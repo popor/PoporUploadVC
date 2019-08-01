@@ -1,0 +1,6 @@
+framework module PoporMedia {
+  umbrella header "PoporMedia-umbrella.h"
+
+  export *
+  module * { export * }
+}

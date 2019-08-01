@@ -1,0 +1,6 @@
+framework module PoporAVPlayer {
+  umbrella header "PoporAVPlayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

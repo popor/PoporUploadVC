@@ -1,0 +1,6 @@
+framework module PoporOrientation {
+  umbrella header "PoporOrientation-umbrella.h"
+
+  export *
+  module * { export * }
+}

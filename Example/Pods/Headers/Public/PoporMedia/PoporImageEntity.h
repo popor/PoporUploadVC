@@ -1,0 +1,1 @@
+../../../PoporMedia/PoporMedia/Classes/PoporImageEntity.h

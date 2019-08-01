@@ -1,0 +1,6 @@
+framework module PoporUploadVC {
+  umbrella header "PoporUploadVC-umbrella.h"
+
+  export *
+  module * { export * }
+}
