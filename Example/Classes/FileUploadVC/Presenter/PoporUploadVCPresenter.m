@@ -311,8 +311,8 @@
     entity.uploadFinishBlock = self.view.uploadFinishBlock;
     
     entity.ivUploadTool = [PoporUploadTool new];
-    if (self.view.createPoporUploadBlock) {
-        entity.ivUploadTool.uploadTool = self.view.createPoporUploadBlock();
+    if (self.view.createUploadBlock) {
+        entity.ivUploadTool.uploadTool = self.view.createUploadBlock();
     }
     entity.ivUploadTool.image = image;
     entity.ivUploadTool.originFile = @(origin);
@@ -331,8 +331,8 @@
     
     entity.ivUploadTool = [PoporUploadTool new];
     entity.ivUploadTool.image    = image;
-    if (self.view.createPoporUploadBlock) {
-        entity.ivUploadTool.uploadTool = self.view.createPoporUploadBlock();
+    if (self.view.createUploadBlock) {
+        entity.ivUploadTool.uploadTool = self.view.createUploadBlock();
     }
 }
 
@@ -364,9 +364,9 @@
         
         entity.ivUploadTool           = [PoporUploadTool new];
         entity.videoUploadTool        = [PoporUploadTool new];
-        if (self.view.createPoporUploadBlock) {
-            entity.ivUploadTool.uploadTool    = self.view.createPoporUploadBlock();
-            entity.videoUploadTool.uploadTool = self.view.createPoporUploadBlock();
+        if (self.view.createUploadBlock) {
+            entity.ivUploadTool.uploadTool    = self.view.createUploadBlock();
+            entity.videoUploadTool.uploadTool = self.view.createUploadBlock();
         }
         
         if (imageData) {

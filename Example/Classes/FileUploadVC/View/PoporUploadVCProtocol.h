@@ -93,7 +93,7 @@ typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize c
 
 @property (nonatomic, copy  ) BlockPDic            videoPlayBlock;
 
-@property (nonatomic, copy  ) BlockRUploadPVoid       createPoporUploadBlock;// 获取生成上传tool的block
+@property (nonatomic, copy  ) BlockRUploadPVoid       createUploadBlock;// 获取生成上传tool的block
 @property (nonatomic, copy  ) BlockRStringPStringSize createIvThumbUrlBlock;// 获取图片缩略图的block
 
 // 是否显示file_name

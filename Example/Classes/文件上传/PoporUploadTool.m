@@ -48,7 +48,7 @@
 
 - (void)startUpload {
     if (!self.uploadTool) {
-        NSLog(@"\n❗️❗️❗️未设置: createPoporUploadBlock, 遵循 PoporUploadProtocol 的上传类❗️❗️❗️");
+        NSLog(@"\n❗️❗️❗️未设置: createUploadBlock, 遵循 PoporUploadProtocol 的上传类❗️❗️❗️");
         if (self.puFinishBlock) {
             self.puFinishBlock(NO, NO, nil, nil);
         }

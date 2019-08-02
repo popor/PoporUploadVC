@@ -61,7 +61,7 @@
 @synthesize showCcBG;
 
 @synthesize videoPlayBlock;
-@synthesize createPoporUploadBlock;
+@synthesize createUploadBlock;
 @synthesize createIvThumbUrlBlock;
 
 - (id)initWithDic:(NSDictionary *)dic {
