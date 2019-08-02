@@ -48,6 +48,7 @@
 
 - (void)startUpload {
     if (!self.uploadTool) {
+        NSLog(@"\n❗️❗️❗️未设置: createPoporUploadBlock, 接受PoporUploadProtocol协议的上传类❗️❗️❗️");
         return;
     }
     

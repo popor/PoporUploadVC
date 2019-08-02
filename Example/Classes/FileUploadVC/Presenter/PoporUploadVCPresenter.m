@@ -262,29 +262,15 @@
         if (assets) {
             // 可以使用原图上传的情况
             for (int i = 0; i<images.count; i++) {
-                UIImage * image = images[i];
-                
                 PoporUploadEntity * entity = [PoporUploadEntity new];
-                entity.hasData = YES;
-                entity.ivUploadTool.image = image;
-                entity.uploadFinishBlock = self.view.uploadFinishBlock;
-                entity.ivUploadTool.originFile = @(origin);
+                [self assembleImagePoporUploadEntity:entity image:images[i] PHAsset:assets[i] origin:origin];
                 
-                [PHAsset getImageFromPHAsset:assets[i] finish:^(NSData *data) {
-                    entity.ivUploadTool.imageData  = data;
-                }];
-                
-                entity.ivUploadStatus = PoporUploadStatusInit;
                 [self.view.weakImageArray addObject:entity];
             }
         }else{
             for (UIImage * image in images) {
                 PoporUploadEntity * entity = [PoporUploadEntity new];
-                entity.hasData = YES;
-                entity.ivUploadTool.image = image;
-                entity.uploadFinishBlock = self.view.uploadFinishBlock;
-                
-                entity.ivUploadStatus = PoporUploadStatusInit;
+                [self assembleImagePoporUploadEntity:entity image:image];
                 [self.view.weakImageArray addObject:entity];
             }
         }
@@ -304,44 +290,50 @@
         if (assets) {
             // 可以使用原图上传的情况
             for (int i = 0; i<images.count; ) {
-                UIImage * image = images[i];
                 PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
-                
-                entity.uploadFinishBlock = self.view.uploadFinishBlock;
-                entity.ivUploadTool          = [PoporUploadTool new];
-                if (self.view.createPoporUploadBlock) {
-                    entity.ivUploadTool.uploadTool = self.view.createPoporUploadBlock();
-                }
-                entity.ivUploadTool.image    = image;
-                
-                entity.ivUploadTool.originFile = @(origin);
-                
-                [PHAsset getImageFromPHAsset:assets[i] finish:^(NSData *data) {
-                    entity.ivUploadTool.imageData  = data;
-                }];
-                entity.ivUploadStatus = PoporUploadStatusInit;
-                
+                [self assembleImagePoporUploadEntity:entity image:images[i] PHAsset:assets[i] origin:origin];
                 break;
             }
         }else{
             for (UIImage * image in images) {
                 PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
-                
-                entity.uploadFinishBlock = self.view.uploadFinishBlock;
-                entity.ivUploadTool          = [PoporUploadTool new];
-                if (self.view.createPoporUploadBlock) {
-                    entity.ivUploadTool.uploadTool = self.view.createPoporUploadBlock();
-                }
-                entity.ivUploadTool.image    = image;
-                
-                entity.ivUploadStatus = PoporUploadStatusInit;
-                
+                [self assembleImagePoporUploadEntity:entity image:image];
                 break;
             }
         }
         
         [self.view.infoCV reloadItemsAtIndexPaths:@[indexPath]];
     }];
+}
+
+- (void)assembleImagePoporUploadEntity:(PoporUploadEntity *)entity image:(UIImage *)image PHAsset:(PHAsset *)asset origin:(BOOL)origin {
+    
+    entity.uploadFinishBlock = self.view.uploadFinishBlock;
+    
+    entity.ivUploadTool = [PoporUploadTool new];
+    if (self.view.createPoporUploadBlock) {
+        entity.ivUploadTool.uploadTool = self.view.createPoporUploadBlock();
+    }
+    entity.ivUploadTool.image = image;
+    entity.ivUploadTool.originFile = @(origin);
+    
+    [PHAsset getImageFromPHAsset:asset finish:^(NSData *data) {
+        entity.ivUploadTool.imageData  = data;
+    }];
+    entity.ivUploadStatus = PoporUploadStatusInit;
+    
+}
+
+- (void)assembleImagePoporUploadEntity:(PoporUploadEntity *)entity image:(UIImage *)image {
+    entity.uploadFinishBlock = self.view.uploadFinishBlock;
+    
+    entity.ivUploadStatus = PoporUploadStatusInit;
+    
+    entity.ivUploadTool = [PoporUploadTool new];
+    entity.ivUploadTool.image    = image;
+    if (self.view.createPoporUploadBlock) {
+        entity.ivUploadTool.uploadTool = self.view.createPoporUploadBlock();
+    }
 }
 
 #pragma mark - 视频选择部分
