@@ -118,12 +118,12 @@
 
 - (void)showVideoPlayVC:(PoporUploadCC *)cc {
     // 视频部分
-    if (cc.fileUploadStatusEntity.videoUploadStatus == PoporUploadStatusFailed) {
+    if (cc.uploadEntity.videoUploadStatus == PoporUploadStatusFailed) {
         NSLog(@"上传失败，无法播放");
         return;
     }
     
-    NSString * updateUrl = cc.fileUploadStatusEntity.videoUrl;
+    NSString * updateUrl = cc.uploadEntity.videoUrl;
     if (!updateUrl) {
         AlertToastTitle(@"视频网址为空，无法播放");
         return;

@@ -10,6 +10,7 @@
 
 #import "PoporUploadVC.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <PoporUI/IToastKeyboard.h>
 
 @interface PoporUploadVCViewController ()
 
@@ -49,7 +50,7 @@
     
     FileUploadAddType addType = FileUploadAddTypeOrder;
     FileUploadCvType cvType   = FileUploadCvType_imageUploadBind;
-    BOOL showCcSelectBT = NO;
+    BOOL showCcSelectBT       = YES;
     
     int fileUploadCcBtXGap = 0;
     int fileUploadCcBtYGap = 0;
@@ -71,7 +72,17 @@
         
     };
     
-    //BlockRBoolPVcCellBT ccSelectBlock = ^BOOL(UIViewController * vc, FileUploadCC * cc, UIButton * bt) { return NO; };
+    BlockPVcCellFinish ccDeleteBlock = ^(UIViewController * vc, PoporUploadCC * cc, BlockPBool finishBlock) {
+        
+        // 网络删除cc.uploadEntity对应的图片url什么的.
+        // 假如是upload模式,只需要删除本地数组就好了,直接返回YES.finishBlock(YES);
+        
+        // 假如是uploadBind模式,那么需要删除网络请求.
+        if (finishBlock) {
+            AlertToastTitle(@"请设置删除图片对应的URL请求");
+            finishBlock(NO);
+        }
+    };
     
     NSDictionary * dic =
     @{
@@ -84,6 +95,7 @@
       @"deallocBlock":      deallocBlock,
       @"uploadFinishBlock": uploadFinishBlock,
       //@"ccSelectBlock":     ccSelectBlock,
+      @"ccDeleteBlock":     ccDeleteBlock,
       
       //FileUploadVC------ Cell UI
       @"fileUploadCcXGap":  @(8),

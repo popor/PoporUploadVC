@@ -44,7 +44,7 @@
 @synthesize willAppearBlock, didAppearBlock, viewDidLoadBlock;
 @synthesize deallocBlock;
 @synthesize ncSelectBlock;
-@synthesize ccSelectBlock;
+@synthesize ccSelectBlock, ccDeleteBlock;
 @synthesize showFileName;
 @synthesize showAddCC;
 @synthesize showCcSelectBT;

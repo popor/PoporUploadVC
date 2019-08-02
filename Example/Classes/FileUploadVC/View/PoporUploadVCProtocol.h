@@ -18,7 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define CvSectionDefaultEdgeInsets UIEdgeInsetsMake(5, 16, 5, 16)
 
-typedef BOOL(^BlockRBoolPVcCellBT) (UIViewController * vc, PoporUploadCC * cc, UIButton * bt);
+//typedef BOOL(^BlockPVcCellFinish) (UIViewController * vc, PoporUploadCC * cc);
+typedef void(^BlockPVcCellFinish) (UIViewController * vc, PoporUploadCC * cc, BlockPBool finishBlock);
 typedef BOOL(^BlockRBoolPVoid) (void);
 typedef id<PoporUploadProtocol>_Nullable(^BlockRUploadPVoid) (void);
 typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize ccSize);
@@ -80,7 +81,12 @@ typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize c
 @property (nonatomic, copy  ) BlockPDic            uploadFinishBlock;// 上传好文件之后的block
 @property (nonatomic, copy  ) BlockPVoid           deallocBlock;// 该VC 注销之后的block
 @property (nonatomic, copy  ) BlockRBoolPVoid      ncSelectBlock;// 选择模式下, nc 右边按钮事件
-@property (nonatomic, copy  ) BlockRBoolPVcCellBT  ccSelectBlock;// 选择模式下, CollectionCell右上角按钮事件
+
+// 选择模式下, cc右上角按钮事件
+@property (nonatomic, copy  ) BlockPVcCellFinish ccSelectBlock;
+// 上传和上传绑定模式下, cc右上角按钮事件
+@property (nonatomic, copy  ) BlockPVcCellFinish ccDeleteBlock;
+
 @property (nonatomic, copy  ) BlockPViewController willAppearBlock;
 @property (nonatomic, copy  ) BlockPViewController didAppearBlock;
 @property (nonatomic, copy  ) BlockPViewController viewDidLoadBlock;

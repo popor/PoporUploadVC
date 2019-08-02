@@ -29,7 +29,7 @@ static NSString * FileUploadCCNormalKey = @"FileUploadCCIdNormal";
 @property (nonatomic, strong) UIButton    * selectBT; // selectBT 最小点击范围是30*30.
 @property (nonatomic, strong) UILabel     * tagL;
 
-@property (nonatomic, weak  ) PoporUploadEntity * fileUploadStatusEntity;
+@property (nonatomic, weak  ) PoporUploadEntity * uploadEntity;
 @property (nonatomic, strong) NSIndexPath * indexPath;
 
 // 用于继承

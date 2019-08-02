@@ -150,7 +150,7 @@
     [cell.imageIV puRemoveError_puTapGRActionAsyn:NO];
     
     PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
-    cell.fileUploadStatusEntity = entity;
+    cell.uploadEntity = entity;
     cell.indexPath              = indexPath;
     
     [self.cellPresent freshCellIvImage:cell];
@@ -549,8 +549,8 @@
 
 #pragma mark - 删除部分
 - (void)updateSelectStatusCC:(PoporUploadCC *)cc {
-    cc.fileUploadStatusEntity.select = !cc.fileUploadStatusEntity.isSelect;
-    if (cc.fileUploadStatusEntity.isSelect) {
+    cc.uploadEntity.select = !cc.uploadEntity.isSelect;
+    if (cc.uploadEntity.isSelect) {
         [cc setSelected:YES];
     }else{
         [cc setSelected:NO];
