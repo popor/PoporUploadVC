@@ -1,5 +1,5 @@
 //
-//  FileUploadVC.m
+//  PoporUploadVC.m
 //  PoporUploadVC
 //
 //  Created by popor on 07/31/2019.
@@ -67,7 +67,7 @@
 - (id)initWithDic:(NSDictionary *)dic {
     if (self = [super init]) {
         [NSAssistant setVC:self dic:dic];
-        [self updateFileUploadTool];
+        [self updatePUShare];
         
         if (UIEdgeInsetsEqualToEdgeInsets(self.cvSectionEdgeInsets, UIEdgeInsetsZero)) {
             self.cvSectionEdgeInsets = CvSectionDefaultEdgeInsets;
@@ -217,13 +217,13 @@
     return self;
 }
 
-- (void)updateFileUploadTool {
+- (void)updatePUShare {
     PUShare * tool = [PUShare share];
     
-    self.image_Add         = self.image_Add     ? : [PUShare imageBundleNamed:PoporImage_Add];
-    self.image_SelectN     = self.image_SelectN ? : [PUShare imageBundleNamed:PoporImage_SelectN];
-    self.image_SelectS     = self.image_SelectS ? : [PUShare imageBundleNamed:PoporImage_SelectS];
-    self.image_Resume      = self.image_Resume  ? : [PUShare imageBundleNamed:PoporImage_Resume];
+    self.image_Add         = self.image_Add     ? : [PUShare imageBundleNamed:PoporUploadImage_Add];
+    self.image_SelectN     = self.image_SelectN ? : [PUShare imageBundleNamed:PoporUploadImage_SelectN];
+    self.image_SelectS     = self.image_SelectS ? : [PUShare imageBundleNamed:PoporUploadImage_SelectS];
+    self.image_Resume      = self.image_Resume  ? : [PUShare imageBundleNamed:PoporUploadImage_Resume];
 
     tool.image_Add         = self.image_Add;
     tool.image_SelectN     = self.image_SelectN;

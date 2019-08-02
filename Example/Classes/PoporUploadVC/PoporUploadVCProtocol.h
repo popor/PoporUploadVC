@@ -1,5 +1,5 @@
 //
-//  FileUploadVCProtocol.h
+//  PoporUploadVCProtocol.h
 //  PoporUploadVC
 //
 //  Created by popor on 07/31/2019.
@@ -29,7 +29,7 @@ typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize c
 @protocol PoporUploadVCProtocol <NSObject>
 
 - (UIViewController *)vc;
-- (void)updateFileUploadTool;
+- (void)updatePUShare;
 
 // MARK: 自己的
 @property (nonatomic, strong) UICollectionView * infoCV;
@@ -105,13 +105,13 @@ typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize c
 @end
 
 // 数据来源
-@protocol FileUploadVCDataSource <NSObject>
+@protocol PoporUploadVCDataSource <NSObject>
 - (void)cleanIVSelectStatus;
 
 @end
 
 // UI事件
-@protocol FileUploadVCEventHandler <NSObject>
+@protocol PoporUploadVCEventHandler <NSObject>
 
 - (void)selectFinishAction;
 

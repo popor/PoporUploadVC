@@ -1,5 +1,5 @@
 //
-//  FileUploadVcCellPresent.m
+//  PoporUploadVcCellPresent.m
 //  PoporUploadVC
 //
 //  Created by popor on 07/31/2019.
@@ -411,7 +411,7 @@
     switch (entity.videoUploadStatus) {
         case PoporUploadStatusInit:{
             // video的upload交给封面上传block.
-            // weakEntity.videoUploadStatus = FileUploadStatusUploading;
+            // weakEntity.videoUploadStatus = PoporUploadStatusUploading;
             // [weakEntity.video abcUpload];
             break;
         }

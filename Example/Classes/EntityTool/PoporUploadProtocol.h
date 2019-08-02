@@ -26,7 +26,7 @@ typedef void(^PoporUploadFinishBlock)   (BOOL isSuccess, BOOL isCancle, NSString
 - (void)uploadVideoPath:(NSString *)path fileName:(NSString *)fileName progress:(PoporUploadProgressBlock)progressBlock finish:(PoporUploadFinishBlock)finishBlock;
 
 #pragma mark - 普通文件
-- (void)uploadJPGData:(NSData *)data fileName:(NSString *)fileName   progress:(PoporUploadProgressBlock)progressBlock finish:(PoporUploadFinishBlock)finishBlock;
+- (void)uploadImageData:(NSData *)data fileName:(NSString *)fileName   progress:(PoporUploadProgressBlock)progressBlock finish:(PoporUploadFinishBlock)finishBlock;
 
 - (void)cancleUpload;
 

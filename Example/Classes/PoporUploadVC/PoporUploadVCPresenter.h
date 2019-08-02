@@ -1,5 +1,5 @@
 //
-//  FileUploadVCPresenter.h
+//  PoporUploadVCPresenter.h
 //  PoporUploadVC
 //
 //  Created by popor on 07/31/2019.
@@ -11,7 +11,7 @@
 #import "PoporUploadVcShowPresent.h"
 
 // 处理和View事件
-@interface PoporUploadVCPresenter : NSObject <FileUploadVCEventHandler, FileUploadVCDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
+@interface PoporUploadVCPresenter : NSObject <PoporUploadVCEventHandler, PoporUploadVCDataSource, UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) PoporUploadVcCellPresent * cellPresent;
 @property (nonatomic, strong) PoporUploadVcShowPresent * showPresent;

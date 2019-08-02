@@ -52,16 +52,16 @@
     PoporUploadCvType cvType   = PoporUploadCvType_imageUploadBind;
     BOOL showCcSelectBT       = YES;
     
-    int fileUploadCcBtXGap = 0;
-    int fileUploadCcBtYGap = 0;
-    int fileUploadCcIvXGap = 0;
-    int fileUploadCcIvYGap = 0;
+    int ccBtXGap = 0;
+    int ccBtYGap = 0;
+    int ccIvXGap = 0;
+    int ccIvYGap = 0;
     
     if (showCcSelectBT) {
-        fileUploadCcBtXGap = -5;
-        fileUploadCcBtYGap = -5;
-        fileUploadCcIvXGap =  5;
-        fileUploadCcIvYGap =  8;
+        ccBtXGap = -5;
+        ccBtYGap = -5;
+        ccIvXGap =  5;
+        ccIvYGap =  8;
     }
     
     BlockPVoid deallocBlock = ^(void){
@@ -98,20 +98,20 @@
       //@"ccSelectBlock":     ccSelectBlock,
       @"ccDeleteBlock":     ccDeleteBlock,
       
-      //FileUploadVC------ Cell UI
-      @"fileUploadCcXGap":  @(8),
-      @"fileUploadCcYGap":  @(8),
-      @"fileUploadCcBtXGap":@(fileUploadCcBtXGap),
-      @"fileUploadCcBtYGap":@(fileUploadCcBtYGap),
-      @"fileUploadCcIvXGap":@(fileUploadCcIvXGap),
-      @"fileUploadCcIvYGap":@(fileUploadCcIvYGap),
-      @"image_SelectN":[PUShare imageBundleNamed:PoporImage_Delete],
-      @"image_SelectS":[PUShare imageBundleNamed:PoporImage_Delete],
+      //PoporUploadVC------ Cell UI
+      @"ccXGap":  @(8),
+      @"ccYGap":  @(8),
+      @"ccBtXGap":@(ccBtXGap),
+      @"ccBtYGap":@(ccBtYGap),
+      @"ccIvXGap":@(ccIvXGap),
+      @"ccIvYGap":@(ccIvYGap),
+      @"image_SelectN":[PUShare imageBundleNamed:PoporUploadImage_Delete],
+      @"image_SelectS":[PUShare imageBundleNamed:PoporUploadImage_Delete],
       @"cvSectionEdgeInsets":[NSValue valueWithUIEdgeInsets:UIEdgeInsetsMake(16, 16, 16, 16)],
       //@"cvSectionEdgeInsets":UIEdgeInsetsMake(5, 16, 16, 16),
       // ---
       @"lineNumber":           @(3),
-      @"fileUploadCcIvCorner": @(0),
+      @"ccIvCorner": @(0),
       @"maxUploadNum":         @(0),
       
       //debug

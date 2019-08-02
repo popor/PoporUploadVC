@@ -111,7 +111,7 @@
         return;
     }
     if (isImage) {
-        [self.uploadTool uploadJPGData:data fileName:self.uploadFileName progress:self.puProgressBlock finish:self.puFinishBlock];
+        [self.uploadTool uploadImageData:data fileName:self.uploadFileName progress:self.puProgressBlock finish:self.puFinishBlock];
     }else{
         if (videoPath) {
             [self.uploadTool uploadVideoPath:videoPath fileName:self.uploadFileName progress:self.puProgressBlock finish:self.puFinishBlock];

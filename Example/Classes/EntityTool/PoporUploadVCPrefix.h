@@ -1,21 +1,21 @@
 //
-//  FileUploadPrefix.h
+//  PoporUploadVCPrefix.h
 //  PoporUploadVC
 //
 //  Created by popor on 07/31/2019.
 //  Copyright (c) 2019 popor. All rights reserved.
 //
 
-#ifndef FileUploadPrefix_h
-#define FileUploadPrefix_h
+#ifndef PoporUploadPrefix_h
+#define PoporUploadPrefix_h
 
-static NSString * PoporImage_Add     = @"PoporImage_Add";
-static NSString * PoporImage_Delete  = @"PoporImage_Delete";
-static NSString * PoporImage_SelectN = @"PoporImage_SelectN";
-static NSString * PoporImage_SelectS = @"PoporImage_SelectS";
-static NSString * PoporImage_Resume  = @"PoporImage_Resume";
+static NSString * PoporUploadImage_Add     = @"PoporImage_Add";
+static NSString * PoporUploadImage_Delete  = @"PoporImage_Delete";
+static NSString * PoporUploadImage_SelectN = @"PoporUploadImage_SelectN";
+static NSString * PoporUploadImage_SelectS = @"PoporUploadImage_SelectS";
+static NSString * PoporUploadImage_Resume  = @"PoporUploadImage_Resume";
 
-static CGFloat PoporUploadImageCompressionQuality = 0.9;
+static CGFloat    PoporUploadImageCompressionQuality = 0.9;
 
 // 功能类型: 内部 CC 使用参数
 typedef NS_ENUM(int, PoporUploadCCFunType) {
@@ -48,4 +48,4 @@ typedef NS_ENUM(int, PoporUploadAddType) {
     PoporUploadAddTypeReplace,        // 替换模式
 };
 
-#endif /* FileUploadPrefix_h */
+#endif /* PoporUploadPrefix_h */
