@@ -107,7 +107,7 @@
                         if (entity.isBindOK) {
                             [cell.imageIV puRemoveError_puTapGRActionAsyn:YES];
                         }else{
-                            [cell.imageIV puAddUsTapGRActionMessage:@"重新增加" asyn:YES block:^{
+                            [cell.imageIV puAddTapGRActionMessage:@"重新增加" asyn:YES block:^{
                                 @strongify(entity);
                                 
                                 if (entity.ivUploadTool.uploadTool.finishBlock) {
@@ -125,7 +125,7 @@
         }else{
             entity.ivUploadStatus = PoporUploadStatusFailed;
             if (entity == cell.fileUploadStatusEntity) {// CellUI线程刷新
-                [cell.imageIV puAddUsTapGRActionMessage:nil asyn:YES block:^{
+                [cell.imageIV puAddTapGRActionMessage:nil asyn:YES block:^{
                     @strongify(cell);
                     @strongify(entity);
                     
@@ -153,7 +153,7 @@
         }
         case PoporUploadStatusFailed:{
             // 假如刷新的时候发现是失败的,那么也要纠正一下. : 貌似没有清空记录
-            [cell.imageIV puAddUsTapGRActionMessage:nil asyn:YES block:^{
+            [cell.imageIV puAddTapGRActionMessage:nil asyn:YES block:^{
                 @strongify(cell);
                 @strongify(entity);
                 
@@ -166,7 +166,7 @@
         case PoporUploadStatusFinish:{
             if (needBind && !entity.isBindOK) {
                 // 这里不需要判断是否一致,因为是cell刷新触发的.
-                [cell.imageIV puAddUsTapGRActionMessage:@"重新增加" asyn:NO block:^{
+                [cell.imageIV puAddTapGRActionMessage:@"重新增加" asyn:NO block:^{
                     //@strongify(cell);
                     @strongify(entity);
                     
@@ -304,7 +304,7 @@
                             if (entity.isBindOK) {
                                 [cell.imageIV puRemoveError_puTapGRActionAsyn:YES];
                             }else{
-                                [cell.imageIV puAddUsTapGRActionMessage:@"重新增加" asyn:YES block:^{
+                                [cell.imageIV puAddTapGRActionMessage:@"重新增加" asyn:YES block:^{
                                     @strongify(entity);
                                     
                                     if (entity.videoUploadTool.uploadTool.finishBlock) {
@@ -331,7 +331,7 @@
                 // 失败的话关闭进度
                 [cell.imageIV puUpdateProgress:1.0];
                 // 假如刷新的时候发现是失败的,那么也要纠正一下.
-                [cell.imageIV puAddUsTapGRActionMessage:@"重新上传视频" asyn:YES block:^{
+                [cell.imageIV puAddTapGRActionMessage:@"重新上传视频" asyn:YES block:^{
                     @strongify(self);
                     @strongify(cell);
                     @strongify(entity);
@@ -366,7 +366,7 @@
             entity.ivUploadStatus = PoporUploadStatusFailed;
             
             if (entity == cell.fileUploadStatusEntity) {// CellUI线程刷新
-                [cell.imageIV puAddUsTapGRActionMessage:@"重新上传视频封面" asyn:YES block:^{
+                [cell.imageIV puAddTapGRActionMessage:@"重新上传视频封面" asyn:YES block:^{
                     @strongify(cell);
                     @strongify(entity);
                     
@@ -391,7 +391,7 @@
         }
         case PoporUploadStatusFailed:{
             // 假如刷新的时候发现是失败的,那么也要纠正一下.
-            [cell.imageIV puAddUsTapGRActionMessage:@"重新上传视频封面" asyn:NO block:^{
+            [cell.imageIV puAddTapGRActionMessage:@"重新上传视频封面" asyn:NO block:^{
                 //@strongify(self);
                 @strongify(cell);
                 @strongify(entity);
@@ -425,7 +425,7 @@
         case PoporUploadStatusFailed:{
             [cell.imageIV puUpdateProgress:1];
             
-            [cell.imageIV puAddUsTapGRActionMessage:@"重新上传视频" asyn:NO block:^{
+            [cell.imageIV puAddTapGRActionMessage:@"重新上传视频" asyn:NO block:^{
                 @strongify(self);
                 @strongify(cell);
                 @strongify(entity);
@@ -446,7 +446,7 @@
     if (entity.ivUploadStatus == PoporUploadStatusFinish && entity.videoUploadStatus == PoporUploadStatusFinish) {
         if (entity.isBindOK == NO &&
             self.view.cvType == FileUploadCvType_videoUploadBind) {
-            [cell.imageIV puAddUsTapGRActionMessage:@"重新增加" asyn:NO block:^{
+            [cell.imageIV puAddTapGRActionMessage:@"重新增加" asyn:NO block:^{
                 @strongify(entity);
                 
                 if (entity.videoUploadTool.uploadTool.finishBlock) {

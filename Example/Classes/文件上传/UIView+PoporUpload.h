@@ -31,7 +31,7 @@ typedef void(^UIImageViewTapGRBlock) (void);
 
 - (void)puAddErrorIVAsyn:(BOOL)asyn;
 
-- (void)puAddUsTapGRActionMessage:(NSString * _Nullable)message asyn:(BOOL)asyn block:(UIImageViewTapGRBlock)block;
+- (void)puAddTapGRActionMessage:(NSString * _Nullable)message asyn:(BOOL)asyn block:(UIImageViewTapGRBlock)block;
 
 - (void)puRemoveError_puTapGRActionAsyn:(BOOL)asyn;
 

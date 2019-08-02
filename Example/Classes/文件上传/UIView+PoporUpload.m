@@ -103,7 +103,7 @@
     });
 }
 
-- (void)puAddpuTapGRActionMessage:(NSString * _Nullable)message asyn:(BOOL)asyn block:(UIImageViewTapGRBlock)block {
+- (void)puAddTapGRActionMessage:(NSString * _Nullable)message asyn:(BOOL)asyn block:(UIImageViewTapGRBlock)block {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self puUpdateProgress:1.0];
         self.puTapGRMessage = message;
