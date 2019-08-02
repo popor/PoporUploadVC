@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'PoporUploadVC/Classes/**/*'
+  s.source_files = 'Example/Classes/**/*.{h,m}'
   
   s.resource = 'Example/Classes/PoporUploadVC.bundle'
   

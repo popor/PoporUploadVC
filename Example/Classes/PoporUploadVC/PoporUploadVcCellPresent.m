@@ -8,7 +8,7 @@
 
 #import "PoporUploadVcCellPresent.h"
 #import "PoporUploadVCPresenter.h"
-#import <UIImageView+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <PoporUI/IToastKeyboard.h>

@@ -12,6 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^PoporUploadProgressBlock) (CGFloat progress);
+
+// 当前PoporUploadFinishBlock所传递的参数满足阿里
 typedef void(^PoporUploadFinishBlock)   (BOOL isSuccess, BOOL isCancle, NSString * _Nullable fileUrl, NSString * _Nullable requestId);
 
 @protocol PoporUploadProtocol <NSObject>

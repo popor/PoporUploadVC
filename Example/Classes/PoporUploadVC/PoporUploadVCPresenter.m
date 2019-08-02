@@ -14,7 +14,7 @@
 
 #import <PoporMedia/PoporMedia.h>
 #import <PoporImageBrower/PoporImageBrower.h>
-#import <UIImageView+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #import <AVFoundation/AVFoundation.h>
 
@@ -23,7 +23,7 @@
 #import <PoporFoundation/PrefixFun.h>
 
 #import <Photos/Photos.h>
-#import <DMProgressHUD.h>
+#import <DMProgressHUD/DMProgressHUD.h>
 
 #if __has_include(<PoporFFmpegCompress/PoporFFmpegCompress.h>)
 #define HasFFmpeg YES
@@ -251,7 +251,7 @@
     if (self.view.maxUploadNum > 0) {
         maxCount = self.view.maxUploadNum - self.view.weakImageArray.count;
         if (maxCount <= 0) {
-            NSString * info = [NSString stringWithFormat:@"已经超过最大上传个数: %li", maxCount];
+            NSString * info = [NSString stringWithFormat:@"已经超过最大上传个数: %i", (int)maxCount];
             AlertToastTitle(info);
             return;
         }
@@ -331,7 +331,7 @@
     entity.ivUploadStatus = PoporUploadStatusInit;
     
     entity.ivUploadTool = [PoporUploadTool new];
-    entity.ivUploadTool.image    = image;
+    entity.ivUploadTool.image = image;
     if (self.view.createUploadBlock) {
         entity.ivUploadTool.uploadTool = self.view.createUploadBlock();
     }
@@ -342,7 +342,7 @@
     if (self.view.maxUploadNum > 0) {
         NSInteger maxCount = self.view.maxUploadNum - self.view.weakImageArray.count;
         if (maxCount <= 0) {
-            NSString * info = [NSString stringWithFormat:@"已经超过最大上传个数: %li", maxCount];
+            NSString * info = [NSString stringWithFormat:@"已经超过最大上传个数: %i", (int)maxCount];
             AlertToastTitle(info);
             return;
         }

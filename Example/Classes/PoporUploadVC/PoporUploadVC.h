@@ -9,7 +9,7 @@
 #import "PoporUploadVCProtocol.h"
 /*
  这个类的缺点就是block用的太多,复杂度跟delegate差不多.
- 
+ 一些dic设置请查看PoporUploadVCProtocol
  //*/
 
 @interface PoporUploadVC : UIViewController <PoporUploadVCProtocol>
