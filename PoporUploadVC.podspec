@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporUploadVC'
-  s.version          = '0.0.01'
+  s.version          = '0.0.02'
   s.summary          = '简化上传图片视频等方法'
 
   s.homepage         = 'https://github.com/popor/PoporUploadVC'
@@ -18,7 +18,15 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Example/Classes/**/*.{h,m}'
+  s.subspec 'EntityTool' do |ss|
+    ss.source_files = 'Example/Classes/EntityTool/*.{h,m}'
+  end
+  
+  s.subspec 'PoporUploadVC' do |ss|
+    ss.ios.dependency 'PoporUploadVC/EntityTool'
+    
+    ss.source_files = 'Example/Classes/PoporUploadVC/*.{h,m}'
+  end
   
   s.resource = 'Example/Classes/PoporUploadVC.bundle'
   

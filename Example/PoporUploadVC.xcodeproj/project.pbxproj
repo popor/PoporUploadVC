@@ -7,18 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18156D9222F40B3300F12405 /* PoporUploadVC.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18156D9122F40B3300F12405 /* PoporUploadVC.bundle */; };
-		18FA06BE22F13CA000F682C3 /* PoporUploadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA068522F13CA000F682C3 /* PoporUploadTool.m */; };
-		18FA06BF22F13CA000F682C3 /* UIView+PoporUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA068822F13CA000F682C3 /* UIView+PoporUpload.m */; };
-		18FA06C422F13CA000F682C3 /* PoporUploadEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA069422F13CA000F682C3 /* PoporUploadEntity.m */; };
-		18FA06C522F13CA000F682C3 /* PUShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA069522F13CA000F682C3 /* PUShare.m */; };
-		18FA06C622F13CA000F682C3 /* PoporUploadVCPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA069922F13CA000F682C3 /* PoporUploadVCPresenter.m */; };
-		18FA06C722F13CA000F682C3 /* PoporUploadVcCellPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA069A22F13CA000F682C3 /* PoporUploadVcCellPresent.m */; };
-		18FA06C822F13CA000F682C3 /* PoporUploadVcShowPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA069B22F13CA000F682C3 /* PoporUploadVcShowPresent.m */; };
-		18FA06C922F13CA000F682C3 /* PoporUploadCC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA06A122F13CA000F682C3 /* PoporUploadCC.m */; };
-		18FA06CB22F13CA000F682C3 /* PoporUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA06A522F13CA000F682C3 /* PoporUploadVC.m */; };
-		18FA06CC22F13CA000F682C3 /* PUVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA06A922F13CA000F682C3 /* PUVideoTool.m */; };
-		18FA06DC22F13CA000F682C3 /* PoporUploadVCInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FA06BD22F13CA000F682C3 /* PoporUploadVCInteractor.m */; };
 		2B1B3AEA388C2739CBB42306 /* libPods-PoporUploadVC_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A76A44BFD0E912EC10FB6934 /* libPods-PoporUploadVC_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -50,32 +38,6 @@
 
 /* Begin PBXFileReference section */
 		05BC1E96DBB6729D412D275D /* Pods-PoporUploadVC_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporUploadVC_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PoporUploadVC_Tests/Pods-PoporUploadVC_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		18156D9122F40B3300F12405 /* PoporUploadVC.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PoporUploadVC.bundle; sourceTree = "<group>"; };
-		18FA068522F13CA000F682C3 /* PoporUploadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporUploadTool.m; sourceTree = "<group>"; };
-		18FA068622F13CA000F682C3 /* UIView+PoporUpload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PoporUpload.h"; sourceTree = "<group>"; };
-		18FA068722F13CA000F682C3 /* PoporUploadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadTool.h; sourceTree = "<group>"; };
-		18FA068822F13CA000F682C3 /* UIView+PoporUpload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PoporUpload.m"; sourceTree = "<group>"; };
-		18FA069422F13CA000F682C3 /* PoporUploadEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporUploadEntity.m; sourceTree = "<group>"; };
-		18FA069522F13CA000F682C3 /* PUShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUShare.m; sourceTree = "<group>"; };
-		18FA069622F13CA000F682C3 /* PUShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUShare.h; sourceTree = "<group>"; };
-		18FA069722F13CA000F682C3 /* PoporUploadEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadEntity.h; sourceTree = "<group>"; };
-		18FA069922F13CA000F682C3 /* PoporUploadVCPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporUploadVCPresenter.m; sourceTree = "<group>"; };
-		18FA069A22F13CA000F682C3 /* PoporUploadVcCellPresent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporUploadVcCellPresent.m; sourceTree = "<group>"; };
-		18FA069B22F13CA000F682C3 /* PoporUploadVcShowPresent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporUploadVcShowPresent.m; sourceTree = "<group>"; };
-		18FA069C22F13CA000F682C3 /* PoporUploadVCPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadVCPresenter.h; sourceTree = "<group>"; };
-		18FA069D22F13CA000F682C3 /* PoporUploadVcCellPresent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadVcCellPresent.h; sourceTree = "<group>"; };
-		18FA069E22F13CA000F682C3 /* PoporUploadVcShowPresent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadVcShowPresent.h; sourceTree = "<group>"; };
-		18FA06A022F13CA000F682C3 /* PoporUploadVCPrefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadVCPrefix.h; sourceTree = "<group>"; };
-		18FA06A122F13CA000F682C3 /* PoporUploadCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporUploadCC.m; sourceTree = "<group>"; };
-		18FA06A222F13CA000F682C3 /* PoporUploadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadVC.h; sourceTree = "<group>"; };
-		18FA06A422F13CA000F682C3 /* PoporUploadCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadCC.h; sourceTree = "<group>"; };
-		18FA06A522F13CA000F682C3 /* PoporUploadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporUploadVC.m; sourceTree = "<group>"; };
-		18FA06A622F13CA000F682C3 /* PoporUploadVCProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadVCProtocol.h; sourceTree = "<group>"; };
-		18FA06A822F13CA000F682C3 /* PUVideoTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUVideoTool.h; sourceTree = "<group>"; };
-		18FA06A922F13CA000F682C3 /* PUVideoTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUVideoTool.m; sourceTree = "<group>"; };
-		18FA06BB22F13CA000F682C3 /* PoporUploadVCInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoporUploadVCInteractor.h; sourceTree = "<group>"; };
-		18FA06BD22F13CA000F682C3 /* PoporUploadVCInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoporUploadVCInteractor.m; sourceTree = "<group>"; };
-		18FA06DD22F1732200F682C3 /* PoporUploadProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PoporUploadProtocol.h; sourceTree = "<group>"; };
 		1FA71330185C9E88233E78B9 /* Pods-PoporUploadVC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporUploadVC_Example.release.xcconfig"; path = "Target Support Files/Pods-PoporUploadVC_Example/Pods-PoporUploadVC_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2E9225548A1081FB34BD24FA /* Pods-PoporUploadVC_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PoporUploadVC_Tests.release.xcconfig"; path = "Target Support Files/Pods-PoporUploadVC_Tests/Pods-PoporUploadVC_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* PoporUploadVC_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoporUploadVC_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,24 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18D8256622F2EAC6000A5BD7 /* entityTool */ = {
-			isa = PBXGroup;
-			children = (
-				18FA06A822F13CA000F682C3 /* PUVideoTool.h */,
-				18FA06A922F13CA000F682C3 /* PUVideoTool.m */,
-				18FA069622F13CA000F682C3 /* PUShare.h */,
-				18FA069522F13CA000F682C3 /* PUShare.m */,
-				18FA069722F13CA000F682C3 /* PoporUploadEntity.h */,
-				18FA069422F13CA000F682C3 /* PoporUploadEntity.m */,
-				18FA06DD22F1732200F682C3 /* PoporUploadProtocol.h */,
-				18FA068722F13CA000F682C3 /* PoporUploadTool.h */,
-				18FA068522F13CA000F682C3 /* PoporUploadTool.m */,
-				18FA068622F13CA000F682C3 /* UIView+PoporUpload.h */,
-				18FA068822F13CA000F682C3 /* UIView+PoporUpload.m */,
-			);
-			path = entityTool;
-			sourceTree = "<group>";
-		};
 		18FA068122F13C3C00F682C3 /* other */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,42 +108,10 @@
 			name = other;
 			sourceTree = "<group>";
 		};
-		18FA068222F13C9F00F682C3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				18156D9122F40B3300F12405 /* PoporUploadVC.bundle */,
-				18D8256622F2EAC6000A5BD7 /* entityTool */,
-				18FA069222F13CA000F682C3 /* PoporUploadVC */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		18FA069222F13CA000F682C3 /* PoporUploadVC */ = {
-			isa = PBXGroup;
-			children = (
-				18FA06A022F13CA000F682C3 /* PoporUploadVCPrefix.h */,
-				18FA06A222F13CA000F682C3 /* PoporUploadVC.h */,
-				18FA06A522F13CA000F682C3 /* PoporUploadVC.m */,
-				18FA06A622F13CA000F682C3 /* PoporUploadVCProtocol.h */,
-				18FA06A422F13CA000F682C3 /* PoporUploadCC.h */,
-				18FA06A122F13CA000F682C3 /* PoporUploadCC.m */,
-				18FA069C22F13CA000F682C3 /* PoporUploadVCPresenter.h */,
-				18FA069922F13CA000F682C3 /* PoporUploadVCPresenter.m */,
-				18FA069D22F13CA000F682C3 /* PoporUploadVcCellPresent.h */,
-				18FA069A22F13CA000F682C3 /* PoporUploadVcCellPresent.m */,
-				18FA069E22F13CA000F682C3 /* PoporUploadVcShowPresent.h */,
-				18FA069B22F13CA000F682C3 /* PoporUploadVcShowPresent.m */,
-				18FA06BB22F13CA000F682C3 /* PoporUploadVCInteractor.h */,
-				18FA06BD22F13CA000F682C3 /* PoporUploadVCInteractor.m */,
-			);
-			path = PoporUploadVC;
-			sourceTree = "<group>";
-		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				18FA068222F13C9F00F682C3 /* Classes */,
 				6003F593195388D20070C39A /* Example for PoporUploadVC */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
@@ -375,7 +287,6 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
-				18156D9222F40B3300F12405 /* PoporUploadVC.bundle in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -473,18 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18FA06C822F13CA000F682C3 /* PoporUploadVcShowPresent.m in Sources */,
-				18FA06BF22F13CA000F682C3 /* UIView+PoporUpload.m in Sources */,
-				18FA06DC22F13CA000F682C3 /* PoporUploadVCInteractor.m in Sources */,
-				18FA06C422F13CA000F682C3 /* PoporUploadEntity.m in Sources */,
-				18FA06C922F13CA000F682C3 /* PoporUploadCC.m in Sources */,
-				18FA06CC22F13CA000F682C3 /* PUVideoTool.m in Sources */,
-				18FA06BE22F13CA000F682C3 /* PoporUploadTool.m in Sources */,
 				6003F59E195388D20070C39A /* PoporUploadVCAppDelegate.m in Sources */,
-				18FA06C622F13CA000F682C3 /* PoporUploadVCPresenter.m in Sources */,
-				18FA06C722F13CA000F682C3 /* PoporUploadVcCellPresent.m in Sources */,
-				18FA06C522F13CA000F682C3 /* PUShare.m in Sources */,
-				18FA06CB22F13CA000F682C3 /* PoporUploadVC.m in Sources */,
 				6003F5A7195388D20070C39A /* PoporUploadVCViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

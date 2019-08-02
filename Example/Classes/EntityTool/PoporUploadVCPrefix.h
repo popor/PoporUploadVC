@@ -15,6 +15,8 @@ static NSString * PoporImage_SelectN = @"PoporImage_SelectN";
 static NSString * PoporImage_SelectS = @"PoporImage_SelectS";
 static NSString * PoporImage_Resume  = @"PoporImage_Resume";
 
+static CGFloat PoporUploadImageCompressionQuality = 0.9;
+
 // 功能类型: 内部 CC 使用参数
 typedef NS_ENUM(int, PoporUploadCCFunType) {
     PoporUploadCCFunTypeAdd    = 1,   // 新增按钮

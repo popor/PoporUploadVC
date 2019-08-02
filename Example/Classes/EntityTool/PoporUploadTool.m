@@ -57,7 +57,7 @@
     
     NSData * data;
     NSString * videoPath;
-    CGFloat compress = self.compressionNumber ? self.compressionNumber.floatValue:ImageCompressionQuality;
+    CGFloat compress = self.compressionNumber ? self.compressionNumber.floatValue:PoporUploadImageCompressionQuality;
     BOOL isImage;
     if (self.imageData || self.imageFileURL) {
         // 1.2.优先使用,

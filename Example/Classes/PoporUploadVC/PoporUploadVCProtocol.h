@@ -10,17 +10,16 @@
 #import <PoporFoundation/PrefixBlock.h>
 #import <PoporFoundation/PrefixColor.h>
 
-#import "PoporUploadCC.h"
+#import "PUShare.h"
 #import "PoporUploadVCPrefix.h"
 #import "PoporUploadProtocol.h"
 
-#import "PUShare.h"
+#import "PoporUploadCC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 #define CvSectionDefaultEdgeInsets UIEdgeInsetsMake(5, 16, 5, 16)
 
-//typedef BOOL(^BlockPVcCellFinish) (UIViewController * vc, PoporUploadCC * cc);
 typedef void(^BlockPVcCellFinish) (UIViewController * vc, PoporUploadCC * cc, BlockPBool finishBlock);
 typedef BOOL(^BlockRBoolPVoid) (void);
 typedef id<PoporUploadProtocol>_Nullable(^BlockRUploadPVoid) (void);
@@ -38,7 +37,7 @@ typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize c
 @property (nonatomic        ) CGSize ccSize;
 
 // MARK: 外部注入
-@property (nonatomic, weak  ) NSMutableArray<PoporUploadEntity*>* weakImageArray;
+@property (nonatomic, weak  ) NSMutableArray<PoporUploadEntity *>* weakImageArray;
 
 @property (nonatomic        ) PoporUploadCvType cvType;
 @property (nonatomic, strong) UIColor * infoCvBgColor;
@@ -67,14 +66,14 @@ typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize c
 @property (nonatomic, getter=isShowCcBG) BOOL showCcBG;// 显示bg颜色
 
 // 图片
-@property (nonatomic, strong) UIColor  * image_Add_bgColor;
+@property (nonatomic, strong) UIColor * image_Add_bgColor;
 
 @property (nonatomic, strong) UIImage * image_Add;
 @property (nonatomic, strong) UIImage * image_SelectN;
 @property (nonatomic, strong) UIImage * image_SelectS;
 @property (nonatomic, strong) UIImage * image_Resume;
 
-@property (nonatomic, strong) UIImage  * ccPlacehlodImage; // 默认的 cc image
+@property (nonatomic, strong) UIImage * ccPlacehlodImage; // 默认的 cc image
 
 // 视频部分
 @property (nonatomic        ) PoporUploadVideoCompressType compressType;

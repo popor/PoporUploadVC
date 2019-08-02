@@ -1,6 +1,6 @@
 {
   "name": "PoporUploadVC",
-  "version": "0.0.01",
+  "version": "0.0.02",
   "summary": "简化上传图片视频等方法",
   "homepage": "https://github.com/popor/PoporUploadVC",
   "license": {
@@ -12,12 +12,11 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporUploadVC.git",
-    "tag": "0.0.01"
+    "tag": "0.0.02"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Example/Classes/**/*.{h,m}",
   "resources": "Example/Classes/PoporUploadVC.bundle",
   "dependencies": {
     "Masonry": [
@@ -56,5 +55,22 @@
     "DMProgressHUD": [
 
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "EntityTool",
+      "source_files": "Example/Classes/EntityTool/*.{h,m}"
+    },
+    {
+      "name": "PoporUploadVC",
+      "ios": {
+        "dependencies": {
+          "PoporUploadVC/EntityTool": [
+
+          ]
+        }
+      },
+      "source_files": "Example/Classes/PoporUploadVC/*.{h,m}"
+    }
+  ]
 }

@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PoporUploadProtocol.h"
+#import "PoporUploadVCPrefix.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-static CGFloat ImageCompressionQuality = 0.9;
 
 @interface PoporUploadTool : NSObject
 
