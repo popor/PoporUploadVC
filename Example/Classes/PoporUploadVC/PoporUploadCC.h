@@ -15,15 +15,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * FileUploadCCAddKey    = @"FileUploadCCIdAdd";
-static NSString * FileUploadCCNormalKey = @"FileUploadCCIdNormal";
+static NSString * PoporUploadCCAddKey    = @"PoporUploadCCIdAdd";
+static NSString * PoporUploadCCNormalKey = @"PoporUploadCCIdNormal";
 
 @class PoporUploadEntity;
 
 @interface PoporUploadCC : UICollectionViewCell
 
 @property (nonatomic, getter=isInit) BOOL init;
-@property (nonatomic        ) FileUploadCCFunType funType;
+@property (nonatomic        ) PoporUploadCCFunType funType;
 
 @property (nonatomic, strong) UIImageView * imageIV;
 @property (nonatomic, strong) UIButton    * selectBT; // selectBT 最小点击范围是30*30.

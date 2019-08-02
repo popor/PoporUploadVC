@@ -18,6 +18,7 @@
     "ios": "8.0"
   },
   "source_files": "PoporUploadVC/Classes/**/*",
+  "resources": "Example/Classes/PoporUploadVC.bundle",
   "dependencies": {
     "Masonry": [
 

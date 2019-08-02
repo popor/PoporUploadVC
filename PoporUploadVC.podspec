@@ -20,6 +20,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'PoporUploadVC/Classes/**/*'
   
+  s.resource = 'Example/Classes/PoporUploadVC.bundle'
+  
   # s.resource_bundles = {
   #   'PoporUploadVC' => ['PoporUploadVC/Assets/*.png']
   # }

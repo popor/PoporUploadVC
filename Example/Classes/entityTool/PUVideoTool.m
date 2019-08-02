@@ -17,7 +17,7 @@
 @implementation PUVideoTool
 
 //压缩视频
-+ (void)compressVideoURL:(NSURL *)originVideoPath finishBlock:(void(^)(NSString * saveUrl))finishBlock {
++ (void)systemCompressVideoURL:(NSURL *)originVideoPath finishBlock:(void(^)(NSString * saveUrl))finishBlock {
     AVURLAsset *avAsset        = [[AVURLAsset alloc] initWithURL:originVideoPath options:nil];
     NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:avAsset];
     NSString * saveUrl         = [PUVideoTool videoCompressPath_time];
@@ -53,12 +53,7 @@
     PHVideoRequestOptions *options = [[PHVideoRequestOptions alloc] init];
     [[PHImageManager defaultManager] requestAVAssetForVideo:myAsset options:options resultHandler:^(AVAsset * _Nullable asset, AVAudioMix * _Nullable audioMix, NSDictionary * _Nullable info) {
         NSURL *fileRUL = [asset valueForKey:@"URL"];
-        if (finishBlock) {
-            NSLog(@"23");
-        }else{
-            NSLog(@"244");
-        }
-        [PUVideoTool compressVideoURL:fileRUL finishBlock:finishBlock];
+        [PUVideoTool systemCompressVideoURL:fileRUL finishBlock:finishBlock];
     }];
 }
 

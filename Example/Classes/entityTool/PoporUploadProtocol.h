@@ -11,8 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSString * PoporUsRepeatRed = @"PoporUsRepeatRed";
-
 typedef void(^PoporUploadProgressBlock) (CGFloat progress);
 typedef void(^PoporUploadFinishBlock)   (BOOL isSuccess, BOOL isCancle, NSString * _Nullable fileUrl, NSString * _Nullable requestId);
 

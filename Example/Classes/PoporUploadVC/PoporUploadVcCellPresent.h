@@ -18,17 +18,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setMyView:(id<PoporUploadVCProtocol>)view;
 - (void)setMyPresent:(id)present;
 
-// 图片上传
-- (void)freshImageUploadCell:(PoporUploadCC *)cell needBind:(BOOL)needBind;
+#pragma mark 上传图片
+- (void)freshImageBlockCell:(PoporUploadCC *)cell needBind:(BOOL)needBind;
+- (void)freshImageSelectCell:(PoporUploadCC *)cell;
 
-- (void)setImageUploadSelectCell:(PoporUploadCC *)cell;
+#pragma mark 上传视频
+- (void)freshVideoBlockCell:(PoporUploadCC *)cell needBind:(BOOL)needBind;
+- (void)freshVideoSelectCell:(PoporUploadCC *)cell;
+- (void)uploadVideo:(PoporUploadEntity *)entity;
 
-// 视频上传绑定
-- (void)freshVideoCell:(PoporUploadCC *)cell needBind:(BOOL)needBind;
-
-- (void)setVideoUploadSelectCell:(PoporUploadCC *)cell;
-
-// cell 选择按钮事件: 只针对选择模式
+#pragma mark 选择图片视频
 - (void)freshImageVideoSelectCell:(PoporUploadCC *)cell;
 
 // !!!: 刷新上传时对应的cell图片

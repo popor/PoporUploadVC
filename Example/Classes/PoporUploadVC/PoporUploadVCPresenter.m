@@ -43,7 +43,7 @@
 
 @property (nonatomic, strong) PoporMedia * media;
 
-#ifndef HasFFmpeg
+#if HasFFmpeg
 @property (nonatomic, strong) PoporFFmpegCompress * ffmpegCmd;
 
 #endif
@@ -99,14 +99,14 @@
     return UIEdgeInsetsMake(self.view.cvSectionEdgeInsets.top,
                             self.view.cvSectionEdgeInsets.left,
                             self.view.cvSectionEdgeInsets.bottom,
-                            self.view.cvSectionEdgeInsets.right - self.view.fileUploadCcIvXGap);
+                            self.view.cvSectionEdgeInsets.right - self.view.ccIvXGap);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return self.view.fileUploadCcYGap;
+    return self.view.ccYGap;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return self.view.fileUploadCcXGap;
+    return self.view.ccXGap;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -122,10 +122,10 @@
     PoporUploadCC *cell;
     // !!!: 这个只显示➕cell
     if (self.view.isShowAddCC && indexPath.row == 0) {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:FileUploadCCAddKey forIndexPath:indexPath];
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:PoporUploadCCAddKey forIndexPath:indexPath];
         
         if (!cell.imageIV.image) {
-            cell.imageIV.image = [UIImage imageNamed:self.view.image_Add];
+            cell.imageIV.image = self.view.image_Add;
             cell.imageIV.contentMode = UIViewContentModeCenter;
             if (self.view.image_Add_bgColor) {
                 cell.imageIV.backgroundColor = self.view.image_Add_bgColor;
@@ -134,16 +134,16 @@
             }
             cell.selectBT.hidden = YES;
             
-            cell.funType = FileUploadCCFunTypeAdd;
+            cell.funType = PoporUploadCCFunTypeAdd;
             [cell.imageIV puUpdateProgress:1];
         }
         return cell;
     }
     // !!!: 正常cell
-    cell = [collectionView dequeueReusableCellWithReuseIdentifier:FileUploadCCNormalKey forIndexPath:indexPath];
+    cell = [collectionView dequeueReusableCellWithReuseIdentifier:PoporUploadCCNormalKey forIndexPath:indexPath];
     if (!cell.isInit) {
         cell.init = YES;
-        cell.funType         = FileUploadCCFunTypeNormal;
+        cell.funType         = PoporUploadCCFunTypeNormal;
         cell.selectBT.hidden = !self.view.isShowCcSelectBT;
     }
     [cell.imageIV puUpdateProgress:1];
@@ -151,37 +151,38 @@
     
     PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
     cell.uploadEntity = entity;
-    cell.indexPath              = indexPath;
+    cell.indexPath    = indexPath;
     
     [self.cellPresent freshCellIvImage:cell];
     
     switch(self.view.cvType) {
-        case FileUploadCvType_imageUpload: {
-            [self.cellPresent freshImageUploadCell:cell needBind:NO];
-            [self.cellPresent setImageUploadSelectCell:cell];
+        case PoporUploadCvType_imageUpload: {
+            [self.cellPresent freshImageBlockCell:cell needBind:NO];
+            [self.cellPresent freshImageSelectCell:cell];
             break;
         }
-        case FileUploadCvType_videoUpload: {
-            [self.cellPresent freshVideoCell:cell needBind:NO];
-            [self.cellPresent setVideoUploadSelectCell:cell];
+        case PoporUploadCvType_imageUploadBind: {
+            [self.cellPresent freshImageBlockCell:cell needBind:YES];
+            [self.cellPresent freshImageSelectCell:cell];
             break;
         }
-        case FileUploadCvType_imageUploadBind: {
-            [self.cellPresent freshImageUploadCell:cell needBind:YES];
-            [self.cellPresent setImageUploadSelectCell:cell];
+        case PoporUploadCvType_videoUpload: {
+            [self.cellPresent freshVideoBlockCell:cell needBind:NO];
+            [self.cellPresent freshVideoSelectCell:cell];
             break;
         }
-        case FileUploadCvType_videoUploadBind: {
-            [self.cellPresent freshVideoCell:cell needBind:YES];
+        case PoporUploadCvType_videoUploadBind: {
+            [self.cellPresent freshVideoBlockCell:cell needBind:YES];
+            [self.cellPresent freshVideoSelectCell:cell];
             break;
         }
-        case FileUploadCvType_imageDisplay:
-        case FileUploadCvType_videoDisplay: {
+        case PoporUploadCvType_imageDisplay:
+        case PoporUploadCvType_videoDisplay: {
             
             break;
         }
-        case FileUploadCvType_imageSelect:
-        case FileUploadCvType_videoSelect: {
+        case PoporUploadCvType_imageSelect:
+        case PoporUploadCvType_videoSelect: {
             [self.cellPresent freshImageVideoSelectCell:cell];
             break;
         }
@@ -196,13 +197,13 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
     PoporUploadCC * cc = (PoporUploadCC *)[collectionView cellForItemAtIndexPath:indexPath];
-    if (cc.funType == FileUploadCCFunTypeAdd) {
+    if (cc.funType == PoporUploadCCFunTypeAdd) {
         // 增加模式
-        if (self.view.cvType == FileUploadCvType_imageUpload ||
-            self.view.cvType == FileUploadCvType_imageUploadBind) {
+        if (self.view.cvType == PoporUploadCvType_imageUpload ||
+            self.view.cvType == PoporUploadCvType_imageUploadBind) {
             [self showImageACAdd];
-        }else if (self.view.cvType == FileUploadCvType_videoUpload ||
-                  self.view.cvType == FileUploadCvType_videoUploadBind) {
+        }else if (self.view.cvType == PoporUploadCvType_videoUpload ||
+                  self.view.cvType == PoporUploadCvType_videoUploadBind) {
             [self showVideoAC];
         }else{
             AlertToastTitle(@"模式设定出错");
@@ -210,10 +211,10 @@
     }else{
         // 查看详情模式
         switch (self.view.cvType) {
-            case FileUploadCvType_imageDisplay :
-            case FileUploadCvType_imageUpload :
-            case FileUploadCvType_imageUploadBind :{
-                if (self.view.addType == FileUploadAddTypeReplace) {
+            case PoporUploadCvType_imageDisplay :
+            case PoporUploadCvType_imageUpload :
+            case PoporUploadCvType_imageUploadBind :{
+                if (self.view.addType == PoporUploadAddTypeReplace) {
                     PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
                     if (entity.ivUrl) {
                         // 查看单张图片
@@ -228,14 +229,14 @@
                 }
                 break;
             }
-            case FileUploadCvType_videoDisplay:
-            case FileUploadCvType_videoUpload:
-            case FileUploadCvType_videoUploadBind:
-            case FileUploadCvType_videoSelect: {
+            case PoporUploadCvType_videoDisplay:
+            case PoporUploadCvType_videoUpload:
+            case PoporUploadCvType_videoUploadBind:
+            case PoporUploadCvType_videoSelect: {
                 [self.showPresent showVideoPlayVC:cc];
                 break;
             }
-            case FileUploadCvType_imageSelect:{
+            case PoporUploadCvType_imageSelect:{
                 [self.showPresent showImageBrowerVCIndexPath:indexPath all:YES];
                 break;
             }
@@ -533,13 +534,13 @@
         
         [oneAC addAction:cancleAction];
         
-        if (self.view.compressType & FileUploadVideoCompressTypeFFMpeg) {
+        if (self.view.compressType & PoporUploadVideoCompressTypeFFMpeg) {
             [oneAC addAction:ffmpegCompressAction];
         }
-        if (self.view.compressType & FileUploadVideoCompressTypeSystem) {
+        if (self.view.compressType & PoporUploadVideoCompressTypeSystem) {
             [oneAC addAction:sysCompressAction];
         }
-        if (self.view.compressType & FileUploadVideoCompressTypeNone) {
+        if (self.view.compressType & PoporUploadVideoCompressTypeNone) {
             [oneAC addAction:nonCompressAction];
         }
         

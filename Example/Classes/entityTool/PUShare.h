@@ -12,24 +12,30 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+// 因为UICollectionViewCell 的复用机制不好用
 @interface PUShare : NSObject
 
 + (instancetype)share;
 
-@property (nonatomic, strong) NSString * image_Add;
 @property (nonatomic, strong) UIColor  * image_Add_bgColor;
-@property (nonatomic, strong) NSString * image_SelectN;
-@property (nonatomic, strong) NSString * image_SelectS;
-@property (nonatomic, strong) NSString * image_Resume;
-@property (nonatomic        ) float    fileUploadCcIvCorner;
-@property (nonatomic        ) UIColor  * fileUploadCcIvBorderColor;
-@property (nonatomic        ) float    fileUploadCcIvBorderWidth;
 
-@property (nonatomic        ) CGFloat fileUploadCcBtXGap;
-@property (nonatomic        ) CGFloat fileUploadCcBtYGap;
-@property (nonatomic        ) CGFloat fileUploadCcIvXGap;
-@property (nonatomic        ) CGFloat fileUploadCcIvYGap;
+@property (nonatomic, strong) UIImage * image_Add;
+@property (nonatomic, strong) UIImage * image_SelectN;
+@property (nonatomic, strong) UIImage * image_SelectS;
+@property (nonatomic, strong) UIImage * image_Resume;
+
+@property (nonatomic        ) float    ccIvCorner;
+@property (nonatomic        ) UIColor  * ccIvBorderColor;
+@property (nonatomic        ) float    ccIvBorderWidth;
+
+@property (nonatomic        ) CGFloat ccBtXGap;
+@property (nonatomic        ) CGFloat ccBtYGap;
+@property (nonatomic        ) CGFloat ccIvXGap;
+@property (nonatomic        ) CGFloat ccIvYGap;
 @property (nonatomic, getter=isShowCcBG) BOOL showCcBG;// 显示bg颜色
+
+// 获取本framework图片
++ (UIImage *)imageBundleNamed:(NSString *)imageName;
 
 @end
 

@@ -45,7 +45,7 @@
     UICollectionView * collectionView = self.view.infoCV;
     NSInteger count;
     NSInteger i;
-    NSInteger indexRowFirst = self.view.isShowAddCC ? 1:0 ;
+    //NSInteger indexRowFirst = self.view.isShowAddCC ? 1:0 ;
     
     if (all) {
         count = [self.present collectionView:collectionView numberOfItemsInSection:0];

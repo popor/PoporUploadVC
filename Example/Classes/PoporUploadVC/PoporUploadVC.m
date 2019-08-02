@@ -22,14 +22,14 @@
 
 @implementation PoporUploadVC
 
-@synthesize cvSectionEdgeInsets, fileUploadCcXGap, fileUploadCcYGap, lineNumber, ccSize;
+@synthesize cvSectionEdgeInsets, ccXGap, ccYGap, lineNumber, ccSize;
 @synthesize infoCV;
 
 @synthesize image_Add, image_Add_bgColor;
 @synthesize image_SelectN;
 @synthesize image_SelectS;
 @synthesize image_Resume;
-@synthesize placehlodCcImage;
+@synthesize ccPlacehlodImage;
 
 @synthesize maxUploadNum;
 
@@ -50,14 +50,14 @@
 @synthesize showCcSelectBT;
 @synthesize addType;
 
-@synthesize fileUploadCcIvCorner;
-@synthesize fileUploadCcIvBorderColor;
-@synthesize fileUploadCcIvBorderWidth;
+@synthesize ccIvCorner;
+@synthesize ccIvBorderColor;
+@synthesize ccIvBorderWidth;
 
-@synthesize fileUploadCcBtXGap;
-@synthesize fileUploadCcBtYGap;
-@synthesize fileUploadCcIvXGap;
-@synthesize fileUploadCcIvYGap;
+@synthesize ccBtXGap;
+@synthesize ccBtYGap;
+@synthesize ccIvXGap;
+@synthesize ccIvYGap;
 @synthesize showCcBG;
 
 @synthesize videoPlayBlock;
@@ -77,22 +77,22 @@
             float width =  (ScreenSize.width
                             - self.cvSectionEdgeInsets.left
                             - self.cvSectionEdgeInsets.right
-                            + self.fileUploadCcIvXGap
-                            - self.fileUploadCcXGap*(self.lineNumber-1)
+                            + self.ccIvXGap
+                            - self.ccXGap*(self.lineNumber-1)
                             - 1
                             )/colume;
             self.ccSize = CGSizeMake(width, width);
         }
         switch (self.addType) {
-            case FileUploadAddTypeNone: {
+            case PoporUploadAddTypeNone: {
                 self.showAddCC = NO;
                 break;
             }
-            case FileUploadAddTypeOrder: {
+            case PoporUploadAddTypeOrder: {
                 self.showAddCC = YES;
                 break;
             }
-            case FileUploadAddTypeReplace: {
+            case PoporUploadAddTypeReplace: {
                 self.showAddCC = NO;
                 break;
             }
@@ -128,7 +128,7 @@
     [super viewDidLoad];
     
     if (!self.title) {
-        self.title = @"素材";
+        self.title = @"上传";
     }
     self.view.backgroundColor = [UIColor whiteColor];
 }
@@ -147,8 +147,8 @@
 }
 
 - (void)addViews {
-    if (self.cvType == FileUploadCvType_imageSelect ||
-        self.cvType == FileUploadCvType_videoSelect ) {
+    if (self.cvType == PoporUploadCvType_imageSelect ||
+        self.cvType == PoporUploadCvType_videoSelect ) {
         [self imageVideoSelectType];
     }
     
@@ -192,8 +192,8 @@
     
     //3.注册collectionViewCell
     //注意，此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致 均为 cellId
-    [cv registerClass:[PoporUploadCC class] forCellWithReuseIdentifier:FileUploadCCAddKey];
-    [cv registerClass:[PoporUploadCC class] forCellWithReuseIdentifier:FileUploadCCNormalKey];
+    [cv registerClass:[PoporUploadCC class] forCellWithReuseIdentifier:PoporUploadCCAddKey];
+    [cv registerClass:[PoporUploadCC class] forCellWithReuseIdentifier:PoporUploadCCNormalKey];
     
     //注册headerView  此处的ReuseIdentifier 必须和 cellForItemAtIndexPath 方法中 一致  均为reusableView
     //[cv registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView"];
@@ -220,27 +220,28 @@
 - (void)updateFileUploadTool {
     PUShare * tool = [PUShare share];
     
-    self.image_Add     = self.image_Add     ? : PoporFUImage_Add;
-    self.image_SelectN = self.image_SelectN ? : PoporFUImage_SelectN;
-    self.image_SelectS = self.image_SelectS ? : PoporFUImage_SelectS;
-    self.image_Resume  = self.image_Resume  ? : PoporFUImage_Resume;
+    self.image_Add         = self.image_Add     ? : [PUShare imageBundleNamed:PoporImage_Add];
+    self.image_SelectN     = self.image_SelectN ? : [PUShare imageBundleNamed:PoporImage_SelectN];
+    self.image_SelectS     = self.image_SelectS ? : [PUShare imageBundleNamed:PoporImage_SelectS];
+    self.image_Resume      = self.image_Resume  ? : [PUShare imageBundleNamed:PoporImage_Resume];
 
     tool.image_Add         = self.image_Add;
-    tool.image_Add_bgColor = self.image_Add_bgColor;
     tool.image_SelectN     = self.image_SelectN;
     tool.image_SelectS     = self.image_SelectS;
     tool.image_Resume      = self.image_Resume;
-    
-    tool.fileUploadCcBtXGap = self.fileUploadCcBtXGap;
-    tool.fileUploadCcBtYGap = self.fileUploadCcBtYGap;
-    tool.fileUploadCcIvXGap = self.fileUploadCcIvXGap;
-    tool.fileUploadCcIvYGap = self.fileUploadCcIvYGap;
-    
-    tool.fileUploadCcIvCorner      = self.fileUploadCcIvCorner;
-    tool.fileUploadCcIvBorderColor = self.fileUploadCcIvBorderColor;
-    tool.fileUploadCcIvBorderWidth = self.fileUploadCcIvBorderWidth;
-    
-    tool.showCcBG = self.isShowCcBG;
+
+    tool.image_Add_bgColor = self.image_Add_bgColor;
+
+    tool.ccBtXGap          = self.ccBtXGap;
+    tool.ccBtYGap          = self.ccBtYGap;
+    tool.ccIvXGap          = self.ccIvXGap;
+    tool.ccIvYGap          = self.ccIvYGap;
+
+    tool.ccIvCorner        = self.ccIvCorner;
+    tool.ccIvBorderColor   = self.ccIvBorderColor;
+    tool.ccIvBorderWidth   = self.ccIvBorderWidth;
+
+    tool.showCcBG          = self.isShowCcBG;
 }
 
 @end

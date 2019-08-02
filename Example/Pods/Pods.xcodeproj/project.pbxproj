@@ -6,6 +6,28 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B0AC8E8838A4E02A99344CC7607B6538 /* PoporUploadVC */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9208A978CA877DA06EDAB0ECC29F98CD /* Build configuration list for PBXAggregateTarget "PoporUploadVC" */;
+			buildPhases = (
+			);
+			dependencies = (
+				362A86FBF18F0D0550802039450CCFDB /* PBXTargetDependency */,
+				D38780B6DF99F55C945F9FCA70785DAE /* PBXTargetDependency */,
+				DBF40090BBCAD2203E8A7B42CF89BB1B /* PBXTargetDependency */,
+				2DDB4DE3FB251CE101F2B0C732CBBD34 /* PBXTargetDependency */,
+				5821D064B2EF2CAF9FD811829429F94C /* PBXTargetDependency */,
+				06FB90523A4600E6C6B82C3C6E20CEC1 /* PBXTargetDependency */,
+				2018299B03384A18DD6F82E40E95FEC8 /* PBXTargetDependency */,
+				2D22C91148525C311BB9E86889C894F2 /* PBXTargetDependency */,
+				3BCDCB2420516BFFCD1F0B3382C2CBAA /* PBXTargetDependency */,
+				D069CEB8698255BE833301D965B5F386 /* PBXTargetDependency */,
+			);
+			name = PoporUploadVC;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		009797B57BE92E60C68683D89CC01FDC /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 179CF4D5D944A73CD4617CC702ABA68B /* TOActivityCroppedImageProvider.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		00A3591B6C5264B2E5A8AA8004FC2E3B /* RACEXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A784347779EC8B635593008151AF4213 /* RACEXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -495,7 +517,6 @@
 		D783A8A5A426DBF85162B92142651218 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 699E630EE98A8B9912AFCCF8BE2BB147 /* MASConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D813D0DEEBC710095489FEA635D26CCF /* NSDictionary+RACSequenceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 24922114AAD728CEA3A4C0D99B59DFE0 /* NSDictionary+RACSequenceAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D8E5F224F9DB668797C36DD0D3B695B5 /* PHAsset+data.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F46072D4A947DC75C1BB7C379F893A /* PHAsset+data.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D976B764513067446901EAE6D42D6547 /* PoporUploadVC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3371F8ACC0DD9F99CF206BCC35C00A1 /* PoporUploadVC-dummy.m */; };
 		D981C88BB070F14697383E783FED805F /* PoporImagePickerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B54CC2864499CA277685DEDF385843BE /* PoporImagePickerVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D9B75D7AF70581C679F68B04A291F80A /* RACSignalSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = C768450ECD8B39EFF172D0EE449814E3 /* RACSignalSequence.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DA9CF0BFC9696769907BC19C8FBAD48A /* BlockAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CD322568AB7A8E2D2D4313F039FC607 /* BlockAlertView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -517,7 +538,6 @@
 		E1CB4BA14AD8D8175D6CF32BAF70727E /* DMProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2093D464C40C510ADC9520AFC8A34764 /* DMProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E1D7B98A36410D7A4347795B668275FD /* DeviceDisk.h in Headers */ = {isa = PBXBuildFile; fileRef = 32ECB63B2B2B058CA398D1F96595491A /* DeviceDisk.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E1FA2B4E309D96F6E56278F50ECF17BD /* TZAssetModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A9CE7B7C3189C91CC0C5CC6EE8B5D7C /* TZAssetModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E214145276FFF4191635C7A6AC243E0A /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5630CD7F3B65EF030E7A1863553C52 /* ReplaceMe.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E2BA7050BF7B8605E87ED0C946FD97A0 /* NSFileHandle+RACSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = BCFEDFE307003E44ABEB44CEEEEA7384 /* NSFileHandle+RACSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E2CF167DE3F85250B97935D378BD3A0A /* NSString+email.m in Sources */ = {isa = PBXBuildFile; fileRef = EBFC61B492E60ED398BCB11C983345C5 /* NSString+email.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E36D330401830656980A293E34B6AC3E /* PoporImageBrowerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F56230951069350C6E37B52F028CFA31 /* PoporImageBrowerCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -597,19 +617,19 @@
 			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
 			remoteInfo = JSONModel;
 		};
+		09CA5997B728792D80D02DFEB1389760 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0D06D6D196B6951E479A69C10EFFBF5;
+			remoteInfo = PoporAVPlayer;
+		};
 		0BB28AF49E989F8E0C7250F0352E2190 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A96BBB982D62BB807B5BD10774BE2D07;
 			remoteInfo = TZImagePickerController;
-		};
-		0D4F9C00BF33396B6E6C260C7588B59C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
-			remoteInfo = AFNetworking;
 		};
 		0D83FF21EB5034FC602E4B8776390482 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -618,19 +638,19 @@
 			remoteGlobalIDString = 2568F753F09C4DFFD8770DCC78EDAEAE;
 			remoteInfo = KVOController;
 		};
-		0E35D11AA95989ABAD00101C73B97C8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
-			remoteInfo = JSONModel;
-		};
 		11FB0C51C3BA7A68761947D0F11C6031 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
 			remoteInfo = SDWebImage;
+		};
+		19AF254AF739CC4B723168A9BFB6E20B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
+			remoteInfo = JSONModel;
 		};
 		1F972E8CB2FDC9EB95D46D7DE747DC1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -667,6 +687,13 @@
 			remoteGlobalIDString = A96BBB982D62BB807B5BD10774BE2D07;
 			remoteInfo = TZImagePickerController;
 		};
+		2DCD30225A148C25A97B8293F45714F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 817833671E949B1C5DDEDB675875A7BE;
+			remoteInfo = PoporUI;
+		};
 		2E04ECF99D01E3429FB29A1336E18F0D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -681,13 +708,6 @@
 			remoteGlobalIDString = EDADB94E77F4A2C2446E84D78D926B9A;
 			remoteInfo = PoporImageBrower;
 		};
-		30F11F5862BF07A156D8F77A9E4453CE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 97370628A8BC4636041BB29E59F4D696;
-			remoteInfo = PoporFoundation;
-		};
 		3F184D07C4764DAF2FC3394E9284F4DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -695,19 +715,12 @@
 			remoteGlobalIDString = 41A5EBEED271FFE3C5F9445BEDC7905D;
 			remoteInfo = PoporOrientation;
 		};
-		3FB0F22AB2A70C74976B9B78AC5EAEDA /* PBXContainerItemProxy */ = {
+		4295ADD9E650CAF9C72C84439C4A3AC9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
-			remoteInfo = SDWebImage;
-		};
-		4DF7842DE501EFCA5C823BF8F65CB62E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C0E032CFC4CF37EB8C4BCA7F69F012F;
-			remoteInfo = PoporMedia;
+			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
+			remoteInfo = Masonry;
 		};
 		50358BC1D76879C8DD68DFE82F248EBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -716,12 +729,12 @@
 			remoteGlobalIDString = 97370628A8BC4636041BB29E59F4D696;
 			remoteInfo = PoporFoundation;
 		};
-		51C1B0ABC297C3B3C5474CDE4FECC246 /* PBXContainerItemProxy */ = {
+		53C8F81EB03D79A210977A481E411159 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 243CB33AE70054DF4B4080E6BB990227;
-			remoteInfo = DMProgressHUD;
+			remoteGlobalIDString = EDADB94E77F4A2C2446E84D78D926B9A;
+			remoteInfo = PoporImageBrower;
 		};
 		562298467C24120C28D99557277834A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -729,6 +742,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 79BFEE24BDA715C459390BEF93511D7B;
 			remoteInfo = SKFCamera;
+		};
+		5B888AB7E417FFDBA21384355E3E227F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97370628A8BC4636041BB29E59F4D696;
+			remoteInfo = PoporFoundation;
 		};
 		609F51BB72593FC130C7332CACC2DCEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -765,12 +785,12 @@
 			remoteGlobalIDString = 97370628A8BC4636041BB29E59F4D696;
 			remoteInfo = PoporFoundation;
 		};
-		915F61936A509D7894883D9A063C9BAC /* PBXContainerItemProxy */ = {
+		864D3B6FBA951AB40625006F562163CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E0D06D6D196B6951E479A69C10EFFBF5;
-			remoteInfo = PoporAVPlayer;
+			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
+			remoteInfo = AFNetworking;
 		};
 		932785D329F455090F7EDF864DC15706 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -778,6 +798,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 817833671E949B1C5DDEDB675875A7BE;
 			remoteInfo = PoporUI;
+		};
+		9A3E804B5AD3EE0051064B39B7E77265 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
+			remoteInfo = SDWebImage;
 		};
 		9A633A3C96A3A8B533F6A9E78C37F83D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -792,13 +819,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
 			remoteInfo = SDWebImage;
-		};
-		A703152A1A43F5BF631214B6199E2EE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EDADB94E77F4A2C2446E84D78D926B9A;
-			remoteInfo = PoporImageBrower;
 		};
 		A9085B8FFDF1D45EE4A46433B28439D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -835,12 +855,12 @@
 			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
 			remoteInfo = Masonry;
 		};
-		C4557ABA0FF4CF5173264D78D98B6ADF /* PBXContainerItemProxy */ = {
+		CC9115CEE5534556F0C89472DB24928C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
-			remoteInfo = Masonry;
+			remoteGlobalIDString = 9C0E032CFC4CF37EB8C4BCA7F69F012F;
+			remoteInfo = PoporMedia;
 		};
 		D25761AA176EAD375E1FC7A3E3E475F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -877,13 +897,6 @@
 			remoteGlobalIDString = 438B238ACC7DF1178D1BCE1A31983146;
 			remoteInfo = ReactiveObjC;
 		};
-		E276DFF0809FE32853EEFBDDD87C23B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 817833671E949B1C5DDEDB675875A7BE;
-			remoteInfo = PoporUI;
-		};
 		E938B97AE75566EEA45E6D77962FC296 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -904,6 +917,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 79BFEE24BDA715C459390BEF93511D7B;
 			remoteInfo = SKFCamera;
+		};
+		F2A7D9F8EF329BB2AA9A70758E5FE45D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 243CB33AE70054DF4B4080E6BB990227;
+			remoteInfo = DMProgressHUD;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -959,7 +979,6 @@
 		156146C68CB10313E22BF041BD606CF3 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
 		15DEB70777F2AFD86C7375B0AD8128F2 /* UIDatePicker+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDatePicker+RACSignalSupport.h"; path = "ReactiveObjC/UIDatePicker+RACSignalSupport.h"; sourceTree = "<group>"; };
 		1636F161C2D092C5F1F32BF681431D45 /* UIButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+WebCache.m"; path = "SDWebImage/UIButton+WebCache.m"; sourceTree = "<group>"; };
-		16F7C7CCCCA465D60FE2CAAF2640F6A4 /* PoporUploadVC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporUploadVC-prefix.pch"; sourceTree = "<group>"; };
 		172AAB5C962C4106C6DE8E88B1FEA2A0 /* TZAssetCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZAssetCell.h; path = TZImagePickerController/TZImagePickerController/TZAssetCell.h; sourceTree = "<group>"; };
 		17598105AD233524A00225AFE54306E0 /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
 		176B71EC56AE303FADF589058F7D987F /* RACDynamicSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACDynamicSequence.h; path = ReactiveObjC/RACDynamicSequence.h; sourceTree = "<group>"; };
@@ -975,6 +994,7 @@
 		1AE03AFDDC96C04A7C2557193E13D297 /* UITableViewCell+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+RACSignalSupport.m"; path = "ReactiveObjC/UITableViewCell+RACSignalSupport.m"; sourceTree = "<group>"; };
 		1B0BB5C3D1C0DD07ADE5685B9E6B47E9 /* PoporMediaPrefix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporMediaPrefix.h; path = PoporMedia/Classes/PoporMediaPrefix.h; sourceTree = "<group>"; };
 		1B50E5A4FFE56AA0173E42135C100073 /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/SDWebImageManager.m; sourceTree = "<group>"; };
+		1B715F79C4C918C3AAC66C108BBF5E8B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		1C435C820B48059246B14BF778B4C7B5 /* TOCropScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropScrollView.h; path = SKFCamera/TOCropScrollView.h; sourceTree = "<group>"; };
 		1CF161CA215AF761963DD1C7264A64C0 /* NSObject+RACDescription.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+RACDescription.m"; path = "ReactiveObjC/NSObject+RACDescription.m"; sourceTree = "<group>"; };
 		1D2C4EB3905B71054ECA05A80D0DCE0A /* MASViewAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASViewAttribute.m; path = Masonry/MASViewAttribute.m; sourceTree = "<group>"; };
@@ -1036,7 +1056,6 @@
 		3673E93758CED42D056AA2C67C1DDF85 /* UIColor+HexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+HexString.m"; path = "SDWebImage/Private/UIColor+HexString.m"; sourceTree = "<group>"; };
 		36B2BB84DE4628D75E9E22CDC8C61FFF /* TZImageCropManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZImageCropManager.m; path = TZImagePickerController/TZImagePickerController/TZImageCropManager.m; sourceTree = "<group>"; };
 		36E998A7660FD852A29D41E07407E91D /* NSObject+assign.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+assign.h"; path = "PoporFoundation/Classes/NSObject/NSObject+assign.h"; sourceTree = "<group>"; };
-		3709714A9EBC9D3473358F451A32D40B /* libPoporUploadVC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPoporUploadVC.a; path = libPoporUploadVC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3717B5678E0BD889B17EAA68D64C1777 /* SDWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWeakProxy.h; path = SDWebImage/Private/SDWeakProxy.h; sourceTree = "<group>"; };
 		37E5E9CD32396B53B34043CB8AD2EB49 /* UITextView+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+RACSignalSupport.m"; path = "ReactiveObjC/UITextView+RACSignalSupport.m"; sourceTree = "<group>"; };
 		386FE773CB95CD0C7FEC70FB5586D55B /* RACKVOChannel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACKVOChannel.m; path = ReactiveObjC/RACKVOChannel.m; sourceTree = "<group>"; };
@@ -1092,7 +1111,6 @@
 		49C1331748CB6A35F6CE3BB5E07B70F3 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		4A1139DCFD4E40AB5203C11A178E5D15 /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
 		4C3EEC398E000575F7DDF84BD1333FE0 /* NSInvocation+RACTypeParsing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+RACTypeParsing.m"; path = "ReactiveObjC/NSInvocation+RACTypeParsing.m"; sourceTree = "<group>"; };
-		4C5630CD7F3B65EF030E7A1863553C52 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = PoporUploadVC/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		4CAE4335C79F11E4A969D1D20E7EC636 /* PoporMediaImageBundle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporMediaImageBundle.h; path = PoporMedia/Classes/PoporMediaImageBundle.h; sourceTree = "<group>"; };
 		4D2C93C82A3EC1B5E795505BE6F0B337 /* UIImage+create.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+create.m"; path = "PoporUI/Classes/UIImage/UIImage+create.m"; sourceTree = "<group>"; };
 		4D3601C378DB470AF8FE880D41FF1F2C /* UIAlertView+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+RACSignalSupport.m"; path = "ReactiveObjC/UIAlertView+RACSignalSupport.m"; sourceTree = "<group>"; };
@@ -1124,7 +1142,6 @@
 		5455DC137390E2AB24EC89475C6FF37A /* SDWebImageCacheSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCacheSerializer.h; path = SDWebImage/SDWebImageCacheSerializer.h; sourceTree = "<group>"; };
 		54766151F9489996BBB8EFBF378D288C /* RACKVOChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACKVOChannel.h; path = ReactiveObjC/RACKVOChannel.h; sourceTree = "<group>"; };
 		555210DEB143284B6CB8182F63B5992B /* PoporImageBrowerCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporImageBrowerCell.h; path = PoporImageBrower/Classes/PoporImageBrowerCell.h; sourceTree = "<group>"; };
-		559006A93BCBF0D8307338FBC4A7CBA9 /* PoporUploadVC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporUploadVC.xcconfig; sourceTree = "<group>"; };
 		5695E39AF9DAF7D582ACA1F50025CAC4 /* libPoporImageBrower.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPoporImageBrower.a; path = libPoporImageBrower.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		569C0E1AE699B189416F8F567945E6A3 /* RACKVOTrampoline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACKVOTrampoline.h; path = ReactiveObjC/RACKVOTrampoline.h; sourceTree = "<group>"; };
 		5789132541A8EDC294E78880B28AAA4C /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewControllerTransitioning.m; path = SKFCamera/TOCropViewControllerTransitioning.m; sourceTree = "<group>"; };
@@ -1165,7 +1182,6 @@
 		639F94100E9188B11CAE2CDCB44BAD1C /* IToastKeyboard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = IToastKeyboard.m; path = PoporUI/Classes/IToast/IToastKeyboard.m; sourceTree = "<group>"; };
 		63A7FB4429D58A0527D7A357927AACE0 /* RACSubscriptionScheduler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACSubscriptionScheduler.m; path = ReactiveObjC/RACSubscriptionScheduler.m; sourceTree = "<group>"; };
 		649FF0632357AC97F43E3406F75007B3 /* Masonry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Masonry.h; path = Masonry/Masonry.h; sourceTree = "<group>"; };
-		64BBAEC4C55F6B1CE4AF614272046E65 /* PoporUploadVC.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PoporUploadVC.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		650E87EE961ADA99CF1BF41764D84169 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
 		67C1E6FF32E3126FBF854098F9CE1C5D /* SDImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCoder.h; path = SDWebImage/SDImageCoder.h; sourceTree = "<group>"; };
 		68BC1A1F0A2ECBB051BB376D1C01EBA7 /* RACReplaySubject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACReplaySubject.m; path = ReactiveObjC/RACReplaySubject.m; sourceTree = "<group>"; };
@@ -1203,7 +1219,6 @@
 		75C10E7112CACBCFF0B1A7F9860F718D /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		75E83F54AF27B9DD8509D38426E9581B /* SDImageTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageTransformer.m; path = SDWebImage/SDImageTransformer.m; sourceTree = "<group>"; };
 		76B69485C3A2D489392588508A6EFFD9 /* SDImageGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGraphics.h; path = SDWebImage/SDImageGraphics.h; sourceTree = "<group>"; };
-		77C05202CFFA7D8019525C759A96E3FA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		78552E4A049D05B52D46CA48BF81C04D /* Pods-PoporUploadVC_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PoporUploadVC_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7877AAD1F8AD72753AB5D8C6BBA77C53 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Swizzling.h"; path = "PoporFoundation/Classes/NSObject/NSObject+Swizzling.h"; sourceTree = "<group>"; };
 		7889E2DC14D389F051F23090ADABCFFE /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
@@ -1215,7 +1230,6 @@
 		7CB674E090653D4E5B95674F3E0BE611 /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZGifPhotoPreviewController.h; path = TZImagePickerController/TZImagePickerController/TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
 		7D22B5E06BA9D68F077A279955FD8B15 /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
 		7D867EA629EE58BA2C7C8CEF52CE4426 /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
-		7DC4B2BF307E71417F7783B92E3C6AA9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		7DE7A1C5B5A35A593BDEA46BFCF25361 /* libPods-PoporUploadVC_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PoporUploadVC_Example.a"; path = "libPods-PoporUploadVC_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE835A0BD54AFA593C1D14E85F6107A /* MKAnnotationView+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MKAnnotationView+RACSignalSupport.m"; path = "ReactiveObjC/MKAnnotationView+RACSignalSupport.m"; sourceTree = "<group>"; };
 		7E1804A0FC291C4F606FCB75241DCE06 /* TOCropScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropScrollView.m; path = SKFCamera/TOCropScrollView.m; sourceTree = "<group>"; };
@@ -1237,6 +1251,7 @@
 		8359AA6DCD8DFFC2AD686A6FE31D6D73 /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
 		83FEDAFCE5933CA949FBB8C4A118B4D6 /* NSObject+RACDeallocating.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+RACDeallocating.m"; path = "ReactiveObjC/NSObject+RACDeallocating.m"; sourceTree = "<group>"; };
 		84429FE4855B046AB8935A848AF9F44B /* SDInternalMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDInternalMacros.h; path = SDWebImage/Private/SDInternalMacros.h; sourceTree = "<group>"; };
+		84710C6B22EE8F9FD55561D12CC2C1E4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		8487FE2B2AB87ECF98371841B2BA448F /* SKFCamera-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SKFCamera-dummy.m"; sourceTree = "<group>"; };
 		84E44FA6D5511278B003A0C392B4894F /* SDImageTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageTransformer.h; path = SDWebImage/SDImageTransformer.h; sourceTree = "<group>"; };
 		852BB66E3D168704D85F9CA906E74D68 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
@@ -1333,7 +1348,6 @@
 		A1E2CC4A14C866D0AE8DDD872F1FF97F /* DeviceDisk.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DeviceDisk.m; path = PoporUI/Classes/Tool/DeviceDisk.m; sourceTree = "<group>"; };
 		A2303B1DEBEF0EE43405429D7B2954A5 /* SDImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoader.h; path = SDWebImage/SDImageLoader.h; sourceTree = "<group>"; };
 		A2663618351E07C4AA34A5674BA6F41A /* UISegmentedControl+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISegmentedControl+RACSignalSupport.h"; path = "ReactiveObjC/UISegmentedControl+RACSignalSupport.h"; sourceTree = "<group>"; };
-		A3371F8ACC0DD9F99CF206BCC35C00A1 /* PoporUploadVC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporUploadVC-dummy.m"; sourceTree = "<group>"; };
 		A3E6C16E321053382E36ACC4012F9EF6 /* RACSignalSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACSignalSequence.m; path = ReactiveObjC/RACSignalSequence.m; sourceTree = "<group>"; };
 		A48EF5C4393920291AF5E6652FDD5BA3 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
 		A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFNetworking.a; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1481,6 +1495,7 @@
 		D8AD1A6470769E31EA852903169E72A0 /* PoporOrientation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporOrientation-dummy.m"; sourceTree = "<group>"; };
 		D9DC9200D4BA26CE0B22111C6266FD23 /* NSBezierPath+RoundedCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+RoundedCorners.h"; path = "SDWebImage/Private/NSBezierPath+RoundedCorners.h"; sourceTree = "<group>"; };
 		D9E50570902C831EC0424F57ACA59F24 /* IToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IToast.h; path = PoporUI/Classes/IToast/IToast.h; sourceTree = "<group>"; };
+		DA2703BC14C7DDBDF7682A2B0ECDDD90 /* PoporUploadVC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporUploadVC.xcconfig; sourceTree = "<group>"; };
 		DAB8F719E4F78E388F2FD9DE0473EB00 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
 		DB051730BB27ECD83189B571F2FF5370 /* NSUserDefaults+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+RACSupport.h"; path = "ReactiveObjC/NSUserDefaults+RACSupport.h"; sourceTree = "<group>"; };
 		DB215FD4A97A2EE0D6A3569E49B3207D /* PoporUI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporUI.xcconfig; sourceTree = "<group>"; };
@@ -1491,6 +1506,7 @@
 		DD0A947EA22D56C326F18402AC576BA9 /* NSDate+Tool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Tool.h"; path = "PoporFoundation/Classes/NSDate/NSDate+Tool.h"; sourceTree = "<group>"; };
 		DD615C6928553CB620722FA8C706DC3F /* PoporMedia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporMedia-dummy.m"; sourceTree = "<group>"; };
 		DD9DE30BD7A9268E72104F3F62450791 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
+		DDD7248C54D78E49DE9C6C1570BB052A /* PoporUploadVC.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PoporUploadVC.bundle; path = Example/Classes/PoporUploadVC.bundle; sourceTree = "<group>"; };
 		DE9F74C1CE5C01EF7C1B6E1346EEF6D7 /* NSNotificationCenter+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+RACSupport.h"; path = "ReactiveObjC/NSNotificationCenter+RACSupport.h"; sourceTree = "<group>"; };
 		DF816F7AFC954B6D160DE40242881638 /* UIBarButtonItem+RACCommandSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+RACCommandSupport.h"; path = "ReactiveObjC/UIBarButtonItem+RACCommandSupport.h"; sourceTree = "<group>"; };
 		DFE840CEA62984474DEDE53F72FC2726 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZPhotoPreviewCell.m; path = TZImagePickerController/TZImagePickerController/TZPhotoPreviewCell.m; sourceTree = "<group>"; };
@@ -1500,6 +1516,7 @@
 		E1C1A5A42BD7DB07598D58F56AB7CC91 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASLayoutConstraint.m; path = Masonry/MASLayoutConstraint.m; sourceTree = "<group>"; };
 		E20A13C15887F3D37929A32988C207D0 /* SDImageCacheDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheDefine.m; path = SDWebImage/SDImageCacheDefine.m; sourceTree = "<group>"; };
 		E2421885161C06CD386E907FB563350C /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MASShorthandAdditions.h"; path = "Masonry/NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		E25ECA6AB33EBBA3A947536BFDE23196 /* PoporUploadVC.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PoporUploadVC.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E2BEBA9BCD6EE71A70C9AD0842C54B70 /* RACDisposable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACDisposable.h; path = ReactiveObjC/RACDisposable.h; sourceTree = "<group>"; };
 		E339872DEB04FF3194B8525CB3250508 /* BlockActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlockActionSheet.h; path = PoporUI/Classes/BlockView/BlockActionSheet.h; sourceTree = "<group>"; };
 		E364C2754B90940100F74C22EEC8AD43 /* RACIndexSetSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACIndexSetSequence.h; path = ReactiveObjC/RACIndexSetSequence.h; sourceTree = "<group>"; };
@@ -1626,13 +1643,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7913F97326CFF57C1AF0834ED60283C6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8A4F03BC9D1647355B4DE8F769E6A87A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1699,16 +1709,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01783D809E018A5FD059773AFC381D98 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				7DC4B2BF307E71417F7783B92E3C6AA9 /* LICENSE */,
-				64BBAEC4C55F6B1CE4AF614272046E65 /* PoporUploadVC.podspec */,
-				77C05202CFFA7D8019525C759A96E3FA /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		04CDF7F8BDCD5558B812BF4F686661F9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1735,7 +1735,7 @@
 		06E2656E66DF420EA06526CB9806BF14 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C2104B5210A9A9D935ED003AFEDD57F8 /* PoporUploadVC */,
+				23D01A0FE05B6D971057D1D693B82036 /* PoporUploadVC */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -1783,32 +1783,6 @@
 			name = NSFileManager;
 			sourceTree = "<group>";
 		};
-		1A8F79BF8C8E1E47033DD15D9682830B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */,
-				57917A5BB51A1E2E8B9F3650BB723391 /* libDMProgressHUD.a */,
-				BAACA1BF7AB3DD28402C4F9A7C2FD104 /* libJSONModel.a */,
-				399EC9508E73C0D54D9BBD8741FBA137 /* libKVOController.a */,
-				1FFED36A657123030ABB700256D73F15 /* libMasonry.a */,
-				8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */,
-				7DE7A1C5B5A35A593BDEA46BFCF25361 /* libPods-PoporUploadVC_Example.a */,
-				D71DE5D71988486C719AFEB3E07BEEEC /* libPods-PoporUploadVC_Tests.a */,
-				C1E4B17CB80F41426423827020ACCC69 /* libPoporAVPlayer.a */,
-				DC3CA27C70199A0DD6E8BCB6D8E30EED /* libPoporFoundation.a */,
-				5695E39AF9DAF7D582ACA1F50025CAC4 /* libPoporImageBrower.a */,
-				34635FE5FBF9364C0387CB3896C8765C /* libPoporMedia.a */,
-				E99D1E3748DEDB52304547C95C4A9E93 /* libPoporOrientation.a */,
-				3D3B401BD51F49729D5652424781AD38 /* libPoporUI.a */,
-				3709714A9EBC9D3473358F451A32D40B /* libPoporUploadVC.a */,
-				9621C6383F5733C35183B2DE886C7EC6 /* libReactiveObjC.a */,
-				B0B214D775196BA7CA8E17E53048A493 /* libSDWebImage.a */,
-				F20E67F46F7799B2F4EDB561C3021E5B /* libSKFCamera.a */,
-				8E1D5C0FCA0D872C3F21E87F25420681 /* libTZImagePickerController.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1C34260E1386AAB7A6660CD0C960ED4D /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1817,6 +1791,17 @@
 			);
 			name = SDWebImage;
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		23D01A0FE05B6D971057D1D693B82036 /* PoporUploadVC */ = {
+			isa = PBXGroup;
+			children = (
+				DCD47E906254EAE05A3F4460384A012C /* Pod */,
+				35BD9FF970D6AA4C083C438C716FD362 /* Resources */,
+				7FFA08B49A99099434891E335CA2C24E /* Support Files */,
+			);
+			name = PoporUploadVC;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		25971E3E61D710FB9A6481E665BB9746 /* Pods */ = {
@@ -1853,6 +1838,31 @@
 			path = "../Target Support Files/PoporMedia";
 			sourceTree = "<group>";
 		};
+		27E37C6D92BBB1E2D58D2745DF22E83B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */,
+				57917A5BB51A1E2E8B9F3650BB723391 /* libDMProgressHUD.a */,
+				BAACA1BF7AB3DD28402C4F9A7C2FD104 /* libJSONModel.a */,
+				399EC9508E73C0D54D9BBD8741FBA137 /* libKVOController.a */,
+				1FFED36A657123030ABB700256D73F15 /* libMasonry.a */,
+				8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */,
+				7DE7A1C5B5A35A593BDEA46BFCF25361 /* libPods-PoporUploadVC_Example.a */,
+				D71DE5D71988486C719AFEB3E07BEEEC /* libPods-PoporUploadVC_Tests.a */,
+				C1E4B17CB80F41426423827020ACCC69 /* libPoporAVPlayer.a */,
+				DC3CA27C70199A0DD6E8BCB6D8E30EED /* libPoporFoundation.a */,
+				5695E39AF9DAF7D582ACA1F50025CAC4 /* libPoporImageBrower.a */,
+				34635FE5FBF9364C0387CB3896C8765C /* libPoporMedia.a */,
+				E99D1E3748DEDB52304547C95C4A9E93 /* libPoporOrientation.a */,
+				3D3B401BD51F49729D5652424781AD38 /* libPoporUI.a */,
+				9621C6383F5733C35183B2DE886C7EC6 /* libReactiveObjC.a */,
+				B0B214D775196BA7CA8E17E53048A493 /* libSDWebImage.a */,
+				F20E67F46F7799B2F4EDB561C3021E5B /* libSKFCamera.a */,
+				8E1D5C0FCA0D872C3F21E87F25420681 /* libTZImagePickerController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2A43E528C5D92072890532BCA2DAFDFE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1877,6 +1887,14 @@
 			);
 			name = AFNetworking;
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		35BD9FF970D6AA4C083C438C716FD362 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDD7248C54D78E49DE9C6C1570BB052A /* PoporUploadVC.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		36F4D4BD64F9D7BF82E3264DDA8A736E /* Resources */ = {
@@ -2281,6 +2299,15 @@
 			path = PoporUI;
 			sourceTree = "<group>";
 		};
+		7FFA08B49A99099434891E335CA2C24E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA2703BC14C7DDBDF7682A2B0ECDDD90 /* PoporUploadVC.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PoporUploadVC";
+			sourceTree = "<group>";
+		};
 		804EB1234796BC5A5D5B786135D27F1D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2675,17 +2702,6 @@
 			path = "../Target Support Files/KVOController";
 			sourceTree = "<group>";
 		};
-		C2104B5210A9A9D935ED003AFEDD57F8 /* PoporUploadVC */ = {
-			isa = PBXGroup;
-			children = (
-				4C5630CD7F3B65EF030E7A1863553C52 /* ReplaceMe.m */,
-				01783D809E018A5FD059773AFC381D98 /* Pod */,
-				EC85EB3C05B6DE9101DFD36148EBCD30 /* Support Files */,
-			);
-			name = PoporUploadVC;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		C375DA6FA6BF5D9D688FC1FCD5EC07D9 /* PoporMedia */ = {
 			isa = PBXGroup;
 			children = (
@@ -2762,7 +2778,7 @@
 				06E2656E66DF420EA06526CB9806BF14 /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				25971E3E61D710FB9A6481E665BB9746 /* Pods */,
-				1A8F79BF8C8E1E47033DD15D9682830B /* Products */,
+				27E37C6D92BBB1E2D58D2745DF22E83B /* Products */,
 				92F7E958C25C3C1FD536D3D6F4AE2951 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -2834,6 +2850,16 @@
 			name = IToast;
 			sourceTree = "<group>";
 		};
+		DCD47E906254EAE05A3F4460384A012C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				1B715F79C4C918C3AAC66C108BBF5E8B /* LICENSE */,
+				E25ECA6AB33EBBA3A947536BFDE23196 /* PoporUploadVC.podspec */,
+				84710C6B22EE8F9FD55561D12CC2C1E4 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		DF2A2A514D38FEFF9729E1790D27135C /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -2866,17 +2892,6 @@
 			);
 			name = Masonry;
 			path = Masonry;
-			sourceTree = "<group>";
-		};
-		EC85EB3C05B6DE9101DFD36148EBCD30 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				559006A93BCBF0D8307338FBC4A7CBA9 /* PoporUploadVC.xcconfig */,
-				A3371F8ACC0DD9F99CF206BCC35C00A1 /* PoporUploadVC-dummy.m */,
-				16F7C7CCCCA465D60FE2CAAF2640F6A4 /* PoporUploadVC-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/PoporUploadVC";
 			sourceTree = "<group>";
 		};
 		EF5F6B6C4935491CE5C9715CC08F6A24 /* PoporMedia */ = {
@@ -3247,13 +3262,6 @@
 				969BE77B9CEF8E2DCAEB18A63CCDC6A5 /* UITableViewHeaderFooterView+RACSignalSupport.h in Headers */,
 				C45949ADD31E573295ACF22EF5006412 /* UITextField+RACSignalSupport.h in Headers */,
 				00E5AC97F0FC17E49512E238F06A903C /* UITextView+RACSignalSupport.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC0D62D7088B2DF658AAB5843C059D9F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3655,33 +3663,6 @@
 			productReference = 8E1D5C0FCA0D872C3F21E87F25420681 /* libTZImagePickerController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		B0AC8E8838A4E02A99344CC7607B6538 /* PoporUploadVC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 80DA8C98AFEABB19CDEBA6D6889D84AC /* Build configuration list for PBXNativeTarget "PoporUploadVC" */;
-			buildPhases = (
-				AC0D62D7088B2DF658AAB5843C059D9F /* Headers */,
-				AC67B6354BC9E88D4AE6C544AC464770 /* Sources */,
-				7913F97326CFF57C1AF0834ED60283C6 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0BFE0FE02AD51E1912C688D979658E3A /* PBXTargetDependency */,
-				7D6CBBD1487C862174753AA130798844 /* PBXTargetDependency */,
-				ABBEAD1A3C65BA8C0058E068FCE4FC29 /* PBXTargetDependency */,
-				894708428C86192B705F43764624D895 /* PBXTargetDependency */,
-				458A418A63C083F14CA472EA21F750F7 /* PBXTargetDependency */,
-				CBF40593EA9EF0D41CD5B55D64D7EBEE /* PBXTargetDependency */,
-				26074AD7A575E3C8D8B2C3A174BBCDC3 /* PBXTargetDependency */,
-				E31DCC159E3285F3D91C4F925F44718D /* PBXTargetDependency */,
-				4747B7196B17808AA7A247A392C04AB3 /* PBXTargetDependency */,
-				AD59FC22D6DD0F521F6B88BBAFDE6EC0 /* PBXTargetDependency */,
-			);
-			name = PoporUploadVC;
-			productName = PoporUploadVC;
-			productReference = 3709714A9EBC9D3473358F451A32D40B /* libPoporUploadVC.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		E0D06D6D196B6951E479A69C10EFFBF5 /* PoporAVPlayer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56A2B1BB43DEA33DBAA46A34407FD6F5 /* Build configuration list for PBXNativeTarget "PoporAVPlayer" */;
@@ -3758,7 +3739,7 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1A8F79BF8C8E1E47033DD15D9682830B /* Products */;
+			productRefGroup = 27E37C6D92BBB1E2D58D2745DF22E83B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -4171,15 +4152,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC67B6354BC9E88D4AE6C544AC464770 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D976B764513067446901EAE6D42D6547 /* PoporUploadVC-dummy.m in Sources */,
-				E214145276FFF4191635C7A6AC243E0A /* ReplaceMe.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F28F9F1E52752D333EB72BD54D58B07E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4211,17 +4183,17 @@
 			target = 41A5EBEED271FFE3C5F9445BEDC7905D /* PoporOrientation */;
 			targetProxy = B2AF52CF93D8582E9ACC6F05CCDDE504 /* PBXContainerItemProxy */;
 		};
+		06FB90523A4600E6C6B82C3C6E20CEC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PoporFoundation;
+			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
+			targetProxy = 5B888AB7E417FFDBA21384355E3E227F /* PBXContainerItemProxy */;
+		};
 		082FF9ED1ADCFEF3A82BB43620CE2B1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-PoporUploadVC_Example";
 			target = 30A1B1CB37973850C023C5FB9CBB9EDF /* Pods-PoporUploadVC_Example */;
 			targetProxy = 1F972E8CB2FDC9EB95D46D7DE747DC1E /* PBXContainerItemProxy */;
-		};
-		0BFE0FE02AD51E1912C688D979658E3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AFNetworking;
-			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
-			targetProxy = 0D4F9C00BF33396B6E6C260C7588B59C /* PBXContainerItemProxy */;
 		};
 		10942B6545272307F2BF0389A838AEA7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4234,6 +4206,12 @@
 			name = PoporUI;
 			target = 817833671E949B1C5DDEDB675875A7BE /* PoporUI */;
 			targetProxy = ACB18A3E426A44E872D618E529A04765 /* PBXContainerItemProxy */;
+		};
+		2018299B03384A18DD6F82E40E95FEC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PoporImageBrower;
+			target = EDADB94E77F4A2C2446E84D78D926B9A /* PoporImageBrower */;
+			targetProxy = 53C8F81EB03D79A210977A481E411159 /* PBXContainerItemProxy */;
 		};
 		2108497B273B8870EAD8F2CC21614322 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4253,11 +4231,17 @@
 			target = 79BFEE24BDA715C459390BEF93511D7B /* SKFCamera */;
 			targetProxy = 562298467C24120C28D99557277834A4 /* PBXContainerItemProxy */;
 		};
-		26074AD7A575E3C8D8B2C3A174BBCDC3 /* PBXTargetDependency */ = {
+		2D22C91148525C311BB9E86889C894F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PoporImageBrower;
-			target = EDADB94E77F4A2C2446E84D78D926B9A /* PoporImageBrower */;
-			targetProxy = A703152A1A43F5BF631214B6199E2EE1 /* PBXContainerItemProxy */;
+			name = PoporMedia;
+			target = 9C0E032CFC4CF37EB8C4BCA7F69F012F /* PoporMedia */;
+			targetProxy = CC9115CEE5534556F0C89472DB24928C /* PBXContainerItemProxy */;
+		};
+		2DDB4DE3FB251CE101F2B0C732CBBD34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = 4295ADD9E650CAF9C72C84439C4A3AC9 /* PBXContainerItemProxy */;
 		};
 		2F8A787303592044B395D00F658C2A2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4271,6 +4255,12 @@
 			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
 			targetProxy = E938B97AE75566EEA45E6D77962FC296 /* PBXContainerItemProxy */;
 		};
+		362A86FBF18F0D0550802039450CCFDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
+			targetProxy = 864D3B6FBA951AB40625006F562163CA /* PBXContainerItemProxy */;
+		};
 		398273FEC115B210B8B09D347ECF27D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
@@ -4283,17 +4273,11 @@
 			target = 9C0E032CFC4CF37EB8C4BCA7F69F012F /* PoporMedia */;
 			targetProxy = 77D027D56C3934461D601B41C24CCB61 /* PBXContainerItemProxy */;
 		};
-		458A418A63C083F14CA472EA21F750F7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PoporAVPlayer;
-			target = E0D06D6D196B6951E479A69C10EFFBF5 /* PoporAVPlayer */;
-			targetProxy = 915F61936A509D7894883D9A063C9BAC /* PBXContainerItemProxy */;
-		};
-		4747B7196B17808AA7A247A392C04AB3 /* PBXTargetDependency */ = {
+		3BCDCB2420516BFFCD1F0B3382C2CBAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PoporUI;
 			target = 817833671E949B1C5DDEDB675875A7BE /* PoporUI */;
-			targetProxy = E276DFF0809FE32853EEFBDDD87C23B3 /* PBXContainerItemProxy */;
+			targetProxy = 2DCD30225A148C25A97B8293F45714F0 /* PBXContainerItemProxy */;
 		};
 		47F3152403B7D5423743A46460C852B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4319,6 +4303,12 @@
 			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
 			targetProxy = E030C9B7214B81D020873BE525C6B393 /* PBXContainerItemProxy */;
 		};
+		5821D064B2EF2CAF9FD811829429F94C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PoporAVPlayer;
+			target = E0D06D6D196B6951E479A69C10EFFBF5 /* PoporAVPlayer */;
+			targetProxy = 09CA5997B728792D80D02DFEB1389760 /* PBXContainerItemProxy */;
+		};
 		5F9E0717B5C3645627CC2C6EA7CACF6E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KVOController;
@@ -4343,12 +4333,6 @@
 			target = 438B238ACC7DF1178D1BCE1A31983146 /* ReactiveObjC */;
 			targetProxy = E0CAC07A673F5D774C114FC5D15F0C32 /* PBXContainerItemProxy */;
 		};
-		7D6CBBD1487C862174753AA130798844 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DMProgressHUD;
-			target = 243CB33AE70054DF4B4080E6BB990227 /* DMProgressHUD */;
-			targetProxy = 51C1B0ABC297C3B3C5474CDE4FECC246 /* PBXContainerItemProxy */;
-		};
 		7E05FAB69707BDF4CEFF2D085871B3BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ReactiveObjC;
@@ -4360,12 +4344,6 @@
 			name = PoporImageBrower;
 			target = EDADB94E77F4A2C2446E84D78D926B9A /* PoporImageBrower */;
 			targetProxy = EB011731BD0A5591E5E6C7C53D5E5CA7 /* PBXContainerItemProxy */;
-		};
-		894708428C86192B705F43764624D895 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = C4557ABA0FF4CF5173264D78D98B6ADF /* PBXContainerItemProxy */;
 		};
 		896581D4ABE1301179DB4181B0EBBEFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4384,18 +4362,6 @@
 			name = PoporOrientation;
 			target = 41A5EBEED271FFE3C5F9445BEDC7905D /* PoporOrientation */;
 			targetProxy = 3F184D07C4764DAF2FC3394E9284F4DD /* PBXContainerItemProxy */;
-		};
-		ABBEAD1A3C65BA8C0058E068FCE4FC29 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JSONModel;
-			target = E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */;
-			targetProxy = 0E35D11AA95989ABAD00101C73B97C8A /* PBXContainerItemProxy */;
-		};
-		AD59FC22D6DD0F521F6B88BBAFDE6EC0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SDWebImage;
-			target = 3847153A6E5EEFB86565BA840768F429 /* SDWebImage */;
-			targetProxy = 3FB0F22AB2A70C74976B9B78AC5EAEDA /* PBXContainerItemProxy */;
 		};
 		B111B2D7E16AC46C5946829692F86B0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4427,23 +4393,29 @@
 			target = E0D06D6D196B6951E479A69C10EFFBF5 /* PoporAVPlayer */;
 			targetProxy = 2E04ECF99D01E3429FB29A1336E18F0D /* PBXContainerItemProxy */;
 		};
-		CBF40593EA9EF0D41CD5B55D64D7EBEE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PoporFoundation;
-			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
-			targetProxy = 30F11F5862BF07A156D8F77A9E4453CE /* PBXContainerItemProxy */;
-		};
 		CE6BD47602106FD19B8EB7289B4B9C7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PoporFoundation;
 			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
 			targetProxy = 50358BC1D76879C8DD68DFE82F248EBA /* PBXContainerItemProxy */;
 		};
+		D069CEB8698255BE833301D965B5F386 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImage;
+			target = 3847153A6E5EEFB86565BA840768F429 /* SDWebImage */;
+			targetProxy = 9A3E804B5AD3EE0051064B39B7E77265 /* PBXContainerItemProxy */;
+		};
 		D2349E9D455D7CFC187A2EA816D3F6BC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PoporUI;
 			target = 817833671E949B1C5DDEDB675875A7BE /* PoporUI */;
 			targetProxy = 6E41773B031529E4710C8EC27BF7950B /* PBXContainerItemProxy */;
+		};
+		D38780B6DF99F55C945F9FCA70785DAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DMProgressHUD;
+			target = 243CB33AE70054DF4B4080E6BB990227 /* DMProgressHUD */;
+			targetProxy = F2A7D9F8EF329BB2AA9A70758E5FE45D /* PBXContainerItemProxy */;
 		};
 		D55680113C739DB27E4FFB82E84112E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4457,11 +4429,11 @@
 			target = A96BBB982D62BB807B5BD10774BE2D07 /* TZImagePickerController */;
 			targetProxy = 26A5EB3DA328CECAC927C80C6567729C /* PBXContainerItemProxy */;
 		};
-		E31DCC159E3285F3D91C4F925F44718D /* PBXTargetDependency */ = {
+		DBF40090BBCAD2203E8A7B42CF89BB1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PoporMedia;
-			target = 9C0E032CFC4CF37EB8C4BCA7F69F012F /* PoporMedia */;
-			targetProxy = 4DF7842DE501EFCA5C823BF8F65CB62E /* PBXContainerItemProxy */;
+			name = JSONModel;
+			target = E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */;
+			targetProxy = 19AF254AF739CC4B723168A9BFB6E20B /* PBXContainerItemProxy */;
 		};
 		E7A9456028B1E7C173D238CB5ECC77FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4527,6 +4499,20 @@
 			};
 			name = Release;
 		};
+		12A83A87661FA3ACA1C73B569967EA23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA2703BC14C7DDBDF7682A2B0ECDDD90 /* PoporUploadVC.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		2C54E9D790E0B874B7ADD206B7F4DAEE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EB36D6E6F0FB3B983AE3517EFA3E293 /* JSONModel.xcconfig */;
@@ -4551,6 +4537,19 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		2C798A63F37D80ECBAC0A6216BBD409C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA2703BC14C7DDBDF7682A2B0ECDDD90 /* PoporUploadVC.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		300563F49B78C629C32D653995501BD8 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -4857,30 +4856,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		7B0B09DA8BE44A0503056B3C4706A72A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 559006A93BCBF0D8307338FBC4A7CBA9 /* PoporUploadVC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/PoporUploadVC/PoporUploadVC-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = PoporUploadVC;
-				PRODUCT_NAME = PoporUploadVC;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		7C88613D41BE6E01A35218AC01D9E349 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -5281,31 +5256,6 @@
 			};
 			name = Release;
 		};
-		CFD602A4D6D803D379124562E9F1775D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 559006A93BCBF0D8307338FBC4A7CBA9 /* PoporUploadVC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/PoporUploadVC/PoporUploadVC-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = PoporUploadVC;
-				PRODUCT_NAME = PoporUploadVC;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		D0A6F3B81FE9DB2D9D2EE5D3A295CB20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 41772A3EF273B22E0FB3B9873991543A /* Pods-PoporUploadVC_Tests.debug.xcconfig */;
@@ -5596,15 +5546,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80DA8C98AFEABB19CDEBA6D6889D84AC /* Build configuration list for PBXNativeTarget "PoporUploadVC" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7B0B09DA8BE44A0503056B3C4706A72A /* Debug */,
-				CFD602A4D6D803D379124562E9F1775D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		822AE267A4FBB35AE2FCA96A33410C91 /* Build configuration list for PBXNativeTarget "TZImagePickerController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -5619,6 +5560,15 @@
 			buildConfigurations = (
 				EFD63874479ED474124B32DDC773E1E6 /* Debug */,
 				77EE74AA1252FD083D85BDF9C9383D89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9208A978CA877DA06EDAB0ECC29F98CD /* Build configuration list for PBXAggregateTarget "PoporUploadVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C798A63F37D80ECBAC0A6216BBD409C /* Debug */,
+				12A83A87661FA3ACA1C73B569967EA23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

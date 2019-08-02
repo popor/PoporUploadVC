@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import <Masonry/Masonry.h>
 #import "PoporUploadProtocol.h"
+#import "PUShare.h"
 
 @implementation UIView (PoporUpload)
 @dynamic puGrayView;
@@ -137,7 +138,9 @@
 
 - (void)addErrorIV {
     if (!self.puErrorIV) {
-        UIImageView * iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:PoporUsRepeatRed]];
+        PUShare * tool = [PUShare share];
+        
+        UIImageView * iv = [[UIImageView alloc] initWithImage:tool.image_Resume];
         [self addSubview:iv];
         
         [iv mas_makeConstraints:^(MASConstraintMaker *make) {

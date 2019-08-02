@@ -48,8 +48,8 @@
 
 - (void)btAction {
     
-    FileUploadAddType addType = FileUploadAddTypeOrder;
-    FileUploadCvType cvType   = FileUploadCvType_imageUploadBind;
+    PoporUploadAddType addType = PoporUploadAddTypeOrder;
+    PoporUploadCvType cvType   = PoporUploadCvType_imageUploadBind;
     BOOL showCcSelectBT       = YES;
     
     int fileUploadCcBtXGap = 0;
@@ -79,6 +79,7 @@
         
         // 假如是uploadBind模式,那么需要删除网络请求.
         if (finishBlock) {
+            NSLog(@"请设置删除图片对应的URL请求");
             AlertToastTitle(@"请设置删除图片对应的URL请求");
             finishBlock(NO);
         }
@@ -104,8 +105,8 @@
       @"fileUploadCcBtYGap":@(fileUploadCcBtYGap),
       @"fileUploadCcIvXGap":@(fileUploadCcIvXGap),
       @"fileUploadCcIvYGap":@(fileUploadCcIvYGap),
-      @"image_SelectN":PoporFUImage_Delete,
-      @"image_SelectS":PoporFUImage_Delete,
+      @"image_SelectN":[PUShare imageBundleNamed:PoporImage_Delete],
+      @"image_SelectS":[PUShare imageBundleNamed:PoporImage_Delete],
       @"cvSectionEdgeInsets":[NSValue valueWithUIEdgeInsets:UIEdgeInsetsMake(16, 16, 16, 16)],
       //@"cvSectionEdgeInsets":UIEdgeInsetsMake(5, 16, 16, 16),
       // ---

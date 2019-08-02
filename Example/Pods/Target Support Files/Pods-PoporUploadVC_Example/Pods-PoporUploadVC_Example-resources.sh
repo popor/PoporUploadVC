@@ -101,6 +101,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/PoporAVPlayer/PoporAVPlayer/Classes/PoporAVPlayer.bundle"
   install_resource "${PODS_ROOT}/PoporImageBrower/PoporImageBrower/Classes/PoporImageBrower.bundle"
   install_resource "${PODS_ROOT}/PoporMedia/PoporMedia/Classes/PoporMedia.bundle"
+  install_resource "${PODS_ROOT}/../Classes/PoporUploadVC.bundle"
   install_resource "${PODS_ROOT}/SKFCamera/SKFCamera/SKFCamera.bundle"
   install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
 fi
@@ -109,6 +110,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/PoporAVPlayer/PoporAVPlayer/Classes/PoporAVPlayer.bundle"
   install_resource "${PODS_ROOT}/PoporImageBrower/PoporImageBrower/Classes/PoporImageBrower.bundle"
   install_resource "${PODS_ROOT}/PoporMedia/PoporMedia/Classes/PoporMedia.bundle"
+  install_resource "${PODS_ROOT}/../Classes/PoporUploadVC.bundle"
   install_resource "${PODS_ROOT}/SKFCamera/SKFCamera/SKFCamera.bundle"
   install_resource "${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle"
 fi

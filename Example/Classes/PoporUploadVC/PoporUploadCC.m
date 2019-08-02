@@ -36,8 +36,8 @@
     });
     self.selectBT = ({
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:tool.image_SelectN] forState:UIControlStateNormal];
-        [button setImage:[UIImage imageNamed:tool.image_SelectS] forState:UIControlStateSelected];
+        [button setImage:tool.image_SelectN forState:UIControlStateNormal];
+        [button setImage:tool.image_SelectS forState:UIControlStateSelected];
         
         [self addSubview:button];
         
@@ -69,38 +69,32 @@
     }
 }
 
-- (void)setSelected:(BOOL)selected {
-    [super setSelected:selected];
-    
-    //self.selectBT.selected = selected;
-}
-
 // 设定了 type 和 showType 之后,需要运行
 - (void)layoutSubviewsCustom {
     PUShare * tool = [PUShare share];
-    if (tool.fileUploadCcIvCorner > 0) {
-        self.imageIV.layer.cornerRadius = tool.fileUploadCcIvCorner;
+    if (tool.ccIvCorner > 0) {
+        self.imageIV.layer.cornerRadius = tool.ccIvCorner;
         self.imageIV.clipsToBounds = YES;
     }
-    if (tool.fileUploadCcIvBorderWidth>0 &&
-        tool.fileUploadCcIvBorderColor) {
-        self.imageIV.layer.borderColor = tool.fileUploadCcIvBorderColor.CGColor;
-        self.imageIV.layer.borderWidth = tool.fileUploadCcIvBorderWidth;
+    if (tool.ccIvBorderWidth>0 &&
+        tool.ccIvBorderColor) {
+        self.imageIV.layer.borderColor = tool.ccIvBorderColor.CGColor;
+        self.imageIV.layer.borderWidth = tool.ccIvBorderWidth;
     }
     
     [self.imageIV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(UIEdgeInsetsMake(tool.fileUploadCcIvYGap, 0, 0, tool.fileUploadCcIvXGap));
+        make.edges.mas_equalTo(UIEdgeInsetsMake(tool.ccIvYGap, 0, 0, tool.ccIvXGap));
     }];
     [self.selectBT mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(tool.fileUploadCcBtYGap);
-        make.right.mas_equalTo(-tool.fileUploadCcBtXGap);
+        make.top.mas_equalTo(tool.ccBtYGap);
+        make.right.mas_equalTo(-tool.ccBtXGap);
         make.width.mas_equalTo(MAX(30, self.selectBT.imageView.image.size.width));
         make.height.mas_equalTo(MAX(30, self.selectBT.imageView.image.size.height));
     }];
     [self.tagL mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(0);
         make.left.mas_equalTo(0);
-        make.right.mas_equalTo(-tool.fileUploadCcIvXGap);
+        make.right.mas_equalTo(-tool.ccIvXGap);
         make.height.mas_equalTo(20);
     }];
 }
