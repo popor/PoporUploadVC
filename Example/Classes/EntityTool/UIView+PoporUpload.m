@@ -104,12 +104,12 @@
     });
 }
 
-- (void)puAddTapGRActionMessage:(NSString * _Nullable)message asyn:(BOOL)asyn block:(UIImageViewTapGRBlock)block {
+- (void)puAddTapGRActionMessage:(NSString * _Nullable)message asyn:(BOOL)asyn tapBlock:(BlockPVoid _Nullable)tapBlock {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self puUpdateProgress:1.0];
         self.puTapGRMessage = message;
         self.puTapGRBlock   = nil;
-        self.puTapGRBlock   = block;
+        self.puTapGRBlock   = tapBlock;
         
         self.userInteractionEnabled=YES;
         if (self.puTapGR) {

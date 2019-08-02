@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)puAddErrorIVAsyn:(BOOL)asyn;
 
-- (void)puAddTapGRActionMessage:(NSString * _Nullable)message asyn:(BOOL)asyn block:(UIImageViewTapGRBlock)block;
+- (void)puAddTapGRActionMessage:(NSString * _Nullable)message asyn:(BOOL)asyn tapBlock:(BlockPVoid _Nullable)tapBlock;
 
 - (void)puRemoveError_puTapGRActionAsyn:(BOOL)asyn;
 
