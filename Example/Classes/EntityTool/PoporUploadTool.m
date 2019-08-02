@@ -9,8 +9,6 @@
 #import "PoporUploadTool.h"
 #import <PoporUI/IToastKeyboard.h>
 
-#import <objc/runtime.h>
-
 @implementation PoporUploadTool
 
 - (void)updateProgressBlock:(PoporUploadProgressBlock)puProgressBlock {

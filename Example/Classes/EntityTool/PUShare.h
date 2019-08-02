@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "PoporUploadVCProtocol.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 // 因为UICollectionViewCell 的复用机制不好用

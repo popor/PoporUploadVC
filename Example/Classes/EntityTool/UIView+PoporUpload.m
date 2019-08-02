@@ -250,11 +250,11 @@
     return objc_getAssociatedObject(self, @"puTapGRMessage");
 }
 
-- (void)setPuTapGRBlock:(UIImageViewTapGRBlock _Nullable)puTapGRBlock {
+- (void)setPuTapGRBlock:(BlockPVoid _Nullable)puTapGRBlock {
     objc_setAssociatedObject(self, @"puTapGRBlock", puTapGRBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (UIImageViewTapGRBlock)puTapGRBlock {
+- (BlockPVoid)puTapGRBlock {
     return objc_getAssociatedObject(self, @"puTapGRBlock");
 }
 

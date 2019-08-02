@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PoporFoundation/PrefixBlock.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
-typedef void(^UIImageViewTapGRBlock) (void);
 
 @interface UIView (PoporUpload)
 
@@ -20,7 +19,7 @@ typedef void(^UIImageViewTapGRBlock) (void);
 @property (nonatomic, strong) NSString                * puTapGRMessage;
 
 @property (nonatomic, strong, nullable) UITapGestureRecognizer  * puTapGR;
-@property (nonatomic, copy  , nullable) UIImageViewTapGRBlock   puTapGRBlock;
+@property (nonatomic, copy  , nullable) BlockPVoid              puTapGRBlock;
 @property (nonatomic, strong, nullable) UIImageView             * puErrorIV;
 
 - (void)puAddUploadStatusViews;
