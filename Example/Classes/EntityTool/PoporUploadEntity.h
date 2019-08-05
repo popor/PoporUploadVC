@@ -48,9 +48,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 用来区分是否使用网络图片.
 // 用户绑定记录,例如用户头像和上传家访图片视频.
-@property(nonatomic, getter = isBindOK)  BOOL bindOK; //绑定成功
-@property(nonatomic, getter = isHasData) BOOL hasData;//是否有素材
-@property(nonatomic, getter = isSelect)  BOOL select; //是否选中图片
+@property (nonatomic, getter = isBindOK)  BOOL bindOK; //绑定成功
+@property (nonatomic, getter = isHasData) BOOL hasData;//是否有素材
+@property (nonatomic, getter = isSelect)  BOOL select; //是否选中图片
 
 // 上传返回的url
 @property (nonatomic, strong, nullable) NSString * ivUrl;
