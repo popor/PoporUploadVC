@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setMyPresent:(id)present;
 
 #pragma mark 上传图片
-- (void)freshImageBlockCell:(PoporUploadCC *)cell needBind:(BOOL)needBind;
-- (void)freshImageSelectCell:(PoporUploadCC *)cell;
+- (void)freshImageBlockEntity:(PoporUploadEntity *)entity needBind:(BOOL)needBind;
+- (void)freshImageSelectEntity:(PoporUploadEntity *)entity;
 
 #pragma mark 上传视频
 - (void)freshVideoBlockCell:(PoporUploadCC *)cell needBind:(BOOL)needBind;

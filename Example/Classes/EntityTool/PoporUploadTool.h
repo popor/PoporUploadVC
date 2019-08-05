@@ -7,16 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PoporUploadProtocol.h"
+#import "PoporUploadServiceProtocol.h"
 #import "PoporUploadVCPrefix.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PoporUploadTool : NSObject
 
-@property (nonatomic, strong, nullable) id<PoporUploadProtocol>  uploadTool;
-@property (nonatomic, copy  , nullable) PoporUploadProgressBlock puProgressBlock;
-@property (nonatomic, copy  , nullable) PoporUploadFinishBlock   puFinishBlock;
+@property (nonatomic, strong, nullable) id<PoporUploadServiceProtocol>  uploadService;
+@property (nonatomic, copy  , nullable) PoporUpload_ProgressBlock puProgressBlock;
+@property (nonatomic, copy  , nullable) PoporUpload_FinishBlock   puFinishBlock;
 @property (nonatomic, strong) NSString          * uploadFileName; // 上传到服务器的名字.
 
 // 图片部分
@@ -32,8 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSData  * videoData;  // 假如传递视频的Data话,可以使用这个参数.
 
 // 回调block
-- (void)updateProgressBlock:(PoporUploadProgressBlock _Nullable)puProgressBlock;
-- (void)updateFinishBlock:(PoporUploadFinishBlock _Nullable)puFinishBlock;
+- (void)updateProgressBlock:(PoporUpload_ProgressBlock _Nullable)puProgressBlock;
+- (void)updateFinishBlock:(PoporUpload_FinishBlock _Nullable)puFinishBlock;
 
 // 开始上传
 - (void)startUpload;

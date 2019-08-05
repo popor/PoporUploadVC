@@ -150,39 +150,47 @@
     [cell.imageIV puRemoveError_puTapGRActionAsyn:NO];
     
     PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
-    cell.uploadEntity = entity;
-    cell.indexPath    = indexPath;
+    // cell 属性
+    cell.uploadEntity       = entity;
+    cell.indexPath          = indexPath;
+    // entity 属性
+    entity.weakCV           = collectionView;
+    entity.weakCC           = cell;
+    entity.weakUploadProgressView = cell.imageIV;
+    entity.indexPath        = indexPath;
+    entity.uploadType       = self.view.uploadType;
+    entity.addType          = self.view.addType;
     
     [self.cellPresent freshCellIvImage:cell];
     
-    switch(self.view.cvType) {
-        case PoporUploadCvType_imageUpload: {
-            [self.cellPresent freshImageBlockCell:cell needBind:NO];
-            [self.cellPresent freshImageSelectCell:cell];
+    switch(self.view.uploadType) {
+        case PoporUploadType_imageUpload: {
+            [self.cellPresent freshImageBlockEntity:entity needBind:NO];
+            [self.cellPresent freshImageSelectEntity:entity];
             break;
         }
-        case PoporUploadCvType_imageUploadBind: {
-            [self.cellPresent freshImageBlockCell:cell needBind:YES];
-            [self.cellPresent freshImageSelectCell:cell];
+        case PoporUploadType_imageUploadBind: {
+            [self.cellPresent freshImageBlockEntity:entity needBind:YES];
+            [self.cellPresent freshImageSelectEntity:entity];
             break;
         }
-        case PoporUploadCvType_videoUpload: {
+        case PoporUploadType_videoUpload: {
             [self.cellPresent freshVideoBlockCell:cell needBind:NO];
             [self.cellPresent freshVideoSelectCell:cell];
             break;
         }
-        case PoporUploadCvType_videoUploadBind: {
+        case PoporUploadType_videoUploadBind: {
             [self.cellPresent freshVideoBlockCell:cell needBind:YES];
             [self.cellPresent freshVideoSelectCell:cell];
             break;
         }
-        case PoporUploadCvType_imageDisplay:
-        case PoporUploadCvType_videoDisplay: {
+        case PoporUploadType_imageDisplay:
+        case PoporUploadType_videoDisplay: {
             
             break;
         }
-        case PoporUploadCvType_imageSelect:
-        case PoporUploadCvType_videoSelect: {
+        case PoporUploadType_imageSelect:
+        case PoporUploadType_videoSelect: {
             [self.cellPresent freshImageVideoSelectCell:cell];
             break;
         }
@@ -199,21 +207,21 @@
     PoporUploadCC * cc = (PoporUploadCC *)[collectionView cellForItemAtIndexPath:indexPath];
     if (cc.funType == PoporUploadCCFunTypeAdd) {
         // 增加模式
-        if (self.view.cvType == PoporUploadCvType_imageUpload ||
-            self.view.cvType == PoporUploadCvType_imageUploadBind) {
+        if (self.view.uploadType == PoporUploadType_imageUpload ||
+            self.view.uploadType == PoporUploadType_imageUploadBind) {
             [self showImageACAdd];
-        }else if (self.view.cvType == PoporUploadCvType_videoUpload ||
-                  self.view.cvType == PoporUploadCvType_videoUploadBind) {
+        }else if (self.view.uploadType == PoporUploadType_videoUpload ||
+                  self.view.uploadType == PoporUploadType_videoUploadBind) {
             [self showVideoAC];
         }else{
             AlertToastTitle(@"模式设定出错");
         }
     }else{
         // 查看详情模式
-        switch (self.view.cvType) {
-            case PoporUploadCvType_imageDisplay :
-            case PoporUploadCvType_imageUpload :
-            case PoporUploadCvType_imageUploadBind :{
+        switch (self.view.uploadType) {
+            case PoporUploadType_imageDisplay :
+            case PoporUploadType_imageUpload :
+            case PoporUploadType_imageUploadBind :{
                 if (self.view.addType == PoporUploadAddTypeReplace) {
                     PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
                     if (entity.ivUrl) {
@@ -229,14 +237,14 @@
                 }
                 break;
             }
-            case PoporUploadCvType_videoDisplay:
-            case PoporUploadCvType_videoUpload:
-            case PoporUploadCvType_videoUploadBind:
-            case PoporUploadCvType_videoSelect: {
+            case PoporUploadType_videoDisplay:
+            case PoporUploadType_videoUpload:
+            case PoporUploadType_videoUploadBind:
+            case PoporUploadType_videoSelect: {
                 [self.showPresent showVideoPlayVC:cc];
                 break;
             }
-            case PoporUploadCvType_imageSelect:{
+            case PoporUploadType_imageSelect:{
                 [self.showPresent showImageBrowerVCIndexPath:indexPath all:YES];
                 break;
             }
@@ -312,8 +320,8 @@
     entity.uploadFinishBlock = self.view.uploadFinishBlock;
     
     entity.ivUploadTool = [PoporUploadTool new];
-    if (self.view.createUploadBlock) {
-        entity.ivUploadTool.uploadTool = self.view.createUploadBlock();
+    if (self.view.createUploadServiceBlock) {
+        entity.ivUploadTool.uploadService = self.view.createUploadServiceBlock();
     }
     entity.ivUploadTool.image = image;
     entity.ivUploadTool.originFile = @(origin);
@@ -332,8 +340,8 @@
     
     entity.ivUploadTool = [PoporUploadTool new];
     entity.ivUploadTool.image = image;
-    if (self.view.createUploadBlock) {
-        entity.ivUploadTool.uploadTool = self.view.createUploadBlock();
+    if (self.view.createUploadServiceBlock) {
+        entity.ivUploadTool.uploadService = self.view.createUploadServiceBlock();
     }
 }
 
@@ -365,9 +373,9 @@
         
         entity.ivUploadTool           = [PoporUploadTool new];
         entity.videoUploadTool        = [PoporUploadTool new];
-        if (self.view.createUploadBlock) {
-            entity.ivUploadTool.uploadTool    = self.view.createUploadBlock();
-            entity.videoUploadTool.uploadTool = self.view.createUploadBlock();
+        if (self.view.createUploadServiceBlock) {
+            entity.ivUploadTool.uploadService    = self.view.createUploadServiceBlock();
+            entity.videoUploadTool.uploadService = self.view.createUploadServiceBlock();
         }
         
         if (imageData) {

@@ -9,7 +9,7 @@
 #import "UIView+PoporUpload.h"
 #import <objc/runtime.h>
 #import <Masonry/Masonry.h>
-#import "PoporUploadProtocol.h"
+#import "PoporUploadServiceProtocol.h"
 #import "PUShare.h"
 
 @implementation UIView (PoporUpload)

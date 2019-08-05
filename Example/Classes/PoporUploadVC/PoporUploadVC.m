@@ -33,7 +33,7 @@
 
 @synthesize maxUploadNum;
 
-@synthesize cvType;
+@synthesize uploadType;
 @synthesize infoCvBgColor;
 @synthesize compressType;
 @synthesize videoFromCamraUseCompress;
@@ -61,7 +61,7 @@
 @synthesize showCcBG;
 
 @synthesize videoPlayBlock;
-@synthesize createUploadBlock;
+@synthesize createUploadServiceBlock;
 @synthesize createIvThumbUrlBlock;
 
 - (id)initWithDic:(NSDictionary *)dic {
@@ -147,8 +147,8 @@
 }
 
 - (void)addViews {
-    if (self.cvType == PoporUploadCvType_imageSelect ||
-        self.cvType == PoporUploadCvType_videoSelect ) {
+    if (self.uploadType == PoporUploadType_imageSelect ||
+        self.uploadType == PoporUploadType_videoSelect ) {
         [self imageVideoSelectType];
     }
     

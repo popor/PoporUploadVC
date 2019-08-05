@@ -49,8 +49,8 @@
 - (void)btAction {
     
     PoporUploadAddType addType = PoporUploadAddTypeOrder;
-    PoporUploadCvType cvType   = PoporUploadCvType_imageUploadBind;
-    BOOL showCcSelectBT       = YES;
+    PoporUploadType uploadType = PoporUploadType_imageUploadBind;
+    BOOL showCcSelectBT        = YES;
     
     int ccBtXGap = 0;
     int ccBtYGap = 0;
@@ -72,7 +72,7 @@
         
     };
     
-    BlockPVcCellFinish ccDeleteBlock = ^(UIViewController * vc, PoporUploadCC * cc, BlockPBool finishBlock) {
+    PoporUpload_PEntityFinish ccDeleteBlock = ^(PoporUploadEntity * entity, BlockPBool finishBlock) {
         
         // 网络删除cc.uploadEntity对应的图片url什么的.
         // 假如是upload模式,只需要删除本地数组就好了,直接返回YES.finishBlock(YES);
@@ -90,7 +90,7 @@
       @"weakImageArray":    self.uploadArray,
       @"title":             @"上传图片",
       
-      @"cvType":            @(cvType),
+      @"uploadType":        @(uploadType),
       @"addType":           @(addType),
       @"showCcSelectBT":    @(showCcSelectBT),
       @"deallocBlock":      deallocBlock,

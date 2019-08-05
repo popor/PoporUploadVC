@@ -12,18 +12,22 @@
 
 #import "PUShare.h"
 #import "PoporUploadVCPrefix.h"
-#import "PoporUploadProtocol.h"
+#import "PoporUploadServiceProtocol.h"
 
 #import "PoporUploadCC.h"
+#import "PoporUploadEntity.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 #define CvSectionDefaultEdgeInsets UIEdgeInsetsMake(5, 16, 5, 16)
 
-typedef void(^BlockPVcCellFinish) (UIViewController * vc, PoporUploadCC * cc, BlockPBool finishBlock);
-typedef BOOL(^BlockRBoolPVoid) (void);
-typedef id<PoporUploadProtocol>_Nullable(^BlockRUploadPVoid) (void);
-typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize ccSize);
+typedef void(^PoporUpload_PEntityFinish) (PoporUploadEntity * entity, BlockPBool finishBlock);
+
+typedef BOOL(^PoporUpload_RBoolPVoid) (void);
+
+typedef id<PoporUploadServiceProtocol>_Nullable(^PoporUpload_RUploadServicePVoid) (void);
+
+typedef NSString * _Nullable(^PoporUpload_RStringPStringSize) (NSString * url, CGSize ccSize);
 
 // MARK: 对外接口
 @protocol PoporUploadVCProtocol <NSObject>
@@ -39,7 +43,7 @@ typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize c
 // MARK: 外部注入
 @property (nonatomic, weak  ) NSMutableArray<PoporUploadEntity *>* weakImageArray;
 
-@property (nonatomic        ) PoporUploadCvType cvType;
+@property (nonatomic        ) PoporUploadType uploadType;
 @property (nonatomic, strong) UIColor * infoCvBgColor;
 
 @property (nonatomic, getter=isShowCcSelectBT) BOOL showCcSelectBT;// 是否在有素材的时候显示selectBT
@@ -83,12 +87,12 @@ typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize c
 // block
 @property (nonatomic, copy  ) BlockPDic            uploadFinishBlock;// 上传好文件之后的block
 @property (nonatomic, copy  ) BlockPVoid           deallocBlock;// 该VC 注销之后的block
-@property (nonatomic, copy  ) BlockRBoolPVoid      ncSelectBlock;// 选择模式下, nc 右边按钮事件
+@property (nonatomic, copy  ) PoporUpload_RBoolPVoid      ncSelectBlock;// 选择模式下, nc 右边按钮事件
 
 // 选择模式下, cc右上角按钮事件
-@property (nonatomic, copy  ) BlockPVcCellFinish   ccSelectBlock;
+@property (nonatomic, copy  ) PoporUpload_PEntityFinish   ccSelectBlock;
 // 上传和上传绑定模式下, cc右上角按钮事件
-@property (nonatomic, copy  ) BlockPVcCellFinish   ccDeleteBlock;
+@property (nonatomic, copy  ) PoporUpload_PEntityFinish   ccDeleteBlock;
 
 @property (nonatomic, copy  ) BlockPViewController willAppearBlock;
 @property (nonatomic, copy  ) BlockPViewController didAppearBlock;
@@ -96,8 +100,11 @@ typedef NSString * _Nullable(^BlockRStringPStringSize) (NSString * url, CGSize c
 
 @property (nonatomic, copy  ) BlockPDic            videoPlayBlock;
 
-@property (nonatomic, copy  ) BlockRUploadPVoid       createUploadBlock;// 获取生成上传tool的block
-@property (nonatomic, copy  ) BlockRStringPStringSize createIvThumbUrlBlock;// 获取图片缩略图的block, 根据不同的图床平台,请设置对应的缩略图url,供ccIV使用
+// 获取生成上传tool的block
+@property (nonatomic, copy  ) PoporUpload_RUploadServicePVoid createUploadServiceBlock;
+
+// 获取图片缩略图的block, 根据不同的图床平台,请设置对应的缩略图url,供ccIV使用
+@property (nonatomic, copy  ) PoporUpload_RStringPStringSize createIvThumbUrlBlock;
 
 // 是否显示file_name
 @property (nonatomic, getter=isShowFileName) BOOL showFileName;

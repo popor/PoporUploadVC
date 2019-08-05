@@ -23,17 +23,17 @@ typedef NS_ENUM(int, PoporUploadCCFunType) {
     PoporUploadCCFunTypeNormal = 2,   // 上传、显示等
 };
 
-typedef NS_ENUM(int, PoporUploadCvType) {
-    PoporUploadCvType_imageUpload,    // 图片上传
-    PoporUploadCvType_videoUpload,    // 视频上传
-    PoporUploadCvType_imageUploadBind,// 图片上传绑定
-    PoporUploadCvType_videoUploadBind,// 视频上传绑定
+typedef NS_ENUM(int, PoporUploadType) {
+    PoporUploadType_imageUpload,    // 图片上传
+    PoporUploadType_videoUpload,    // 视频上传
+    PoporUploadType_imageUploadBind,// 图片上传绑定
+    PoporUploadType_videoUploadBind,// 视频上传绑定
     
-    PoporUploadCvType_imageDisplay,   // 图片浏览
-    PoporUploadCvType_videoDisplay,   // 视频浏览
+    PoporUploadType_imageDisplay,   // 图片浏览
+    PoporUploadType_videoDisplay,   // 视频浏览
     
-    PoporUploadCvType_imageSelect,    // 图片浏览选择
-    PoporUploadCvType_videoSelect,    // 视频浏览选择
+    PoporUploadType_imageSelect,    // 图片浏览选择
+    PoporUploadType_videoSelect,    // 视频浏览选择
 };
 
 typedef NS_OPTIONS(NSUInteger, PoporUploadVideoCompressType) {
@@ -46,6 +46,13 @@ typedef NS_ENUM(int, PoporUploadAddType) {
     PoporUploadAddTypeNone,           // 没有新增图片的功能
     PoporUploadAddTypeOrder,          // 顺序增加
     PoporUploadAddTypeReplace,        // 替换模式
+};
+
+typedef NS_ENUM(int, PoporUploadStatus) {
+    PoporUploadStatusInit = 1,
+    PoporUploadStatusUploading,
+    PoporUploadStatusFinish,
+    PoporUploadStatusFailed,
 };
 
 #endif /* PoporUploadPrefix_h */

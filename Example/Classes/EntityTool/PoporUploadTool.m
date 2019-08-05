@@ -11,15 +11,15 @@
 
 @implementation PoporUploadTool
 
-- (void)updateProgressBlock:(PoporUploadProgressBlock)puProgressBlock {
+- (void)updateProgressBlock:(PoporUpload_ProgressBlock)puProgressBlock {
     // !!!: 以后禁止做自己销毁的动作,自己只做自己该做的东西,不然其他调用者会出现异常.
     self.puProgressBlock = puProgressBlock;
-    if (self.uploadTool) {
-        self.uploadTool.progressBlock = puProgressBlock;
+    if (self.uploadService) {
+        self.uploadService.progressBlock = puProgressBlock;
     }
 }
 
-- (void)updateFinishBlock:(PoporUploadFinishBlock _Nullable)puFinishBlock {
+- (void)updateFinishBlock:(PoporUpload_FinishBlock _Nullable)puFinishBlock {
     // !!!: 以后禁止做自己销毁的动作,自己只做自己该做的东西,不然其他调用者会出现异常.
     __weak typeof(self) weakSelf = self;
     self.puFinishBlock = ^(BOOL isSuccess, BOOL isCancle, NSString * _Nullable fileUrl, NSString * _Nullable requestId) {
@@ -39,14 +39,14 @@
             //});
         }
     };
-    if (self.uploadTool) {
-        self.uploadTool.finishBlock = self.puFinishBlock;
+    if (self.uploadService) {
+        self.uploadService.finishBlock = self.puFinishBlock;
     }
 }
 
 - (void)startUpload {
-    if (!self.uploadTool) {
-        NSLog(@"\n❗️❗️❗️未设置: createUploadBlock, 遵循 PoporUploadProtocol 的上传类❗️❗️❗️");
+    if (!self.uploadService) {
+        NSLog(@"\n❗️❗️❗️未设置: createUploadServiceBlock, 遵循 PoporUploadServiceProtocol 的上传类❗️❗️❗️");
         if (self.puFinishBlock) {
             self.puFinishBlock(NO, NO, nil, nil);
         }
@@ -111,20 +111,20 @@
         return;
     }
     if (isImage) {
-        [self.uploadTool uploadImageData:data fileName:self.uploadFileName progress:self.puProgressBlock finish:self.puFinishBlock];
+        [self.uploadService uploadImageData:data fileName:self.uploadFileName progress:self.puProgressBlock finish:self.puFinishBlock];
     }else{
         if (videoPath) {
-            [self.uploadTool uploadVideoPath:videoPath fileName:self.uploadFileName progress:self.puProgressBlock finish:self.puFinishBlock];
+            [self.uploadService uploadVideoPath:videoPath fileName:self.uploadFileName progress:self.puProgressBlock finish:self.puFinishBlock];
         }else{
-            [self.uploadTool uploadVideoData:data fileName:self.uploadFileName progress:self.puProgressBlock finish:self.puFinishBlock];
+            [self.uploadService uploadVideoData:data fileName:self.uploadFileName progress:self.puProgressBlock finish:self.puFinishBlock];
         }
         
     }
 }
 
 - (void)cancleUpload {
-    if (self.uploadTool) {
-        [self.uploadTool cancleUpload];
+    if (self.uploadService) {
+        [self.uploadService cancleUpload];
     }
 }
 
