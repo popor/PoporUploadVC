@@ -181,8 +181,6 @@
     }
 }
 
-//- (void)setBindBlockFileUrl:(NSString *)fileUrl ccImageUrl:(NSString *)ccImageUrl entity:(PoporUploadEntity *)entity {}
-
 - (void)freshImageSelectCell:(PoporUploadCC *)cell {
     PoporUploadEntity * entity = cell.uploadEntity;
     NSIndexPath * indexPath    = cell.indexPath;
@@ -613,8 +611,10 @@
 // !!!: 刷新上传时对应的cell图片
 - (void)freshCellIvImage:(PoporUploadCC *)cell {
     PoporUploadEntity * entity = cell.uploadEntity;
-    if (entity.ccImageUrl) {
-        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.ccImageUrl] placeholderImage:self.view.ccPlacehlodImage];
+    if (entity.thumbnailImageUrl) {
+        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage];
+    }else if (entity.thumbnailImage) {
+        cell.imageIV.image = entity.thumbnailImage;
     }else if (entity.ivUploadTool.image) {
         cell.imageIV.image = entity.ivUploadTool.image;
     }else if(entity.ivUrl){
