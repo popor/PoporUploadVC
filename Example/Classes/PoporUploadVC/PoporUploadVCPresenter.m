@@ -81,7 +81,7 @@
 #pragma mark - VCDataSource
 // 页面进来之后头几件事情
 - (void)cleanIVSelectStatus {
-    for (PoporUploadEntity * entity in self.view.weakImageArray) {
+    for (PoporUploadEntity * entity in self.view.weakPuEntityArray) {
         entity.select = NO;
     }
 }
@@ -111,9 +111,9 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (self.view.isShowAddCC) {
-        return self.view.weakImageArray.count + 1;
+        return self.view.weakPuEntityArray.count + 1;
     }else{
-        return self.view.weakImageArray.count;
+        return self.view.weakPuEntityArray.count;
     }
 }
 
@@ -151,17 +151,18 @@
     
     PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
     // cell 属性
-    cell.uploadEntity       = entity;
-    cell.indexPath          = indexPath;
+    cell.uploadEntity             = entity;
+    cell.indexPath                = indexPath;
     // entity 属性
-    entity.weakCV           = collectionView;
-    entity.weakCC           = cell;
+    entity.weakCV                 = collectionView;
+    entity.weakCC                 = cell;
+    entity.weakPuEntityArray      = self.view.weakPuEntityArray;
     entity.weakUploadProgressView = cell.imageIV;
-    entity.indexPath        = indexPath;
-    entity.uploadType       = self.view.uploadType;
-    entity.addType          = self.view.addType;
+    entity.indexPath              = indexPath;
+    entity.uploadType             = self.view.uploadType;
+    entity.addType                = self.view.addType;
     
-    [self.cellPresent freshCellIvImage:cell];
+    [self.cellPresent freshCellIvImageEntity:entity];
     
     switch(self.view.uploadType) {
         case PoporUploadType_imageUpload: {
@@ -175,13 +176,13 @@
             break;
         }
         case PoporUploadType_videoUpload: {
-            [self.cellPresent freshVideoBlockCell:cell needBind:NO];
-            [self.cellPresent freshVideoSelectCell:cell];
+            [self.cellPresent freshVideoBlockEntity:entity needBind:NO];
+            [self.cellPresent freshVideoSelectEntity:entity];
             break;
         }
         case PoporUploadType_videoUploadBind: {
-            [self.cellPresent freshVideoBlockCell:cell needBind:YES];
-            [self.cellPresent freshVideoSelectCell:cell];
+            [self.cellPresent freshVideoBlockEntity:entity needBind:YES];
+            [self.cellPresent freshVideoSelectEntity:entity];
             break;
         }
         case PoporUploadType_imageDisplay:
@@ -191,12 +192,12 @@
         }
         case PoporUploadType_imageSelect:
         case PoporUploadType_videoSelect: {
-            [self.cellPresent freshImageVideoSelectCell:cell];
+            [self.cellPresent freshImageVideoSelectEntity:entity];
             break;
         }
     }
     
-    [self.cellPresent showFileNameEvent:cell];
+    [self.cellPresent showFileNameEventEntity:entity];
     return cell;
 }
 
@@ -257,7 +258,7 @@
     @weakify(self);
     NSInteger maxCount = 20;
     if (self.view.maxUploadNum > 0) {
-        maxCount = self.view.maxUploadNum - self.view.weakImageArray.count;
+        maxCount = self.view.maxUploadNum - self.view.weakPuEntityArray.count;
         if (maxCount <= 0) {
             NSString * info = [NSString stringWithFormat:@"已经超过最大上传个数: %i", (int)maxCount];
             AlertToastTitle(info);
@@ -274,13 +275,13 @@
                 PoporUploadEntity * entity = [PoporUploadEntity new];
                 [self assembleImagePoporUploadEntity:entity image:images[i] PHAsset:assets[i] origin:origin];
                 
-                [self.view.weakImageArray addObject:entity];
+                [self.view.weakPuEntityArray addObject:entity];
             }
         }else{
             for (UIImage * image in images) {
                 PoporUploadEntity * entity = [PoporUploadEntity new];
                 [self assembleImagePoporUploadEntity:entity image:image];
-                [self.view.weakImageArray addObject:entity];
+                [self.view.weakPuEntityArray addObject:entity];
             }
         }
         
@@ -348,7 +349,7 @@
 #pragma mark - 视频选择部分
 - (void)showVideoAC {
     if (self.view.maxUploadNum > 0) {
-        NSInteger maxCount = self.view.maxUploadNum - self.view.weakImageArray.count;
+        NSInteger maxCount = self.view.maxUploadNum - self.view.weakPuEntityArray.count;
         if (maxCount <= 0) {
             NSString * info = [NSString stringWithFormat:@"已经超过最大上传个数: %i", (int)maxCount];
             AlertToastTitle(info);
@@ -388,7 +389,7 @@
         
         @weakify(entity);
         
-        [self.view.weakImageArray addObject:entity];
+        [self.view.weakPuEntityArray addObject:entity];
         BOOL isCamera = phAsset ? NO:YES;
         
         [self compressVideoTime:time size:videoSize camera:isCamera Block:^(int number) {
@@ -398,7 +399,7 @@
             switch (number) {
                 case -1:{
                     // 取消
-                    [self.view.weakImageArray removeObject:entity];
+                    [self.view.weakPuEntityArray removeObject:entity];
                     break;
                 }
                 case 0:{
@@ -478,11 +479,11 @@
                                 });
                             }else{
                                 NSLog(@"视频导出完成 error");
-                                [self.view.weakImageArray removeObject:entity];
+                                [self.view.weakPuEntityArray removeObject:entity];
                             }
                         }else{
                             NSLog(@"视频导出完成 error");
-                            [self.view.weakImageArray removeObject:entity];
+                            [self.view.weakPuEntityArray removeObject:entity];
                         }
                     }];
                     
@@ -577,7 +578,7 @@
 }
 
 - (PoporUploadEntity *)getCellEntityAt:(NSIndexPath *)indexPath {
-    return self.view.weakImageArray[[self.cellPresent arrayOrderAt:indexPath]];
+    return self.view.weakPuEntityArray[[self.cellPresent arrayOrderAt:indexPath]];
 }
 
 @end

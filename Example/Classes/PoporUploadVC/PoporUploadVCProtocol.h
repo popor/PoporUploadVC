@@ -41,7 +41,7 @@ typedef NSString * _Nullable(^PoporUpload_RStringPStringSize) (NSString * url, C
 @property (nonatomic        ) CGSize ccSize;
 
 // MARK: 外部注入
-@property (nonatomic, weak  ) NSMutableArray<PoporUploadEntity *>* weakImageArray;
+@property (nonatomic, weak  ) NSMutableArray<PoporUploadEntity*> * weakPuEntityArray;
 
 @property (nonatomic        ) PoporUploadType uploadType;
 @property (nonatomic, strong) UIColor * infoCvBgColor;

@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak  ) UICollectionView     * weakCV;
 @property (nonatomic, weak  ) UICollectionViewCell * weakCC;
+@property (nonatomic, weak  ) NSMutableArray       * weakPuEntityArray;// 自己位于哪个数组
 @property (nonatomic, strong) NSIndexPath          * indexPath; // UI刷新不及时可能会出错
 
 // 在本framework中,除了承担进度条之外,还承担了获取点击事件功能

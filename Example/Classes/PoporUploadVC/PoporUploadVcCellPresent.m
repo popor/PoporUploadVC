@@ -189,7 +189,7 @@
     @weakify(cell);
     @weakify(entity);
     
-    switch (self.view.addType) {
+    switch (entity.addType) {
         case PoporUploadAddTypeNone: {
             if (cell.selectBT.hidden) {
                 break;
@@ -208,15 +208,13 @@
                 
                 if (self.view.ccDeleteBlock) {
                     BlockPBool finishBlock = ^(BOOL value) {
-                        @strongify(self);
+                        @strongify(entity);
                         if (value) {
-                            NSInteger order = [self arrayOrderAt:indexPath];
-                            [self.view.weakImageArray removeObjectAtIndex:order];
-                            [self.view.infoCV reloadData];
+                            [entity.weakPuEntityArray removeObject:entity];
+                            [entity.weakCV reloadData];
                         }
                     };
                     self.view.ccDeleteBlock(entity, finishBlock);
-                    //self.view.ccDeleteBlock(self.view.vc, cell, finishBlock);
                 }else{
                     NSLog(@"\n❗️请设置ccDeleteBlock");
                 }
@@ -233,16 +231,16 @@
             }
             cell.selectBT.userInteractionEnabled = YES;
             [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
-                @strongify(self);
+                @strongify(entity);
                 @strongify(cell);
                 
-                cell.uploadEntity.ivUrl              = nil;
-                cell.uploadEntity.ivUploadTool.image = nil;
-                cell.uploadEntity.ivUploadStatus     = 0;
-                cell.uploadEntity.videoUploadStatus  = 0;
+                entity.ivUrl              = nil;
+                entity.ivUploadTool.image = nil;
+                entity.ivUploadStatus     = 0;
+                entity.videoUploadStatus  = 0;
                 
-                NSIndexPath * ip = [self.view.infoCV indexPathForCell:cell];
-                [self.view.infoCV reloadItemsAtIndexPaths:@[ip]];
+                NSIndexPath * ip = [entity.weakCV indexPathForCell:entity.weakCC];
+                [entity.weakCV reloadItemsAtIndexPaths:@[ip]];
             }];
             break;
         }
@@ -252,8 +250,10 @@
 }
 
 #pragma mark 上传视频
-- (void)freshVideoBlockCell:(PoporUploadCC *)cell needBind:(BOOL)needBind {
-    PoporUploadEntity * entity = cell.uploadEntity;
+- (void)freshVideoBlockEntity:(PoporUploadEntity *)entity needBind:(BOOL)needBind {
+    PoporUploadCC  * cell   = (PoporUploadCC *)entity.weakCC;
+    NSIndexPath * indexPath = entity.indexPath;
+    
     @weakify(self);
     @weakify(cell);
     @weakify(entity);
@@ -266,15 +266,15 @@
         
         if (entity == cell.uploadEntity) {// CellUI线程刷新
             if (progress == 1) {
-                [cell.imageIV puUpdateProgress:0.99];
+                [entity.weakUploadProgressView puUpdateProgress:0.99];
             }else{
-                [cell.imageIV puUpdateProgress:progress];
+                [entity.weakUploadProgressView puUpdateProgress:progress];
             }
         }
     }];
     // bind部分
     [entity.videoUploadTool updateFinishBlock:^(BOOL isSuccess, BOOL isCancle, NSString * _Nullable fileUrl, NSString * _Nullable requestId) {
-        @strongify(self);
+        //@strongify(self);
         @strongify(cell);
         @strongify(entity);
         
@@ -282,8 +282,8 @@
         if (isSuccess) {
             if (entity == cell.uploadEntity) {// CellUI线程刷新
                 // 成功的话,关闭progress的block.
-                [cell.imageIV puRemoveError_puTapGRActionAsyn:YES];
-                [cell.imageIV puUpdating];
+                [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:YES];
+                [entity.weakUploadProgressView puUpdating];
             }
             entity.videoUploadStatus = PoporUploadStatusFinish;
             entity.videoUrl          = fileUrl;
@@ -301,11 +301,11 @@
                     entity.bindOK = value;
                     
                     if (entity == cell.uploadEntity) {// CellUI线程刷新
-                        [cell.imageIV puUpdateProgress:1.0]; // 移除状态栏
+                        [entity.weakUploadProgressView puUpdateProgress:1.0]; // 移除状态栏
                         if (entity.isBindOK) {
-                            [cell.imageIV puRemoveError_puTapGRActionAsyn:YES];
+                            [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:YES];
                         }else{
-                            [cell.imageIV puAddTapGRActionMessage:@"重新增加" asyn:YES tapBlock:^{
+                            [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新增加" asyn:YES tapBlock:^{
                                 @strongify(entity);
                                 if (entity.videoUploadTool.uploadService.finishBlock) {
                                     entity.videoUploadTool.uploadService.finishBlock(isSuccess, isCancle, entity.videoUrl, entity.videoRequestId);
@@ -320,7 +320,7 @@
                 entity.uploadFinishBlock(dic);
             }else{
                 if (entity == cell.uploadEntity) {// CellUI线程刷新
-                    [cell.imageIV puUpdateProgress:1.0];
+                    [entity.weakUploadProgressView puUpdateProgress:1.0];
                 }
             }
             
@@ -328,15 +328,15 @@
             entity.videoUploadStatus = PoporUploadStatusFailed;
             if (entity == cell.uploadEntity) {// CellUI线程刷新
                 // 失败的话关闭进度
-                [cell.imageIV puUpdateProgress:1.0];
+                [entity.weakUploadProgressView puUpdateProgress:1.0];
                 // 假如刷新的时候发现是失败的,那么也要纠正一下.
-                [cell.imageIV puAddTapGRActionMessage:@"重新上传视频" asyn:YES tapBlock:^{
+                [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频" asyn:YES tapBlock:^{
                     @strongify(self);
                     @strongify(cell);
                     @strongify(entity);
                     
                     entity.videoUploadStatus = PoporUploadStatusUploading;
-                    [cell.imageIV puUpdateProgress:0.01];
+                    [entity.weakUploadProgressView puUpdateProgress:0.01];
                     [self uploadVideo:entity];
                 }];
             }
@@ -344,7 +344,7 @@
     }];
     
     [entity.ivUploadTool updateFinishBlock:^(BOOL isSuccess, BOOL isCancle, NSString * _Nullable fileUrl, NSString * _Nullable requestId) {
-        @strongify(self);
+        //@strongify(self);
         @strongify(cell);
         @strongify(entity);
         
@@ -358,19 +358,19 @@
             });
             
             if (entity == cell.uploadEntity) {// CellUI线程刷新
-                [cell.imageIV puRemoveError_puTapGRActionAsyn:YES];
-                [cell.imageIV puUpdating]; // 增加状态栏
+                [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:YES];
+                [entity.weakUploadProgressView puUpdating]; // 增加状态栏
             }
         }else{
             entity.ivUploadStatus = PoporUploadStatusFailed;
             
             if (entity == cell.uploadEntity) {// CellUI线程刷新
-                [cell.imageIV puAddTapGRActionMessage:@"重新上传视频封面" asyn:YES tapBlock:^{
+                [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频封面" asyn:YES tapBlock:^{
                     @strongify(cell);
                     @strongify(entity);
                     
                     entity.ivUploadStatus = PoporUploadStatusUploading;
-                    [cell.imageIV puUpdateProgress:0.01];
+                    [entity.weakUploadProgressView puUpdateProgress:0.01];
                     [entity.ivUploadTool startUpload];
                 }];
             }
@@ -385,12 +385,12 @@
             break;
         }
         case PoporUploadStatusUploading:{
-            [cell.imageIV puUpdating];
+            [entity.weakUploadProgressView puUpdating];
             break;
         }
         case PoporUploadStatusFailed:{
             // 假如刷新的时候发现是失败的,那么也要纠正一下.
-            [cell.imageIV puAddTapGRActionMessage:@"重新上传视频封面" asyn:NO tapBlock:^{
+            [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频封面" asyn:NO tapBlock:^{
                 //@strongify(self);
                 @strongify(cell);
                 @strongify(entity);
@@ -398,13 +398,13 @@
                 entity.ivUploadStatus = PoporUploadStatusUploading;
                 // 点击重新上传,肯定会在可见范围内的.
                 //为了防止意外再加一次
-                [cell.imageIV puUpdateProgress:0.01];
+                [entity.weakUploadProgressView puUpdateProgress:0.01];
                 [entity.ivUploadTool startUpload];
             }];
             break;
         }
         case PoporUploadStatusFinish:{
-            [cell.imageIV puRemoveError_puTapGRActionAsyn:NO];
+            [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:NO];
             break;
         }
         default:
@@ -418,25 +418,25 @@
             break;
         }
         case PoporUploadStatusUploading:{
-            [cell.imageIV puUpdating];
+            [entity.weakUploadProgressView puUpdating];
             break;
         }
         case PoporUploadStatusFailed:{
-            [cell.imageIV puUpdateProgress:1];
+            [entity.weakUploadProgressView puUpdateProgress:1];
             
-            [cell.imageIV puAddTapGRActionMessage:@"重新上传视频" asyn:NO tapBlock:^{
+            [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频" asyn:NO tapBlock:^{
                 @strongify(self);
-                @strongify(cell);
+                //@strongify(cell);
                 @strongify(entity);
                 
                 entity.videoUploadStatus = PoporUploadStatusUploading;
-                [cell.imageIV puUpdateProgress:0.01];
+                [entity.weakUploadProgressView puUpdateProgress:0.01];
                 [self uploadVideo:entity];
             }];
             break;
         }
         case PoporUploadStatusFinish:{
-            [cell.imageIV puRemoveError_puTapGRActionAsyn:NO];
+            [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:NO];
             break;
         }
         default:
@@ -444,8 +444,8 @@
     }
     if (entity.ivUploadStatus == PoporUploadStatusFinish && entity.videoUploadStatus == PoporUploadStatusFinish) {
         if (entity.isBindOK == NO &&
-            self.view.uploadType == PoporUploadType_videoUploadBind) {
-            [cell.imageIV puAddTapGRActionMessage:@"重新增加" asyn:NO tapBlock:^{
+            entity.uploadType == PoporUploadType_videoUploadBind) {
+            [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新增加" asyn:NO tapBlock:^{
                 @strongify(entity);
                 if (entity.videoUploadTool.uploadService.finishBlock) {
                     entity.videoUploadTool.uploadService.finishBlock(YES, NO, entity.videoUrl, entity.videoRequestId);
@@ -457,14 +457,15 @@
     }
 }
 
-- (void)freshVideoSelectCell:(PoporUploadCC *)cell {
-    PoporUploadEntity * entity = cell.uploadEntity;
-    NSIndexPath * indexPath    = cell.indexPath;
+- (void)freshVideoSelectEntity:(PoporUploadEntity *)entity {
+    PoporUploadCC  * cell   = (PoporUploadCC *)entity.weakCC;
+    NSIndexPath * indexPath = cell.indexPath;
+    
     @weakify(self);
     @weakify(cell);
     @weakify(entity);
     
-    switch (self.view.addType) {
+    switch (entity.addType) {
         case PoporUploadAddTypeNone: {
             if (cell.selectBT.hidden) {
                 break;
@@ -483,10 +484,12 @@
                 if (self.view.ccDeleteBlock) {
                     BlockPBool finishBlock = ^(BOOL value) {
                         @strongify(self);
+                        @strongify(cell);
+                        @strongify(entity);
+                        
                         if (value) {
-                            NSInteger order = [self arrayOrderAt:indexPath];
-                            [self.view.weakImageArray removeObjectAtIndex:order];
-                            [self.view.infoCV reloadData];
+                            [entity.weakPuEntityArray removeObject:entity];
+                            [entity.weakCV reloadData];
                         }
                     };
                     self.view.ccDeleteBlock(entity, finishBlock);
@@ -508,15 +511,16 @@
             [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
                 @strongify(self);
                 @strongify(cell);
+                @strongify(entity);
                 
-                cell.uploadEntity.ivUrl              = nil;
-                cell.uploadEntity.ivUploadTool.image = nil;
-                cell.uploadEntity.ivUploadStatus     = 0;
-                cell.uploadEntity.videoUploadStatus  = 0;
-                cell.uploadEntity.videoUrl           = nil;
+                entity.ivUrl              = nil;
+                entity.ivUploadTool.image = nil;
+                entity.ivUploadStatus     = 0;
+                entity.videoUploadStatus  = 0;
+                entity.videoUrl           = nil;
                 
-                NSIndexPath * ip = [self.view.infoCV indexPathForCell:cell];
-                [self.view.infoCV reloadItemsAtIndexPaths:@[ip]];
+                NSIndexPath * ip = [entity.weakCV indexPathForCell:entity.weakCC];
+                [entity.weakCV reloadItemsAtIndexPaths:@[ip]];
             }];
             break;
         }
@@ -536,7 +540,7 @@
             entity.videoSizeMB = ceil(data.length/1048576);
         }
     }
-    //self.view.videoUploadMaxSize = 1;
+    
     if (self.view.videoUploadMaxSize > 0 &&
         entity.videoSizeMB >= self.view.videoUploadMaxSize) {
         {
@@ -553,7 +557,7 @@
         entity.videoUploadStatus = PoporUploadStatusFailed;
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self.view.infoCV reloadData];
+            [entity.weakCV reloadData];
         });
         
         return;
@@ -591,9 +595,8 @@
 }
 
 #pragma mark 选择图片视频
-- (void)freshImageVideoSelectCell:(PoporUploadCC *)cell {
-    PoporUploadEntity * entity = cell.uploadEntity;
-    
+- (void)freshImageVideoSelectEntity:(PoporUploadEntity *)entity {
+    PoporUploadCC * cell = entity.weakCC;
     @weakify(self);
     @weakify(cell);
     @weakify(entity);
@@ -618,8 +621,9 @@
 }
 
 // !!!: 刷新上传时对应的cell图片
-- (void)freshCellIvImage:(PoporUploadCC *)cell {
-    PoporUploadEntity * entity = cell.uploadEntity;
+- (void)freshCellIvImageEntity:(PoporUploadEntity *)entity {
+    PoporUploadCC * cell = entity.weakCC;
+    
     if (entity.thumbnailImageUrl) {
         [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage];
     }else if (entity.thumbnailImage) {
@@ -633,23 +637,23 @@
 
 - (NSInteger)arrayOrderAt:(NSIndexPath *)indexPath {
     int num = self.view.isShowAddCC ? 0:1;
-    NSInteger order = self.view.weakImageArray.count - indexPath.row - num;
+    NSInteger order = self.view.weakPuEntityArray.count - indexPath.row - num;
     return order;
 }
 
 #pragma mark - cell 的刷新格式
-- (void)showFileNameEvent:(PoporUploadCC *)cc {
+- (void)showFileNameEventEntity:(PoporUploadEntity *)entity {
+    PoporUploadCC * cell = entity.weakCC;
     if (self.view.isShowFileName) {
-        cc.tagL.hidden = NO;
-        cc.tagL.text   = cc.uploadEntity.file_name;
+        cell.tagL.hidden = NO;
+        cell.tagL.text   = cell.uploadEntity.file_name;
     }else{
-        cc.tagL.hidden = YES;
+        cell.tagL.hidden = YES;
     }
 }
 
 - (NSString *)imageIconUrlEntity:(PoporUploadEntity *)entity {
     if (self.view.createIvThumbUrlBlock) {
-        // ImageUrlWH(entity.ivUrl, self.view.ccSize.width*2, self.view.ccSize.height*2);
         return self.view.createIvThumbUrlBlock(entity.ivUrl, self.view.ccSize);
     }else{
         return entity.ivUrl;

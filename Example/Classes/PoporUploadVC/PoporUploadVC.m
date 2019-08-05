@@ -39,7 +39,7 @@
 @synthesize videoFromCamraUseCompress;
 @synthesize videoUploadMaxSize;
 
-@synthesize weakImageArray;
+@synthesize weakPuEntityArray;
 @synthesize uploadFinishBlock;
 @synthesize willAppearBlock, didAppearBlock, viewDidLoadBlock;
 @synthesize deallocBlock;

@@ -23,17 +23,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)freshImageSelectEntity:(PoporUploadEntity *)entity;
 
 #pragma mark 上传视频
-- (void)freshVideoBlockCell:(PoporUploadCC *)cell needBind:(BOOL)needBind;
-- (void)freshVideoSelectCell:(PoporUploadCC *)cell;
+- (void)freshVideoBlockEntity:(PoporUploadEntity *)entity needBind:(BOOL)needBind;
+- (void)freshVideoSelectEntity:(PoporUploadEntity *)entity;
 - (void)uploadVideo:(PoporUploadEntity *)entity;
 
 #pragma mark 选择图片视频
-- (void)freshImageVideoSelectCell:(PoporUploadCC *)cell;
+- (void)freshImageVideoSelectEntity:(PoporUploadEntity *)entity;
 
 // !!!: 刷新上传时对应的cell图片
-- (void)freshCellIvImage:(PoporUploadCC *)cell;
+- (void)freshCellIvImageEntity:(PoporUploadEntity *)entity;
 
-- (void)showFileNameEvent:(PoporUploadCC *)cc;
+- (void)showFileNameEventEntity:(PoporUploadEntity *)entity;
 
 - (NSString *)imageIconUrlEntity:(PoporUploadEntity *)entity;
 
