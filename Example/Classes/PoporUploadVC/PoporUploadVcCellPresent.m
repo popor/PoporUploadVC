@@ -627,15 +627,23 @@
 // !!!: 刷新上传时对应的cell图片
 - (void)freshCellIvImageEntity:(PoporUploadEntity *)entity {
     PoporUploadCC * cell = entity.weakCC;
-    if (entity.thumbnailImageUrl) {
-        if (entity.placeholderImage) {
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:entity.placeholderImage];
-        }else if (self.view.ccPlacehlodImage){
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage];
-        }else{
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl]];
+    
+    // 图片使用顺序
+    // 1. 本地图片缩略图
+    // 2. 网络图片缩略图, 根据block生成
+    // 3. 网络图片缩略图
+    // 4. 本地缩略图
+    // 5. 本地默认图
+    
+    if (entity.ivUploadTool.image) {
+        if (!entity.ivUploadTool.thumbnailImage) {
+            entity.ivUploadTool.thumbnailImage = [UIImage imageFromImage:entity.ivUploadTool.image size:cell.imageIV.frame.size];
         }
-    }else if(entity.ivUrl){
+        cell.imageIV.image = entity.ivUploadTool.thumbnailImage;
+        
+    }
+    // 大多数只有ivUrl
+    else if(entity.ivUrl){
         if (entity.placeholderImage) {
             [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:entity.placeholderImage];
         }else if (self.view.ccPlacehlodImage){
@@ -643,13 +651,29 @@
         }else{
             [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]]];
         }
-    }else if (entity.thumbnailImage) {
-        cell.imageIV.image = entity.thumbnailImage;
-    }else if (entity.ivUploadTool.image) {
-        if (entity.ivUploadTool.thumbnailImage) {
-            entity.ivUploadTool.thumbnailImage = [UIImage imageFromImage:entity.ivUploadTool.image size:cell.imageIV.frame.size];
+    }
+    // 个别有缩略图
+    else if (entity.thumbnailImageUrl) {
+        if (entity.placeholderImage) {
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:entity.placeholderImage];
+        }else if (self.view.ccPlacehlodImage){
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage];
+        }else{
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl]];
         }
-        cell.imageIV.image = entity.ivUploadTool.thumbnailImage;
+    }
+    
+    else if (entity.thumbnailImage) {
+        cell.imageIV.image = entity.thumbnailImage;
+    }
+    else{
+        if (entity.placeholderImage) {
+            cell.imageIV.image = entity.placeholderImage;
+        }else if (self.view.ccPlacehlodImage){
+            cell.imageIV.image = self.view.ccPlacehlodImage;
+        }else{
+            cell.imageIV.image = nil;
+        }
     }
 }
 
@@ -674,7 +698,7 @@
     if (self.view.createIvThumbUrlBlock) {
         return self.view.createIvThumbUrlBlock(entity.ivUrl, self.view.ccSize);
     }else{
-         NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: createIvThumbUrlBlock, 显示CC图片时候有可能内存不够使用! \n❗️❗️❗️  \n❗️❗️❗️ ");
+        NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: createIvThumbUrlBlock, 显示CC图片时候有可能内存不够使用! \n❗️❗️❗️  \n❗️❗️❗️ ");
         return entity.ivUrl;
     }
 }
