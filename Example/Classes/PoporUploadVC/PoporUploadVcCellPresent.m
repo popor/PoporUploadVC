@@ -220,11 +220,11 @@
             break;
         }
         case PoporUploadAddTypeReplace:{
-            if (cell.selectBT.hidden) {
-                break;
-            }
             if (self.view.isShowCcSelectBT) {
                 cell.selectBT.hidden = !entity.ivUrl;
+            }
+            if (cell.selectBT.hidden) {
+                break;
             }
             cell.selectBT.userInteractionEnabled = YES;
             [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
@@ -489,11 +489,11 @@
             break;
         }
         case PoporUploadAddTypeReplace:{
-            if (cell.selectBT.hidden) {
-                break;
-            }
             if (self.view.isShowCcSelectBT) {
                 cell.selectBT.hidden = !entity.ivUrl;
+            }
+            if (cell.selectBT.hidden) {
+                break;
             }
             [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
                 @strongify(entity);
