@@ -15,7 +15,7 @@
 #import <PoporFoundation/PrefixSize.h>
 #import <Masonry/Masonry.h>
 
-@interface PoporUploadVC () 
+@interface PoporUploadVC ()
 @property (nonatomic, strong) PoporUploadVCPresenter * present;
 
 @end
@@ -61,6 +61,7 @@
 @synthesize showCcBG;
 
 @synthesize videoPlayBlock;
+@synthesize videoPlayExtraSetBlock;
 @synthesize createUploadServiceBlock;
 @synthesize createIvThumbUrlBlock;
 
@@ -224,23 +225,23 @@
     self.image_SelectN     = self.image_SelectN ? : [PUShare imageBundleNamed:PoporUploadImage_SelectN];
     self.image_SelectS     = self.image_SelectS ? : [PUShare imageBundleNamed:PoporUploadImage_SelectS];
     self.image_Resume      = self.image_Resume  ? : [PUShare imageBundleNamed:PoporUploadImage_Resume];
-
+    
     tool.image_Add         = self.image_Add;
     tool.image_SelectN     = self.image_SelectN;
     tool.image_SelectS     = self.image_SelectS;
     tool.image_Resume      = self.image_Resume;
-
+    
     tool.image_Add_bgColor = self.image_Add_bgColor;
-
+    
     tool.ccBtXGap          = self.ccBtXGap;
     tool.ccBtYGap          = self.ccBtYGap;
     tool.ccIvXGap          = self.ccIvXGap;
     tool.ccIvYGap          = self.ccIvYGap;
-
+    
     tool.ccIvCorner        = self.ccIvCorner;
     tool.ccIvBorderColor   = self.ccIvBorderColor;
     tool.ccIvBorderWidth   = self.ccIvBorderWidth;
-
+    
     tool.showCcBG          = self.isShowCcBG;
 }
 

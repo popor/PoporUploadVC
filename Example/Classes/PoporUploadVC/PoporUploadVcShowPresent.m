@@ -142,7 +142,11 @@
     }else{
         UIViewController * vc = [[PoporAVPlayerVC alloc] initWithDic:@{@"title":self.view.vc.title, @"videoURL":[NSURL URLWithString:updateUrl], @"showLockRotateBT":@(NO)}];
         // vc.hiddenNcBar = YES;
-        
+        if (!self.view.videoPlayExtraSetBlock) {
+            NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n请设置videoPlayExtraSetBlock, 设置隐藏导航栏, 不然和自带视频播放界面相冲突. \n❗️❗️❗️  \n❗️❗️❗️ ");
+        }else{
+            self.view.videoPlayExtraSetBlock(self.view.vc.navigationController, vc);
+        }
         [self.view.vc.navigationController pushViewController:vc animated:YES];
     }
 }

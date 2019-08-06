@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define CvSectionDefaultEdgeInsets UIEdgeInsetsMake(5, 16, 5, 16)
 
 typedef void(^PoporUpload_PEntityFinish) (PoporUploadEntity * entity, BlockPBool finishBlock);
+typedef void(^PoporUpload_PNcVc) (UINavigationController * nc, UIViewController * vc);
 
 typedef BOOL(^PoporUpload_RBoolPVoid) (void);
 
@@ -98,7 +99,11 @@ typedef NSString * _Nullable(^PoporUpload_RStringPStringSize) (NSString * url, C
 @property (nonatomic, copy  ) BlockPViewController didAppearBlock;
 @property (nonatomic, copy  ) BlockPViewController viewDidLoadBlock;
 
+// 自定义视频播放block
 @property (nonatomic, copy  ) BlockPDic            videoPlayBlock;
+
+// 自定义视频播放额外设置block, 比如隐藏系统默认导航栏,这个必须设置,不然和我的相冲突
+@property (nonatomic, copy  ) PoporUpload_PNcVc    videoPlayExtraSetBlock;
 
 // 获取生成上传tool的block
 @property (nonatomic, copy  ) PoporUpload_RUploadServicePVoid createUploadServiceBlock;
