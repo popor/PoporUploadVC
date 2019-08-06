@@ -699,7 +699,7 @@
     if (self.view.createIvThumbUrlBlock) {
         return self.view.createIvThumbUrlBlock(entity.ivUrl, self.view.ccSize);
     } else if (puShare.createIvThumbUrlBlock) {
-        puShare.createIvThumbUrlBlock(entity.ivUrl, self.view.ccSize);
+        return puShare.createIvThumbUrlBlock(entity.ivUrl, self.view.ccSize);
     } else {
         NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: createIvThumbUrlBlock (可已设置PUShare里面的公共属性), 显示CC图片时候有可能内存不够使用! \n❗️❗️❗️  \n❗️❗️❗️ ");
         return entity.ivUrl;

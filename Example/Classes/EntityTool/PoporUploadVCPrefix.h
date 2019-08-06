@@ -12,6 +12,8 @@
 
 @class PoporUploadEntity;
 
+NS_ASSUME_NONNULL_BEGIN
+
 #ifndef PoporUploadPrefix_h
 #define PoporUploadPrefix_h
 
@@ -75,3 +77,5 @@ typedef NS_ENUM(int, PoporUploadStatus) {
 };
 
 #endif /* PoporUploadPrefix_h */
+
+NS_ASSUME_NONNULL_END
