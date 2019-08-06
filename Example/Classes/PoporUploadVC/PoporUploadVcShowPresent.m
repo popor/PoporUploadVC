@@ -40,7 +40,9 @@
 }
 
 // !!!: 查看图片
-- (void)showImageBrowerVCIndexPath:(NSIndexPath *)indexPath all:(BOOL)all {
+//- (void)showImageBrowerVCIndexPath:(NSIndexPath *)indexPath all:(BOOL)all {
+- (void)showImageBrowerVCEntity:(PoporUploadEntity *)entity all:(BOOL)all {
+    NSIndexPath * indexPath = entity.indexPath;
     // 全选类别: 一般为all,替换模式为no
     UICollectionView * collectionView = self.view.infoCV;
     NSInteger count;
@@ -48,7 +50,7 @@
     //NSInteger indexRowFirst = self.view.isShowAddCC ? 1:0 ;
     
     if (all) {
-        count = [self.present collectionView:collectionView numberOfItemsInSection:0];
+        count = [self.present collectionView:collectionView numberOfItemsInSection:indexPath.section];
         i = self.view.isShowAddCC ? 1:0 ;
     }else{
         count = indexPath.row+1;
@@ -59,7 +61,7 @@
         imageArray = [NSMutableArray new];
         for (; i < count; i++) {
             PoporImageBrowerEntity * entity = [PoporImageBrowerEntity new];
-            PoporUploadEntity * wde = [self.present getCellEntityAt:[NSIndexPath indexPathForRow:i inSection:0]];
+            PoporUploadEntity * wde = [self.present getCellEntityAt:[NSIndexPath indexPathForRow:i inSection:indexPath.section]];
             
             if (wde.ivUrl) {
                 entity.bigImageUrl = [NSURL URLWithString:wde.ivUrl];
@@ -89,7 +91,7 @@
             }
             PoporUploadCC * tempCC;
             if (all) {
-                tempCC = (PoporUploadCC *)[collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
+                tempCC = (PoporUploadCC *)[collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:indexPath.section]];
             }else{
                 tempCC = (PoporUploadCC *)[collectionView cellForItemAtIndexPath:indexPath];
             }
@@ -100,7 +102,7 @@
                 if (self.view.isShowAddCC) {
                     index ++;
                 }
-                [self.view.infoCV scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+                [self.view.infoCV scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:indexPath.section] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
                 //collectionView必须要layoutIfNeeded，否则cellForItemAtIndexPath,有可能获取到的是nil，
                 [self.view.infoCV layoutIfNeeded];
             } else {
