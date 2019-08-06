@@ -23,7 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy  ) NSNumber          * compressionNumber;
 @property (nonatomic, strong) NSString          * imageFileURL; // 假如传递图片url的话,可以使用这个参数.
 
-@property (nonatomic, strong, nullable) UIImage * image; // 不太想用UIImageView的category了,容易造成误解.
+@property (nonatomic, strong, nullable) UIImage * image;// 用于上传
+@property (nonatomic, strong, nullable) UIImage * thumbnailImage; // 用于cc展示
 @property (nonatomic, strong, nullable) NSData  * imageData;  // 假如传递视频的Data话,可以使用这个参数. 优选选择imageData
 @property (nonatomic, strong) NSNumber          * originFile; // 是否使用原图
 

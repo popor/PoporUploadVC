@@ -12,6 +12,7 @@
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <PoporUI/IToastKeyboard.h>
+#import <PoporUI/UIImage+create.h>
 
 @interface PoporUploadVcCellPresent ()
 
@@ -626,15 +627,29 @@
 // !!!: 刷新上传时对应的cell图片
 - (void)freshCellIvImageEntity:(PoporUploadEntity *)entity {
     PoporUploadCC * cell = entity.weakCC;
-    
     if (entity.thumbnailImageUrl) {
-        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage];
+        if (entity.placeholderImage) {
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:entity.placeholderImage];
+        }else if (self.view.ccPlacehlodImage){
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage];
+        }else{
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl]];
+        }
+    }else if(entity.ivUrl){
+        if (entity.placeholderImage) {
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:entity.placeholderImage];
+        }else if (self.view.ccPlacehlodImage){
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:self.view.ccPlacehlodImage];
+        }else{
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]]];
+        }
     }else if (entity.thumbnailImage) {
         cell.imageIV.image = entity.thumbnailImage;
     }else if (entity.ivUploadTool.image) {
-        cell.imageIV.image = entity.ivUploadTool.image;
-    }else if(entity.ivUrl){
-        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:self.view.ccPlacehlodImage];
+        if (entity.ivUploadTool.thumbnailImage) {
+            entity.ivUploadTool.thumbnailImage = [UIImage imageFromImage:entity.ivUploadTool.image size:cell.imageIV.frame.size];
+        }
+        cell.imageIV.image = entity.ivUploadTool.thumbnailImage;
     }
 }
 
@@ -659,6 +674,7 @@
     if (self.view.createIvThumbUrlBlock) {
         return self.view.createIvThumbUrlBlock(entity.ivUrl, self.view.ccSize);
     }else{
+         NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: createIvThumbUrlBlock, 显示CC图片时候有可能内存不够使用! \n❗️❗️❗️  \n❗️❗️❗️ ");
         return entity.ivUrl;
     }
 }

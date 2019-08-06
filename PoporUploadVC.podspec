@@ -40,6 +40,7 @@ Pod::Spec.new do |s|
   s.dependency 'Masonry'
   s.dependency 'JSONModel'
   s.dependency 'PoporUI/IToast'
+  s.dependency 'PoporUI/UIImage'
   s.dependency 'PoporFoundation/PrefixCore'
   s.dependency 'PoporFoundation/NSAssistant'
   s.dependency 'PoporFoundation/NSDate'
