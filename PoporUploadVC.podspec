@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporUploadVC'
-  s.version          = '0.0.12'
+  s.version          = '0.0.13'
   s.summary          = '简化上传图片视频等方法'
 
   s.homepage         = 'https://github.com/popor/PoporUploadVC'
@@ -29,13 +29,6 @@ Pod::Spec.new do |s|
   end
   
   s.resource = 'Example/Classes/PoporUploadVC.bundle'
-  
-  # s.resource_bundles = {
-  #   'PoporUploadVC' => ['PoporUploadVC/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   
   s.dependency 'Masonry'
   s.dependency 'JSONModel'

@@ -183,11 +183,8 @@
 }
 
 - (void)freshImageSelectEntity:(PoporUploadEntity *)entity {
-    
-    NSIndexPath * indexPath = entity.indexPath;
     PoporUploadCC * cell    = (PoporUploadCC *)entity.weakCC;
     @weakify(self);
-    @weakify(cell);
     @weakify(entity);
     
     switch (entity.addType) {
@@ -204,7 +201,6 @@
             cell.selectBT.userInteractionEnabled = YES;
             [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
                 @strongify(self);
-                @strongify(cell);
                 @strongify(entity);
                 
                 if (self.view.ccDeleteBlock) {
@@ -233,7 +229,7 @@
             cell.selectBT.userInteractionEnabled = YES;
             [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
                 @strongify(entity);
-                @strongify(cell);
+                //@strongify(cell);
                 
                 entity.ivUrl              = nil;
                 entity.ivUploadTool.image = nil;
@@ -253,7 +249,6 @@
 #pragma mark 上传视频
 - (void)freshVideoBlockEntity:(PoporUploadEntity *)entity needBind:(BOOL)needBind {
     PoporUploadCC  * cell   = (PoporUploadCC *)entity.weakCC;
-    NSIndexPath * indexPath = entity.indexPath;
     
     @weakify(self);
     @weakify(cell);
@@ -333,7 +328,6 @@
                 // 假如刷新的时候发现是失败的,那么也要纠正一下.
                 [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频" asyn:YES tapBlock:^{
                     @strongify(self);
-                    @strongify(cell);
                     @strongify(entity);
                     
                     entity.videoUploadStatus = PoporUploadStatusUploading;
@@ -367,7 +361,6 @@
             
             if (entity == cell.uploadEntity) {// CellUI线程刷新
                 [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频封面" asyn:YES tapBlock:^{
-                    @strongify(cell);
                     @strongify(entity);
                     
                     entity.ivUploadStatus = PoporUploadStatusUploading;
@@ -392,8 +385,6 @@
         case PoporUploadStatusFailed:{
             // 假如刷新的时候发现是失败的,那么也要纠正一下.
             [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频封面" asyn:NO tapBlock:^{
-                //@strongify(self);
-                @strongify(cell);
                 @strongify(entity);
                 
                 entity.ivUploadStatus = PoporUploadStatusUploading;
@@ -460,10 +451,8 @@
 
 - (void)freshVideoSelectEntity:(PoporUploadEntity *)entity {
     PoporUploadCC  * cell   = (PoporUploadCC *)entity.weakCC;
-    NSIndexPath * indexPath = cell.indexPath;
     
     @weakify(self);
-    @weakify(cell);
     @weakify(entity);
     
     switch (entity.addType) {
@@ -479,13 +468,10 @@
             }
             [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
                 @strongify(self);
-                @strongify(cell);
                 @strongify(entity);
                 
                 if (self.view.ccDeleteBlock) {
                     BlockPBool finishBlock = ^(BOOL value) {
-                        @strongify(self);
-                        @strongify(cell);
                         @strongify(entity);
                         
                         if (value) {
@@ -510,8 +496,6 @@
                 cell.selectBT.hidden = !entity.ivUrl;
             }
             [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
-                @strongify(self);
-                @strongify(cell);
                 @strongify(entity);
                 
                 entity.ivUrl              = nil;
@@ -597,7 +581,7 @@
 
 #pragma mark 选择图片视频
 - (void)freshImageVideoSelectEntity:(PoporUploadEntity *)entity {
-    PoporUploadCC * cell = entity.weakCC;
+    PoporUploadCC * cell = (PoporUploadCC *)entity.weakCC;
     @weakify(self);
     @weakify(cell);
     @weakify(entity);
@@ -626,7 +610,7 @@
 
 // !!!: 刷新上传时对应的cell图片
 - (void)freshCellIvImageEntity:(PoporUploadEntity *)entity {
-    PoporUploadCC * cell = entity.weakCC;
+    PoporUploadCC * cell = (PoporUploadCC *)entity.weakCC;
     
     // 图片使用顺序
     // 1. 本地图片缩略图
@@ -685,7 +669,7 @@
 
 #pragma mark - cell 的刷新格式
 - (void)showFileNameEventEntity:(PoporUploadEntity *)entity {
-    PoporUploadCC * cell = entity.weakCC;
+    PoporUploadCC * cell = (PoporUploadCC *)entity.weakCC;
     if (self.view.isShowFileName) {
         cell.tagL.hidden = NO;
         cell.tagL.text   = cell.uploadEntity.file_name;

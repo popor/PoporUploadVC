@@ -25,7 +25,7 @@
     self.title = @"上传";
     
     self.uploadArray = [NSMutableArray new];
-    UIButton * oneBT = ({
+    {
         UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame =  CGRectMake(100, 100, 80, 44);
         [button setTitle:@"TEST" forState:UIControlStateNormal];
@@ -42,8 +42,7 @@
         
         [button addTarget:self action:@selector(btAction) forControlEvents:UIControlEventTouchUpInside];
         
-        button;
-    });
+    };
 }
 
 - (void)btAction {
