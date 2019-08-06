@@ -117,7 +117,7 @@
     }
 }
 
-- (void)showVideoPlayVC:(PoporUploadEntity *)entity {
+- (void)showVideoPlayEntity:(PoporUploadEntity *)entity {
     PoporUploadCC * cc = (PoporUploadCC *)entity.weakCC;
     // 视频部分
     if (cc.uploadEntity.videoUploadStatus == PoporUploadStatusFailed) {

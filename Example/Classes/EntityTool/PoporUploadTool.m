@@ -46,7 +46,7 @@
 
 - (void)startUpload {
     if (!self.uploadService) {
-        NSLog(@"\n❗️❗️❗️未设置: createUploadServiceBlock, 遵循 PoporUploadServiceProtocol 的上传类❗️❗️❗️");
+        NSLog(@"\n❗️❗️❗️未设置: createUploadServiceBlock, 遵循 PoporUploadServiceProtocol 的上传类. 或者自定义继承类未初始化相应组件.❗️❗️❗️");
         if (self.puFinishBlock) {
             self.puFinishBlock(NO, NO, nil, nil);
         }

@@ -219,11 +219,11 @@
         }
     }else{
         // 查看详情模式
+        PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
         switch (self.view.uploadType) {
             case PoporUploadType_imageDisplay :
             case PoporUploadType_imageUpload :
             case PoporUploadType_imageUploadBind :{
-                PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
                 if (self.view.addType == PoporUploadAddTypeReplace) {
                     if (entity.ivUrl) {
                         // 查看单张图片
@@ -242,11 +242,10 @@
             case PoporUploadType_videoUpload:
             case PoporUploadType_videoUploadBind:
             case PoporUploadType_videoSelect: {
-                [self.showPresent showVideoPlayVC:cc];
+                [self.showPresent showVideoPlayEntity:entity];
                 break;
             }
-            case PoporUploadType_imageSelect:{PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
-                
+            case PoporUploadType_imageSelect:{
                 [self.showPresent showImageBrowerVCEntity:entity all:YES];
                 break;
             }

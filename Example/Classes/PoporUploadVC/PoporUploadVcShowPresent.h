@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)showImageBrowerVCEntity:(PoporUploadEntity *)entity all:(BOOL)all;
 
-- (void)showVideoPlayVC:(PoporUploadEntity *)entity;
+- (void)showVideoPlayEntity:(PoporUploadEntity *)entity;
 
 @end
 
