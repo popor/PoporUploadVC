@@ -615,6 +615,9 @@
                 }
             };
             self.view.ccSelectBlock(entity, finishBlock);
+        }else{
+            cell.uploadEntity.select = !cell.uploadEntity.isSelect;
+            [cell.selectBT setSelected:cell.uploadEntity.isSelect];
         }
     }];
     cell.selectBT.selected = cell.uploadEntity.isSelect;
