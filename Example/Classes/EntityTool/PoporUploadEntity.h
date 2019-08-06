@@ -39,25 +39,32 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImage              * thumbnailImage;
 @property (nonatomic, strong) NSString             * thumbnailImageUrl;
 
-@property (nonatomic        ) PoporUploadStatus    ivUploadStatus;// 图片上传状态
-@property (nonatomic        ) PoporUploadStatus    videoUploadStatus;// 视频上传状态
+// 图片和视频是主要的使用场景,文件是预设.
+// 图片
+@property (nonatomic, strong, nullable) PoporUploadTool   * ivUploadTool;// 负责上传图片
+@property (nonatomic, strong, nullable) NSString          * ivUrl;
+@property (nonatomic, strong, nullable) NSString          * ivRequestId;
+@property (nonatomic                  ) PoporUploadStatus ivUploadStatus;// 上传图片状态
 
-@property (nonatomic, strong) PoporUploadTool      * ivUploadTool;// 负责上传图片
-@property (nonatomic, strong) PoporUploadTool      * videoUploadTool;// 负责上传视频
-@property (nonatomic        ) NSInteger            videoSizeMB;// 单位为MB
+// 视频
+@property (nonatomic, strong, nullable) PoporUploadTool   * videoUploadTool;// 负责上传视频
+@property (nonatomic, strong, nullable) NSString          * videoUrl;
+@property (nonatomic, strong, nullable) NSString          * videoRequestId;
+@property (nonatomic                  ) PoporUploadStatus videoUploadStatus;// 上传视频状态
+@property (nonatomic                  ) NSInteger         videoSizeMB;// 单位为MB
+
+// 文件
+@property (nonatomic, strong, nullable) PoporUploadTool   * fileUploadTool;// 负责文件视频
+@property (nonatomic, strong, nullable) NSString          * fileUrl;
+@property (nonatomic, strong, nullable) NSString          * fileRequestId;
+@property (nonatomic                  ) PoporUploadStatus fileUploadStatus;// 上传文件状态
+@property (nonatomic                  ) NSInteger         fileSizeMB;// 单位为MB
 
 // 用来区分是否使用网络图片.
 // 用户绑定记录,例如用户头像和上传家访图片视频.
 @property (nonatomic, getter = isBindOK)  BOOL bindOK; //绑定成功
 @property (nonatomic, getter = isHasData) BOOL hasData;//是否有素材
 @property (nonatomic, getter = isSelect)  BOOL select; //是否选中图片
-
-// 上传返回的url
-@property (nonatomic, strong, nullable) NSString * ivUrl;
-@property (nonatomic, strong, nullable) NSString * videoUrl;
-
-@property (nonatomic, strong, nullable) NSString * ivRequestId;
-@property (nonatomic, strong, nullable) NSString * videoRequestId;
 
 // --- 额外参数 -----------------------------------------------------------------
 // 供其他情况使用额外参数

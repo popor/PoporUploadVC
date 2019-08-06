@@ -44,14 +44,13 @@ typedef NSString * _Nullable(^PoporUpload_RStringPStringSize) (NSString * url, C
 @property (nonatomic, weak  ) NSMutableArray<PoporUploadEntity*> * weakPuEntityArray;
 
 @property (nonatomic        ) PoporUploadType uploadType;
-@property (nonatomic, strong) UIColor * infoCvBgColor;
+@property (nonatomic        ) PoporUploadAddType addType;
 
 @property (nonatomic, getter=isShowCcSelectBT) BOOL showCcSelectBT;// 是否在有素材的时候显示selectBT
 
-@property (nonatomic        ) PoporUploadAddType addType;
-
 // 是否显示新增按钮, 这个由addType决定, 最好不要在dic中设置了.
 @property (nonatomic, getter=isShowAddCC) BOOL showAddCC;
+
 // !!!: UI 参数
 @property (nonatomic        ) int lineNumber; // 默认为4
 @property (nonatomic        ) UIEdgeInsets cvSectionEdgeInsets;
@@ -70,6 +69,7 @@ typedef NSString * _Nullable(^PoporUpload_RStringPStringSize) (NSString * url, C
 @property (nonatomic, getter=isShowCcBG) BOOL showCcBG;// 显示bg颜色
 
 // 图片
+@property (nonatomic, strong) UIColor * infoCvBgColor;
 @property (nonatomic, strong) UIColor * image_Add_bgColor;
 
 @property (nonatomic, strong) UIImage * image_Add;

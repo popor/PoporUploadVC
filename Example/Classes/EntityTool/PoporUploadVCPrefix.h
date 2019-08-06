@@ -9,8 +9,8 @@
 #ifndef PoporUploadPrefix_h
 #define PoporUploadPrefix_h
 
-static NSString * PoporUploadImage_Add     = @"PoporImage_Add";
-static NSString * PoporUploadImage_Delete  = @"PoporImage_Delete";
+static NSString * PoporUploadImage_Add     = @"PoporUploadImage_Add";
+static NSString * PoporUploadImage_Delete  = @"PoporUploadImage_Delete";
 static NSString * PoporUploadImage_SelectN = @"PoporUploadImage_SelectN";
 static NSString * PoporUploadImage_SelectS = @"PoporUploadImage_SelectS";
 static NSString * PoporUploadImage_Resume  = @"PoporUploadImage_Resume";

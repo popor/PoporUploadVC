@@ -40,7 +40,6 @@
 }
 
 // !!!: 查看图片
-//- (void)showImageBrowerVCIndexPath:(NSIndexPath *)indexPath all:(BOOL)all {
 - (void)showImageBrowerVCEntity:(PoporUploadEntity *)entity all:(BOOL)all {
     NSIndexPath * indexPath = entity.indexPath;
     // 全选类别: 一般为all,替换模式为no
@@ -118,7 +117,8 @@
     }
 }
 
-- (void)showVideoPlayVC:(PoporUploadCC *)cc {
+- (void)showVideoPlayVC:(PoporUploadEntity *)entity {
+    PoporUploadCC * cc = (PoporUploadCC *)entity.weakCC;
     // 视频部分
     if (cc.uploadEntity.videoUploadStatus == PoporUploadStatusFailed) {
         NSLog(@"上传失败，无法播放");

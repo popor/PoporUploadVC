@@ -223,18 +223,18 @@
             case PoporUploadType_imageDisplay :
             case PoporUploadType_imageUpload :
             case PoporUploadType_imageUploadBind :{
+                PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
                 if (self.view.addType == PoporUploadAddTypeReplace) {
-                    PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
                     if (entity.ivUrl) {
                         // 查看单张图片
-                        [self.showPresent showImageBrowerVCIndexPath:indexPath all:NO];
+                        [self.showPresent showImageBrowerVCEntity:entity all:NO];
                     }else{
                         // 上传图片
                         [self showImageACReplaceIndexPath:indexPath];
                     }
                 }else{
                     // 查看全部
-                    [self.showPresent showImageBrowerVCIndexPath:indexPath all:YES];
+                    [self.showPresent showImageBrowerVCEntity:entity all:YES];
                 }
                 break;
             }
@@ -245,8 +245,9 @@
                 [self.showPresent showVideoPlayVC:cc];
                 break;
             }
-            case PoporUploadType_imageSelect:{
-                [self.showPresent showImageBrowerVCIndexPath:indexPath all:YES];
+            case PoporUploadType_imageSelect:{PoporUploadEntity * entity = [self getCellEntityAt:indexPath];
+                
+                [self.showPresent showImageBrowerVCEntity:entity all:YES];
                 break;
             }
         }

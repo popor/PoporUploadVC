@@ -19,9 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setMyView:(id<PoporUploadVCProtocol>)view;
 - (void)setMyPresent:(id)present;
 
-- (void)showImageBrowerVCIndexPath:(NSIndexPath *)indexPath all:(BOOL)all;
+- (void)showImageBrowerVCEntity:(PoporUploadEntity *)entity all:(BOOL)all;
 
-- (void)showVideoPlayVC:(PoporUploadCC *)cc;
+- (void)showVideoPlayVC:(PoporUploadEntity *)entity;
 
 @end
 

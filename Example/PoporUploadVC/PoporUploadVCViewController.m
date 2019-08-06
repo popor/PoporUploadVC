@@ -87,7 +87,7 @@
     
     NSDictionary * dic =
     @{
-      @"weakImageArray":    self.uploadArray,
+      @"weakPuEntityArray":    self.uploadArray,
       @"title":             @"上传图片",
       
       @"uploadType":        @(uploadType),
