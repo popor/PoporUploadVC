@@ -134,18 +134,23 @@
     if ([updateUrl hasPrefix:@"//"]) {
         updateUrl = [NSString stringWithFormat:@"http:%@", updateUrl];
     }
-    
+    PUShare * pushare = [PUShare share];
     if (self.view.videoPlayBlock) {
         self.view.videoPlayBlock(@{@"videoURL":[NSURL URLWithString:updateUrl],
                                    @"vc":self.view.vc,
                                    });
-    }else{
+    }else if(pushare.videoPlayBlock){
+        pushare.videoPlayBlock(@{@"videoURL":[NSURL URLWithString:updateUrl],
+                                 @"vc":self.view.vc,
+                                   });
+    } else {
         UIViewController * vc = [[PoporAVPlayerVC alloc] initWithDic:@{@"title":self.view.vc.title, @"videoURL":[NSURL URLWithString:updateUrl], @"showLockRotateBT":@(NO)}];
-        // vc.hiddenNcBar = YES;
-        if (!self.view.videoPlayExtraSetBlock) {
-            NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n请设置videoPlayExtraSetBlock, 设置隐藏导航栏, 不然和自带视频播放界面相冲突. \n❗️❗️❗️  \n❗️❗️❗️ ");
-        }else{
+        if (self.view.videoPlayExtraSetBlock) {
             self.view.videoPlayExtraSetBlock(self.view.vc.navigationController, vc);
+        } else if (pushare.videoPlayExtraSetBlock){
+            pushare.videoPlayExtraSetBlock(self.view.vc.navigationController, vc);
+        } else {
+            NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n请设置videoPlayExtraSetBlock (可已设置PUShare里面的公共属性), 设置隐藏导航栏, 不然和自带视频播放界面相冲突. \n❗️❗️❗️  \n❗️❗️❗️ ");
         }
         [self.view.vc.navigationController pushViewController:vc animated:YES];
     }

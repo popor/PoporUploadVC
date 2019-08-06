@@ -6,8 +6,27 @@
 //  Copyright (c) 2019 popor. All rights reserved.
 //
 
+#import <PoporFoundation/PrefixBlock.h>
+#import <PoporFoundation/PrefixColor.h>
+#import "PoporUploadServiceProtocol.h"
+
+@class PoporUploadEntity;
+
 #ifndef PoporUploadPrefix_h
 #define PoporUploadPrefix_h
+
+#define CvSectionDefaultEdgeInsets UIEdgeInsetsMake(5, 16, 5, 16)
+
+typedef void(^PoporUpload_PEntityFinish) (PoporUploadEntity * entity, BlockPBool finishBlock);
+
+typedef void(^PoporUpload_PNcVc) (UINavigationController * nc, UIViewController * vc);
+
+typedef BOOL(^PoporUpload_RBoolPVoid) (void);
+
+typedef id<PoporUploadServiceProtocol>_Nullable(^PoporUpload_RUploadServicePVoid) (void);
+
+typedef NSString * _Nullable(^PoporUpload_RStringPStringSize) (NSString * url, CGSize ccSize);
+
 
 static NSString * PoporUploadImage_Add     = @"PoporUploadImage_Add";
 static NSString * PoporUploadImage_Delete  = @"PoporUploadImage_Delete";

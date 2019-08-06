@@ -321,9 +321,7 @@
     entity.uploadFinishBlock = self.view.uploadFinishBlock;
     
     entity.ivUploadTool = [PoporUploadTool new];
-    if (self.view.createUploadServiceBlock) {
-        entity.ivUploadTool.uploadService = self.view.createUploadServiceBlock();
-    }
+    entity.ivUploadTool.uploadService = [self getPoporUploadService];
     entity.ivUploadTool.image = image;
     entity.ivUploadTool.originFile = @(origin);
     
@@ -340,10 +338,22 @@
     entity.ivUploadStatus = PoporUploadStatusInit;
     
     entity.ivUploadTool = [PoporUploadTool new];
+    entity.ivUploadTool.uploadService = [self getPoporUploadService];
     entity.ivUploadTool.image = image;
+}
+
+- (id<PoporUploadServiceProtocol>)getPoporUploadService {
+    PUShare * puShare = [PUShare share];
+    id<PoporUploadServiceProtocol> service;
     if (self.view.createUploadServiceBlock) {
-        entity.ivUploadTool.uploadService = self.view.createUploadServiceBlock();
+        service = self.view.createUploadServiceBlock();
+    } else if (puShare.createUploadServiceBlock){
+        service = puShare.createUploadServiceBlock();
+    } else{
+        NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n请设置createUploadServiceBlock (可已设置PUShare里面的公共属性), 上传实体类. \n❗️❗️❗️  \n❗️❗️❗️ ");
+        return nil;
     }
+    return service;
 }
 
 #pragma mark - 视频选择部分
@@ -374,10 +384,8 @@
         
         entity.ivUploadTool           = [PoporUploadTool new];
         entity.videoUploadTool        = [PoporUploadTool new];
-        if (self.view.createUploadServiceBlock) {
-            entity.ivUploadTool.uploadService    = self.view.createUploadServiceBlock();
-            entity.videoUploadTool.uploadService = self.view.createUploadServiceBlock();
-        }
+        entity.ivUploadTool.uploadService    = [self getPoporUploadService];
+        entity.videoUploadTool.uploadService = [self getPoporUploadService];
         
         if (imageData) {
             entity.ivUploadTool.image     = [UIImage imageWithData:imageData];

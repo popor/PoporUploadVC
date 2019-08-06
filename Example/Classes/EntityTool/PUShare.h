@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PoporUploadVCPrefix.h"
+#import "PoporUploadEntity.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,6 +36,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 获取本framework图片
 + (UIImage *)imageBundleNamed:(NSString *)imageName;
+
+// 以下设置一些公共的block,比如图片缩略图block等
+// 自定义视频播放block
+@property (nonatomic, copy  ) BlockPDic                       videoPlayBlock;
+
+// 自定义视频播放额外设置block, 比如隐藏系统默认导航栏,这个必须设置,不然和我的相冲突
+@property (nonatomic, copy  ) PoporUpload_PNcVc               videoPlayExtraSetBlock;
+
+// 获取生成上传tool的block
+@property (nonatomic, copy  ) PoporUpload_RUploadServicePVoid createUploadServiceBlock;
+
+// 获取图片缩略图的block, 根据不同的图床平台,请设置对应的缩略图url,供ccIV使用
+@property (nonatomic, copy  ) PoporUpload_RStringPStringSize  createIvThumbUrlBlock;
+
 
 @end
 

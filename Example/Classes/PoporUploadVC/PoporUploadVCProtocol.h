@@ -7,28 +7,10 @@
 
 #import <Foundation/Foundation.h>
 
-#import <PoporFoundation/PrefixBlock.h>
-#import <PoporFoundation/PrefixColor.h>
-
-#import "PUShare.h"
-#import "PoporUploadVCPrefix.h"
-#import "PoporUploadServiceProtocol.h"
-
+#import "PUShare.h" // 包含所有常用.h
 #import "PoporUploadCC.h"
-#import "PoporUploadEntity.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-#define CvSectionDefaultEdgeInsets UIEdgeInsetsMake(5, 16, 5, 16)
-
-typedef void(^PoporUpload_PEntityFinish) (PoporUploadEntity * entity, BlockPBool finishBlock);
-typedef void(^PoporUpload_PNcVc) (UINavigationController * nc, UIViewController * vc);
-
-typedef BOOL(^PoporUpload_RBoolPVoid) (void);
-
-typedef id<PoporUploadServiceProtocol>_Nullable(^PoporUpload_RUploadServicePVoid) (void);
-
-typedef NSString * _Nullable(^PoporUpload_RStringPStringSize) (NSString * url, CGSize ccSize);
 
 // MARK: 对外接口
 @protocol PoporUploadVCProtocol <NSObject>
@@ -85,34 +67,38 @@ typedef NSString * _Nullable(^PoporUpload_RStringPStringSize) (NSString * url, C
 @property (nonatomic        ) BOOL videoFromCamraUseCompress; // 拍摄的视频是否压缩?
 @property (nonatomic        ) int  videoUploadMaxSize; //视频上传最大容量,单位为MB 1024*1024.
 
-// block
-@property (nonatomic, copy  ) BlockPDic            uploadFinishBlock;// 上传好文件之后的block
-@property (nonatomic, copy  ) BlockPVoid           deallocBlock;// 该VC 注销之后的block
-@property (nonatomic, copy  ) PoporUpload_RBoolPVoid      ncSelectBlock;// 选择模式下, nc 右边按钮事件
+// 是否显示file_name
+@property (nonatomic, getter=isShowFileName) BOOL showFileName;
+
+// --- block -------------------------------------------------------------------
+@property (nonatomic, copy  ) BlockPDic                       uploadFinishBlock;// 上传好文件之后的block
+@property (nonatomic, copy  ) BlockPVoid                      deallocBlock;// 该VC 注销之后的block
+@property (nonatomic, copy  ) PoporUpload_RBoolPVoid          ncSelectBlock;// 选择模式下, nc 右边按钮事件
 
 // 选择模式下, cc右上角按钮事件
-@property (nonatomic, copy  ) PoporUpload_PEntityFinish   ccSelectBlock;
+@property (nonatomic, copy  ) PoporUpload_PEntityFinish       ccSelectBlock;
 // 上传和上传绑定模式下, cc右上角按钮事件
-@property (nonatomic, copy  ) PoporUpload_PEntityFinish   ccDeleteBlock;
+@property (nonatomic, copy  ) PoporUpload_PEntityFinish       ccDeleteBlock;
 
-@property (nonatomic, copy  ) BlockPViewController willAppearBlock;
-@property (nonatomic, copy  ) BlockPViewController didAppearBlock;
-@property (nonatomic, copy  ) BlockPViewController viewDidLoadBlock;
+@property (nonatomic, copy  ) BlockPViewController            willAppearBlock;
+@property (nonatomic, copy  ) BlockPViewController            didAppearBlock;
+@property (nonatomic, copy  ) BlockPViewController            viewDidLoadBlock;
 
+// 下面是可以使用PUShare里面的公共block
 // 自定义视频播放block
-@property (nonatomic, copy  ) BlockPDic            videoPlayBlock;
+@property (nonatomic, copy  ) BlockPDic                       videoPlayBlock;
 
 // 自定义视频播放额外设置block, 比如隐藏系统默认导航栏,这个必须设置,不然和我的相冲突
-@property (nonatomic, copy  ) PoporUpload_PNcVc    videoPlayExtraSetBlock;
+@property (nonatomic, copy  ) PoporUpload_PNcVc               videoPlayExtraSetBlock;
 
 // 获取生成上传tool的block
 @property (nonatomic, copy  ) PoporUpload_RUploadServicePVoid createUploadServiceBlock;
 
 // 获取图片缩略图的block, 根据不同的图床平台,请设置对应的缩略图url,供ccIV使用
-@property (nonatomic, copy  ) PoporUpload_RStringPStringSize createIvThumbUrlBlock;
+@property (nonatomic, copy  ) PoporUpload_RStringPStringSize  createIvThumbUrlBlock;
 
-// 是否显示file_name
-@property (nonatomic, getter=isShowFileName) BOOL showFileName;
+
+
 
 @end
 
