@@ -619,14 +619,25 @@
     // 3. 网络图片缩略图
     // 4. 本地缩略图
     // 5. 本地默认图
+    if (entity.thumbnailImage) {
+        cell.imageIV.image = entity.thumbnailImage;
+        return;
+    }
+    
+    // 保存使用下载好的图片,提升刷新速度
+    @weakify(entity);
+    SDExternalCompletionBlock completedBlock = ^void(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL){
+        @strongify(entity);
+        entity.thumbnailImage = image;
+    };
     
     if (entity.ivUploadTool.image) {
-        if (!entity.ivUploadTool.thumbnailImage) {
+        if (!entity.thumbnailImage) {
             // 很有可能第一个cell的ImageIV.frame = CGRectZero,所以使用ccSize.
-            entity.ivUploadTool.thumbnailImage = [UIImage imageFromImage:entity.ivUploadTool.image size:self.view.ccSize];
+            entity.thumbnailImage = [UIImage imageFromImage:entity.ivUploadTool.image size:self.view.ccSize];
         }
-        if (entity.ivUploadTool.thumbnailImage) {
-            cell.imageIV.image = entity.ivUploadTool.thumbnailImage;
+        if (entity.thumbnailImage) {
+            cell.imageIV.image = entity.thumbnailImage;
         }else{
             cell.imageIV.image = entity.ivUploadTool.image;
         }
@@ -634,35 +645,33 @@
     // 个别有缩略图
     else if (entity.thumbnailImageUrl) {
         if (entity.placeholderImage) {
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:entity.placeholderImage];
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:entity.placeholderImage completed:completedBlock];
         }else if (self.view.ccPlacehlodImage){
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage];
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage completed:completedBlock];
         }else{
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl]];
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] completed:completedBlock];
         }
     }
     // 大多数只有ivUrl
     else if(entity.ivUrl){
         if (entity.placeholderImage) {
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:entity.placeholderImage];
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:entity.placeholderImage completed:completedBlock];
         }else if (self.view.ccPlacehlodImage){
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:self.view.ccPlacehlodImage];
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:self.view.ccPlacehlodImage completed:completedBlock];
         }else{
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]]];
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] completed:completedBlock];
         }
     }
-    
-    else if (entity.thumbnailImage) {
-        cell.imageIV.image = entity.thumbnailImage;
-    }
+    // 其他情况
     else{
         if (entity.placeholderImage) {
-            cell.imageIV.image = entity.placeholderImage;
+            entity.thumbnailImage = entity.placeholderImage;
         }else if (self.view.ccPlacehlodImage){
-            cell.imageIV.image = self.view.ccPlacehlodImage;
+            entity.thumbnailImage = self.view.ccPlacehlodImage;
         }else{
-            cell.imageIV.image = nil;
+            //cell.imageIV.image = nil;
         }
+        cell.imageIV.image = entity.thumbnailImage;
     }
 }
 
