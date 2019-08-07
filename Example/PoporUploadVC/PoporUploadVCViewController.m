@@ -71,7 +71,7 @@
         
     };
     
-    PoporUpload_PEntityFinish ccDeleteBlock = ^(PoporUploadEntity * entity, BlockPBool finishBlock) {
+    PoporUpload_PEntityFinish ccDeleteBlock = ^(PoporUploadEntity * puEntity, BlockPBool finishBlock) {
         
         // 网络删除cc.uploadEntity对应的图片url什么的.
         // 假如是upload模式,只需要删除本地数组就好了,直接返回YES.finishBlock(YES);

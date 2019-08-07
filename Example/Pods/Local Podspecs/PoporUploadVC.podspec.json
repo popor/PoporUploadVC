@@ -1,6 +1,6 @@
 {
   "name": "PoporUploadVC",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "summary": "简化上传图片视频等方法",
   "homepage": "https://github.com/popor/PoporUploadVC",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporUploadVC.git",
-    "tag": "0.0.14"
+    "tag": "0.0.15"
   },
   "platforms": {
     "ios": "8.0"

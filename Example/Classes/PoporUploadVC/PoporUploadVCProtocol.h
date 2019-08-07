@@ -71,7 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, getter=isShowFileName) BOOL showFileName;
 
 // --- block -------------------------------------------------------------------
-@property (nonatomic, copy  ) BlockPDic                       uploadFinishBlock;// 上传好文件之后的block
+@property (nonatomic, copy  ) PoporUpload_PEntityFinish       uploadFinishBlock;// 上传好文件之后的block
 @property (nonatomic, copy  ) BlockPVoid                      deallocBlock;// 该VC 注销之后的block
 @property (nonatomic, copy  ) PoporUpload_RBoolPVoid          ncSelectBlock;// 选择模式下, nc 右边按钮事件
 

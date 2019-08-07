@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define CvSectionDefaultEdgeInsets UIEdgeInsetsMake(5, 16, 5, 16)
 
-typedef void(^PoporUpload_PEntityFinish) (PoporUploadEntity * entity, BlockPBool finishBlock);
+typedef void(^PoporUpload_PEntityFinish) (PoporUploadEntity * puEntity, BlockPBool finishBlock);
 
 typedef void(^PoporUpload_PNcVc) (UINavigationController * nc, UIViewController * vc);
 

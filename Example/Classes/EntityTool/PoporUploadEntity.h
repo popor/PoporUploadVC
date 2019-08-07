@@ -89,7 +89,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSString * file_name; // cc 上面的lable文字
 
 // 主要来源于拷贝PoporUploadVC的uploadFinishBlock
-@property (nonatomic, copy  ) BlockPDic  uploadFinishBlock;
+@property (nonatomic, copy  ) PoporUpload_PEntityFinish uploadFinishBlock;
 
 // 其他字段
 @property (nonatomic, strong, nullable) NSString * file_id; // 单独删除的时候会用到.

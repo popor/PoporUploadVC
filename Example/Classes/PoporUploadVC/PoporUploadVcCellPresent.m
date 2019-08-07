@@ -119,7 +119,7 @@
                     }
                 };
                 NSDictionary * dic = @{@"fileUrl":fileUrl, @"bindFinishBlock":bindFinishBlock};
-                entity.uploadFinishBlock(dic);
+                entity.uploadFinishBlock(entity, bindFinishBlock);
             }
         }else{
             entity.ivUploadStatus = PoporUploadStatusFailed;
@@ -313,7 +313,8 @@
                     }
                 };
                 NSDictionary * dic = @{@"fileUrl":fileUrl, @"cover_image":entity.ivUrl, @"bindFinishBlock":bindFinishBlock};
-                entity.uploadFinishBlock(dic);
+                
+                entity.uploadFinishBlock(entity, bindFinishBlock);
             }else{
                 if (entity == cell.uploadEntity) {// CellUI线程刷新
                     [entity.weakUploadProgressView puUpdateProgress:1.0];
