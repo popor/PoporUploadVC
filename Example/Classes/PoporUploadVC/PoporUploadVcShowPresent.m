@@ -125,26 +125,60 @@
         return;
     }
     
-    NSString * updateUrl = cc.uploadEntity.videoUrl;
-    if (!updateUrl) {
+    NSString * videoURL = cc.uploadEntity.videoUrl;
+    if (!videoURL) {
         AlertToastTitle(@"视频网址为空，无法播放");
         return;
     }
     
-    if ([updateUrl hasPrefix:@"//"]) {
-        updateUrl = [NSString stringWithFormat:@"http:%@", updateUrl];
+    if ([videoURL hasPrefix:@"//"]) {
+        videoURL = [NSString stringWithFormat:@"http:%@", videoURL];
     }
     PUShare * pushare = [PUShare share];
     if (self.view.videoPlayBlock) {
-        self.view.videoPlayBlock(@{@"videoURL":[NSURL URLWithString:updateUrl],
+        self.view.videoPlayBlock(@{@"videoURL":[NSURL URLWithString:videoURL],
                                    @"vc":self.view.vc,
                                    });
     }else if(pushare.videoPlayBlock){
-        pushare.videoPlayBlock(@{@"videoURL":[NSURL URLWithString:updateUrl],
+        pushare.videoPlayBlock(@{@"videoURL":[NSURL URLWithString:videoURL],
                                  @"vc":self.view.vc,
                                    });
     } else {
-        UIViewController * vc = [[PoporAVPlayerVC alloc] initWithDic:@{@"title":self.view.vc.title, @"videoURL":[NSURL URLWithString:updateUrl], @"showLockRotateBT":@(NO)}];
+        UIViewController * vc = [[PoporAVPlayerVC alloc] initWithDic:@{@"title":self.view.vc.title, @"videoURL":[NSURL URLWithString:videoURL], @"showLockRotateBT":@(NO)}];
+        if (self.view.videoPlayExtraSetBlock) {
+            self.view.videoPlayExtraSetBlock(self.view.vc.navigationController, vc);
+        } else if (pushare.videoPlayExtraSetBlock){
+            pushare.videoPlayExtraSetBlock(self.view.vc.navigationController, vc);
+        } else {
+            NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n请设置videoPlayExtraSetBlock (可已设置PUShare里面的公共属性), 设置隐藏导航栏, 不然和自带视频播放界面相冲突. \n❗️❗️❗️  \n❗️❗️❗️ ");
+        }
+        [self.view.vc.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (void)showAudioPlayEntity:(PoporUploadEntity *)entity {
+    PoporUploadCC * cc = (PoporUploadCC *)entity.weakCC;
+    
+    NSString * fileUrl = cc.uploadEntity.fileUrl;
+    if (!fileUrl) {
+        AlertToastTitle(@"视频网址为空，无法播放");
+        return;
+    }
+    
+    if ([fileUrl hasPrefix:@"//"]) {
+        fileUrl = [NSString stringWithFormat:@"http:%@", fileUrl];
+    }
+    PUShare * pushare = [PUShare share];
+    if (self.view.videoPlayBlock) {
+        self.view.videoPlayBlock(@{@"playUrl":[NSURL URLWithString:fileUrl],
+                                   @"vc":self.view.vc,
+                                   });
+    }else if(pushare.videoPlayBlock){
+        pushare.videoPlayBlock(@{@"playUrl":[NSURL URLWithString:fileUrl],
+                                 @"vc":self.view.vc,
+                                 });
+    } else {
+        UIViewController * vc = [[PoporAVPlayerVC alloc] initWithDic:@{@"title":self.view.vc.title, @"videoURL":[NSURL URLWithString:fileUrl], @"showLockRotateBT":@(NO)}];
         if (self.view.videoPlayExtraSetBlock) {
             self.view.videoPlayExtraSetBlock(self.view.vc.navigationController, vc);
         } else if (pushare.videoPlayExtraSetBlock){

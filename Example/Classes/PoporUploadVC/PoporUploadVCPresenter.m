@@ -190,7 +190,8 @@
             break;
         }
         case PoporUploadType_imageDisplay:
-        case PoporUploadType_videoDisplay: {
+        case PoporUploadType_videoDisplay:
+        case PoporUploadType_audioDisplay: {
             
             break;
         }
@@ -227,7 +228,7 @@
         switch (self.view.uploadType) {
             case PoporUploadType_imageDisplay :
             case PoporUploadType_imageUpload :
-            case PoporUploadType_imageUploadBind :{
+            case PoporUploadType_imageUploadBind : {
                 if (self.view.addType == PoporUploadAddTypeReplace) {
                     if (entity.ivUrl) {
                         // 查看单张图片
@@ -247,6 +248,10 @@
             case PoporUploadType_videoUploadBind:
             case PoporUploadType_videoSelect: {
                 [self.showPresent showVideoPlayEntity:entity];
+                break;
+            }
+            case PoporUploadType_audioDisplay: {
+                [self.showPresent showAudioPlayEntity:entity];
                 break;
             }
             case PoporUploadType_imageSelect:{
@@ -568,8 +573,12 @@
         if (self.view.compressType & PoporUploadVideoCompressTypeNone) {
             [oneAC addAction:nonCompressAction];
         }
-        
-        [self.view.vc presentViewController:oneAC animated:YES completion:nil];
+        if (oneAC.actions.count == 1) {
+            AlertToastTitle(@"请设置 compressType, 视频压缩方式");
+            NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n请设置 compressType, 视频压缩方式! \n❗️❗️❗️  \n❗️❗️❗️ ");
+        }else{
+            [self.view.vc presentViewController:oneAC animated:YES completion:nil];
+        }
     }
 }
 

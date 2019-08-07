@@ -55,6 +55,8 @@ typedef NS_ENUM(int, PoporUploadType) {
     
     PoporUploadType_imageSelect,    // 图片浏览选择
     PoporUploadType_videoSelect,    // 视频浏览选择
+    
+    PoporUploadType_audioDisplay,   // 音频浏览
 };
 
 typedef NS_OPTIONS(NSUInteger, PoporUploadVideoCompressType) {
