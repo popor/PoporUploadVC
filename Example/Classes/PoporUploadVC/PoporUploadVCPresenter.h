@@ -16,11 +16,12 @@
 @property (nonatomic, strong) PoporUploadVcCellPresent * cellPresent;
 @property (nonatomic, strong) PoporUploadVcShowPresent * showPresent;
 
-// 初始化数据处理
 - (void)setMyInteractor:(id)interactor;
 
-// 很多操作,需要在设置了view之后才可以执行.
 - (void)setMyView:(id)view;
+
+// 开始执行事件,比如获取网络数据
+- (void)startEvent;
 
 // !!!:  图片选择部分: 顺序增加
 - (void)showImageACAdd;

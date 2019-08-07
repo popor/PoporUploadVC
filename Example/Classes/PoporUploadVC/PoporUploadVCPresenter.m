@@ -60,13 +60,11 @@
     return self;
 }
 
-// 初始化数据处理
 - (void)setMyInteractor:(PoporUploadVCInteractor *)interactor {
     self.interactor = interactor;
     
 }
 
-// 很多操作,需要在设置了view之后才可以执行.
 - (void)setMyView:(id<PoporUploadVCProtocol>)view {
     self.view = view;
     [self.cellPresent setMyView:view];
@@ -76,6 +74,12 @@
     [self.showPresent setMyPresent:self];
     
     // 对外接口
+}
+
+// 开始执行事件,比如获取网络数据
+- (void)startEvent {
+    
+    
 }
 
 #pragma mark - VCDataSource

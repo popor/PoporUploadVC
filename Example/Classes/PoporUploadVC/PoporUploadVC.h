@@ -18,4 +18,8 @@
 
 - (void)addViews;
 
+// 开始执行事件,比如获取网络数据
+- (void)startEvent;
+
+
 @end

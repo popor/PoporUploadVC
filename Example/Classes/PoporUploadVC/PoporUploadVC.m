@@ -144,6 +144,7 @@
         [present setMyView:self];
         
         [self addViews];
+        [self startEvent];
     }
 }
 
@@ -162,6 +163,14 @@
         self.viewDidLoadBlock(self);
     }
 }
+
+// 开始执行事件,比如获取网络数据
+- (void)startEvent {
+    [self.present startEvent];
+    
+}
+
+// -----------------------------------------------------------------------------
 
 - (void)imageVideoSelectType {
     {
