@@ -621,19 +621,13 @@
     
     if (entity.ivUploadTool.image) {
         if (!entity.ivUploadTool.thumbnailImage) {
-            entity.ivUploadTool.thumbnailImage = [UIImage imageFromImage:entity.ivUploadTool.image size:cell.imageIV.frame.size];
+            // 很有可能第一个cell的ImageIV.frame = CGRectZero,所以使用ccSize.
+            entity.ivUploadTool.thumbnailImage = [UIImage imageFromImage:entity.ivUploadTool.image size:self.view.ccSize];
         }
-        cell.imageIV.image = entity.ivUploadTool.thumbnailImage;
-        
-    }
-    // 大多数只有ivUrl
-    else if(entity.ivUrl){
-        if (entity.placeholderImage) {
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:entity.placeholderImage];
-        }else if (self.view.ccPlacehlodImage){
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:self.view.ccPlacehlodImage];
+        if (entity.ivUploadTool.thumbnailImage) {
+            cell.imageIV.image = entity.ivUploadTool.thumbnailImage;
         }else{
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]]];
+            cell.imageIV.image = entity.ivUploadTool.image;
         }
     }
     // 个别有缩略图
@@ -644,6 +638,16 @@
             [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage];
         }else{
             [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl]];
+        }
+    }
+    // 大多数只有ivUrl
+    else if(entity.ivUrl){
+        if (entity.placeholderImage) {
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:entity.placeholderImage];
+        }else if (self.view.ccPlacehlodImage){
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:self.view.ccPlacehlodImage];
+        }else{
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]]];
         }
     }
     
