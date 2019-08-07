@@ -213,7 +213,7 @@
                     };
                     self.view.ccDeleteBlock(entity, finishBlock);
                 }else{
-                    NSLog(@"\n❗️请设置ccDeleteBlock");
+                    NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: ccDeleteBlock, 否则不执行删除操作! \n❗️❗️❗️  \n❗️❗️❗️ ");
                 }
                 
             }];
@@ -481,7 +481,7 @@
                     };
                     self.view.ccDeleteBlock(entity, finishBlock);
                 }else{
-                    NSLog(@"\n❗️请设置ccDeleteBlock");
+                    NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: ccDeleteBlock, 否则不执行删除操作! \n❗️❗️❗️  \n❗️❗️❗️ ");
                 }
                 
             }];
