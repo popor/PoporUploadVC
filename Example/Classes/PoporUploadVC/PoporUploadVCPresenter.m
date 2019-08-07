@@ -26,14 +26,15 @@
 #import <DMProgressHUD/DMProgressHUD.h>
 
 #if __has_include(<PoporFFmpegCompress/PoporFFmpegCompress.h>)
-#define HasFFmpeg YES
+#define HasFFmpeg 1
 #import <PoporFFmpegCompress/PoporFFmpegCompress.h>
 
 #else
-#define HasFFmpeg NO
+#define HasFFmpeg 0
+
 #endif
 
-//#import "UIImageView+UploadABCBlock.h"
+#import "PUVideoTool.h"
 #import <PoporUI/IToastKeyboard.h>
 
 @interface PoporUploadVCPresenter ()
@@ -43,7 +44,7 @@
 
 @property (nonatomic, strong) PoporMedia * media;
 
-#if HasFFmpeg
+#if HasFFmpeg == 1
 @property (nonatomic, strong) PoporFFmpegCompress * ffmpegCmd;
 
 #endif
@@ -62,7 +63,6 @@
 
 - (void)setMyInteractor:(PoporUploadVCInteractor *)interactor {
     self.interactor = interactor;
-    
 }
 
 - (void)setMyView:(id<PoporUploadVCProtocol>)view {
@@ -384,7 +384,9 @@
         
         PoporUploadEntity * entity = [PoporUploadEntity new];
         entity.hasData = YES;
-        entity.uploadFinishBlock = self.view.uploadFinishBlock;
+        entity.uploadFinishBlock      = self.view.uploadFinishBlock;
+        entity.weakCV                 = self.view.infoCV;
+        entity.weakPuEntityArray      = self.view.weakPuEntityArray;
         
         entity.ivUploadTool           = [PoporUploadTool new];
         entity.videoUploadTool        = [PoporUploadTool new];
@@ -415,7 +417,7 @@
                     break;
                 }
                 case 0:{
-#if HasFFmpeg
+#if HasFFmpeg == 1
                     //NSLog(@"开始标准压缩");
                     if (!self.ffmpegCmd) {
                         self.ffmpegCmd = [PoporFFmpegCompress new];
@@ -428,7 +430,7 @@
                         hud.text = @"压缩视频中~";
                         
                         __weak typeof(hud) weakHud = hud;
-                        NSString *resultPath = [VideoServer videoCompressPath_time];
+                        NSString *resultPath = [PUVideoTool videoCompressPath_time];
                         [self.ffmpegCmd compressVideoUrl:videoPath size:CGSizeMake(540, 960) tPath:resultPath finish:^(BOOL finished, NSString *info) {
                             [weakHud dismiss];
                             if (finished) {
@@ -448,7 +450,8 @@
                         }];
                     }
 #else
-                    AlertToastTitle(@"未引入FFMpeg");
+                    AlertToastTitle(@"未引入 pod 'PoporFFmpegCompress'");
+                    NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未引入 pod 'PoporFFmpegCompress', 否则无法执行FFMpeg压缩视频! \n❗️❗️❗️  \n❗️❗️❗️ ");
                     [entity.weakPuEntityArray removeObject:entity];
 #endif
                     break;
