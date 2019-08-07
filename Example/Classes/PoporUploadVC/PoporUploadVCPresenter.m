@@ -438,17 +438,18 @@
                                         NSData * data = [NSData dataWithContentsOfFile:resultPath];
                                         NSLog(@"FFMpeg video size : %02fMB", data.length/1024.0f/1024.0f);
                                     }
-                                    entity.videoUpload.videoFileURL = resultPath;
-                                    [self.view.infoCV reloadData];
+                                    entity.videoUploadTool.videoFileURL = resultPath;
+                                    [entity.weakCV reloadData];
                                 });
                             }else{
                                 AlertToastTitle(info);
-                                [self.view.weakImageArray removeObject:entity];
+                                [entity.weakPuEntityArray removeObject:entity];
                             }
                         }];
                     }
 #else
                     AlertToastTitle(@"未引入FFMpeg");
+                    [entity.weakPuEntityArray removeObject:entity];
 #endif
                     break;
                 }
