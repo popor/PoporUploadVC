@@ -140,42 +140,42 @@
     
     // 刷新状态
     switch (entity.imageUploadStatus) {
-        case PoporUploadStatusInit:{
-            entity.imageUploadStatus = PoporUploadStatusUploading;
-            [entity.imageUploadTool startUpload];
-            break;
-        }
-        case PoporUploadStatusUploading:{
-            [entity.weakUploadProgressView puUpdating];
-            break;
-        }
-        case PoporUploadStatusFailed:{
-            // 假如刷新的时候发现是失败的,那么也要纠正一下. : 貌似没有清空记录
-            [entity.weakUploadProgressView puAddTapGRActionMessage:nil asyn:YES tapBlock:^{
-                @strongify(entity);
-                
+            case PoporUploadStatusInit:{
                 entity.imageUploadStatus = PoporUploadStatusUploading;
                 [entity.imageUploadTool startUpload];
-                [entity.weakUploadProgressView puUpdateProgress:0.01];
-            }];
-            break;
-        }
-        case PoporUploadStatusFinish:{
-            if (needBind && !entity.isBindOK) {
-                // 这里不需要判断是否一致,因为是cell刷新触发的.
-                [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新增加" asyn:NO tapBlock:^{
-                    @strongify(entity);
-                    if (entity.imageUploadTool.uploadService.finishBlock) {
-                        entity.imageUploadTool.uploadService.finishBlock(YES, NO, entity.imageUrl, entity.imageRequestId);
-                    }else{
-                        AlertToastTitle(@"uploadTool.finishBlock 被置空了");
-                    }
-                }];
-            }else{
-                [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:NO];
+                break;
             }
-            break;
-        }
+            case PoporUploadStatusUploading:{
+                [entity.weakUploadProgressView puUpdating];
+                break;
+            }
+            case PoporUploadStatusFailed:{
+                // 假如刷新的时候发现是失败的,那么也要纠正一下. : 貌似没有清空记录
+                [entity.weakUploadProgressView puAddTapGRActionMessage:nil asyn:YES tapBlock:^{
+                    @strongify(entity);
+                    
+                    entity.imageUploadStatus = PoporUploadStatusUploading;
+                    [entity.imageUploadTool startUpload];
+                    [entity.weakUploadProgressView puUpdateProgress:0.01];
+                }];
+                break;
+            }
+            case PoporUploadStatusFinish:{
+                if (needBind && !entity.isBindOK) {
+                    // 这里不需要判断是否一致,因为是cell刷新触发的.
+                    [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新增加" asyn:NO tapBlock:^{
+                        @strongify(entity);
+                        if (entity.imageUploadTool.uploadService.finishBlock) {
+                            entity.imageUploadTool.uploadService.finishBlock(YES, NO, entity.imageUrl, entity.imageRequestId);
+                        }else{
+                            AlertToastTitle(@"uploadTool.finishBlock 被置空了");
+                        }
+                    }];
+                }else{
+                    [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:NO];
+                }
+                break;
+            }
         default:
             break;
     }
@@ -187,59 +187,59 @@
     @weakify(entity);
     
     switch (entity.addType) {
-        case PoporUploadAddTypeNone: {
-            if (cell.selectBT.hidden) {
-                break;
-            }
-            break;
-        }
-        case PoporUploadAddTypeOrder: {
-            if (cell.selectBT.hidden) {
-                break;
-            }
-            cell.selectBT.userInteractionEnabled = YES;
-            [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
-                @strongify(self);
-                @strongify(entity);
-                
-                if (self.view.ccDeleteBlock) {
-                    BlockPBool finishBlock = ^(BOOL value) {
-                        @strongify(entity);
-                        if (value) {
-                            [entity.weakPuEntityArray removeObject:entity];
-                            [entity.weakCV reloadData];
-                        }
-                    };
-                    self.view.ccDeleteBlock(entity, finishBlock);
-                }else{
-                    NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: ccDeleteBlock, 否则不执行删除操作! \n❗️❗️❗️  \n❗️❗️❗️ ");
+            case PoporUploadAddTypeNone: {
+                if (cell.selectBT.hidden) {
+                    break;
                 }
-                
-            }];
-            break;
-        }
-        case PoporUploadAddTypeReplace:{
-            if (self.view.isShowCcSelectBT) {
-                cell.selectBT.hidden = !entity.imageUrl;
-            }
-            if (cell.selectBT.hidden) {
                 break;
             }
-            cell.selectBT.userInteractionEnabled = YES;
-            [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
-                @strongify(entity);
-                //@strongify(cell);
-                
-                entity.imageUrl              = nil;
-                entity.imageUploadTool.image = nil;
-                entity.imageUploadStatus     = 0;
-                entity.videoUploadStatus     = 0;
-                
-                NSIndexPath * ip = [entity.weakCV indexPathForCell:entity.weakCC];
-                [entity.weakCV reloadItemsAtIndexPaths:@[ip]];
-            }];
-            break;
-        }
+            case PoporUploadAddTypeOrder: {
+                if (cell.selectBT.hidden) {
+                    break;
+                }
+                cell.selectBT.userInteractionEnabled = YES;
+                [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
+                    @strongify(self);
+                    @strongify(entity);
+                    
+                    if (self.view.ccDeleteBlock) {
+                        BlockPBool finishBlock = ^(BOOL value) {
+                            @strongify(entity);
+                            if (value) {
+                                [entity.weakPuEntityArray removeObject:entity];
+                                [entity.weakCV reloadData];
+                            }
+                        };
+                        self.view.ccDeleteBlock(entity, finishBlock);
+                    }else{
+                        NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: ccDeleteBlock, 否则不执行删除操作! \n❗️❗️❗️  \n❗️❗️❗️ ");
+                    }
+                    
+                }];
+                break;
+            }
+            case PoporUploadAddTypeReplace:{
+                if (self.view.isShowCcSelectBT) {
+                    cell.selectBT.hidden = !entity.imageUrl;
+                }
+                if (cell.selectBT.hidden) {
+                    break;
+                }
+                cell.selectBT.userInteractionEnabled = YES;
+                [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
+                    @strongify(entity);
+                    //@strongify(cell);
+                    
+                    entity.imageUrl              = nil;
+                    entity.imageUploadTool.image = nil;
+                    entity.imageUploadStatus     = 0;
+                    entity.videoUploadStatus     = 0;
+                    
+                    NSIndexPath * ip = [entity.weakCV indexPathForCell:entity.weakCC];
+                    [entity.weakCV reloadItemsAtIndexPaths:@[ip]];
+                }];
+                break;
+            }
         default:
             break;
     }
@@ -370,65 +370,65 @@
     }];
     
     switch (entity.imageUploadStatus) {
-        case PoporUploadStatusInit:{
-            entity.imageUploadStatus = PoporUploadStatusUploading;
-            // 上传视频起始点
-            [entity.imageUploadTool startUpload];
-            break;
-        }
-        case PoporUploadStatusUploading:{
-            [entity.weakUploadProgressView puUpdating];
-            break;
-        }
-        case PoporUploadStatusFailed:{
-            // 假如刷新的时候发现是失败的,那么也要纠正一下.
-            [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频封面" asyn:NO tapBlock:^{
-                @strongify(entity);
-                
+            case PoporUploadStatusInit:{
                 entity.imageUploadStatus = PoporUploadStatusUploading;
-                // 点击重新上传,肯定会在可见范围内的.
-                //为了防止意外再加一次
-                [entity.weakUploadProgressView puUpdateProgress:0.01];
+                // 上传视频起始点
                 [entity.imageUploadTool startUpload];
-            }];
-            break;
-        }
-        case PoporUploadStatusFinish:{
-            [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:NO];
-            break;
-        }
+                break;
+            }
+            case PoporUploadStatusUploading:{
+                [entity.weakUploadProgressView puUpdating];
+                break;
+            }
+            case PoporUploadStatusFailed:{
+                // 假如刷新的时候发现是失败的,那么也要纠正一下.
+                [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频封面" asyn:NO tapBlock:^{
+                    @strongify(entity);
+                    
+                    entity.imageUploadStatus = PoporUploadStatusUploading;
+                    // 点击重新上传,肯定会在可见范围内的.
+                    //为了防止意外再加一次
+                    [entity.weakUploadProgressView puUpdateProgress:0.01];
+                    [entity.imageUploadTool startUpload];
+                }];
+                break;
+            }
+            case PoporUploadStatusFinish:{
+                [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:NO];
+                break;
+            }
         default:
             break;
     }
     switch (entity.videoUploadStatus) {
-        case PoporUploadStatusInit:{
-            // video的upload交给封面上传block.
-            // weakEntity.videoUploadStatus = PoporUploadStatusUploading;
-            // [weakEntity.video abcUpload];
-            break;
-        }
-        case PoporUploadStatusUploading:{
-            [entity.weakUploadProgressView puUpdating];
-            break;
-        }
-        case PoporUploadStatusFailed:{
-            [entity.weakUploadProgressView puUpdateProgress:1];
-            
-            [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频" asyn:NO tapBlock:^{
-                @strongify(self);
-                //@strongify(cell);
-                @strongify(entity);
+            case PoporUploadStatusInit:{
+                // video的upload交给封面上传block.
+                // weakEntity.videoUploadStatus = PoporUploadStatusUploading;
+                // [weakEntity.video abcUpload];
+                break;
+            }
+            case PoporUploadStatusUploading:{
+                [entity.weakUploadProgressView puUpdating];
+                break;
+            }
+            case PoporUploadStatusFailed:{
+                [entity.weakUploadProgressView puUpdateProgress:1];
                 
-                entity.videoUploadStatus = PoporUploadStatusUploading;
-                [entity.weakUploadProgressView puUpdateProgress:0.01];
-                [self uploadVideo:entity];
-            }];
-            break;
-        }
-        case PoporUploadStatusFinish:{
-            [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:NO];
-            break;
-        }
+                [entity.weakUploadProgressView puAddTapGRActionMessage:@"重新上传视频" asyn:NO tapBlock:^{
+                    @strongify(self);
+                    //@strongify(cell);
+                    @strongify(entity);
+                    
+                    entity.videoUploadStatus = PoporUploadStatusUploading;
+                    [entity.weakUploadProgressView puUpdateProgress:0.01];
+                    [self uploadVideo:entity];
+                }];
+                break;
+            }
+            case PoporUploadStatusFinish:{
+                [entity.weakUploadProgressView puRemoveError_puTapGRActionAsyn:NO];
+                break;
+            }
         default:
             break;
     }
@@ -454,59 +454,59 @@
     @weakify(entity);
     
     switch (entity.addType) {
-        case PoporUploadAddTypeNone: {
-            if (cell.selectBT.hidden) {
-                break;
-            }
-            break;
-        }
-        case PoporUploadAddTypeOrder: {
-            if (cell.selectBT.hidden) {
-                break;
-            }
-            [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
-                @strongify(self);
-                @strongify(entity);
-                
-                if (self.view.ccDeleteBlock) {
-                    BlockPBool finishBlock = ^(BOOL value) {
-                        @strongify(entity);
-                        
-                        if (value) {
-                            [entity.weakPuEntityArray removeObject:entity];
-                            [entity.weakCV reloadData];
-                        }
-                    };
-                    self.view.ccDeleteBlock(entity, finishBlock);
-                }else{
-                    NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: ccDeleteBlock, 否则不执行删除操作! \n❗️❗️❗️  \n❗️❗️❗️ ");
+            case PoporUploadAddTypeNone: {
+                if (cell.selectBT.hidden) {
+                    break;
                 }
-                
-            }];
-            
-            break;
-        }
-        case PoporUploadAddTypeReplace:{
-            if (self.view.isShowCcSelectBT) {
-                cell.selectBT.hidden = !entity.imageUrl;
-            }
-            if (cell.selectBT.hidden) {
                 break;
             }
-            [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
-                @strongify(entity);
+            case PoporUploadAddTypeOrder: {
+                if (cell.selectBT.hidden) {
+                    break;
+                }
+                [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
+                    @strongify(self);
+                    @strongify(entity);
+                    
+                    if (self.view.ccDeleteBlock) {
+                        BlockPBool finishBlock = ^(BOOL value) {
+                            @strongify(entity);
+                            
+                            if (value) {
+                                [entity.weakPuEntityArray removeObject:entity];
+                                [entity.weakCV reloadData];
+                            }
+                        };
+                        self.view.ccDeleteBlock(entity, finishBlock);
+                    }else{
+                        NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未设置: ccDeleteBlock, 否则不执行删除操作! \n❗️❗️❗️  \n❗️❗️❗️ ");
+                    }
+                    
+                }];
                 
-                entity.imageUrl              = nil;
-                entity.imageUploadTool.image = nil;
-                entity.imageUploadStatus     = 0;
-                entity.videoUploadStatus     = 0;
-                entity.videoUrl              = nil;
-                
-                NSIndexPath * ip = [entity.weakCV indexPathForCell:entity.weakCC];
-                [entity.weakCV reloadItemsAtIndexPaths:@[ip]];
-            }];
-            break;
-        }
+                break;
+            }
+            case PoporUploadAddTypeReplace:{
+                if (self.view.isShowCcSelectBT) {
+                    cell.selectBT.hidden = !entity.imageUrl;
+                }
+                if (cell.selectBT.hidden) {
+                    break;
+                }
+                [[[cell.selectBT rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
+                    @strongify(entity);
+                    
+                    entity.imageUrl              = nil;
+                    entity.imageUploadTool.image = nil;
+                    entity.imageUploadStatus     = 0;
+                    entity.videoUploadStatus     = 0;
+                    entity.videoUrl              = nil;
+                    
+                    NSIndexPath * ip = [entity.weakCV indexPathForCell:entity.weakCC];
+                    [entity.weakCV reloadItemsAtIndexPaths:@[ip]];
+                }];
+                break;
+            }
         default:
             break;
     }
@@ -610,12 +610,6 @@
 - (void)freshCellIvImageEntity:(PoporUploadEntity *)entity {
     PoporUploadCC * cell = (PoporUploadCC *)entity.weakCC;
     
-    // 图片使用顺序
-    // 1. 本地图片缩略图
-    // 2. 网络图片缩略图
-    // 3. 本地缩略图
-    // 4. 本地默认图
-    
     // 保存使用下载好的图片,提升刷新速度
     @weakify(entity);
     SDExternalCompletionBlock completedBlock = ^void(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL){
@@ -623,36 +617,39 @@
         entity.imageUploadTool.imageThumbnail = image;
     };
     
-    if (entity.imageUploadTool.image) {
+    // 1.优先只显示默认图,省内存
+    if (entity.placeholderImage) {
+        cell.imageIV.image = entity.placeholderImage;
+    }
+    else if(entity.placeholderImageUrl){
+        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.placeholderImageUrl]];
+    }
+    else if (entity.placeholderImageName) {
+        cell.imageIV.image = [UIImage imageNamed:entity.placeholderImageName];
+    }
+    
+    // 2.优先显示本地图片,速度快
+    else if (entity.imageUploadTool.image) {
         if (!entity.imageUploadTool.imageThumbnail) {
             // 很有可能第一个cell的ImageIV.frame = CGRectZero,所以使用ccSize.
             entity.imageUploadTool.imageThumbnail = [UIImage imageFromImage:entity.imageUploadTool.image size:self.view.ccSize];
         }
-        if (entity.imageUploadTool.imageThumbnail) {
-            cell.imageIV.image = entity.imageUploadTool.imageThumbnail;
-        }else{
-            cell.imageIV.image = entity.imageUploadTool.image;
-        }
+        cell.imageIV.image = entity.imageUploadTool.imageThumbnail;
     }
-    // 大多数只有imageUrl
+    
+    // 3.大多数只有imageUrl
     else if(entity.imageUrl){
-        if (entity.placeholderImage) {
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:entity.placeholderImage completed:completedBlock];
-        }else if (self.view.ccPlacehlodImage){
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:self.view.ccPlacehlodImage completed:completedBlock];
-        }else{
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] completed:completedBlock];
-        }
+        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] completed:completedBlock];
     }
-    // 其他情况
+    
+    // 4.显示本页面默认图片
+    else if (self.view.ccPlacehlodImage){
+        cell.imageIV.image = self.view.ccPlacehlodImage;
+    }
+    
+    // 其他置空
     else{
-        if (entity.placeholderImage) {
-            cell.imageIV.image = entity.placeholderImage;
-        }else if (self.view.ccPlacehlodImage){
-            cell.imageIV.image = self.view.ccPlacehlodImage;
-        }else{
-            cell.imageIV.image = nil;
-        }
+        cell.imageIV.image = nil;
     }
 }
 
@@ -687,14 +684,14 @@
 
 - (BOOL)is4GNet {
     switch (self.afn.networkReachabilityStatus) {
-        case AFNetworkReachabilityStatusUnknown:
+            case AFNetworkReachabilityStatusUnknown:
             break;
-        case AFNetworkReachabilityStatusNotReachable:
+            case AFNetworkReachabilityStatusNotReachable:
             break;
-        case AFNetworkReachabilityStatusReachableViaWWAN:
+            case AFNetworkReachabilityStatusReachableViaWWAN:
             return YES;
             break;
-        case AFNetworkReachabilityStatusReachableViaWiFi:
+            case AFNetworkReachabilityStatusReachableViaWiFi:
             break;
         default:
             break;

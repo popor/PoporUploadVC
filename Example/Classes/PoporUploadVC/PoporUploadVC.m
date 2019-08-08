@@ -62,6 +62,8 @@
 
 @synthesize videoPlayBlock;
 @synthesize videoPlayExtraSetBlock;
+@synthesize audioPlayBlock;
+@synthesize audioPlayExtraSetBlock;
 @synthesize createUploadServiceBlock;
 @synthesize createImageThumbUrlBlock;
 
@@ -85,18 +87,18 @@
             self.ccSize = CGSizeMake(width, width);
         }
         switch (self.addType) {
-            case PoporUploadAddTypeNone: {
-                self.showAddCC = NO;
-                break;
-            }
-            case PoporUploadAddTypeOrder: {
-                self.showAddCC = YES;
-                break;
-            }
-            case PoporUploadAddTypeReplace: {
-                self.showAddCC = NO;
-                break;
-            }
+                case PoporUploadAddTypeNone: {
+                    self.showAddCC = NO;
+                    break;
+                }
+                case PoporUploadAddTypeOrder: {
+                    self.showAddCC = YES;
+                    break;
+                }
+                case PoporUploadAddTypeReplace: {
+                    self.showAddCC = NO;
+                    break;
+                }
         }
     }
     return self;
