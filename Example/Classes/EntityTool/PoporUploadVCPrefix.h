@@ -23,6 +23,8 @@ typedef void(^PoporUpload_PEntityFinish) (PoporUploadEntity * puEntity, BlockPBo
 
 typedef void(^PoporUpload_PNcVc) (UINavigationController * nc, UIViewController * vc);
 
+typedef void(^PoporUpload_PNcVcEntityArray) (UINavigationController * nc, UIViewController * vc, PoporUploadEntity * puEntity, NSMutableArray * pueArray);
+
 typedef BOOL(^PoporUpload_RBoolPVoid) (void);
 
 typedef id<PoporUploadServiceProtocol>_Nullable(^PoporUpload_RUploadServicePVoid) (void);

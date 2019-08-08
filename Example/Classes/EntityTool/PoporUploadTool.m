@@ -127,4 +127,12 @@
     }
 }
 
+#pragma mark - set
+- (void)setImage:(UIImage *)image {
+    _image = image;
+    if (!image) {
+        _imageThumbnail = nil;
+    }
+}
+
 @end

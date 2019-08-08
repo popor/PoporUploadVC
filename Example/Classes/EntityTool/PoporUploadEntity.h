@@ -31,12 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 // 在本framework中,除了承担进度条之外,还承担了获取点击事件功能
 @property (nonatomic, weak  ) UIView               * weakUploadProgressView;
 
-// 默认只有图片,不然逻辑太乱,也和系统的方法不一样
-@property (nonatomic, strong) UIImage              * placeholderImage;
-
-// 缩略图
-@property (nonatomic, strong) UIImage              * thumbnailImage;
-@property (nonatomic, strong) NSString             * thumbnailImageUrl;
+// 默认图: 可用于replace模式.
+@property (nonatomic, strong) UIImage                     * placeholderImage;
 
 // 图片视频文件区分开的好处:代码阅读性提高.个别地方不容易出错.
 // 图片

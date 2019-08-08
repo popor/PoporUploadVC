@@ -156,7 +156,7 @@
     }
 }
 
-- (void)showAudioPlayEntity:(PoporUploadEntity *)entity {
+- (void)showAudioPlayEntity:(PoporUploadEntity *)entity array:(NSMutableArray *)array {
     PoporUploadCC * cc = (PoporUploadCC *)entity.weakCC;
     
     NSString * fileUrl = cc.uploadEntity.fileUrl;
@@ -169,20 +169,16 @@
         fileUrl = [NSString stringWithFormat:@"http:%@", fileUrl];
     }
     PUShare * pushare = [PUShare share];
-    if (self.view.videoPlayBlock) {
-        self.view.videoPlayBlock(@{@"playUrl":[NSURL URLWithString:fileUrl],
-                                   @"vc":self.view.vc,
-                                   });
-    }else if(pushare.videoPlayBlock){
-        pushare.videoPlayBlock(@{@"playUrl":[NSURL URLWithString:fileUrl],
-                                 @"vc":self.view.vc,
-                                 });
+    if (self.view.audioPlayBlock) {
+        self.view.audioPlayBlock(self.view.vc.navigationController, self.view.vc, entity, array);
+    }else if(pushare.audioPlayBlock){
+        pushare.audioPlayBlock(self.view.vc.navigationController, self.view.vc, entity, array);
     } else {
         UIViewController * vc = [[PoporAVPlayerVC alloc] initWithDic:@{@"title":self.view.vc.title, @"videoURL":[NSURL URLWithString:fileUrl], @"showLockRotateBT":@(NO)}];
-        if (self.view.videoPlayExtraSetBlock) {
-            self.view.videoPlayExtraSetBlock(self.view.vc.navigationController, vc);
-        } else if (pushare.videoPlayExtraSetBlock){
-            pushare.videoPlayExtraSetBlock(self.view.vc.navigationController, vc);
+        if (self.view.audioPlayExtraSetBlock) {
+            self.view.audioPlayExtraSetBlock(self.view.vc.navigationController, vc);
+        } else if (pushare.audioPlayExtraSetBlock){
+            pushare.audioPlayExtraSetBlock(self.view.vc.navigationController, vc);
         } else {
             NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n请设置videoPlayExtraSetBlock (可已设置PUShare里面的公共属性), 设置隐藏导航栏, 不然和自带视频播放界面相冲突. \n❗️❗️❗️  \n❗️❗️❗️ ");
         }

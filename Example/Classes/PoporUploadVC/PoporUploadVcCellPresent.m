@@ -233,7 +233,7 @@
                 entity.imageUrl              = nil;
                 entity.imageUploadTool.image = nil;
                 entity.imageUploadStatus     = 0;
-                entity.videoUploadStatus  = 0;
+                entity.videoUploadStatus     = 0;
                 
                 NSIndexPath * ip = [entity.weakCV indexPathForCell:entity.weakCC];
                 [entity.weakCV reloadItemsAtIndexPaths:@[ip]];
@@ -612,41 +612,26 @@
     
     // 图片使用顺序
     // 1. 本地图片缩略图
-    // 2. 网络图片缩略图, 根据block生成
-    // 3. 网络图片缩略图
-    // 4. 本地缩略图
-    // 5. 本地默认图
-    if (entity.thumbnailImage) {
-        cell.imageIV.image = entity.thumbnailImage;
-        return;
-    }
+    // 2. 网络图片缩略图
+    // 3. 本地缩略图
+    // 4. 本地默认图
     
     // 保存使用下载好的图片,提升刷新速度
     @weakify(entity);
     SDExternalCompletionBlock completedBlock = ^void(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL){
         @strongify(entity);
-        entity.thumbnailImage = image;
+        entity.imageUploadTool.imageThumbnail = image;
     };
     
     if (entity.imageUploadTool.image) {
-        if (!entity.thumbnailImage) {
+        if (!entity.imageUploadTool.imageThumbnail) {
             // 很有可能第一个cell的ImageIV.frame = CGRectZero,所以使用ccSize.
-            entity.thumbnailImage = [UIImage imageFromImage:entity.imageUploadTool.image size:self.view.ccSize];
+            entity.imageUploadTool.imageThumbnail = [UIImage imageFromImage:entity.imageUploadTool.image size:self.view.ccSize];
         }
-        if (entity.thumbnailImage) {
-            cell.imageIV.image = entity.thumbnailImage;
+        if (entity.imageUploadTool.imageThumbnail) {
+            cell.imageIV.image = entity.imageUploadTool.imageThumbnail;
         }else{
             cell.imageIV.image = entity.imageUploadTool.image;
-        }
-    }
-    // 个别有缩略图
-    else if (entity.thumbnailImageUrl) {
-        if (entity.placeholderImage) {
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:entity.placeholderImage completed:completedBlock];
-        }else if (self.view.ccPlacehlodImage){
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] placeholderImage:self.view.ccPlacehlodImage completed:completedBlock];
-        }else{
-            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.thumbnailImageUrl] completed:completedBlock];
         }
     }
     // 大多数只有imageUrl
@@ -662,13 +647,12 @@
     // 其他情况
     else{
         if (entity.placeholderImage) {
-            entity.thumbnailImage = entity.placeholderImage;
+            cell.imageIV.image = entity.placeholderImage;
         }else if (self.view.ccPlacehlodImage){
-            entity.thumbnailImage = self.view.ccPlacehlodImage;
+            cell.imageIV.image = self.view.ccPlacehlodImage;
         }else{
-            //cell.imageIV.image = nil;
+            cell.imageIV.image = nil;
         }
-        cell.imageIV.image = entity.thumbnailImage;
     }
 }
 

@@ -251,7 +251,7 @@
                 break;
             }
             case PoporUploadType_audioDisplay: {
-                [self.showPresent showAudioPlayEntity:entity];
+                [self.showPresent showAudioPlayEntity:entity array:self.view.weakPuEntityArray];
                 break;
             }
             case PoporUploadType_imageSelect:{

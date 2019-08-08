@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)showVideoPlayEntity:(PoporUploadEntity *)entity;
 
-- (void)showAudioPlayEntity:(PoporUploadEntity *)entity;
+- (void)showAudioPlayEntity:(PoporUploadEntity *)entity array:(NSMutableArray *)array;
 
 @end
 

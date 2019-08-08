@@ -91,6 +91,12 @@ NS_ASSUME_NONNULL_BEGIN
 // 自定义视频播放额外设置block, 比如隐藏系统默认导航栏,这个必须设置,不然和我的相冲突
 @property (nonatomic, copy  ) PoporUpload_PNcVc               videoPlayExtraSetBlock;
 
+// 自定义音频播放block
+@property (nonatomic, copy  ) PoporUpload_PNcVcEntityArray    audioPlayBlock;
+
+// 自定义视频播放额外设置block, 比如隐藏系统默认导航栏,这个必须设置,不然和我的相冲突
+@property (nonatomic, copy  ) PoporUpload_PNcVc               audioPlayExtraSetBlock;
+
 // 获取生成上传tool的block
 @property (nonatomic, copy  ) PoporUpload_RUploadServicePVoid createUploadServiceBlock;
 
