@@ -38,12 +38,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImage              * thumbnailImage;
 @property (nonatomic, strong) NSString             * thumbnailImageUrl;
 
-// 图片和视频是主要的使用场景,文件是预设.
+// 图片视频文件区分开的好处:代码阅读性提高.个别地方不容易出错.
 // 图片
-@property (nonatomic, strong, nullable) PoporUploadTool   * ivUploadTool;// 负责上传图片
-@property (nonatomic, strong, nullable) NSString          * ivUrl;
-@property (nonatomic, strong, nullable) NSString          * ivRequestId;
-@property (nonatomic                  ) PoporUploadStatus ivUploadStatus;// 上传图片状态
+@property (nonatomic, strong, nullable) PoporUploadTool   * imageUploadTool;// 负责上传图片
+@property (nonatomic, strong, nullable) NSString          * imageUrl;
+@property (nonatomic, strong, nullable) NSString          * imageRequestId;
+@property (nonatomic                  ) PoporUploadStatus imageUploadStatus;// 上传图片状态
 
 // 视频
 @property (nonatomic, strong, nullable) PoporUploadTool   * videoUploadTool;// 负责上传视频
@@ -52,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic                  ) PoporUploadStatus videoUploadStatus;// 上传视频状态
 @property (nonatomic                  ) NSInteger         videoSizeMB;// 单位为MB
 
-// 文件
+// 文件:mp3、doc等
 @property (nonatomic, strong, nullable) PoporUploadTool   * fileUploadTool;// 负责文件视频
 @property (nonatomic, strong, nullable) NSString          * fileUrl;
 @property (nonatomic, strong, nullable) NSString          * fileRequestId;

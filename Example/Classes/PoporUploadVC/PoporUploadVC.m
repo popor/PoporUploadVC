@@ -63,7 +63,7 @@
 @synthesize videoPlayBlock;
 @synthesize videoPlayExtraSetBlock;
 @synthesize createUploadServiceBlock;
-@synthesize createIvThumbUrlBlock;
+@synthesize createImageThumbUrlBlock;
 
 - (id)initWithDic:(NSDictionary *)dic {
     if (self = [super init]) {

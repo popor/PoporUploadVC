@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy  ) PoporUpload_RUploadServicePVoid createUploadServiceBlock;
 
 // 获取图片缩略图的block, 根据不同的图床平台,请设置对应的缩略图url,供ccIV使用
-@property (nonatomic, copy  ) PoporUpload_RStringPStringSize  createIvThumbUrlBlock;
+@property (nonatomic, copy  ) PoporUpload_RStringPStringSize  createImageThumbUrlBlock;
 
 
 @end

@@ -230,7 +230,7 @@
             case PoporUploadType_imageUpload :
             case PoporUploadType_imageUploadBind : {
                 if (self.view.addType == PoporUploadAddTypeReplace) {
-                    if (entity.ivUrl) {
+                    if (entity.imageUrl) {
                         // 查看单张图片
                         [self.showPresent showImageBrowerVCEntity:entity all:NO];
                     }else{
@@ -329,26 +329,26 @@
     
     entity.uploadFinishBlock = self.view.uploadFinishBlock;
     
-    entity.ivUploadTool = [PoporUploadTool new];
-    entity.ivUploadTool.uploadService = [self getPoporUploadService];
-    entity.ivUploadTool.image = image;
-    entity.ivUploadTool.originFile = @(origin);
+    entity.imageUploadTool = [PoporUploadTool new];
+    entity.imageUploadTool.uploadService = [self getPoporUploadService];
+    entity.imageUploadTool.image = image;
+    entity.imageUploadTool.originFile = @(origin);
     
     [PHAsset getImageFromPHAsset:asset finish:^(NSData *data) {
-        entity.ivUploadTool.imageData  = data;
+        entity.imageUploadTool.imageData  = data;
     }];
-    entity.ivUploadStatus = PoporUploadStatusInit;
+    entity.imageUploadStatus = PoporUploadStatusInit;
     
 }
 
 - (void)assembleImagePoporUploadEntity:(PoporUploadEntity *)entity image:(UIImage *)image {
     entity.uploadFinishBlock = self.view.uploadFinishBlock;
     
-    entity.ivUploadStatus = PoporUploadStatusInit;
+    entity.imageUploadStatus = PoporUploadStatusInit;
     
-    entity.ivUploadTool = [PoporUploadTool new];
-    entity.ivUploadTool.uploadService = [self getPoporUploadService];
-    entity.ivUploadTool.image = image;
+    entity.imageUploadTool = [PoporUploadTool new];
+    entity.imageUploadTool.uploadService = [self getPoporUploadService];
+    entity.imageUploadTool.image = image;
 }
 
 - (id<PoporUploadServiceProtocol>)getPoporUploadService {
@@ -393,18 +393,18 @@
         entity.weakCV                 = self.view.infoCV;
         entity.weakPuEntityArray      = self.view.weakPuEntityArray;
         
-        entity.ivUploadTool           = [PoporUploadTool new];
+        entity.imageUploadTool           = [PoporUploadTool new];
         entity.videoUploadTool        = [PoporUploadTool new];
-        entity.ivUploadTool.uploadService    = [self getPoporUploadService];
+        entity.imageUploadTool.uploadService    = [self getPoporUploadService];
         entity.videoUploadTool.uploadService = [self getPoporUploadService];
         
         if (imageData) {
-            entity.ivUploadTool.image     = [UIImage imageWithData:imageData];
-            entity.ivUploadTool.imageData = imageData;
+            entity.imageUploadTool.image     = [UIImage imageWithData:imageData];
+            entity.imageUploadTool.imageData = imageData;
         }else if (image) {
-            entity.ivUploadTool.image     = image;
+            entity.imageUploadTool.image     = image;
         }
-        entity.ivUploadStatus = PoporUploadStatusInit;
+        entity.imageUploadStatus = PoporUploadStatusInit;
         
         @weakify(entity);
         

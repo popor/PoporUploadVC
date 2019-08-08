@@ -60,12 +60,12 @@
         imageArray = [NSMutableArray new];
         for (; i < count; i++) {
             PoporImageBrowerEntity * entity = [PoporImageBrowerEntity new];
-            PoporUploadEntity * wde = [self.present getCellEntityAt:[NSIndexPath indexPathForRow:i inSection:indexPath.section]];
+            PoporUploadEntity * pue = [self.present getCellEntityAt:[NSIndexPath indexPathForRow:i inSection:indexPath.section]];
             
-            if (wde.ivUrl) {
-                entity.bigImageUrl = [NSURL URLWithString:wde.ivUrl];
-            }else if (wde.ivUploadTool.image){
-                entity.bigImage = wde.ivUploadTool.image;
+            if (pue.imageUrl) {
+                entity.bigImageUrl = [NSURL URLWithString:pue.imageUrl];
+            }else if (pue.imageUploadTool.image){
+                entity.bigImage = pue.imageUploadTool.image;
             }
             
             [imageArray addObject:entity];
