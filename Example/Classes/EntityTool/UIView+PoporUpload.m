@@ -89,7 +89,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         if (!self.puGrayView) {
-            NSLog(@"❗️未初始化图片进度UI层");
+            NSLog(@"❗️未初始化图片进度UI层, 请给对应的UI执行 puAddUploadStatusViews.");
         }
         if (progressF == 1) {
             self.puGrayView.hidden = YES;
