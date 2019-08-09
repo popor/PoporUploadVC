@@ -32,9 +32,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak  ) UIView               * weakUploadProgressView;
 
 // 默认图: 可用于replace模式, 显示cellIV的时候优先显示以下三个参数.
-@property (nonatomic, strong) UIImage                     * placeholderImage;
+@property (nonatomic, strong, nullable) UIImage           * placeholderImage;
 @property (nonatomic, strong, nullable) NSString          * placeholderImageUrl;// 缩略图url
 @property (nonatomic, strong, nullable) NSString          * placeholderImageName;// 缩略图name
+
+// 用于替换模式
+@property (nonatomic, strong, nullable) UIImage           * replaceImage;
+@property (nonatomic, strong, nullable) NSString          * replaceImageUrl;// 缩略图url
+@property (nonatomic, strong, nullable) NSString          * replaceImageName;// 缩略图name
 
 // 图片视频文件区分开的好处:代码阅读性提高.个别地方不容易出错.
 // 图片
