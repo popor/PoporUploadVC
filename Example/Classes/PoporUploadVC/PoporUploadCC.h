@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+#import "PoporUploadCCProtocol.h"
 #import "PoporUploadVCPrefix.h"
 #import "UIView+PoporUpload.h"
 
@@ -20,16 +21,10 @@ static NSString * PoporUploadCCNormalKey = @"PoporUploadCCIdNormal";
 
 @class PoporUploadEntity;
 
-@interface PoporUploadCC : UICollectionViewCell
+@interface PoporUploadCC : UICollectionViewCell <PoporUploadCCProtocol>
 
 @property (nonatomic, getter=isInit) BOOL init;
 @property (nonatomic        ) PoporUploadCCFunType funType;
-
-@property (nonatomic, strong) UIImageView * imageIV;
-@property (nonatomic, strong) UIButton    * selectBT; // selectBT 最小点击范围是30*30.
-@property (nonatomic, strong) UILabel     * tagL;
-
-@property (nonatomic, weak  ) PoporUploadEntity * uploadEntity;
 @property (nonatomic, strong) NSIndexPath * indexPath;
 
 // 用于继承

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		009797B57BE92E60C68683D89CC01FDC /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 179CF4D5D944A73CD4617CC702ABA68B /* TOActivityCroppedImageProvider.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		00A3591B6C5264B2E5A8AA8004FC2E3B /* RACEXTRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A784347779EC8B635593008151AF4213 /* RACEXTRuntimeExtensions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		00BF55290702B5399EB4C0837888FCFF /* PoporUploadVCInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D540FA45E3C524A23D933B26F7FACC6 /* PoporUploadVCInteractor.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		00E5AC97F0FC17E49512E238F06A903C /* UITextView+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C5BDA5820ED9C0008298DE469CE8B48 /* UITextView+RACSignalSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		00EBF674A5ACE32D21769D338A1F50E6 /* RACSignalProvider.d in Sources */ = {isa = PBXBuildFile; fileRef = D78F6D1E240677141A955F1DFD663DBA /* RACSignalProvider.d */; };
 		01120EC6618D81D6DC34DAF2421BD53F /* RACScopedDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C7DB9936D3BBCAF2C0C56B49CCD9B1 /* RACScopedDisposable.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -63,6 +64,7 @@
 		171F862D3AA949643D78768B62224EF9 /* RACTupleSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9712719D964BF5A8871CA3D8F168D4 /* RACTupleSequence.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		17B54C87481033342D67F0B9720E34E2 /* SDWebImageCacheSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5455DC137390E2AB24EC89475C6FF37A /* SDWebImageCacheSerializer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		181B2691FF506F26F7F71F711C724B81 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5DAA8623E5F022C5FF8538F59158BA /* MASConstraintMaker.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1891A9196F4C63FE6DDC8E85C26CC073 /* PoporUploadServiceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2695ADCACA1B4F47429E0BC72F1D73D6 /* PoporUploadServiceProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		19293CF823BCFACFDF0C09442F9A1F5F /* SDWebImageDownloaderOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F035F94F78128A1776E1D6388A06FE3 /* SDWebImageDownloaderOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		19B0EDA5C625C22D5C514952B4C35C12 /* RACTargetQueueScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 12CF3759C466CA28535A21AD80ADB3CC /* RACTargetQueueScheduler.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1A7DEF2B80668386AD2496CF7590B9E6 /* SDWebImageDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4E973ADEAD699CA34729FDC86C4D02 /* SDWebImageDefine.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -75,11 +77,11 @@
 		1D2CC2CFEEF4028381B05881DEC5748E /* RACIndexSetSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59F499DA22270D280D03252F561E80 /* RACIndexSetSequence.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D7450A6ABCB37CF10D3BA8A6FB64D4C /* SKFCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6859F68F28565AF6EC6BB1E52FB928 /* SKFCamera.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1EB887D99B2C94863633A1A81AF136A0 /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = CDD3BA59EBAA842B5EE818BD43B95CC6 /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1F14EF2035087361561181E7C2141349 /* PoporUploadCC.h in Headers */ = {isa = PBXBuildFile; fileRef = EE3A67DCF52A11D765114DF011E781C8 /* PoporUploadCC.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1F40C1D2B487E4B8F16F1A4870367923 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E40A029C3DD4631A0E085CB79F4E58B /* UIImageView+HighlightedWebCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1F9D86E0EE9DB2F795834DBF835C01DD /* IToastKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 639F94100E9188B11CAE2CDCB44BAD1C /* IToastKeyboard.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		20809166611FF37D60DB873389BBF3C4 /* DMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E7335355F11E1F253EAA7DD2F860D /* DMProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		20E2F8001CC8A41A0E1B50694BE7875D /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B93021BEFCB8B61736DBBE8CB7B0660 /* NSArray+MASAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		210A7A97739178294159C973340B2992 /* PoporUploadVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F193462EE5E2A2B84C5FF5E1636C163 /* PoporUploadVC.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		214D77E1E9B12A69F61128C64BB88D28 /* RACCompoundDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = D3CB1D82C0318B5636BA33E3F04E59FB /* RACCompoundDisposable.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		21D89B7E38D55361BEE62476F4561BFF /* RACKVOChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 54766151F9489996BBB8EFBF378D288C /* RACKVOChannel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2292635A9721CBCA44BB3444DE2DF220 /* NSBezierPath+RoundedCorners.h in Headers */ = {isa = PBXBuildFile; fileRef = D9DC9200D4BA26CE0B22111C6266FD23 /* NSBezierPath+RoundedCorners.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -94,10 +96,8 @@
 		24BA00B49E3C5394C87C384D29DC556B /* RACReturnSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = B6DD08CE0B94303D8186C416A9835135 /* RACReturnSignal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		253FC061FBEAE4292323CB58B2159626 /* PoporAVPlayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14235C13EA8C9EB0468F7807A6E4FF24 /* PoporAVPlayer-dummy.m */; };
 		25A89F3435C639D3A05B6331DA1567AC /* RACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 741BC9D2B97FF1681B8CC3754D6A6AE3 /* RACEXTRuntimeExtensions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		25D075F8C0FF1ED66CB9DB08081BFEC5 /* PUShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 34BEF002846EC23792EE81E5F9CDC25A /* PUShare.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		26597975CAED072D4A349CDEB320ED3E /* SDWebImageCacheSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D5073CAA36243D59DE30555530F7570E /* SDWebImageCacheSerializer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		26A19FBC6228D2F8AA16E7A4A233D9AE /* SDImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E83F54AF27B9DD8509D38426E9581B /* SDImageTransformer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		26B69902B9AFE0318C8679B2560C3247 /* PoporUploadEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 750CEF7300CCFD97C136BA79CC029FE1 /* PoporUploadEntity.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		26C7F672CF13A1B2FD30F5F359ED6F84 /* Pods-PoporUploadVC_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7261A20CE1E46A27057166B3A64CCB9A /* Pods-PoporUploadVC_Example-dummy.m */; };
 		2848A7763232B1DE848F34AE26BBC358 /* PoporAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 362777A700532BF2C0AE197204D6CEB9 /* PoporAppDelegate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2883734705823D99DB84A16302B46358 /* TOCropView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EBDB85EEF2931A3C2FF028E53E14AE4 /* TOCropView.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -114,13 +114,11 @@
 		2DD880BE42533EBD872EE479612853EA /* PoporMotionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6BF94CD54BD561D8F588299D276E7A /* PoporMotionManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2E5F3B41BD51ACE4EE3B422BB67E51DF /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C4EB3905B71054ECA05A80D0DCE0A /* MASViewAttribute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2E7116936B2266AF27454EA1B46992B0 /* PoporImageBrowerProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA3A40841D46CE3FF3A74C3310680AC /* PoporImageBrowerProgressView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2F537580EB946E0330EED432F40391E3 /* PoporUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A181E732B465A9C6801FED7FF49C54BB /* PoporUploadVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3085B8D4844DAC6761A85067725419B8 /* RACKVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C92C7088EC4B4C92B0853BD1EDC3452F /* RACKVOProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		30B93027A94C13790B863BFDC1D33E1D /* LLSimpleCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A83278E62161ECDD58CC71454EBB968 /* LLSimpleCamera.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		30DF716ACC4B07F18ED5726A714F9403 /* NSDate+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A8F48534EB56077337DB8B781EAA686 /* NSDate+Tool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		30DFD4B8A4195598D51BDBC5522C2ECF /* NSObject+RACLifting.h in Headers */ = {isa = PBXBuildFile; fileRef = 3286BD23C2028966D6EC733E3E4E352C /* NSObject+RACLifting.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		31064475EC704EC31BC3E2DE0DAFC72C /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 155DFD0FEBED9DA99C04B39DED24BCF7 /* MASViewConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		316A0B86B2D7B41B1DF35015C30B4988 /* PoporUploadCC.h in Headers */ = {isa = PBXBuildFile; fileRef = 616FDE00E35DF09876FD9EA0F544E475 /* PoporUploadCC.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		317DBE2CABB1ECB11D065A9FAC654AE6 /* PoporAVPlayerVCPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = D4B8687F976C88AE1B52D50BEC42423F /* PoporAVPlayerVCPresenter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		321D6617CB874D2DE8FB9789FAE573F6 /* TZAssetCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 172AAB5C962C4106C6DE8E88B1FEA2A0 /* TZAssetCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3262F4F5EBA5F2BDEF6414207F6ADDD9 /* RACTestScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E827700D16B8D31231E795BC08F16C /* RACTestScheduler.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -152,11 +150,11 @@
 		3952B299954AAFABD9ADB15460AA793B /* JSONAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E94257408C33B21E712191EB14FD11B /* JSONAPI.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3A1CB782EBC3BF61E0D44A1157F13BC4 /* RACTargetQueueScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = C0419FAD834C9B1CECF707BD0B83ACE6 /* RACTargetQueueScheduler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3A6A98A184BAA36E6F3779F4BCDD6172 /* UIDeviceScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C189AF836A9AA2584C75A6BE7C3E36 /* UIDeviceScreen.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3AF0F501E9FCB43D88BCE12696BC4F70 /* PoporUploadCC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E6A3C90CD171D4E3FE434D825463E3 /* PoporUploadCC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3B74FA662CB2B878FED452D0216567A8 /* UIImage+Metadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EF471882B096C9B18A9C72086696F8B /* UIImage+Metadata.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3B7806EADB6E52C89C9F6E34EF5FA1A4 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F37AA816149C60A94E7C70E03B75F6 /* NSString+Size.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3B95555E0A5A4D34DE89020F97BECE9E /* TZImagePickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 24270A84B801CD44923642270F29AF34 /* TZImagePickerController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3BB8CCF7D85217C4095897D8E301A6C7 /* SDImageCachesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C927DCA9D03203F664268596CA8801A /* SDImageCachesManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3BE0B4E347D2F9CA7B5311DF491C48A3 /* PoporUploadEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D608C6B2704D48F7C99CEE478A4D04 /* PoporUploadEntity.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3C3C478DFA8065CC4457EF0899D5DB7F /* TZImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BBBB3895E060780A0343F0FF019D14D /* TZImageManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3C4C2F0FDFA4224A89671167C386610A /* RACEXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = C1CEFD6B6F70EF4AB14B24F013C58B6A /* RACEXTScope.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3C896ADD35D2099C68B2CE0169EB16D2 /* RACKVOChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 386FE773CB95CD0C7FEC70FB5586D55B /* RACKVOChannel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -186,6 +184,8 @@
 		4545F1020B6215D7715FEC6CE5E48A8F /* RACEmptySignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F36BC81BD3F645639C72E12024E421 /* RACEmptySignal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4559F3674D71BB4F74F0E6D0F7D18195 /* RACArraySequence.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C45803CAB20D6E8ABBE05873A35232 /* RACArraySequence.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		46692A2E77157B00827182C8DC686F72 /* View+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D09F36FABAAD77E2574EF15C53BB9195 /* View+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4686D18306EBC7A47965C53FFFE82037 /* PoporUploadCCProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C03D1ABCCE7B148B53A653BA55AAE4C5 /* PoporUploadCCProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46F29C74C4076ED8DDBDECF35B737CBE /* PoporUploadVcShowPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2416532AEB15C05EFFB3C6036EAD6A4B /* PoporUploadVcShowPresent.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4711432FA88877A0F5B1D1D25B3993DF /* PoporImagePreviewCC.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B4C40AB9477A5BDC244D5779F043DD /* PoporImagePreviewCC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4988AE0F889FE7ED8606DAD42A78EC13 /* UIStepper+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 183E3AD5E9512E21D6254AFDFFD38849 /* UIStepper+RACSignalSupport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		498BC1342B3A4632BAC5490A0369B0A3 /* SDWebImageDownloaderRequestModifier.h in Headers */ = {isa = PBXBuildFile; fileRef = CF198E5A7949176EEBE1CFF65258C264 /* SDWebImageDownloaderRequestModifier.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -196,6 +196,7 @@
 		4BF2004DE1C17F528EF895755222A520 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = DAB8F719E4F78E388F2FD9DE0473EB00 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4C51C7E0387F59E2025E3D00220A3787 /* UIActionSheet+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E9E1A8F109554036E60ED443FE0020 /* UIActionSheet+RACSignalSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4C538A59452D9EE529285435C1917B03 /* SDImageCacheConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D00006106216734DC409DD52CB967E4E /* SDImageCacheConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4CC765D63283585553E4FF5A8DDCF75F /* UIView+PoporUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CFD159CB342F1E53C0BED89C9B7C9F /* UIView+PoporUpload.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4CE091F886EC6324673EFE0AEBBEA0FE /* MASConstraint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 87C2E1B8A735C30A31DD1F7D2D4FCCDE /* MASConstraint+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4CE415AB15D5663BD3598BA1E84ACE21 /* SDWebImageTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B117CE8B16FE2FFB1CE9F145DB009C1 /* SDWebImageTransition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4D31B6B03266635DA107A7DAAD061B0F /* PoporImageBrowerEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 993BE574F72360AE241EDA8F197D24AF /* PoporImageBrowerEntity.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -210,13 +211,12 @@
 		526CD62CFE195493EAAB3A92C3C9763E /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5CE2C437CC129B042A2CFD653919F9 /* AFImageDownloader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		528D535342F0C60DC48FDB63893F9D98 /* PoporMedia.h in Headers */ = {isa = PBXBuildFile; fileRef = 40923C6B97BD0EE14C5F274150592973 /* PoporMedia.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		52B62848488ACAD4E9C4446E8116133A /* TZPhotoPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BE67BB2D378631004A74EB147B72268 /* TZPhotoPreviewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		534690E148F8EB302EF02D6D73C085A1 /* PoporUploadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A59C4C69C1132972E68F42AADABAFB /* PoporUploadTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		534CA491DD789BAAA1FF38D71357AA7B /* NSString+format.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BC601B0DE9B59CDFCF1A50E252D74 /* NSString+format.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		538A962F9C43545922FEF32832375F7B /* PoporUploadVCPrefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FA9F0B4A471E67AFDD1C3C9AA9AC328 /* PoporUploadVCPrefix.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		53F51E9794A44980E56DCB7699D922D8 /* PUShare.h in Headers */ = {isa = PBXBuildFile; fileRef = A186E76C7BB299F3529004F6CD16A231 /* PUShare.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		549E20595A32EC823472EFA21E09D4FF /* PoporUploadVC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C513765BAAF2CA4F399EA4AD8BB3D9 /* PoporUploadVC-dummy.m */; };
 		54D8D2D5C08C51B57B6DFAF0086D0DCB /* UIImage+ForceDecode.h in Headers */ = {isa = PBXBuildFile; fileRef = 997719AD6D5401FE125D1BFEE5779E21 /* UIImage+ForceDecode.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		55486461A324867FA30B1151324D8598 /* NSUserDefaults+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B863C0543339E328E9A3A4CEFEEA66 /* NSUserDefaults+RACSupport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		55F2A736488BD5801B209E78855023EE /* RACStringSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BEF6D6A0615CD27E7A7A5F40214FB1 /* RACStringSequence.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		55FCB66F05CDAF4A36BA754EA51975FB /* PoporUploadVcCellPresent.h in Headers */ = {isa = PBXBuildFile; fileRef = 13543F24646869CF023C34E19A957092 /* PoporUploadVcCellPresent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5705637BE97848A7B7954A24483C3557 /* PoporVideoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A64D48407F17533F2B35EFC9F400C5 /* PoporVideoProvider.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		576EDBB1B994180EED0782B735745CFA /* NSObject+RACDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF161CA215AF761963DD1C7264A64C0 /* NSObject+RACDescription.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5794357F9DC428B5F7CEC1C6068B6ACF /* RACSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = F614F66DDEBE272C9F98F7747EECE35B /* RACSignal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -253,6 +253,7 @@
 		645B4D6CFF88CC2E39A94C4457CBAE01 /* NSData+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A004727EB4BFDB6F78E212D0520780 /* NSData+RACSupport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		64B257FD325F096C248375F6279485DF /* RACValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 940387E132FE1E65452A40B2DB407268 /* RACValueTransformer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		64E68FCA58542F60BB34C38105DBF93A /* SDAnimatedImageRep.m in Sources */ = {isa = PBXBuildFile; fileRef = C93251694BAF66C332C953A5654FA12A /* SDAnimatedImageRep.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6528D79D11A67A8CE0F8E1DD81EE8FED /* PUShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5081E6701EBD2277DF8E86602EEBD4F2 /* PUShare.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		65E88072A2BDC576BFC85E67EF9FBBC6 /* MASUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = A736173B3976B5D6C3FE2AC78FE612DD /* MASUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		679155DCC2F151949EDA5A6CA19DF018 /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 814B5FCDA0E0C013C471C3583C389D07 /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		684CBE548B519A309C8F695A8A89FCB6 /* PoporAVPlayerlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3F80A2F346FB71029C8563AABDAC85 /* PoporAVPlayerlayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -261,7 +262,6 @@
 		687919C64D11F46059F5A2CC207F58C3 /* NSString+IDCard.h in Headers */ = {isa = PBXBuildFile; fileRef = E817E76A5A58962493BBA82A05BA9050 /* NSString+IDCard.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		68C188263A7502001FB44D19BA85EC1F /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A51C77ECFB8307312055F2F3B67F7C /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		697400A2664D98B0E8F1D619BF62EEB1 /* RACEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = C11368F3F03AB7DC85C20762F408ED42 /* RACEvent.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6A38496791602D7B995C83FCCEBDDFFA /* PoporUploadVcShowPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B3066DDCACAC169A3FBBD456C32A173 /* PoporUploadVcShowPresent.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6AFA21FB0306CA4F8E25586E3E1AB3E3 /* PoporAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DBFB6439D73ACCC727504625953B8869 /* PoporAppDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6B5643A76EC43D6E71A4A4C98C1F1B9B /* SDDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 25C71F36FEF3F86F44CF7927F31BF087 /* SDDiskCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6B5B030904BA451F4FFE3AF2FD28D2DA /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = D40EBFA69ACB0919137202787CD696D9 /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -271,6 +271,7 @@
 		6D2BE7452A8D93383C95AF0EE3D7B418 /* RACAnnotations.h in Headers */ = {isa = PBXBuildFile; fileRef = 08669EB3EDDB4243C70096CBC5516920 /* RACAnnotations.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6DD2BCE3F14525FBDF06073376D5F4C3 /* RACChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = BBB61BC22A7AA7CDCEC213B26170E8B5 /* RACChannel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6E69B2C39FAE53254DD4C5E87CA20F2C /* RACReplaySubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BC1A1F0A2ECBB051BB376D1C01EBA7 /* RACReplaySubject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6E877B14B57B8763A7DF168171E25359 /* PUVideoTool.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D8C3D57B831F82AB2FAE7A662A648C /* PUVideoTool.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6EB8376ED1C2BF5D68DB2C6147B3AE20 /* SDImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BDDCD4B140E7033A484E8A72506929 /* SDImageCodersManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		6EED1463DFFC42C3054B99CFC4BD2273 /* UISegmentedControl+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A2663618351E07C4AA34A5674BA6F41A /* UISegmentedControl+RACSignalSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6FFEF19D10909CEB12EAEE18AC3C159C /* PoporAVPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CABD4036803C7C0C83917A4EC74938A5 /* PoporAVPlayerVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -285,9 +286,7 @@
 		75F3F932F205CAB6CB3855ADD03C3A19 /* TZImageCropManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D2BB806AD10D40FC82BB37795DA2CDC5 /* TZImageCropManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		763A0B8F5B456C986E357EBFD891A8C0 /* JSONHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7DBD01FA76EAD7B60E2A8F0AB5CC7 /* JSONHTTPClient.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		76612641497A72840106F4D6FB81123F /* SDMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3BFE5796D295ED7C873C6197910A45 /* SDMemoryCache.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7685FDC6350D34B0A696C3EF2019EAED /* PoporUploadVcShowPresent.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A414673BFC781CDE44822264CD2239 /* PoporUploadVcShowPresent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		76CC0F1E9E8692DE351FB6E269CF4B0E /* NSString+RACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 921B93AF6182C7574F0C09C533A1B553 /* NSString+RACKeyPathUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		771E23AFEB759EFEF09BAC743A6D2B8D /* PoporUploadVcCellPresent.h in Headers */ = {isa = PBXBuildFile; fileRef = DAA0673F2547E726CDB8724667F75B55 /* PoporUploadVcCellPresent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		77D8D46E42DE3A97D29E19BC7292F524 /* SDImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCD02D02CE269A5A66FD1C0328E98AB /* SDImageGIFCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		77E36C17280C096F7478459000D0A426 /* RACmetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 85C72C9E0052CAD2222873D297E29A66 /* RACmetamacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		780B2CD651D2F5F8E4646C25147BBDAA /* RACCompoundDisposableProvider.d in Sources */ = {isa = PBXBuildFile; fileRef = C833068CEE7F46528A0207E81873368E /* RACCompoundDisposableProvider.d */; };
@@ -300,6 +299,7 @@
 		7A311AA5B1C3B57A916DDED5770AA0E6 /* UIImage+create.h in Headers */ = {isa = PBXBuildFile; fileRef = 13489DE4CCE9A09DFEF5618AC89AC8F8 /* UIImage+create.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7A3D78289EC21A509E53364585272808 /* UICollectionReusableView+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CFCBFDF3C039F29098B8546D4D5F61B /* UICollectionReusableView+RACSignalSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7CF2AC7A3B3ED03B30C1E4ED662B0551 /* MASLayoutConstraint.h in Headers */ = {isa = PBXBuildFile; fileRef = 733B6F89C422770C0604425412F32FA9 /* MASLayoutConstraint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7E0358FCD90A3F2041C09FAEEAF7646E /* PoporUploadVcCellPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = F94AF652A08E8556DD146D7EE30FB1F5 /* PoporUploadVcCellPresent.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7E47A3DA4A4C0B228C8DA01912D2EDBA /* UIStepper+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 59DCF4116554C53E4C494C39EEDA169E /* UIStepper+RACSignalSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7E57AB817354A16E41CA333491501D39 /* RACErrorSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = EA4C9BE8F6A4BAD1F8D1B22F2E576726 /* RACErrorSignal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7E6A5FEA12A5557CD0813283107D83F3 /* RACUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A8A0911B2B1499FF7DDB31FE85F491 /* RACUnit.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -315,15 +315,12 @@
 		82DBCDC798334AA40AA5B8EE76EA2C15 /* RACDynamicSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 620BD89CE096C611A2695E3C5FA94FF7 /* RACDynamicSignal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		82ED7C890D4DB41B8004602A9E334CB8 /* PoporAVPlayerVCInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = C1C5C992E04C359A674604A44D1AC525 /* PoporAVPlayerVCInteractor.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		837730159C6A0E987D1F1498B75B55CA /* UITextView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E5E9CD32396B53B34043CB8AD2EB49 /* UITextView+RACSignalSupport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		84514B410C36001E9780146CAA5BB293 /* PoporUploadVCPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = DF4F60B48A597CE4BD453DEB29B7F8DA /* PoporUploadVCPresenter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		84E5507BD6B32BE617295475C57033E5 /* RACKVOTrampoline.h in Headers */ = {isa = PBXBuildFile; fileRef = 569C0E1AE699B189416F8F567945E6A3 /* RACKVOTrampoline.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		852197182D5E79F6157852215D8511EF /* PoporAVPlayerVCProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 148D0B0F10C3CD45A66000EED1EC52EC /* PoporAVPlayerVCProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		85256C314B57BAA4DDF2DC6337B7E31A /* RACReplaySubject.h in Headers */ = {isa = PBXBuildFile; fileRef = AA94476E13F36373CD757956FBF1E96E /* RACReplaySubject.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		85BF72A7BAAC7D34631F6FAE9E43B6C2 /* PoporUploadVcCellPresent.m in Sources */ = {isa = PBXBuildFile; fileRef = 40515F27D48F4B7ED10B0DB6F3167C51 /* PoporUploadVcCellPresent.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		85C9EA51718CFD8BA54EB9CBF6400E53 /* UIView+PoporUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B43ABB394A34BB30890FB5961DE461 /* UIView+PoporUpload.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		863C24A214424BB6FB865335EB6C79BD /* RACEmptySignal.h in Headers */ = {isa = PBXBuildFile; fileRef = A0522AD9EC4C8E59F4C7537CF912E575 /* RACEmptySignal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		865B42B13CAA7FBA0F637FAB9AAFCC85 /* PUVideoTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEFBDA971E7EDDC0EAA51038B9E92E6 /* PUVideoTool.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		866B6DB09346C0C96F729835C93FC5B7 /* SDImageIOCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 876F2408AA81A2FD57C6D8D3B3468F11 /* SDImageIOCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		87F7D5DEDAC868E993EB75E99B0B9BBE /* PoporUploadTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 697C76AC2B59F34D546465B30E5CBB68 /* PoporUploadTool.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		87FADB66C46B993D2BE48C2D502240D4 /* UIImage+create.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C93C82A3EC1B5E795505BE6F0B337 /* UIImage+create.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		88165F1EDEBAEC69F9A6FFB915DE4FBF /* PoporImageBrowerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 555210DEB143284B6CB8182F63B5992B /* PoporImageBrowerCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		895BE61AA6068432855FDC6D78A6F27F /* SDWebImageCacheKeyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3C9AA9AAA3A560CB047560E43A2B1D /* SDWebImageCacheKeyFilter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -351,6 +348,7 @@
 		909EBFFE40DB50CF6B3A16C1B2DDE493 /* NSDate+Tool.h in Headers */ = {isa = PBXBuildFile; fileRef = DD0A947EA22D56C326F18402AC576BA9 /* NSDate+Tool.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		90F5557ACBB1974DA3309F8A73E608E8 /* UIImage+read.m in Sources */ = {isa = PBXBuildFile; fileRef = 2772DC76C0CFC5FEA2DB177C9890476B /* UIImage+read.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		91072EC44A619533CD398B803A4E6210 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E67FAE0746C49A7BCA9B98D58344CF7 /* SDWebImageDownloader.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		91091378A6B0F0DB130D0DE37D5DD8CC /* PoporUploadVCProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 3956051C4985EF12B61077D72471C38B /* PoporUploadVCProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9111C034CB75C25A71E1AD67C7A5C390 /* RACDynamicSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = B22F641DF569B4A7A22624D4583AB5A8 /* RACDynamicSequence.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9194B58ACE900ED6BAE6AD92E24A2CFF /* MASConstraintMaker.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7D2769BC0390D4FDF4D9342E468283 /* MASConstraintMaker.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		91BDEEA9891B745735D8463D39FBD59D /* SDImageLoadersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BE7DE3E248880F84072418979C54305F /* SDImageLoadersManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -365,12 +363,12 @@
 		956BA413E1735E0A2A05130C4E55E501 /* UIControl+RACSignalSupportPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A156BB3C01257CD4C7E6A27B0CF207E3 /* UIControl+RACSignalSupportPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		95A102F08D0E3E9B66B090CC006C89AA /* PoporImageBrowerEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = E855B4B0311BC9C903BA62EE3476358D /* PoporImageBrowerEntity.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		95C0F1E068DCAC33B5695F6FEBE0F1F9 /* SDImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 67C1E6FF32E3126FBF854098F9CE1C5D /* SDImageCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		963A770F18820CCC3C940A762C3B9F60 /* PUShare.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E2ED4A8D28E6B5AC07D2716589D5105 /* PUShare.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		969BE77B9CEF8E2DCAEB18A63CCDC6A5 /* UITableViewHeaderFooterView+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = B35427E0CBD290B5416F47B71BA73BAC /* UITableViewHeaderFooterView+RACSignalSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		977A189FA35911A414F263608CEE0C8D /* NSObject+assign.h in Headers */ = {isa = PBXBuildFile; fileRef = 36E998A7660FD852A29D41E07407E91D /* NSObject+assign.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		978B588EFD0328F9F00E1B0E6797A0D0 /* NSString+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD064CB6C7346BFD2D48B938E553B9A /* NSString+RACSupport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		97B25EA69FD4AD52360E905F7782966D /* PrefixOs.h in Headers */ = {isa = PBXBuildFile; fileRef = B47E08B868F5213FB636B5F7FD62CE50 /* PrefixOs.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		97C8473E08D914DC7AF00A0A217FC5F4 /* SDWebImageDownloaderRequestModifier.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1E2DFB8482F1F09A23299C1DDD082E /* SDWebImageDownloaderRequestModifier.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9888333DB4377CC28CB700FBE9577A7E /* PoporUploadTool.h in Headers */ = {isa = PBXBuildFile; fileRef = D0AC18D9AD770EFBF8049E794B1E61E5 /* PoporUploadTool.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		99667DD4C71297EDCB19A3670F79C764 /* RACSignal+Operations.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D08F2F1942036DE539A306C92CA46C /* RACSignal+Operations.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		997286872208035FAC62895BAA034C63 /* SDWebImageCacheKeyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B890A42FB1F9F99B5900D4CE10592757 /* SDWebImageCacheKeyFilter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9A3FCB5167AED32E296C78742582B803 /* RACKVOTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA153C60A0E65A05F330A238417475 /* RACKVOTrampoline.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -380,11 +378,11 @@
 		9B27CCC49F82F30192D3FF1910CD8E49 /* UITextField+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2530E02CC4E2641F62C1DE45482E621D /* UITextField+RACSignalSupport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9B369AAD43832AEDBBDA8A0DF0856B4C /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A81861FA2BEE3480CAD92B82C2E56769 /* MASCompositeConstraint.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9CC94DFE85E56C0D5C3D182783525467 /* BlockActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = E339872DEB04FF3194B8525CB3250508 /* BlockActionSheet.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9D6A40088CBCE0AB3EE24BCCD3B32B38 /* PoporUploadVC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83311141602D535FF4041269FBBE7F2C /* PoporUploadVC-dummy.m */; };
 		9D8403AF0770123276BA4FFD00F3B1DF /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 22706897359E3A12D516D0A15D8F4DB8 /* UIImage+ForceDecode.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9DA2BD6649790F38BC3925378A310208 /* UISwitch+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DBC664A87E5CFF13E7D01239F951D5 /* UISwitch+RACSignalSupport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9E4BB8A3A283C94BC48F95998677E93B /* NSUserDefaults+RACSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = DB051730BB27ECD83189B571F2FF5370 /* NSUserDefaults+RACSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9FC68679C6CE4447151692A52F250B8C /* NSArray+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 623F20F0B0A96FBEF37ACE95E67B7F2B /* NSArray+RACSequenceAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A0F4E4CAACC255E9131A99A4689E1658 /* PoporUploadVcShowPresent.h in Headers */ = {isa = PBXBuildFile; fileRef = EE5013EF59BD4CBCF5A7C5443629125C /* PoporUploadVcShowPresent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A11BD7CB054EE88B14A02C6A6E6F79B5 /* UIImage+MemoryCacheCost.m in Sources */ = {isa = PBXBuildFile; fileRef = C30155AEA554EB68AB9C9433C82AFE02 /* UIImage+MemoryCacheCost.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A213100ACE3ED1468F0F828A7E85FC7D /* RACEmptySequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 888A33E430B9E9CE545601C4160B7C1A /* RACEmptySequence.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A240330FA60AB9A5D7F5F923DD4EFE4F /* SDImageAssetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EA041FC6AF972A56A577C7F779B66539 /* SDImageAssetManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -414,9 +412,7 @@
 		AD9F072EE928DD295E0047F68AE7139A /* RACGroupedSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = C35172C27072A7D8A13129BB11342B0C /* RACGroupedSignal.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ADD8FDBCA646C5199AC315309C9EE7C8 /* RACUnarySequence.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F7ECC8CAB009EB271A56D35F0E5DAD /* RACUnarySequence.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AE0E71F0DFAF5409CD59A73F08ABD5F8 /* RACBehaviorSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFA6DB1A0421E4CAACC124B34CBF716 /* RACBehaviorSubject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AE513E02A3A1DD7892FDD1E60305AF20 /* UIView+PoporUpload.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B2BB1DDDE0A0ED966B3941DF4817A37 /* UIView+PoporUpload.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		AEA6506973247AAEE38AA1ADEA55367B /* RACQueueScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBBBFCA88D676B817D515DB9B78561 /* RACQueueScheduler.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AF3DF203E9AA33A333F488AEC5CC9010 /* PoporUploadVCInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B9079FE98C88566FB15D60FB746E47A /* PoporUploadVCInteractor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AFA34EA8170D26D455829DB99871B14E /* NSNotificationCenter+RACSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = DE9F74C1CE5C01EF7C1B6E1346EEF6D7 /* NSNotificationCenter+RACSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B00EA522A62498626388BC649DFE2996 /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 883FDD2F6053EC888745EF22266C3EAB /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B0730C45D007AC27130F4E98C141ACF5 /* TZPhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFE840CEA62984474DEDE53F72FC2726 /* TZPhotoPreviewCell.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -439,17 +435,18 @@
 		B5EEAB37DB9E873D567A6D2448615A95 /* NSObject+RACPropertySubscribing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC493E0E03C24B4C36A77664FFDD78F /* NSObject+RACPropertySubscribing.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B60F4ABA7C7983693EF9E3324DF9A2F5 /* SDAsyncBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 828085B230CEF3A7ADA4C2A15F992863 /* SDAsyncBlockOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B63AD60F5C8CC889C3924C29CBE1CA7A /* UIView+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = BD64A710648249F69087040EA67A1F6E /* UIView+Extension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B643E2236DBA44D6ADE2A3B2B6471897 /* UIView+PoporUpload.h in Headers */ = {isa = PBXBuildFile; fileRef = C26A43D196FD5868065D87C58C301C45 /* UIView+PoporUpload.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B64C5A5EB2B85612397A326837EF0393 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A869169DB7B8038BE6A8C531302E86E5 /* AFNetworkReachabilityManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		B783D3A049BC38BF94032E40A2791DE3 /* SDWebImageTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D444AB09F4001AFE380D4EBAE8E5B93 /* SDWebImageTransition.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B7AB871B699F4FA310A1A56CD105FA03 /* SDWebImageError.h in Headers */ = {isa = PBXBuildFile; fileRef = 48405EC3D3198CFFE745FF80B4AD12EF /* SDWebImageError.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B7E63F3FB0108480EAB00B79AEF74659 /* TZGifPhotoPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CB674E090653D4E5B95674F3E0BE611 /* TZGifPhotoPreviewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B9A5B1F39CCD19A92E2775C2A3BD03FA /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AFBDC1B4D36B2AB368899DD681151B /* SDWebImageCompat.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BA63988E4C8F3F4130B3496D4DC0F411 /* RACReturnSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = AC39D4F5345445EB9A633336CD67C604 /* RACReturnSignal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BB15D04FB21B5B6EC190A62B0F30236F /* PoporUploadVCInteractor.h in Headers */ = {isa = PBXBuildFile; fileRef = BD98D731B3C743608E1BEA27F7FC8C5B /* PoporUploadVCInteractor.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BC598394049981A2B9C617DC1D43B219 /* PoporInterfaceOrientation.h in Headers */ = {isa = PBXBuildFile; fileRef = 351C3D77407F5D266666B13079C62BB4 /* PoporInterfaceOrientation.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BCE59BD2B7A475CAEB95F8E195A80DDF /* RACCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = FB05F4F51D6B91253874C1E450FFC55C /* RACCommand.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BE0984B3558AE1A5869BBD097439AC35 /* RACCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A82897EFD7A5716F63887ED1E9B7884 /* RACCommand.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		BE405F7BBA84B6C8404DD8F6A8E6E475 /* RACBlockTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 734859210091EB59CBD363974E47418B /* RACBlockTrampoline.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BE5D5CFAE15B17950F53C7B0174EFCCC /* PoporUploadVCPrefix.h in Headers */ = {isa = PBXBuildFile; fileRef = A4CA5094EA71052F36F75C0248712D0D /* PoporUploadVCPrefix.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BEB6D1F19DBE58FDDE4CCDF845385BC5 /* SDAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B84B38908385E5F713134C8F41C9F46 /* SDAnimatedImage.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BF9574B8A5F1F34CC54EFEC36957E9C4 /* RACPassthroughSubscriber.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6F23350C380BECFDC34E309DFCACBC /* RACPassthroughSubscriber.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BFD184BB06C6539457929AA3B0433B8C /* SDImageAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 87625DB62B97874DF009B0E461B0BB5C /* SDImageAssetManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -461,6 +458,7 @@
 		C06F61A759022A62864BD9F8EE3660F3 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B87116780D05B1C2C97B796182565A59 /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C1192DADE3469DF444542D8C1B6BB117 /* TOCropViewControllerTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = A5A25608AF284E486C7F25D9C52DFAA3 /* TOCropViewControllerTransitioning.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C14E817792A84343729D330F7CB59F85 /* SDWebImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F270D8CE04CED3A62286934E3218DC5 /* SDWebImageOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C15EC6B2F1D05AEF95D4FB6D12CD94C8 /* PoporUploadVC.h in Headers */ = {isa = PBXBuildFile; fileRef = E4817134E7AF748E85625083999DF965 /* PoporUploadVC.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C166B1162E7F982C6DD0E61A75BE279A /* TOCroppedImageAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD6921DB14F28E01455B4CF4E61600A /* TOCroppedImageAttributes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C1C4BBC805CBF3205E65E02CF420819E /* UIActionSheet+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 30ED93DF3FD0DAED67D2AD4F5F5FC616 /* UIActionSheet+RACSignalSupport.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C1EE07F0E0B54668574633B545FBCE48 /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A985C9ECEFD65ADD6C8F7D396ECF2D1 /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -476,17 +474,15 @@
 		C564C8D042998164475E13AD54B0A294 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = E8AE070A2F1821EC1A2D674DECDEB302 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C58AA1A7C48929B243A6A53EED594B3A /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 960F4F83973ADF3366C700BCFA61F35D /* JSONModelError.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C60A332AF75E98C1376D9D36562C5B2E /* PoporAVPlayerVCInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8E3CDFC1E5524377246F67FB188794 /* PoporAVPlayerVCInteractor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C6777B731DE1C8C3C32D7A97D9F0D29B /* PoporUploadCC.m in Sources */ = {isa = PBXBuildFile; fileRef = DE889E97C52B4225CACA8B4133AE88AA /* PoporUploadCC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C6DB28F8BFFAAB6F5DD8B32A46AE2000 /* TZImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2ED446C5BADD726D18CA2C11E5F40 /* TZImageManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C74D2E856ADC8139CD00DBD184061B23 /* NSLayoutConstraint+MASDebugAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 097A839F2013EEE30874A3E4C4D54F2C /* NSLayoutConstraint+MASDebugAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C77003C5656FB131924A02D06BB83413 /* PoporUploadVCPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 93AAF71774884A9EE91D0CD77BED760B /* PoporUploadVCPresenter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C7A48F7EE029781788D2232A39ECD4D5 /* TZImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 510DF4D7603DD3F927A3E97A8CA1A9AF /* TZImageRequestOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C81230B0F6210C9D9C2D9485751D2E94 /* RACScheduler+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = ABCE7932715F20B831A497081881255D /* RACScheduler+Subclass.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C845FB6311581F28284F921659F0FDC2 /* SDWebImageError.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8DF369F7E0A078C19D535784FE6E73 /* SDWebImageError.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C84F7A4A6AF530DBC9CC414A7BDCCA4D /* PoporUploadVCProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F0DB68941D2721B0CF6F80A2B79C47D /* PoporUploadVCProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C8F4F89907BFA09A3CAF069B3BD5CAAD /* NSString+email.h in Headers */ = {isa = PBXBuildFile; fileRef = B55BEFF451DF4265F808781F7EB7F5F6 /* NSString+email.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C96BBB7A9829A518D9E42A32BA9F15A3 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EE5B754BA5E4180DE6A06592C628EB /* UIView+Extension.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		C9B7C0B49F09E5C508839370A4A06FA2 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 156146C68CB10313E22BF041BD606CF3 /* AFSecurityPolicy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CA992C9C84E33429E65A5FFCFD7D9A9C /* PUVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 42CE2F465F05164BF03FDB0528F69C34 /* PUVideoTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CABC2BC321875AEB00315DD7D0E77144 /* RACImmediateScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = F9169772B0358E5C4C518C0B5770F6ED /* RACImmediateScheduler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CADE89D9DC0B4F36927F6280151A60E9 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D439D8C79F7B2BD58949815B2F8004A /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CBA13F3F9054353747AD9A768C6FD548 /* NSObject+RACDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = EE65C8560E2612BA097E7479F16CEC73 /* NSObject+RACDescription.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -503,6 +499,8 @@
 		D16001E47CB28D27EB04E72B365E323B /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 432FCD29FAADCE0A94471F0E8A3EC3DE /* NSString+MD5.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D1B4633F512DFDE002DF323C7D8133D8 /* NSAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8991654FE8B6088111BEB95E995858 /* NSAssistant.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D213D47E8D9A98619519DCB4D8BE591E /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 852BB66E3D168704D85F9CA906E74D68 /* UIView+WebCacheOperation.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D223AA8DC638286DEC093C7CB16F7DF0 /* PoporUploadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F805BFC91E98F8A1EA265430276FFAD /* PoporUploadTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D2674CA7CF3D22C64AA21AE1B80888B6 /* PoporUploadEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D0999D1EDEDB8BB50CD7500BCE40CB9 /* PoporUploadEntity.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D280A3B13923FF5FA778EF312BD965F7 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 617E3FD43DAEB35F661182C72292FF15 /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D37B803B11491CC7CB70E95FDA2F1FCA /* PrefixBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = 02A7707F0BD7166F67AD1CA8FFF24771 /* PrefixBlock.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D3DC240631E1FA883A5604B3E99BAE2B /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 922613CA7D1E62FD9760ECE26A24D516 /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -535,6 +533,7 @@
 		DFA102A756B2C5F7A01EBBE34E2B251D /* UIColor+HexString.h in Headers */ = {isa = PBXBuildFile; fileRef = A8BDA56FE7E5CC81F31D23E4A764D704 /* UIColor+HexString.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		DFCC4B46B40A53AB8E6581F951F33389 /* JSONAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = F16A470B6F194E07D269AF9D3C10E1A5 /* JSONAPI.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E0030366F6493189CA27DEA3D019EC95 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 94D1D774D73213F29B4167F578E124EA /* SDWebImagePrefetcher.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E03B506677B710E1FF734D99FDF9101F /* PoporUploadVCPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 533E529337B659DE8D50C3A5E592AE99 /* PoporUploadVCPresenter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E16F377C197F703734ACEEAD92F5885D /* UIImage+save.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B2031AC5B968478D04C58622415E97C /* UIImage+save.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E1B306B318E51DCC4F56A6DB27190EFE /* RACTuple.h in Headers */ = {isa = PBXBuildFile; fileRef = F6F3CEA7DCBD6CE22F4BC1E7B402F8D9 /* RACTuple.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E1CB4BA14AD8D8175D6CF32BAF70727E /* DMProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 2093D464C40C510ADC9520AFC8A34764 /* DMProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -555,11 +554,13 @@
 		E6F89928692BF33E2653AD0A5743AF95 /* UIDevice+SaveImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE27D342AEAEA4DACE221C856680DD7 /* UIDevice+SaveImage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E76935CFF4AF327F8D9A7C1935F7D900 /* ViewController+MASAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E51E8CE5B0FF2AE5B70E2A1A0E7441F4 /* ViewController+MASAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E78BE5E7C61ADB8E94B6CCC8F0ACA6BA /* NSString+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F69B4960D58AB36CB46814589C7593 /* NSString+RACSequenceAdditions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E7AD5E5A50355FA15E905AE4F56240E4 /* PoporUploadVCInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A64E7D08A32BD4C898EFB668E43D09 /* PoporUploadVCInteractor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E7E99B0674271CCE8C3AFA1DF17959A2 /* NSString+RACSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 5197EC873CC3915598CF43ECCB48FEF2 /* NSString+RACSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E82F874952E2BBA492C147D50AC71839 /* PoporAVPlayerlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 050EF1B2B4C59DC3E96025DD61433148 /* PoporAVPlayerlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E8C1601FAECC42CFF50D21E38A8C3398 /* PoporMediaImageBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CAE4335C79F11E4A969D1D20E7EC636 /* PoporMediaImageBundle.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E90CF9762EB40FAA0E240BADF5D1424B /* SDWebImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DA92D2DB0556951CF59F807A85C8BA /* SDWebImage-dummy.m */; };
 		E926AAAD533A70068B56AE4F26066E27 /* SDImageAPNGCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8755C13E8A6E327CD6412DB46527E4FB /* SDImageAPNGCoder.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E952EAE70E5823D0BC3319ABDCF6D531 /* PoporUploadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D82510897C2C68EC7ED1CCD038DF717D /* PoporUploadVC.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E9547EF6B7D64705BA27B789B1D98848 /* RACSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F032C04A909AB15D629D9BC6F588EE /* RACSequence.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E9BEE5A8F39A3E0CD63FE5C41D4F9889 /* TOCropViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9762C0E099579EF325EAABAD8A603364 /* TOCropViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EA47D22B7E1F82E9BC9A1F2A931188AD /* SDAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECF2E7504A3C8B71D299B0FBAA5FD5D /* SDAnimatedImageView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -584,8 +585,9 @@
 		F39A38A71E9870E6C154C13E822C2301 /* UIView+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = F12DB6EB6421FEAE2C68793F3A07F90D /* UIView+Tool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F3AC67790EC8FC0F393C5DF08E6C2AA8 /* PrefixFun.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A52BC281A714002BFF0C43152DCF77C /* PrefixFun.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F3C9CC6087B2BE14165EA141BFA2A787 /* RACEagerSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EAE7174E6E6A9BFFBC4834D98803ABF /* RACEagerSequence.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F3E49D081D254EF6D85EF0C403DF1E27 /* PoporUploadServiceProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4611A0E8F5FAF724276B10EF863FCBDD /* PoporUploadServiceProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F4DF9E2B29F03B1F9A1A6D666F94F97D /* PUVideoTool.m in Sources */ = {isa = PBXBuildFile; fileRef = FE751A0EB6C4E53324AAF1B3A0E75DEE /* PUVideoTool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F5547F4FB6F7D6958C255FF704C40960 /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 85C78EDABDF616150B0F3593725D78FA /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F6040E50E5AA54646D61E3A567561EA2 /* PoporUploadVCPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E5DCC60CD7E869BEA3692AC965C656C9 /* PoporUploadVCPresenter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F6A2FD9309D9E933F65787771C34AF33 /* RACQueueScheduler+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D2C87DD5AF5447AAF6F86599B5F5D0 /* RACQueueScheduler+Subclass.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F6DB82CB7E3B141CE1A77E0792AB49B0 /* PoporAVPlayerBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = F698429D7806CBACACB30CD45BCA13EB /* PoporAVPlayerBundle.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F6F635A27923FBA0F7C3E898D59AC495 /* PoporAVPlayerVC.h in Headers */ = {isa = PBXBuildFile; fileRef = E65CF2354FBDC1D444885309137E55E3 /* PoporAVPlayerVC.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -602,7 +604,6 @@
 		FC359EA7A68874C788F03A6890014F18 /* SDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B93DE938D9E4A4842EA9A14EC123DA /* SDWeakProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FC915505857BA9C3D47E953D9715C31B /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD9B78A02EBCE01A4D33E39FBF36A4E /* TZVideoPlayerController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FC97F53EB4E8F178ADE2C6A7C58D9B87 /* JSONModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40DB1D9DFFF4D267E5B5C95693CC6907 /* JSONModel-dummy.m */; };
-		FCCEFC046D57508EEEE97DEFEBD3F1C8 /* PoporUploadEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = F40E1741AA831ABA9FD1D7D4F68A3BC9 /* PoporUploadEntity.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FDD80BC3B91842CADAEEE2B2DFE4B6AC /* UIImage+read.h in Headers */ = {isa = PBXBuildFile; fileRef = 90BF051B68430106751C0976705ADFDF /* UIImage+read.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		FDF3957A0DEF53563C03DF05442D96C6 /* RACSerialDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 930554AD0A14C67B4F2D1602CD3B96BD /* RACSerialDisposable.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FE12F1410C4B79E9C626253561218E3B /* UIImage+gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 82E180B8C309CC4951684EDB736DB341 /* UIImage+gradient.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -614,13 +615,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		06332B4A8D6E51620164297A2EA54212 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
-			remoteInfo = AFNetworking;
-		};
 		07DBB4CB6EFB7516D4DA2062ED5D7750 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -648,20 +642,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
 			remoteInfo = SDWebImage;
-		};
-		1339BC5B69176214E62E67FFF7181526 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 243CB33AE70054DF4B4080E6BB990227;
-			remoteInfo = DMProgressHUD;
-		};
-		17EB24EAF533A1F8136EAF1412B3A1CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C0E032CFC4CF37EB8C4BCA7F69F012F;
-			remoteInfo = PoporMedia;
 		};
 		1F972E8CB2FDC9EB95D46D7DE747DC1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -698,7 +678,7 @@
 			remoteGlobalIDString = A96BBB982D62BB807B5BD10774BE2D07;
 			remoteInfo = TZImagePickerController;
 		};
-		2A484284B69861C758997D206B52A4C7 /* PBXContainerItemProxy */ = {
+		2C9E84A24F93D8A1836E97CE0B98AFD7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -740,12 +720,12 @@
 			remoteGlobalIDString = 79BFEE24BDA715C459390BEF93511D7B;
 			remoteInfo = SKFCamera;
 		};
-		5BB2F559549346345FB05CE3BD241C9F /* PBXContainerItemProxy */ = {
+		57F2A177BB3C2DC06C74E0147715E17A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
-			remoteInfo = SDWebImage;
+			remoteGlobalIDString = EDADB94E77F4A2C2446E84D78D926B9A;
+			remoteInfo = PoporImageBrower;
 		};
 		609F51BB72593FC130C7332CACC2DCEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -754,21 +734,7 @@
 			remoteGlobalIDString = 82B0A41D3031FF27D78E17B0A9A46FB0;
 			remoteInfo = MBProgressHUD;
 		};
-		61BA496C2254B2EBCACE631CD75B96A5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EDADB94E77F4A2C2446E84D78D926B9A;
-			remoteInfo = PoporImageBrower;
-		};
 		6E41773B031529E4710C8EC27BF7950B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 817833671E949B1C5DDEDB675875A7BE;
-			remoteInfo = PoporUI;
-		};
-		71A3C0B0A3642565FABBD6C2DE526B4F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -788,6 +754,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = B0AC8E8838A4E02A99344CC7607B6538;
 			remoteInfo = PoporUploadVC;
+		};
+		7DB4113C8A9399D8011D522C14DCF731 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
+			remoteInfo = AFNetworking;
+		};
+		8467BB9346248E13FE42C90A1E270A35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
+			remoteInfo = JSONModel;
 		};
 		863FD67926A1FDAE5DC669DDAC672974 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -824,13 +804,6 @@
 			remoteGlobalIDString = 0130B3724283586C0E9D2A112D4F2AA1;
 			remoteInfo = AFNetworking;
 		};
-		AA7CD6F46DAEE8951BF760C71AE8830E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E0EAF4371C6E4B30A1779D513CB4355B;
-			remoteInfo = JSONModel;
-		};
 		ACB18A3E426A44E872D618E529A04765 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -859,7 +832,14 @@
 			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
 			remoteInfo = Masonry;
 		};
-		CF784D47E931FB9A02002532FE0BD485 /* PBXContainerItemProxy */ = {
+		BBDEBD83F115635DA9A9D4BFA1A7B147 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C0E032CFC4CF37EB8C4BCA7F69F012F;
+			remoteInfo = PoporMedia;
+		};
+		BF8179E14BF9B6093D17088C40113CE2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -894,6 +874,13 @@
 			remoteGlobalIDString = 55AF53E6C77A10ED4985E04D74A8878E;
 			remoteInfo = Masonry;
 		};
+		E044359DF5D0ED5FDE6F6935F9594C83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 243CB33AE70054DF4B4080E6BB990227;
+			remoteInfo = DMProgressHUD;
+		};
 		E0CAC07A673F5D774C114FC5D15F0C32 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -901,12 +888,12 @@
 			remoteGlobalIDString = 438B238ACC7DF1178D1BCE1A31983146;
 			remoteInfo = ReactiveObjC;
 		};
-		E1BAF8DEDABB28B7FBE1212E87F1F5B6 /* PBXContainerItemProxy */ = {
+		E4DB794D873421CF0F481C5B2E921E8F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 97370628A8BC4636041BB29E59F4D696;
-			remoteInfo = PoporFoundation;
+			remoteGlobalIDString = 817833671E949B1C5DDEDB675875A7BE;
+			remoteInfo = PoporUI;
 		};
 		E938B97AE75566EEA45E6D77962FC296 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -928,6 +915,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 79BFEE24BDA715C459390BEF93511D7B;
 			remoteInfo = SKFCamera;
+		};
+		F61F10DB669F39F24ED2A772E045C571 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3847153A6E5EEFB86565BA840768F429;
+			remoteInfo = SDWebImage;
+		};
+		FD5E45E9F7378B52515382A36BEF8586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97370628A8BC4636041BB29E59F4D696;
+			remoteInfo = PoporFoundation;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -965,7 +966,6 @@
 		0F18C959CD6D835E1BEA7F766591A6C9 /* MASConstraint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraint.h; path = Masonry/MASConstraint.h; sourceTree = "<group>"; };
 		0F7A720B687AE2BB54BE2F93C886638C /* DMProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DMProgressHUD.xcconfig; sourceTree = "<group>"; };
 		0FA3A40841D46CE3FF3A74C3310680AC /* PoporImageBrowerProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporImageBrowerProgressView.m; path = PoporImageBrower/Classes/PoporImageBrowerProgressView.m; sourceTree = "<group>"; };
-		0FA9F0B4A471E67AFDD1C3C9AA9AC328 /* PoporUploadVCPrefix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVCPrefix.h; path = Example/Classes/EntityTool/PoporUploadVCPrefix.h; sourceTree = "<group>"; };
 		102CD974E5C1C1D47B49F8A836E6E342 /* UIAlertView+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+RACSignalSupport.h"; path = "ReactiveObjC/UIAlertView+RACSignalSupport.h"; sourceTree = "<group>"; };
 		128F2A5D281C0040DE8E598E4AB561A1 /* SDImageCoderHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCoderHelper.h; path = SDWebImage/SDImageCoderHelper.h; sourceTree = "<group>"; };
 		12C2BE5E56524E973DB9DA188B0F310F /* UIImage+gradient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+gradient.h"; path = "PoporUI/Classes/UIImage/UIImage+gradient.h"; sourceTree = "<group>"; };
@@ -974,6 +974,7 @@
 		12FD25881A6029D0F8BF4F0C57A3114E /* TZImagePickerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TZImagePickerController.xcconfig; sourceTree = "<group>"; };
 		130275F50C31F7BBACDA672F4FA43BD8 /* UIView+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCache.h"; path = "SDWebImage/UIView+WebCache.h"; sourceTree = "<group>"; };
 		13489DE4CCE9A09DFEF5618AC89AC8F8 /* UIImage+create.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+create.h"; path = "PoporUI/Classes/UIImage/UIImage+create.h"; sourceTree = "<group>"; };
+		13543F24646869CF023C34E19A957092 /* PoporUploadVcCellPresent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVcCellPresent.h; path = Example/Classes/PoporUploadVC/PoporUploadVcCellPresent.h; sourceTree = "<group>"; };
 		13E0352C65B030A0D7BE9917D9AF008D /* NSIndexSet+RACSequenceAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSIndexSet+RACSequenceAdditions.h"; path = "ReactiveObjC/NSIndexSet+RACSequenceAdditions.h"; sourceTree = "<group>"; };
 		14235C13EA8C9EB0468F7807A6E4FF24 /* PoporAVPlayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporAVPlayer-dummy.m"; sourceTree = "<group>"; };
 		1427C51661F2FDD873580D05670D8E81 /* JSONModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JSONModel-prefix.pch"; sourceTree = "<group>"; };
@@ -988,6 +989,7 @@
 		17598105AD233524A00225AFE54306E0 /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
 		176B71EC56AE303FADF589058F7D987F /* RACDynamicSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACDynamicSequence.h; path = ReactiveObjC/RACDynamicSequence.h; sourceTree = "<group>"; };
 		179CF4D5D944A73CD4617CC702ABA68B /* TOActivityCroppedImageProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOActivityCroppedImageProvider.m; path = SKFCamera/TOActivityCroppedImageProvider.m; sourceTree = "<group>"; };
+		17D608C6B2704D48F7C99CEE478A4D04 /* PoporUploadEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadEntity.h; path = Example/Classes/EntityTool/PoporUploadEntity.h; sourceTree = "<group>"; };
 		18249F1DDE8270DA0979E0496F6742EE /* Pods-PoporUploadVC_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoporUploadVC_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		183E3AD5E9512E21D6254AFDFFD38849 /* UIStepper+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIStepper+RACSignalSupport.m"; path = "ReactiveObjC/UIStepper+RACSignalSupport.m"; sourceTree = "<group>"; };
 		18E46DA9BB4742A05320DF9C62BE9AA1 /* UIRefreshControl+RACCommandSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+RACCommandSupport.h"; path = "ReactiveObjC/UIRefreshControl+RACCommandSupport.h"; sourceTree = "<group>"; };
@@ -1012,13 +1014,14 @@
 		1FFA6DB1A0421E4CAACC124B34CBF716 /* RACBehaviorSubject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACBehaviorSubject.m; path = ReactiveObjC/RACBehaviorSubject.m; sourceTree = "<group>"; };
 		1FFED36A657123030ABB700256D73F15 /* libMasonry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMasonry.a; path = libMasonry.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2093D464C40C510ADC9520AFC8A34764 /* DMProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DMProgressHUD.h; path = DMProgressHUD/DMProgressHUD.h; sourceTree = "<group>"; };
-		20B43ABB394A34BB30890FB5961DE461 /* UIView+PoporUpload.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+PoporUpload.m"; path = "Example/Classes/EntityTool/UIView+PoporUpload.m"; sourceTree = "<group>"; };
 		210B94D02C39B332EB0C887F17177798 /* NSBundle+TZImagePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+TZImagePicker.m"; path = "TZImagePickerController/TZImagePickerController/NSBundle+TZImagePicker.m"; sourceTree = "<group>"; };
 		220A0B3AC5A7DEE8B69AE980B16A09DB /* RACSubject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACSubject.h; path = ReactiveObjC/RACSubject.h; sourceTree = "<group>"; };
 		22180CD1BCDA75B4C3D5A464827C95CD /* SKFCamera.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SKFCamera.xcconfig; sourceTree = "<group>"; };
 		22706897359E3A12D516D0A15D8F4DB8 /* UIImage+ForceDecode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ForceDecode.m"; path = "SDWebImage/UIImage+ForceDecode.m"; sourceTree = "<group>"; };
 		22F37AA816149C60A94E7C70E03B75F6 /* NSString+Size.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Size.m"; path = "PoporFoundation/Classes/NSString/NSString+Size.m"; sourceTree = "<group>"; };
 		2347DF465D4EB620E7CB740A3FAB6ED6 /* KVOController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KVOController-prefix.pch"; sourceTree = "<group>"; };
+		23E7DD63E5B2AA7C0E3113EE8CAF4F99 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		2416532AEB15C05EFFB3C6036EAD6A4B /* PoporUploadVcShowPresent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVcShowPresent.m; path = Example/Classes/PoporUploadVC/PoporUploadVcShowPresent.m; sourceTree = "<group>"; };
 		24270A84B801CD44923642270F29AF34 /* TZImagePickerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZImagePickerController.h; path = TZImagePickerController/TZImagePickerController/TZImagePickerController.h; sourceTree = "<group>"; };
 		24922114AAD728CEA3A4C0D99B59DFE0 /* NSDictionary+RACSequenceAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+RACSequenceAdditions.h"; path = "ReactiveObjC/NSDictionary+RACSequenceAdditions.h"; sourceTree = "<group>"; };
 		2499115B913C54B2603C64045352E825 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
@@ -1026,6 +1029,8 @@
 		2556955BDCD84C74629B4B764EE18799 /* RACSerialDisposable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACSerialDisposable.h; path = ReactiveObjC/RACSerialDisposable.h; sourceTree = "<group>"; };
 		25C71F36FEF3F86F44CF7927F31BF087 /* SDDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDDiskCache.m; path = SDWebImage/SDDiskCache.m; sourceTree = "<group>"; };
 		2663362E2DAF4C28C367565CAC4CC454 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		266F420FB4026460CCFAEE31AC6BB822 /* PoporUploadVC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporUploadVC.xcconfig; sourceTree = "<group>"; };
+		2695ADCACA1B4F47429E0BC72F1D73D6 /* PoporUploadServiceProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadServiceProtocol.h; path = Example/Classes/EntityTool/PoporUploadServiceProtocol.h; sourceTree = "<group>"; };
 		27254536327755C32B3EDB0354099109 /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+FBKVOController.m"; path = "FBKVOController/NSObject+FBKVOController.m"; sourceTree = "<group>"; };
 		2772DC76C0CFC5FEA2DB177C9890476B /* UIImage+read.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+read.m"; path = "PoporUI/Classes/UIImage/UIImage+read.m"; sourceTree = "<group>"; };
 		279B730BE06B2F97CD4D3D0FDF63D72F /* UIImagePickerController+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImagePickerController+RACSignalSupport.h"; path = "ReactiveObjC/UIImagePickerController+RACSignalSupport.h"; sourceTree = "<group>"; };
@@ -1038,6 +1043,7 @@
 		2BBBB3895E060780A0343F0FF019D14D /* TZImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZImageManager.h; path = TZImagePickerController/TZImagePickerController/TZImageManager.h; sourceTree = "<group>"; };
 		2C3F80A2F346FB71029C8563AABDAC85 /* PoporAVPlayerlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporAVPlayerlayer.m; path = PoporAVPlayer/Classes/PoporAVPlayerlayer.m; sourceTree = "<group>"; };
 		2CD322568AB7A8E2D2D4313F039FC607 /* BlockAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlockAlertView.h; path = PoporUI/Classes/BlockView/BlockAlertView.h; sourceTree = "<group>"; };
+		2E2ED4A8D28E6B5AC07D2716589D5105 /* PUShare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PUShare.h; path = Example/Classes/EntityTool/PUShare.h; sourceTree = "<group>"; };
 		2EC7DBD01FA76EAD7B60E2A8F0AB5CC7 /* JSONHTTPClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONHTTPClient.m; path = JSONModel/JSONModelNetworking/JSONHTTPClient.m; sourceTree = "<group>"; };
 		2EF42214775CD0F0D11692597096BBB8 /* NSBundle+TZImagePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+TZImagePicker.h"; path = "TZImagePickerController/TZImagePickerController/NSBundle+TZImagePicker.h"; sourceTree = "<group>"; };
 		2F7D2769BC0390D4FDF4D9342E468283 /* MASConstraintMaker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASConstraintMaker.h; path = Masonry/MASConstraintMaker.h; sourceTree = "<group>"; };
@@ -1052,11 +1058,9 @@
 		32AEC2D838CA8D86DFA15795B10F2AD3 /* PrefixFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PrefixFont.h; path = PoporFoundation/Classes/PrefixCore/PrefixFont.h; sourceTree = "<group>"; };
 		32AFBDC1B4D36B2AB368899DD681151B /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/SDWebImageCompat.m; sourceTree = "<group>"; };
 		32ECB63B2B2B058CA398D1F96595491A /* DeviceDisk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeviceDisk.h; path = PoporUI/Classes/Tool/DeviceDisk.h; sourceTree = "<group>"; };
-		3315D5B829EEDBC361F03448F228FEB8 /* PoporUploadVC.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PoporUploadVC.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		33BDDCD4B140E7033A484E8A72506929 /* SDImageCodersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCodersManager.m; path = SDWebImage/SDImageCodersManager.m; sourceTree = "<group>"; };
 		33C8AE6B2FD535DF2873CD13D2BD968B /* UIView+Tool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Tool.h"; path = "PoporUI/Classes/UIView/UIView+Tool.h"; sourceTree = "<group>"; };
 		34635FE5FBF9364C0387CB3896C8765C /* libPoporMedia.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPoporMedia.a; path = libPoporMedia.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		34BEF002846EC23792EE81E5F9CDC25A /* PUShare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PUShare.m; path = Example/Classes/EntityTool/PUShare.m; sourceTree = "<group>"; };
 		351C3D77407F5D266666B13079C62BB4 /* PoporInterfaceOrientation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporInterfaceOrientation.h; path = PoporOrientation/Classes/PoporInterfaceOrientation.h; sourceTree = "<group>"; };
 		3536C3D6D900BEEA5B05BDC405F9B51B /* UIDevice+Tool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+Tool.h"; path = "PoporUI/Classes/Tool/UIDevice+Tool.h"; sourceTree = "<group>"; };
 		362777A700532BF2C0AE197204D6CEB9 /* PoporAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporAppDelegate.m; path = PoporOrientation/Classes/PoporAppDelegate.m; sourceTree = "<group>"; };
@@ -1067,7 +1071,9 @@
 		3717B5678E0BD889B17EAA68D64C1777 /* SDWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWeakProxy.h; path = SDWebImage/Private/SDWeakProxy.h; sourceTree = "<group>"; };
 		37E5E9CD32396B53B34043CB8AD2EB49 /* UITextView+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextView+RACSignalSupport.m"; path = "ReactiveObjC/UITextView+RACSignalSupport.m"; sourceTree = "<group>"; };
 		386FE773CB95CD0C7FEC70FB5586D55B /* RACKVOChannel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACKVOChannel.m; path = ReactiveObjC/RACKVOChannel.m; sourceTree = "<group>"; };
+		38C513765BAAF2CA4F399EA4AD8BB3D9 /* PoporUploadVC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporUploadVC-dummy.m"; sourceTree = "<group>"; };
 		38F2D903B9FC58ABB85FE971C89DDDB4 /* UIDevice+Permission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+Permission.m"; path = "PoporUI/Classes/Tool/UIDevice+Permission.m"; sourceTree = "<group>"; };
+		3956051C4985EF12B61077D72471C38B /* PoporUploadVCProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVCProtocol.h; path = Example/Classes/PoporUploadVC/PoporUploadVCProtocol.h; sourceTree = "<group>"; };
 		395FF43D4A5B6EA26ADD8FE48B14AA17 /* UISwitch+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISwitch+RACSignalSupport.h"; path = "ReactiveObjC/UISwitch+RACSignalSupport.h"; sourceTree = "<group>"; };
 		399EC9508E73C0D54D9BBD8741FBA137 /* libKVOController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libKVOController.a; path = libKVOController.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B09FB647B44DDEC51993E0319C2D2E /* PoporUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporUI-prefix.pch"; sourceTree = "<group>"; };
@@ -1078,6 +1084,8 @@
 		3B117CE8B16FE2FFB1CE9F145DB009C1 /* SDWebImageTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageTransition.m; path = SDWebImage/SDWebImageTransition.m; sourceTree = "<group>"; };
 		3B93021BEFCB8B61736DBBE8CB7B0660 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MASAdditions.m"; path = "Masonry/NSArray+MASAdditions.m"; sourceTree = "<group>"; };
 		3BF6B8B16D631BB0282AB737C1DE6656 /* RACTupleSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACTupleSequence.h; path = ReactiveObjC/RACTupleSequence.h; sourceTree = "<group>"; };
+		3C06EC6B7298F3B2025EBFE62379E572 /* PoporUploadVC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporUploadVC-prefix.pch"; sourceTree = "<group>"; };
+		3D0999D1EDEDB8BB50CD7500BCE40CB9 /* PoporUploadEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadEntity.m; path = Example/Classes/EntityTool/PoporUploadEntity.m; sourceTree = "<group>"; };
 		3D3B401BD51F49729D5652424781AD38 /* libPoporUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPoporUI.a; path = libPoporUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6345AB93D4CB4DEE12CF6D4F243CC1 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MultiFormat.m"; path = "SDWebImage/UIImage+MultiFormat.m"; sourceTree = "<group>"; };
 		3D6859F68F28565AF6EC6BB1E52FB928 /* SKFCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SKFCamera.m; path = SKFCamera/SKFCamera.m; sourceTree = "<group>"; };
@@ -1089,10 +1097,11 @@
 		3F270D8CE04CED3A62286934E3218DC5 /* SDWebImageOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageOperation.h; path = SDWebImage/SDWebImageOperation.h; sourceTree = "<group>"; };
 		3F4A1BC61AEEDCE330B1A166CED83106 /* ReactiveObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReactiveObjC-dummy.m"; sourceTree = "<group>"; };
 		3F6E220312588265ADBD41511D8F7723 /* RACDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACDelegateProxy.h; path = ReactiveObjC/RACDelegateProxy.h; sourceTree = "<group>"; };
+		3F805BFC91E98F8A1EA265430276FFAD /* PoporUploadTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadTool.m; path = Example/Classes/EntityTool/PoporUploadTool.m; sourceTree = "<group>"; };
 		3F9E4C2EDFEBD3CD8909BD56A28D711F /* NSImage+Compatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSImage+Compatibility.m"; path = "SDWebImage/NSImage+Compatibility.m"; sourceTree = "<group>"; };
-		40515F27D48F4B7ED10B0DB6F3167C51 /* PoporUploadVcCellPresent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVcCellPresent.m; path = Example/Classes/PoporUploadVC/PoporUploadVcCellPresent.m; sourceTree = "<group>"; };
 		40923C6B97BD0EE14C5F274150592973 /* PoporMedia.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporMedia.h; path = PoporMedia/Classes/PoporMedia.h; sourceTree = "<group>"; };
 		40CF0312210059481CE0DE69C63F30A4 /* UISlider+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISlider+RACSignalSupport.h"; path = "ReactiveObjC/UISlider+RACSignalSupport.h"; sourceTree = "<group>"; };
+		40CFD159CB342F1E53C0BED89C9B7C9F /* UIView+PoporUpload.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+PoporUpload.m"; path = "Example/Classes/EntityTool/UIView+PoporUpload.m"; sourceTree = "<group>"; };
 		40DB1D9DFFF4D267E5B5C95693CC6907 /* JSONModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JSONModel-dummy.m"; sourceTree = "<group>"; };
 		40ED1E50AAC789745B0534161F5221D8 /* RACDisposable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACDisposable.m; path = ReactiveObjC/RACDisposable.m; sourceTree = "<group>"; };
 		412A8CF642F99D7EFEA7A453A2755397 /* SDAnimatedImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SDAnimatedImageView+WebCache.m"; path = "SDWebImage/SDAnimatedImageView+WebCache.m"; sourceTree = "<group>"; };
@@ -1100,7 +1109,6 @@
 		41D08F2F1942036DE539A306C92CA46C /* RACSignal+Operations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RACSignal+Operations.h"; path = "ReactiveObjC/RACSignal+Operations.h"; sourceTree = "<group>"; };
 		4222D947EEB7567F96C315AC79181A21 /* SDWebImageCompat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCompat.h; path = SDWebImage/SDWebImageCompat.h; sourceTree = "<group>"; };
 		4269163EBB01C2264FCD58D90F1F53CE /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
-		42CE2F465F05164BF03FDB0528F69C34 /* PUVideoTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PUVideoTool.m; path = Example/Classes/EntityTool/PUVideoTool.m; sourceTree = "<group>"; };
 		43082D0B912CB1F18EF0B6A926C12889 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
 		432FCD29FAADCE0A94471F0E8A3EC3DE /* NSString+MD5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5.m"; path = "PoporFoundation/Classes/NSString/NSString+MD5.m"; sourceTree = "<group>"; };
 		43963C8F9738938DB2ABB3950CCA22D4 /* RACDynamicSignal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACDynamicSignal.m; path = ReactiveObjC/RACDynamicSignal.m; sourceTree = "<group>"; };
@@ -1112,7 +1120,6 @@
 		44E067901E16D93683126BA349578483 /* SDAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageView.h; path = SDWebImage/SDAnimatedImageView.h; sourceTree = "<group>"; };
 		45710327609BE155A25566AF886B581C /* TZAssetCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZAssetCell.m; path = TZImagePickerController/TZImagePickerController/TZAssetCell.m; sourceTree = "<group>"; };
 		457A2AF435ACC943B3724CE85FB8B18E /* RACSubscriber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACSubscriber.h; path = ReactiveObjC/RACSubscriber.h; sourceTree = "<group>"; };
-		4611A0E8F5FAF724276B10EF863FCBDD /* PoporUploadServiceProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadServiceProtocol.h; path = Example/Classes/EntityTool/PoporUploadServiceProtocol.h; sourceTree = "<group>"; };
 		463A14A700BE14F07203D266507AA223 /* PoporImagePreviewVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporImagePreviewVC.h; path = PoporMedia/Classes/PoporImagePreviewVC.h; sourceTree = "<group>"; };
 		46C54D44845152D0BD846CE6FDA8078E /* NSObject+Swizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Swizzling.m"; path = "PoporFoundation/Classes/NSObject/NSObject+Swizzling.m"; sourceTree = "<group>"; };
 		47E4B3B57AA8E51BEC48B14A3AEBB475 /* PoporAVPlayerTimeIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporAVPlayerTimeIndicatorView.m; path = PoporAVPlayer/Classes/PoporAVPlayerTimeIndicatorView.m; sourceTree = "<group>"; };
@@ -1121,7 +1128,6 @@
 		48FB19B8240F35077E6E011A7DF30A58 /* KVOController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KVOController-dummy.m"; sourceTree = "<group>"; };
 		49C1331748CB6A35F6CE3BB5E07B70F3 /* AFCompatibilityMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFCompatibilityMacros.h; path = AFNetworking/AFCompatibilityMacros.h; sourceTree = "<group>"; };
 		4A1139DCFD4E40AB5203C11A178E5D15 /* JSONHTTPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONHTTPClient.h; path = JSONModel/JSONModelNetworking/JSONHTTPClient.h; sourceTree = "<group>"; };
-		4B2BB1DDDE0A0ED966B3941DF4817A37 /* UIView+PoporUpload.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+PoporUpload.h"; path = "Example/Classes/EntityTool/UIView+PoporUpload.h"; sourceTree = "<group>"; };
 		4C3EEC398E000575F7DDF84BD1333FE0 /* NSInvocation+RACTypeParsing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+RACTypeParsing.m"; path = "ReactiveObjC/NSInvocation+RACTypeParsing.m"; sourceTree = "<group>"; };
 		4CAE4335C79F11E4A969D1D20E7EC636 /* PoporMediaImageBundle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporMediaImageBundle.h; path = PoporMedia/Classes/PoporMediaImageBundle.h; sourceTree = "<group>"; };
 		4D2C93C82A3EC1B5E795505BE6F0B337 /* UIImage+create.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+create.m"; path = "PoporUI/Classes/UIImage/UIImage+create.m"; sourceTree = "<group>"; };
@@ -1138,25 +1144,24 @@
 		50132207C97B6DDF38C79F25C51CEB6B /* BlockActionSheet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BlockActionSheet.m; path = PoporUI/Classes/BlockView/BlockActionSheet.m; sourceTree = "<group>"; };
 		5025DC93059E78FC6D7ACFB33AF8DB14 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ViewController+MASAdditions.m"; path = "Masonry/ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		506AB10E7EB8AD9730C2D2FB866F60B5 /* TZImagePickerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TZImagePickerController-dummy.m"; sourceTree = "<group>"; };
+		5081E6701EBD2277DF8E86602EEBD4F2 /* PUShare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PUShare.m; path = Example/Classes/EntityTool/PUShare.m; sourceTree = "<group>"; };
 		508F695207C7689F039E4297DA7D3C8F /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		509789B31CB79FA474F8D492151A4EF1 /* SDImageCoderHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCoderHelper.m; path = SDWebImage/SDImageCoderHelper.m; sourceTree = "<group>"; };
 		510275848D72F3FAACCBE2387AA75616 /* PoporFoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporFoundation-prefix.pch"; sourceTree = "<group>"; };
 		510DF4D7603DD3F927A3E97A8CA1A9AF /* TZImageRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZImageRequestOperation.m; path = TZImagePickerController/TZImagePickerController/TZImageRequestOperation.m; sourceTree = "<group>"; };
 		5197EC873CC3915598CF43ECCB48FEF2 /* NSString+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+RACSupport.h"; path = "ReactiveObjC/NSString+RACSupport.h"; sourceTree = "<group>"; };
-		51E6A3C90CD171D4E3FE434D825463E3 /* PoporUploadCC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadCC.m; path = Example/Classes/PoporUploadVC/PoporUploadCC.m; sourceTree = "<group>"; };
 		51FB0AB10540B127D6DFC1F6AD4A0B37 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		520A18861AEF6BB39720503A3DDFFCBC /* NSString+Size.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Size.h"; path = "PoporFoundation/Classes/NSString/NSString+Size.h"; sourceTree = "<group>"; };
 		526A803283F0F5760E76593BD3FC4BB7 /* RACMulticastConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACMulticastConnection.m; path = ReactiveObjC/RACMulticastConnection.m; sourceTree = "<group>"; };
 		52BDAE98218ED4FC9AA09CF9A6A70BE3 /* PoporFoundation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporFoundation.xcconfig; sourceTree = "<group>"; };
 		52D2C87DD5AF5447AAF6F86599B5F5D0 /* RACQueueScheduler+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RACQueueScheduler+Subclass.h"; path = "ReactiveObjC/RACQueueScheduler+Subclass.h"; sourceTree = "<group>"; };
 		53392A827E2F18C90030710894585F28 /* RACPassthroughSubscriber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACPassthroughSubscriber.m; path = ReactiveObjC/RACPassthroughSubscriber.m; sourceTree = "<group>"; };
+		533E529337B659DE8D50C3A5E592AE99 /* PoporUploadVCPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVCPresenter.h; path = Example/Classes/PoporUploadVC/PoporUploadVCPresenter.h; sourceTree = "<group>"; };
 		53DDBFDDB83C2D98E0021DBF0662FA48 /* SDImageAPNGCoderInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAPNGCoderInternal.h; path = SDWebImage/Private/SDImageAPNGCoderInternal.h; sourceTree = "<group>"; };
 		53E7D3F0358E319D652AD8E67A4BFB3D /* KVOController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVOController.h; path = FBKVOController/KVOController.h; sourceTree = "<group>"; };
 		5455DC137390E2AB24EC89475C6FF37A /* SDWebImageCacheSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCacheSerializer.h; path = SDWebImage/SDWebImageCacheSerializer.h; sourceTree = "<group>"; };
 		54766151F9489996BBB8EFBF378D288C /* RACKVOChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACKVOChannel.h; path = ReactiveObjC/RACKVOChannel.h; sourceTree = "<group>"; };
 		555210DEB143284B6CB8182F63B5992B /* PoporImageBrowerCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporImageBrowerCell.h; path = PoporImageBrower/Classes/PoporImageBrowerCell.h; sourceTree = "<group>"; };
-		55A414673BFC781CDE44822264CD2239 /* PoporUploadVcShowPresent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVcShowPresent.h; path = Example/Classes/PoporUploadVC/PoporUploadVcShowPresent.h; sourceTree = "<group>"; };
-		568130D616B3F4D3E96FF0A0F5065007 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		5695E39AF9DAF7D582ACA1F50025CAC4 /* libPoporImageBrower.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPoporImageBrower.a; path = libPoporImageBrower.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		569C0E1AE699B189416F8F567945E6A3 /* RACKVOTrampoline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACKVOTrampoline.h; path = ReactiveObjC/RACKVOTrampoline.h; sourceTree = "<group>"; };
 		5789132541A8EDC294E78880B28AAA4C /* TOCropViewControllerTransitioning.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropViewControllerTransitioning.m; path = SKFCamera/TOCropViewControllerTransitioning.m; sourceTree = "<group>"; };
@@ -1174,7 +1179,6 @@
 		5B8E3CDFC1E5524377246F67FB188794 /* PoporAVPlayerVCInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporAVPlayerVCInteractor.m; path = PoporAVPlayer/Classes/PoporAVPlayerVCInteractor.m; sourceTree = "<group>"; };
 		5BA11A5A673BEB80D2A0A3AC6572E992 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
 		5BAB56D131420E627EAEC6EC62ADD2A0 /* RACGroupedSignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACGroupedSignal.h; path = ReactiveObjC/RACGroupedSignal.h; sourceTree = "<group>"; };
-		5BCCDFFCE20CBAF4ABA1AC92748A5B79 /* PoporUploadVC.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PoporUploadVC.bundle; path = Example/Classes/PoporUploadVC.bundle; sourceTree = "<group>"; };
 		5D5401D93A8BACEC65F5EEF8C9A98ED0 /* NSData+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+RACSupport.h"; path = "ReactiveObjC/NSData+RACSupport.h"; sourceTree = "<group>"; };
 		5E40A029C3DD4631A0E085CB79F4E58B /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+HighlightedWebCache.m"; path = "SDWebImage/UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
 		5E57756FED9D421276EB34396B723176 /* UIView+Layout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Layout.m"; path = "TZImagePickerController/TZImagePickerController/UIView+Layout.m"; sourceTree = "<group>"; };
@@ -1186,7 +1190,6 @@
 		60F69B4960D58AB36CB46814589C7593 /* NSString+RACSequenceAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+RACSequenceAdditions.m"; path = "ReactiveObjC/NSString+RACSequenceAdditions.m"; sourceTree = "<group>"; };
 		610E7309E1C816425B4E9F01E16B6556 /* UIImage+Metadata.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Metadata.m"; path = "SDWebImage/UIImage+Metadata.m"; sourceTree = "<group>"; };
 		61160D234475A926774946A005C30CF7 /* UIImagePickerController+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImagePickerController+RACSignalSupport.m"; path = "ReactiveObjC/UIImagePickerController+RACSignalSupport.m"; sourceTree = "<group>"; };
-		616FDE00E35DF09876FD9EA0F544E475 /* PoporUploadCC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadCC.h; path = Example/Classes/PoporUploadVC/PoporUploadCC.h; sourceTree = "<group>"; };
 		617E3FD43DAEB35F661182C72292FF15 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		61CEDED7C331F062A938F278137A1F87 /* SKFCamera-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKFCamera-prefix.pch"; sourceTree = "<group>"; };
 		61D21653327397B096D55AA86C07E5D7 /* PoporMedia.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporMedia.m; path = PoporMedia/Classes/PoporMedia.m; sourceTree = "<group>"; };
@@ -1205,6 +1208,7 @@
 		68C87FD847AD2EFA606DFC0B00D1A0BC /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
 		68CB11FDBC35FCCAED0818897159F443 /* PoporImageEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporImageEntity.m; path = PoporMedia/Classes/PoporImageEntity.m; sourceTree = "<group>"; };
 		68E526B6DEF3A639B0C1069F46A61C82 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		697C76AC2B59F34D546465B30E5CBB68 /* PoporUploadTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadTool.h; path = Example/Classes/EntityTool/PoporUploadTool.h; sourceTree = "<group>"; };
 		699E630EE98A8B9912AFCCF8BE2BB147 /* MASConstraint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MASConstraint.m; path = Masonry/MASConstraint.m; sourceTree = "<group>"; };
 		6A457D2A517024C50C1856EB6B6C1738 /* Pods-PoporUploadVC_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PoporUploadVC_Tests-dummy.m"; sourceTree = "<group>"; };
 		6A4E973ADEAD699CA34729FDC86C4D02 /* SDWebImageDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDefine.m; path = SDWebImage/SDWebImageDefine.m; sourceTree = "<group>"; };
@@ -1213,7 +1217,6 @@
 		6B175A68812C8F2B35004E07C4C8C7C8 /* PoporImagePreviewVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporImagePreviewVC.m; path = PoporMedia/Classes/PoporImagePreviewVC.m; sourceTree = "<group>"; };
 		6B30BDDAA9BAF4DD70BF97BDCB21A230 /* SDWebImageIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageIndicator.m; path = SDWebImage/SDWebImageIndicator.m; sourceTree = "<group>"; };
 		6B6AC7EECD96AE066759376CB96A8663 /* TOCropToolbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropToolbar.h; path = SKFCamera/TOCropToolbar.h; sourceTree = "<group>"; };
-		6B9079FE98C88566FB15D60FB746E47A /* PoporUploadVCInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVCInteractor.m; path = Example/Classes/PoporUploadVC/PoporUploadVCInteractor.m; sourceTree = "<group>"; };
 		6C53AF06BFAF68D439790BAD99D03C78 /* NSObject+RACSelectorSignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+RACSelectorSignal.h"; path = "ReactiveObjC/NSObject+RACSelectorSignal.h"; sourceTree = "<group>"; };
 		6DA0E8E90EA871CBE7A2135BA3D8D4E1 /* Pods-PoporUploadVC_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PoporUploadVC_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6DA2A077436F015430E3F0D14C3B680B /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -1234,7 +1237,6 @@
 		74986E848C5E113DB0EC28C401F416C4 /* RACSignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACSignal.h; path = ReactiveObjC/RACSignal.h; sourceTree = "<group>"; };
 		74A51C77ECFB8307312055F2F3B67F7C /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/SDAnimatedImageRep.h; sourceTree = "<group>"; };
 		74C9595CB3580CB3CE6363BF84D0447C /* MKAnnotationView+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MKAnnotationView+RACSignalSupport.h"; path = "ReactiveObjC/MKAnnotationView+RACSignalSupport.h"; sourceTree = "<group>"; };
-		750CEF7300CCFD97C136BA79CC029FE1 /* PoporUploadEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadEntity.m; path = Example/Classes/EntityTool/PoporUploadEntity.m; sourceTree = "<group>"; };
 		75C10E7112CACBCFF0B1A7F9860F718D /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASShorthandAdditions.h"; path = "Masonry/View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		75E83F54AF27B9DD8509D38426E9581B /* SDImageTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageTransformer.m; path = SDWebImage/SDImageTransformer.m; sourceTree = "<group>"; };
 		76B69485C3A2D489392588508A6EFFD9 /* SDImageGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGraphics.h; path = SDWebImage/SDImageGraphics.h; sourceTree = "<group>"; };
@@ -1248,6 +1250,7 @@
 		7C1F03169724ADE31F354301CFFDB2EF /* NSButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSButton+WebCache.h"; path = "SDWebImage/NSButton+WebCache.h"; sourceTree = "<group>"; };
 		7CB674E090653D4E5B95674F3E0BE611 /* TZGifPhotoPreviewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZGifPhotoPreviewController.h; path = TZImagePickerController/TZImagePickerController/TZGifPhotoPreviewController.h; sourceTree = "<group>"; };
 		7D22B5E06BA9D68F077A279955FD8B15 /* JSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONModel.h; path = JSONModel/JSONModel/JSONModel.h; sourceTree = "<group>"; };
+		7D540FA45E3C524A23D933B26F7FACC6 /* PoporUploadVCInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVCInteractor.h; path = Example/Classes/PoporUploadVC/PoporUploadVCInteractor.h; sourceTree = "<group>"; };
 		7D867EA629EE58BA2C7C8CEF52CE4426 /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
 		7DE7A1C5B5A35A593BDEA46BFCF25361 /* libPods-PoporUploadVC_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PoporUploadVC_Example.a"; path = "libPods-PoporUploadVC_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE835A0BD54AFA593C1D14E85F6107A /* MKAnnotationView+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MKAnnotationView+RACSignalSupport.m"; path = "ReactiveObjC/MKAnnotationView+RACSignalSupport.m"; sourceTree = "<group>"; };
@@ -1256,7 +1259,6 @@
 		7E7BD08D35DA869C8F76210B216A72B6 /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
 		7E94257408C33B21E712191EB14FD11B /* JSONAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONAPI.m; path = JSONModel/JSONModelNetworking/JSONAPI.m; sourceTree = "<group>"; };
 		7EBDB85EEF2931A3C2FF028E53E14AE4 /* TOCropView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropView.h; path = SKFCamera/TOCropView.h; sourceTree = "<group>"; };
-		7F193462EE5E2A2B84C5FF5E1636C163 /* PoporUploadVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVC.h; path = Example/Classes/PoporUploadVC/PoporUploadVC.h; sourceTree = "<group>"; };
 		7FD6DFE8233E0E337F0989F92164179F /* KVOController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KVOController.xcconfig; sourceTree = "<group>"; };
 		80465EBDB3E962E3B47EBF925D01DB59 /* NSIndexSet+RACSequenceAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSIndexSet+RACSequenceAdditions.m"; path = "ReactiveObjC/NSIndexSet+RACSequenceAdditions.m"; sourceTree = "<group>"; };
 		80A6B5B812798769635A9B71D0FFF971 /* RACTestScheduler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACTestScheduler.m; path = ReactiveObjC/RACTestScheduler.m; sourceTree = "<group>"; };
@@ -1268,7 +1270,6 @@
 		828085B230CEF3A7ADA4C2A15F992863 /* SDAsyncBlockOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAsyncBlockOperation.m; path = SDWebImage/Private/SDAsyncBlockOperation.m; sourceTree = "<group>"; };
 		82E180B8C309CC4951684EDB736DB341 /* UIImage+gradient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+gradient.m"; path = "PoporUI/Classes/UIImage/UIImage+gradient.m"; sourceTree = "<group>"; };
 		83074FAF36FE1C3E3F392B18A3598D5F /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
-		83311141602D535FF4041269FBBE7F2C /* PoporUploadVC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporUploadVC-dummy.m"; sourceTree = "<group>"; };
 		8359AA6DCD8DFFC2AD686A6FE31D6D73 /* JSONKeyMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONKeyMapper.m; path = JSONModel/JSONModelTransformations/JSONKeyMapper.m; sourceTree = "<group>"; };
 		83FEDAFCE5933CA949FBB8C4A118B4D6 /* NSObject+RACDeallocating.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+RACDeallocating.m"; path = "ReactiveObjC/NSObject+RACDeallocating.m"; sourceTree = "<group>"; };
 		84429FE4855B046AB8935A848AF9F44B /* SDInternalMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDInternalMacros.h; path = SDWebImage/Private/SDInternalMacros.h; sourceTree = "<group>"; };
@@ -1296,7 +1297,6 @@
 		8A9CE7B7C3189C91CC0C5CC6EE8B5D7C /* TZAssetModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZAssetModel.h; path = TZImagePickerController/TZImagePickerController/TZAssetModel.h; sourceTree = "<group>"; };
 		8AA17913EAEDDC6C5156FD73B2FF0455 /* RACSubscriptionScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACSubscriptionScheduler.h; path = ReactiveObjC/RACSubscriptionScheduler.h; sourceTree = "<group>"; };
 		8AC493E0E03C24B4C36A77664FFDD78F /* NSObject+RACPropertySubscribing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+RACPropertySubscribing.m"; path = "ReactiveObjC/NSObject+RACPropertySubscribing.m"; sourceTree = "<group>"; };
-		8B3066DDCACAC169A3FBBD456C32A173 /* PoporUploadVcShowPresent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVcShowPresent.m; path = Example/Classes/PoporUploadVC/PoporUploadVcShowPresent.m; sourceTree = "<group>"; };
 		8B5CE2C437CC129B042A2CFD653919F9 /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
 		8B7AB198D48468ABBF85F95823E04B91 /* RACSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACSequence.m; path = ReactiveObjC/RACSequence.m; sourceTree = "<group>"; };
 		8B8FAB0D627B17EDE1366984278705D9 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMBProgressHUD.a; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1314,6 +1314,7 @@
 		8E327353DBB83B8878150071B187F0FB /* NSString+MD5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5.h"; path = "PoporFoundation/Classes/NSString/NSString+MD5.h"; sourceTree = "<group>"; };
 		902C39B7353ECD55D47262C636609883 /* RACStream+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RACStream+Private.h"; path = "ReactiveObjC/RACStream+Private.h"; sourceTree = "<group>"; };
 		90BF051B68430106751C0976705ADFDF /* UIImage+read.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+read.h"; path = "PoporUI/Classes/UIImage/UIImage+read.h"; sourceTree = "<group>"; };
+		9103F8BD43FF5008C7054D4899BCF51F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		91180362761C8FC081B7042ADC8A1808 /* RACSubscriptingAssignmentTrampoline.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACSubscriptingAssignmentTrampoline.m; path = ReactiveObjC/RACSubscriptingAssignmentTrampoline.m; sourceTree = "<group>"; };
 		914649F43C092ECDC571FEF1ED6729DE /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		91F4CA6679A1F4266271853D32D4C8EA /* UITextField+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+RACSignalSupport.h"; path = "ReactiveObjC/UITextField+RACSignalSupport.h"; sourceTree = "<group>"; };
@@ -1323,7 +1324,6 @@
 		92FEFE373E307B524AA28F43E54EA697 /* UIView+Layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Layout.h"; path = "TZImagePickerController/TZImagePickerController/UIView+Layout.h"; sourceTree = "<group>"; };
 		930554AD0A14C67B4F2D1602CD3B96BD /* RACSerialDisposable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACSerialDisposable.m; path = ReactiveObjC/RACSerialDisposable.m; sourceTree = "<group>"; };
 		93A2974A040656C42C56C7D196FC8388 /* SDImageIOCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageIOCoder.m; path = SDWebImage/SDImageIOCoder.m; sourceTree = "<group>"; };
-		93AAF71774884A9EE91D0CD77BED760B /* PoporUploadVCPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVCPresenter.m; path = Example/Classes/PoporUploadVC/PoporUploadVCPresenter.m; sourceTree = "<group>"; };
 		93D43DBEE949A7D497593C3D7D65A2F8 /* NSString+Tool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Tool.h"; path = "PoporFoundation/Classes/NSString/NSString+Tool.h"; sourceTree = "<group>"; };
 		93E6E3A6FF6D7C3DD2EF3A543DEEC5ED /* RACEXTKeyPathCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACEXTKeyPathCoding.h; path = ReactiveObjC/extobjc/RACEXTKeyPathCoding.h; sourceTree = "<group>"; };
 		940387E132FE1E65452A40B2DB407268 /* RACValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACValueTransformer.m; path = ReactiveObjC/RACValueTransformer.m; sourceTree = "<group>"; };
@@ -1353,7 +1353,6 @@
 		9C457371BB75206F137D84596324A98C /* TZProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZProgressView.h; path = TZImagePickerController/TZImagePickerController/TZProgressView.h; sourceTree = "<group>"; };
 		9C66DBC208CEDD3FDBB7C60038B0BD38 /* SDWebImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImage.h; path = WebImage/SDWebImage.h; sourceTree = "<group>"; };
 		9C6BF94CD54BD561D8F588299D276E7A /* PoporMotionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporMotionManager.m; path = PoporOrientation/Classes/PoporMotionManager.m; sourceTree = "<group>"; };
-		9CEFBDA971E7EDDC0EAA51038B9E92E6 /* PUVideoTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PUVideoTool.h; path = Example/Classes/EntityTool/PUVideoTool.h; sourceTree = "<group>"; };
 		9CFCBFDF3C039F29098B8546D4D5F61B /* UICollectionReusableView+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionReusableView+RACSignalSupport.h"; path = "ReactiveObjC/UICollectionReusableView+RACSignalSupport.h"; sourceTree = "<group>"; };
 		9D2EDA44C443C3411E50B16946EE1F16 /* NSObject+performSelector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+performSelector.m"; path = "PoporFoundation/Classes/NSObject/NSObject+performSelector.m"; sourceTree = "<group>"; };
 		9D66F2869078C371CF09F1AE986192FB /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
@@ -1363,19 +1362,17 @@
 		9EAB1D5B7240B2432874E8BAF903D093 /* NSURLConnection+RACSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLConnection+RACSupport.m"; path = "ReactiveObjC/NSURLConnection+RACSupport.m"; sourceTree = "<group>"; };
 		9EAE7174E6E6A9BFFBC4834D98803ABF /* RACEagerSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACEagerSequence.h; path = ReactiveObjC/RACEagerSequence.h; sourceTree = "<group>"; };
 		9F0C364BBB1E959E376EEA1E01C1C241 /* SDImageGIFCoderInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageGIFCoderInternal.h; path = SDWebImage/Private/SDImageGIFCoderInternal.h; sourceTree = "<group>"; };
-		9F0DB68941D2721B0CF6F80A2B79C47D /* PoporUploadVCProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVCProtocol.h; path = Example/Classes/PoporUploadVC/PoporUploadVCProtocol.h; sourceTree = "<group>"; };
 		9FF275E8133C06C08B023ADCF44730FD /* NSFileManager+Tool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+Tool.m"; path = "PoporFoundation/Classes/NSFileManager/NSFileManager+Tool.m"; sourceTree = "<group>"; };
 		A0333D589457A2AAF85E36B9CDA58B60 /* SDAsyncBlockOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAsyncBlockOperation.h; path = SDWebImage/Private/SDAsyncBlockOperation.h; sourceTree = "<group>"; };
 		A0522AD9EC4C8E59F4C7537CF912E575 /* RACEmptySignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACEmptySignal.h; path = ReactiveObjC/RACEmptySignal.h; sourceTree = "<group>"; };
 		A1215FE72180A211BFC47E7AB30C6EB9 /* TOCropOverlayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TOCropOverlayView.m; path = SKFCamera/TOCropOverlayView.m; sourceTree = "<group>"; };
 		A156BB3C01257CD4C7E6A27B0CF207E3 /* UIControl+RACSignalSupportPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+RACSignalSupportPrivate.h"; path = "ReactiveObjC/UIControl+RACSignalSupportPrivate.h"; sourceTree = "<group>"; };
-		A181E732B465A9C6801FED7FF49C54BB /* PoporUploadVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVC.m; path = Example/Classes/PoporUploadVC/PoporUploadVC.m; sourceTree = "<group>"; };
-		A186E76C7BB299F3529004F6CD16A231 /* PUShare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PUShare.h; path = Example/Classes/EntityTool/PUShare.h; sourceTree = "<group>"; };
 		A1E2CC4A14C866D0AE8DDD872F1FF97F /* DeviceDisk.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DeviceDisk.m; path = PoporUI/Classes/Tool/DeviceDisk.m; sourceTree = "<group>"; };
 		A2303B1DEBEF0EE43405429D7B2954A5 /* SDImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoader.h; path = SDWebImage/SDImageLoader.h; sourceTree = "<group>"; };
 		A2663618351E07C4AA34A5674BA6F41A /* UISegmentedControl+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISegmentedControl+RACSignalSupport.h"; path = "ReactiveObjC/UISegmentedControl+RACSignalSupport.h"; sourceTree = "<group>"; };
 		A3E6C16E321053382E36ACC4012F9EF6 /* RACSignalSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACSignalSequence.m; path = ReactiveObjC/RACSignalSequence.m; sourceTree = "<group>"; };
 		A48EF5C4393920291AF5E6652FDD5BA3 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+MASDebugAdditions.m"; path = "Masonry/NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		A4CA5094EA71052F36F75C0248712D0D /* PoporUploadVCPrefix.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVCPrefix.h; path = Example/Classes/EntityTool/PoporUploadVCPrefix.h; sourceTree = "<group>"; };
 		A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFNetworking.a; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5135AF4B489777CE2247B846B265DDF /* NSBezierPath+RoundedCorners.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBezierPath+RoundedCorners.m"; path = "SDWebImage/Private/NSBezierPath+RoundedCorners.m"; sourceTree = "<group>"; };
 		A5A25608AF284E486C7F25D9C52DFAA3 /* TOCropViewControllerTransitioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TOCropViewControllerTransitioning.h; path = SKFCamera/TOCropViewControllerTransitioning.h; sourceTree = "<group>"; };
@@ -1384,7 +1381,6 @@
 		A5F7ECC8CAB009EB271A56D35F0E5DAD /* RACUnarySequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACUnarySequence.m; path = ReactiveObjC/RACUnarySequence.m; sourceTree = "<group>"; };
 		A5FB60048AD80BA66F9EA57A0A3DBB1C /* NSSet+RACSequenceAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSSet+RACSequenceAdditions.h"; path = "ReactiveObjC/NSSet+RACSequenceAdditions.h"; sourceTree = "<group>"; };
 		A60478EA97929B5EF0A961B671956075 /* NSObject+RACKVOWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+RACKVOWrapper.h"; path = "ReactiveObjC/NSObject+RACKVOWrapper.h"; sourceTree = "<group>"; };
-		A6E2C3D68EC78DAD5F8CF597F08A0469 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		A736173B3976B5D6C3FE2AC78FE612DD /* MASUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MASUtilities.h; path = Masonry/MASUtilities.h; sourceTree = "<group>"; };
 		A784347779EC8B635593008151AF4213 /* RACEXTRuntimeExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACEXTRuntimeExtensions.h; path = ReactiveObjC/extobjc/RACEXTRuntimeExtensions.h; sourceTree = "<group>"; };
 		A78A1B968B02868F0D3B157DEC4288D0 /* NSButton+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSButton+WebCache.m"; path = "SDWebImage/NSButton+WebCache.m"; sourceTree = "<group>"; };
@@ -1396,6 +1392,7 @@
 		A99BBA66DDB3B7120BA007998E0FE132 /* UIControl+RACSignalSupportPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+RACSignalSupportPrivate.m"; path = "ReactiveObjC/UIControl+RACSignalSupportPrivate.m"; sourceTree = "<group>"; };
 		AA7739352B66BFD54237DEC5081947F4 /* RACScheduler+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RACScheduler+Private.h"; path = "ReactiveObjC/RACScheduler+Private.h"; sourceTree = "<group>"; };
 		AA94476E13F36373CD757956FBF1E96E /* RACReplaySubject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACReplaySubject.h; path = ReactiveObjC/RACReplaySubject.h; sourceTree = "<group>"; };
+		AB603FD3DC074D3D8C31C03EAC743816 /* PoporUploadVC.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PoporUploadVC.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ABCE7932715F20B831A497081881255D /* RACScheduler+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RACScheduler+Subclass.h"; path = "ReactiveObjC/RACScheduler+Subclass.h"; sourceTree = "<group>"; };
 		ABF3C19BA6FDB2C59755DFCA7EED9B14 /* LLSimpleCamera+Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "LLSimpleCamera+Helper.h"; path = "SKFCamera/LLSimpleCamera+Helper.h"; sourceTree = "<group>"; };
 		AC39D4F5345445EB9A633336CD67C604 /* RACReturnSignal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACReturnSignal.h; path = ReactiveObjC/RACReturnSignal.h; sourceTree = "<group>"; };
@@ -1417,7 +1414,6 @@
 		B226AF34CF8B3A4C0F8F93FFE824DBFB /* DispatchTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DispatchTool.m; path = PoporUI/Classes/Tool/DispatchTool.m; sourceTree = "<group>"; };
 		B22F641DF569B4A7A22624D4583AB5A8 /* RACDynamicSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACDynamicSequence.m; path = ReactiveObjC/RACDynamicSequence.m; sourceTree = "<group>"; };
 		B35427E0CBD290B5416F47B71BA73BAC /* UITableViewHeaderFooterView+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableViewHeaderFooterView+RACSignalSupport.h"; path = "ReactiveObjC/UITableViewHeaderFooterView+RACSignalSupport.h"; sourceTree = "<group>"; };
-		B3A59C4C69C1132972E68F42AADABAFB /* PoporUploadTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadTool.m; path = Example/Classes/EntityTool/PoporUploadTool.m; sourceTree = "<group>"; };
 		B3CFF73E62375480EBAECB7719A7D95E /* NSAssistant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSAssistant.h; path = PoporFoundation/Classes/NSAssistant/NSAssistant.h; sourceTree = "<group>"; };
 		B42B3479245017A24F5391DC659617A7 /* SDImageCacheConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheConfig.m; path = SDWebImage/SDImageCacheConfig.m; sourceTree = "<group>"; };
 		B4652476C6FC22108610FD070429A5A0 /* PoporOrientation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporOrientation-prefix.pch"; sourceTree = "<group>"; };
@@ -1436,6 +1432,7 @@
 		B8800C5E15C9A2088D4B2CD9F1AA33FE /* RACUnarySequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACUnarySequence.h; path = ReactiveObjC/RACUnarySequence.h; sourceTree = "<group>"; };
 		B890A42FB1F9F99B5900D4CE10592757 /* SDWebImageCacheKeyFilter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageCacheKeyFilter.h; path = SDWebImage/SDWebImageCacheKeyFilter.h; sourceTree = "<group>"; };
 		B8A004727EB4BFDB6F78E212D0520780 /* NSData+RACSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+RACSupport.m"; path = "ReactiveObjC/NSData+RACSupport.m"; sourceTree = "<group>"; };
+		B8A64E7D08A32BD4C898EFB668E43D09 /* PoporUploadVCInteractor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVCInteractor.m; path = Example/Classes/PoporUploadVC/PoporUploadVCInteractor.m; sourceTree = "<group>"; };
 		B8A8A0911B2B1499FF7DDB31FE85F491 /* RACUnit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACUnit.m; path = ReactiveObjC/RACUnit.m; sourceTree = "<group>"; };
 		B8F46072D4A947DC75C1BB7C379F893A /* PHAsset+data.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PHAsset+data.m"; path = "PoporMedia/Classes/PHAsset+data.m"; sourceTree = "<group>"; };
 		B941038ECE2089DE2F1EE1BBD6C7BDB4 /* UIControl+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+RACSignalSupport.m"; path = "ReactiveObjC/UIControl+RACSignalSupport.m"; sourceTree = "<group>"; };
@@ -1451,7 +1448,6 @@
 		BCA050058F4ABFB64995C9D22F5FA74A /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		BCFEDFE307003E44ABEB44CEEEEA7384 /* NSFileHandle+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileHandle+RACSupport.h"; path = "ReactiveObjC/NSFileHandle+RACSupport.h"; sourceTree = "<group>"; };
 		BD64A710648249F69087040EA67A1F6E /* UIView+Extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Extension.h"; path = "PoporUI/Classes/UIView/UIView+Extension.h"; sourceTree = "<group>"; };
-		BD98D731B3C743608E1BEA27F7FC8C5B /* PoporUploadVCInteractor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVCInteractor.h; path = Example/Classes/PoporUploadVC/PoporUploadVCInteractor.h; sourceTree = "<group>"; };
 		BDE55D63A4AF0AD6E71B78682ECF3924 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		BE34A88836AED86E89919D56CC46E1A9 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
 		BE4667609166002014FE1A26935E962E /* PoporImageBrowerBundle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporImageBrowerBundle.m; path = PoporImageBrower/Classes/PoporImageBrowerBundle.m; sourceTree = "<group>"; };
@@ -1462,6 +1458,7 @@
 		BF56EB9AF28E0C4EF22EBE9C83235CBF /* SDImageGIFCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageGIFCoder.m; path = SDWebImage/SDImageGIFCoder.m; sourceTree = "<group>"; };
 		BF78133ACCBE1A9CCFF00DF7E66C2AA4 /* UIControl+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+RACSignalSupport.h"; path = "ReactiveObjC/UIControl+RACSignalSupport.h"; sourceTree = "<group>"; };
 		BFF76922805DC60D37B4A0E58ADBC3D8 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		C03D1ABCCE7B148B53A653BA55AAE4C5 /* PoporUploadCCProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadCCProtocol.h; path = Example/Classes/PoporUploadVC/PoporUploadCCProtocol.h; sourceTree = "<group>"; };
 		C0419FAD834C9B1CECF707BD0B83ACE6 /* RACTargetQueueScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACTargetQueueScheduler.h; path = ReactiveObjC/RACTargetQueueScheduler.h; sourceTree = "<group>"; };
 		C11368F3F03AB7DC85C20762F408ED42 /* RACEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACEvent.h; path = ReactiveObjC/RACEvent.h; sourceTree = "<group>"; };
 		C1B0868125A161ED4ED1A7D2DDC2A22A /* NSString+RACKeyPathUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+RACKeyPathUtilities.h"; path = "ReactiveObjC/NSString+RACKeyPathUtilities.h"; sourceTree = "<group>"; };
@@ -1469,10 +1466,12 @@
 		C1CEFD6B6F70EF4AB14B24F013C58B6A /* RACEXTScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACEXTScope.h; path = ReactiveObjC/extobjc/RACEXTScope.h; sourceTree = "<group>"; };
 		C1E4B17CB80F41426423827020ACCC69 /* libPoporAVPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPoporAVPlayer.a; path = libPoporAVPlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C242DB673A05BC0A76CCF778C537F55C /* RACSignal+Operations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RACSignal+Operations.m"; path = "ReactiveObjC/RACSignal+Operations.m"; sourceTree = "<group>"; };
+		C26A43D196FD5868065D87C58C301C45 /* UIView+PoporUpload.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+PoporUpload.h"; path = "Example/Classes/EntityTool/UIView+PoporUpload.h"; sourceTree = "<group>"; };
 		C2DA92D2DB0556951CF59F807A85C8BA /* SDWebImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDWebImage-dummy.m"; sourceTree = "<group>"; };
 		C30155AEA554EB68AB9C9433C82AFE02 /* UIImage+MemoryCacheCost.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+MemoryCacheCost.m"; path = "SDWebImage/UIImage+MemoryCacheCost.m"; sourceTree = "<group>"; };
 		C35172C27072A7D8A13129BB11342B0C /* RACGroupedSignal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACGroupedSignal.m; path = ReactiveObjC/RACGroupedSignal.m; sourceTree = "<group>"; };
 		C412DC97C840AC9C7EB4E09325403F74 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+FixOrientation.m"; path = "SKFCamera/UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		C4A73B625646C36B3D6FAACF7670C325 /* PoporUploadVC.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PoporUploadVC.bundle; path = Example/Classes/PoporUploadVC.bundle; sourceTree = "<group>"; };
 		C581CF4856CB752FA48EEA121382F442 /* UISegmentedControl+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISegmentedControl+RACSignalSupport.m"; path = "ReactiveObjC/UISegmentedControl+RACSignalSupport.m"; sourceTree = "<group>"; };
 		C58754362BAEC2048D033FD895A832FE /* SDImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageFrame.m; path = SDWebImage/SDImageFrame.m; sourceTree = "<group>"; };
 		C59A1F2758A84134E630FD6F43FF705F /* PoporImageBrower-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporImageBrower-dummy.m"; sourceTree = "<group>"; };
@@ -1501,7 +1500,6 @@
 		D00006106216734DC409DD52CB967E4E /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/SDImageCacheConfig.h; sourceTree = "<group>"; };
 		D0401395DC8FF8F37947F76DB643157A /* PoporImageBrower.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporImageBrower.m; path = PoporImageBrower/Classes/PoporImageBrower.m; sourceTree = "<group>"; };
 		D09F36FABAAD77E2574EF15C53BB9195 /* View+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "View+MASAdditions.h"; path = "Masonry/View+MASAdditions.h"; sourceTree = "<group>"; };
-		D0AC18D9AD770EFBF8049E794B1E61E5 /* PoporUploadTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadTool.h; path = Example/Classes/EntityTool/PoporUploadTool.h; sourceTree = "<group>"; };
 		D0B93DE938D9E4A4842EA9A14EC123DA /* SDWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWeakProxy.m; path = SDWebImage/Private/SDWeakProxy.m; sourceTree = "<group>"; };
 		D1A3D501DA068762BD2D0D3317CE8A0E /* IToastKeyboard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IToastKeyboard.h; path = PoporUI/Classes/IToast/IToastKeyboard.h; sourceTree = "<group>"; };
 		D2A64D48407F17533F2B35EFC9F400C5 /* PoporVideoProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporVideoProvider.m; path = PoporMedia/Classes/PoporVideoProvider.m; sourceTree = "<group>"; };
@@ -1522,10 +1520,10 @@
 		D730B956BE9D04736115D235AA7CAF7F /* NSEnumerator+RACSequenceAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSEnumerator+RACSequenceAdditions.m"; path = "ReactiveObjC/NSEnumerator+RACSequenceAdditions.m"; sourceTree = "<group>"; };
 		D78F6D1E240677141A955F1DFD663DBA /* RACSignalProvider.d */ = {isa = PBXFileReference; includeInIndex = 1; name = RACSignalProvider.d; path = ReactiveObjC/RACSignalProvider.d; sourceTree = "<group>"; };
 		D7E58A77A97E91675DBA198108DA0181 /* SDWebImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.xcconfig; sourceTree = "<group>"; };
+		D82510897C2C68EC7ED1CCD038DF717D /* PoporUploadVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVC.m; path = Example/Classes/PoporUploadVC/PoporUploadVC.m; sourceTree = "<group>"; };
 		D8AD1A6470769E31EA852903169E72A0 /* PoporOrientation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporOrientation-dummy.m"; sourceTree = "<group>"; };
 		D9DC9200D4BA26CE0B22111C6266FD23 /* NSBezierPath+RoundedCorners.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBezierPath+RoundedCorners.h"; path = "SDWebImage/Private/NSBezierPath+RoundedCorners.h"; sourceTree = "<group>"; };
 		D9E50570902C831EC0424F57ACA59F24 /* IToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IToast.h; path = PoporUI/Classes/IToast/IToast.h; sourceTree = "<group>"; };
-		DAA0673F2547E726CDB8724667F75B55 /* PoporUploadVcCellPresent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVcCellPresent.h; path = Example/Classes/PoporUploadVC/PoporUploadVcCellPresent.h; sourceTree = "<group>"; };
 		DAB8F719E4F78E388F2FD9DE0473EB00 /* UIImage+GIF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+GIF.h"; path = "SDWebImage/UIImage+GIF.h"; sourceTree = "<group>"; };
 		DB051730BB27ECD83189B571F2FF5370 /* NSUserDefaults+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+RACSupport.h"; path = "ReactiveObjC/NSUserDefaults+RACSupport.h"; sourceTree = "<group>"; };
 		DB215FD4A97A2EE0D6A3569E49B3207D /* PoporUI.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporUI.xcconfig; sourceTree = "<group>"; };
@@ -1536,8 +1534,8 @@
 		DD0A947EA22D56C326F18402AC576BA9 /* NSDate+Tool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Tool.h"; path = "PoporFoundation/Classes/NSDate/NSDate+Tool.h"; sourceTree = "<group>"; };
 		DD615C6928553CB620722FA8C706DC3F /* PoporMedia-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PoporMedia-dummy.m"; sourceTree = "<group>"; };
 		DD9DE30BD7A9268E72104F3F62450791 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
+		DE889E97C52B4225CACA8B4133AE88AA /* PoporUploadCC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadCC.m; path = Example/Classes/PoporUploadVC/PoporUploadCC.m; sourceTree = "<group>"; };
 		DE9F74C1CE5C01EF7C1B6E1346EEF6D7 /* NSNotificationCenter+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+RACSupport.h"; path = "ReactiveObjC/NSNotificationCenter+RACSupport.h"; sourceTree = "<group>"; };
-		DF4F60B48A597CE4BD453DEB29B7F8DA /* PoporUploadVCPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVCPresenter.h; path = Example/Classes/PoporUploadVC/PoporUploadVCPresenter.h; sourceTree = "<group>"; };
 		DF816F7AFC954B6D160DE40242881638 /* UIBarButtonItem+RACCommandSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+RACCommandSupport.h"; path = "ReactiveObjC/UIBarButtonItem+RACCommandSupport.h"; sourceTree = "<group>"; };
 		DFE840CEA62984474DEDE53F72FC2726 /* TZPhotoPreviewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZPhotoPreviewCell.m; path = TZImagePickerController/TZImagePickerController/TZPhotoPreviewCell.m; sourceTree = "<group>"; };
 		E0A4026B658EF4C9D8BA9FBBD6F5831B /* JSONValueTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONValueTransformer.m; path = JSONModel/JSONModelTransformations/JSONValueTransformer.m; sourceTree = "<group>"; };
@@ -1549,12 +1547,13 @@
 		E2BEBA9BCD6EE71A70C9AD0842C54B70 /* RACDisposable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACDisposable.h; path = ReactiveObjC/RACDisposable.h; sourceTree = "<group>"; };
 		E339872DEB04FF3194B8525CB3250508 /* BlockActionSheet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlockActionSheet.h; path = PoporUI/Classes/BlockView/BlockActionSheet.h; sourceTree = "<group>"; };
 		E364C2754B90940100F74C22EEC8AD43 /* RACIndexSetSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACIndexSetSequence.h; path = ReactiveObjC/RACIndexSetSequence.h; sourceTree = "<group>"; };
-		E389039F3F0295F02AC76762048176CF /* PoporUploadVC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporUploadVC-prefix.pch"; sourceTree = "<group>"; };
 		E39E06034954537C798236D5DD1F0FD0 /* RACValueTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACValueTransformer.h; path = ReactiveObjC/RACValueTransformer.h; sourceTree = "<group>"; };
+		E4817134E7AF748E85625083999DF965 /* PoporUploadVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVC.h; path = Example/Classes/PoporUploadVC/PoporUploadVC.h; sourceTree = "<group>"; };
 		E4A4DC458BA1C8B411655AC633EA3625 /* SDImageCachesManagerOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCachesManagerOperation.m; path = SDWebImage/Private/SDImageCachesManagerOperation.m; sourceTree = "<group>"; };
 		E4CA9118C8D9638EA2083CE09D4626F8 /* TZPhotoPreviewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TZPhotoPreviewController.m; path = TZImagePickerController/TZImagePickerController/TZPhotoPreviewController.m; sourceTree = "<group>"; };
 		E51E8CE5B0FF2AE5B70E2A1A0E7441F4 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ViewController+MASAdditions.h"; path = "Masonry/ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		E52415894AE5F84D5E0E81BE4734F30F /* RACTuple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACTuple.m; path = ReactiveObjC/RACTuple.m; sourceTree = "<group>"; };
+		E5DCC60CD7E869BEA3692AC965C656C9 /* PoporUploadVCPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVCPresenter.m; path = Example/Classes/PoporUploadVC/PoporUploadVCPresenter.m; sourceTree = "<group>"; };
 		E65CF2354FBDC1D444885309137E55E3 /* PoporAVPlayerVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporAVPlayerVC.h; path = PoporAVPlayer/Classes/PoporAVPlayerVC.h; sourceTree = "<group>"; };
 		E817E76A5A58962493BBA82A05BA9050 /* NSString+IDCard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+IDCard.h"; path = "PoporFoundation/Classes/NSString/NSString+IDCard.h"; sourceTree = "<group>"; };
 		E855B4B0311BC9C903BA62EE3476358D /* PoporImageBrowerEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporImageBrowerEntity.h; path = PoporImageBrower/Classes/PoporImageBrowerEntity.h; sourceTree = "<group>"; };
@@ -1568,19 +1567,21 @@
 		EAEC58460DDB821579F01313AC32BA7E /* UITableViewHeaderFooterView+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableViewHeaderFooterView+RACSignalSupport.m"; path = "ReactiveObjC/UITableViewHeaderFooterView+RACSignalSupport.m"; sourceTree = "<group>"; };
 		EB917F3C750DCA6DB531D4FD14F724D0 /* Pods-PoporUploadVC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PoporUploadVC_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EBFC61B492E60ED398BCB11C983345C5 /* NSString+email.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+email.m"; path = "PoporFoundation/Classes/NSString/NSString+email.m"; sourceTree = "<group>"; };
+		EE3A67DCF52A11D765114DF011E781C8 /* PoporUploadCC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadCC.h; path = Example/Classes/PoporUploadVC/PoporUploadCC.h; sourceTree = "<group>"; };
+		EE5013EF59BD4CBCF5A7C5443629125C /* PoporUploadVcShowPresent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadVcShowPresent.h; path = Example/Classes/PoporUploadVC/PoporUploadVcShowPresent.h; sourceTree = "<group>"; };
 		EE65C8560E2612BA097E7479F16CEC73 /* NSObject+RACDescription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+RACDescription.h"; path = "ReactiveObjC/NSObject+RACDescription.h"; sourceTree = "<group>"; };
 		EEB5213A419753B8D1464CAD5A16C1FF /* SDImageLoadersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoadersManager.m; path = SDWebImage/SDImageLoadersManager.m; sourceTree = "<group>"; };
 		F0E014D0188006E59D916908726DF63C /* TZPhotoPreviewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TZPhotoPreviewCell.h; path = TZImagePickerController/TZImagePickerController/TZPhotoPreviewCell.h; sourceTree = "<group>"; };
 		F12DB6EB6421FEAE2C68793F3A07F90D /* UIView+Tool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Tool.m"; path = "PoporUI/Classes/UIView/UIView+Tool.m"; sourceTree = "<group>"; };
 		F16A470B6F194E07D269AF9D3C10E1A5 /* JSONAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONAPI.h; path = JSONModel/JSONModelNetworking/JSONAPI.h; sourceTree = "<group>"; };
 		F20E67F46F7799B2F4EDB561C3021E5B /* libSKFCamera.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSKFCamera.a; path = libSKFCamera.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F40E1741AA831ABA9FD1D7D4F68A3BC9 /* PoporUploadEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporUploadEntity.h; path = Example/Classes/EntityTool/PoporUploadEntity.h; sourceTree = "<group>"; };
 		F4FFD4A544A5D453371CE6836BB6D3EB /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/UIView+WebCache.m"; sourceTree = "<group>"; };
 		F54C0F00DFA18BB1D7F5A0EB01580BD4 /* RACSubscriber+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RACSubscriber+Private.h"; path = "ReactiveObjC/RACSubscriber+Private.h"; sourceTree = "<group>"; };
 		F56230951069350C6E37B52F028CFA31 /* PoporImageBrowerCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporImageBrowerCell.m; path = PoporImageBrower/Classes/PoporImageBrowerCell.m; sourceTree = "<group>"; };
 		F59789D9E9B8207F773E38B363822E82 /* UIButton+RACCommandSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+RACCommandSupport.h"; path = "ReactiveObjC/UIButton+RACCommandSupport.h"; sourceTree = "<group>"; };
 		F614F66DDEBE272C9F98F7747EECE35B /* RACSignal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACSignal.m; path = ReactiveObjC/RACSignal.m; sourceTree = "<group>"; };
 		F698429D7806CBACACB30CD45BCA13EB /* PoporAVPlayerBundle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PoporAVPlayerBundle.h; path = PoporAVPlayer/Classes/PoporAVPlayerBundle.h; sourceTree = "<group>"; };
+		F6D8C3D57B831F82AB2FAE7A662A648C /* PUVideoTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PUVideoTool.h; path = Example/Classes/EntityTool/PUVideoTool.h; sourceTree = "<group>"; };
 		F6F3CEA7DCBD6CE22F4BC1E7B402F8D9 /* RACTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACTuple.h; path = ReactiveObjC/RACTuple.h; sourceTree = "<group>"; };
 		F7040F2C8FCE7F865EB252142ABDF886 /* RACScheduler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACScheduler.m; path = ReactiveObjC/RACScheduler.m; sourceTree = "<group>"; };
 		F71B31122F69E8D3F90C0AB03EC259AF /* PoporAVPlayerBundle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporAVPlayerBundle.m; path = PoporAVPlayer/Classes/PoporAVPlayerBundle.m; sourceTree = "<group>"; };
@@ -1589,6 +1590,7 @@
 		F886EB65BD1F0A72620D0BC16C589A9C /* NSData+ImageContentType.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+ImageContentType.m"; path = "SDWebImage/NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		F9169772B0358E5C4C518C0B5770F6ED /* RACImmediateScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACImmediateScheduler.h; path = ReactiveObjC/RACImmediateScheduler.h; sourceTree = "<group>"; };
 		F9265CD52EC25F8B7913E9A6B7A79561 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		F94AF652A08E8556DD146D7EE30FB1F5 /* PoporUploadVcCellPresent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporUploadVcCellPresent.m; path = Example/Classes/PoporUploadVC/PoporUploadVcCellPresent.m; sourceTree = "<group>"; };
 		F99999494D1DE42897CC3727E63AB153 /* PoporShortTapGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PoporShortTapGestureRecognizer.m; path = PoporImageBrower/Classes/PoporShortTapGestureRecognizer.m; sourceTree = "<group>"; };
 		F9E827700D16B8D31231E795BC08F16C /* RACTestScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACTestScheduler.h; path = ReactiveObjC/RACTestScheduler.h; sourceTree = "<group>"; };
 		FA2AAF4B2A5F314E5EC2B7BE726085C6 /* RACStringSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACStringSequence.h; path = ReactiveObjC/RACStringSequence.h; sourceTree = "<group>"; };
@@ -1605,7 +1607,7 @@
 		FD33ED30C8B690117A32AB6594CF300D /* RACKVOProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACKVOProxy.h; path = ReactiveObjC/RACKVOProxy.h; sourceTree = "<group>"; };
 		FE3C9AA9AAA3A560CB047560E43A2B1D /* SDWebImageCacheKeyFilter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCacheKeyFilter.m; path = SDWebImage/SDWebImageCacheKeyFilter.m; sourceTree = "<group>"; };
 		FE59F499DA22270D280D03252F561E80 /* RACIndexSetSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACIndexSetSequence.m; path = ReactiveObjC/RACIndexSetSequence.m; sourceTree = "<group>"; };
-		FE79D28579591C654952DEA82A437335 /* PoporUploadVC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PoporUploadVC.xcconfig; sourceTree = "<group>"; };
+		FE751A0EB6C4E53324AAF1B3A0E75DEE /* PUVideoTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PUVideoTool.m; path = Example/Classes/EntityTool/PUVideoTool.m; sourceTree = "<group>"; };
 		FEB5C7DB4C3827847EB74B7B04457655 /* UIImage+Transform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Transform.m"; path = "SDWebImage/UIImage+Transform.m"; sourceTree = "<group>"; };
 		FF31F9792F3410D461409F688AC59E85 /* PoporImageBrower-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PoporImageBrower-prefix.pch"; sourceTree = "<group>"; };
 		FFAAA563668FFD46380A8DF1D72E29E9 /* NSObject+RACKVOWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+RACKVOWrapper.m"; path = "ReactiveObjC/NSObject+RACKVOWrapper.m"; sourceTree = "<group>"; };
@@ -1641,13 +1643,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		34594D5EF4299CD27F2841D4259D6906 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		430D9DC391C6414ECBECE394E9821558 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1711,6 +1706,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B14A2FBB0E253E068B8F77A5005CC848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE037D7A32391D66A7D90DA7D35B5DB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1850,25 +1852,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		22D818EA4005006FC607DB3A5233964D /* EntityTool */ = {
-			isa = PBXGroup;
-			children = (
-				F40E1741AA831ABA9FD1D7D4F68A3BC9 /* PoporUploadEntity.h */,
-				750CEF7300CCFD97C136BA79CC029FE1 /* PoporUploadEntity.m */,
-				4611A0E8F5FAF724276B10EF863FCBDD /* PoporUploadServiceProtocol.h */,
-				D0AC18D9AD770EFBF8049E794B1E61E5 /* PoporUploadTool.h */,
-				B3A59C4C69C1132972E68F42AADABAFB /* PoporUploadTool.m */,
-				0FA9F0B4A471E67AFDD1C3C9AA9AC328 /* PoporUploadVCPrefix.h */,
-				A186E76C7BB299F3529004F6CD16A231 /* PUShare.h */,
-				34BEF002846EC23792EE81E5F9CDC25A /* PUShare.m */,
-				9CEFBDA971E7EDDC0EAA51038B9E92E6 /* PUVideoTool.h */,
-				42CE2F465F05164BF03FDB0528F69C34 /* PUVideoTool.m */,
-				4B2BB1DDDE0A0ED966B3941DF4817A37 /* UIView+PoporUpload.h */,
-				20B43ABB394A34BB30890FB5961DE461 /* UIView+PoporUpload.m */,
-			);
-			name = EntityTool;
-			sourceTree = "<group>";
-		};
 		25971E3E61D710FB9A6481E665BB9746 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1929,12 +1912,42 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		3636D018DAA2613399C883BBDC8018D4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				266F420FB4026460CCFAEE31AC6BB822 /* PoporUploadVC.xcconfig */,
+				38C513765BAAF2CA4F399EA4AD8BB3D9 /* PoporUploadVC-dummy.m */,
+				3C06EC6B7298F3B2025EBFE62379E572 /* PoporUploadVC-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PoporUploadVC";
+			sourceTree = "<group>";
+		};
 		36F4D4BD64F9D7BF82E3264DDA8A736E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				793C7DEEFD056F8699C8B8D49BDB594A /* PoporMedia.bundle */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		372252D03EDE8D7D6BFCA276CB49C160 /* EntityTool */ = {
+			isa = PBXGroup;
+			children = (
+				17D608C6B2704D48F7C99CEE478A4D04 /* PoporUploadEntity.h */,
+				3D0999D1EDEDB8BB50CD7500BCE40CB9 /* PoporUploadEntity.m */,
+				2695ADCACA1B4F47429E0BC72F1D73D6 /* PoporUploadServiceProtocol.h */,
+				697C76AC2B59F34D546465B30E5CBB68 /* PoporUploadTool.h */,
+				3F805BFC91E98F8A1EA265430276FFAD /* PoporUploadTool.m */,
+				A4CA5094EA71052F36F75C0248712D0D /* PoporUploadVCPrefix.h */,
+				2E2ED4A8D28E6B5AC07D2716589D5105 /* PUShare.h */,
+				5081E6701EBD2277DF8E86602EEBD4F2 /* PUShare.m */,
+				F6D8C3D57B831F82AB2FAE7A662A648C /* PUVideoTool.h */,
+				FE751A0EB6C4E53324AAF1B3A0E75DEE /* PUVideoTool.m */,
+				C26A43D196FD5868065D87C58C301C45 /* UIView+PoporUpload.h */,
+				40CFD159CB342F1E53C0BED89C9B7C9F /* UIView+PoporUpload.m */,
+			);
+			name = EntityTool;
 			sourceTree = "<group>";
 		};
 		3FF1A46A7508214E9EF84664090FB92F /* PoporFoundation */ = {
@@ -2264,26 +2277,6 @@
 			name = NSObject;
 			sourceTree = "<group>";
 		};
-		5F22107701180A404E34092862EB8394 /* PoporUploadVC */ = {
-			isa = PBXGroup;
-			children = (
-				616FDE00E35DF09876FD9EA0F544E475 /* PoporUploadCC.h */,
-				51E6A3C90CD171D4E3FE434D825463E3 /* PoporUploadCC.m */,
-				7F193462EE5E2A2B84C5FF5E1636C163 /* PoporUploadVC.h */,
-				A181E732B465A9C6801FED7FF49C54BB /* PoporUploadVC.m */,
-				DAA0673F2547E726CDB8724667F75B55 /* PoporUploadVcCellPresent.h */,
-				40515F27D48F4B7ED10B0DB6F3167C51 /* PoporUploadVcCellPresent.m */,
-				BD98D731B3C743608E1BEA27F7FC8C5B /* PoporUploadVCInteractor.h */,
-				6B9079FE98C88566FB15D60FB746E47A /* PoporUploadVCInteractor.m */,
-				DF4F60B48A597CE4BD453DEB29B7F8DA /* PoporUploadVCPresenter.h */,
-				93AAF71774884A9EE91D0CD77BED760B /* PoporUploadVCPresenter.m */,
-				9F0DB68941D2721B0CF6F80A2B79C47D /* PoporUploadVCProtocol.h */,
-				55A414673BFC781CDE44822264CD2239 /* PoporUploadVcShowPresent.h */,
-				8B3066DDCACAC169A3FBBD456C32A173 /* PoporUploadVcShowPresent.m */,
-			);
-			name = PoporUploadVC;
-			sourceTree = "<group>";
-		};
 		61B421C91061D45488570072F5CB8829 /* BlockView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2301,6 +2294,16 @@
 				3EAC86EB1ECC250A2012E57B2611E8C3 /* SKFCamera.bundle */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		69412A099A8835F76851408F39786CFA /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9103F8BD43FF5008C7054D4899BCF51F /* LICENSE */,
+				AB603FD3DC074D3D8C31C03EAC743816 /* PoporUploadVC.podspec */,
+				23E7DD63E5B2AA7C0E3113EE8CAF4F99 /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		6A89B7B0E6E284B958003B44ADCD134B /* MBProgressHUD */ = {
@@ -2637,14 +2640,6 @@
 			name = UIKit;
 			sourceTree = "<group>";
 		};
-		AC66D5A105003076EC837CC9AE51A5A1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5BCCDFFCE20CBAF4ABA1AC92748A5B79 /* PoporUploadVC.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		AD44675ACB7262F5F16D740B696447FD /* SKFCamera */ = {
 			isa = PBXGroup;
 			children = (
@@ -2689,36 +2684,12 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		AF363F3C21EA644B77FF438C5BAF6A06 /* PoporUploadVC */ = {
-			isa = PBXGroup;
-			children = (
-				22D818EA4005006FC607DB3A5233964D /* EntityTool */,
-				BDE9EBAC93D31D87369EA39E739C73EF /* Pod */,
-				5F22107701180A404E34092862EB8394 /* PoporUploadVC */,
-				AC66D5A105003076EC837CC9AE51A5A1 /* Resources */,
-				B3723959D370AA698229D1ED8D06F378 /* Support Files */,
-			);
-			name = PoporUploadVC;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		AFCD32EE4FA3F6CDB7CECC82A8400D44 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				8DCAC79B05C0ED18EFE775794E14331F /* PoporImageBrower.bundle */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		B3723959D370AA698229D1ED8D06F378 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FE79D28579591C654952DEA82A437335 /* PoporUploadVC.xcconfig */,
-				83311141602D535FF4041269FBBE7F2C /* PoporUploadVC-dummy.m */,
-				E389039F3F0295F02AC76762048176CF /* PoporUploadVC-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/PoporUploadVC";
 			sourceTree = "<group>";
 		};
 		B8B070D76BFCAE3C187206794C3845CD /* UIImage */ = {
@@ -2753,16 +2724,6 @@
 				1EACCE3E32C46722111438A2E9A83B76 /* UIDevice+Tool.m */,
 			);
 			name = Tool;
-			sourceTree = "<group>";
-		};
-		BDE9EBAC93D31D87369EA39E739C73EF /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				A6E2C3D68EC78DAD5F8CF597F08A0469 /* LICENSE */,
-				3315D5B829EEDBC361F03448F228FEB8 /* PoporUploadVC.podspec */,
-				568130D616B3F4D3E96FF0A0F5065007 /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		C109DA15A128367B34BE708939F4296C /* Serialization */ = {
@@ -2823,6 +2784,19 @@
 			path = KVOController;
 			sourceTree = "<group>";
 		};
+		CB5DE180605839EBA57B3DD9B298DDD9 /* PoporUploadVC */ = {
+			isa = PBXGroup;
+			children = (
+				372252D03EDE8D7D6BFCA276CB49C160 /* EntityTool */,
+				69412A099A8835F76851408F39786CFA /* Pod */,
+				D9ADC2FF90F075A700C6EBF6E00B3C8F /* PoporUploadVC */,
+				D03AF0701178E170BE5C683E42EAEBC7 /* Resources */,
+				3636D018DAA2613399C883BBDC8018D4 /* Support Files */,
+			);
+			name = PoporUploadVC;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		CDAE484B98F718BC60A9BFFA190057EC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -2866,6 +2840,14 @@
 				1A8F79BF8C8E1E47033DD15D9682830B /* Products */,
 				92F7E958C25C3C1FD536D3D6F4AE2951 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D03AF0701178E170BE5C683E42EAEBC7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4A73B625646C36B3D6FAACF7670C325 /* PoporUploadVC.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		D0E3D34937FED2307BC23C0A512B1F16 /* NSAssistant */ = {
@@ -2922,6 +2904,27 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9ADC2FF90F075A700C6EBF6E00B3C8F /* PoporUploadVC */ = {
+			isa = PBXGroup;
+			children = (
+				EE3A67DCF52A11D765114DF011E781C8 /* PoporUploadCC.h */,
+				DE889E97C52B4225CACA8B4133AE88AA /* PoporUploadCC.m */,
+				C03D1ABCCE7B148B53A653BA55AAE4C5 /* PoporUploadCCProtocol.h */,
+				E4817134E7AF748E85625083999DF965 /* PoporUploadVC.h */,
+				D82510897C2C68EC7ED1CCD038DF717D /* PoporUploadVC.m */,
+				13543F24646869CF023C34E19A957092 /* PoporUploadVcCellPresent.h */,
+				F94AF652A08E8556DD146D7EE30FB1F5 /* PoporUploadVcCellPresent.m */,
+				7D540FA45E3C524A23D933B26F7FACC6 /* PoporUploadVCInteractor.h */,
+				B8A64E7D08A32BD4C898EFB668E43D09 /* PoporUploadVCInteractor.m */,
+				533E529337B659DE8D50C3A5E592AE99 /* PoporUploadVCPresenter.h */,
+				E5DCC60CD7E869BEA3692AC965C656C9 /* PoporUploadVCPresenter.m */,
+				3956051C4985EF12B61077D72471C38B /* PoporUploadVCProtocol.h */,
+				EE5013EF59BD4CBCF5A7C5443629125C /* PoporUploadVcShowPresent.h */,
+				2416532AEB15C05EFFB3C6036EAD6A4B /* PoporUploadVcShowPresent.m */,
+			);
+			name = PoporUploadVC;
 			sourceTree = "<group>";
 		};
 		D9C7209DEA0E0AEBEAFE111B12A30F17 /* IToast */ = {
@@ -2997,7 +3000,7 @@
 		F10578183C58D1744161A84DB47F3A9F /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AF363F3C21EA644B77FF438C5BAF6A06 /* PoporUploadVC */,
+				CB5DE180605839EBA57B3DD9B298DDD9 /* PoporUploadVC */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -3185,27 +3188,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5834B5272566E5182D7ECF3B454F1EA3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				316A0B86B2D7B41B1DF35015C30B4988 /* PoporUploadCC.h in Headers */,
-				FCCEFC046D57508EEEE97DEFEBD3F1C8 /* PoporUploadEntity.h in Headers */,
-				F3E49D081D254EF6D85EF0C403DF1E27 /* PoporUploadServiceProtocol.h in Headers */,
-				9888333DB4377CC28CB700FBE9577A7E /* PoporUploadTool.h in Headers */,
-				210A7A97739178294159C973340B2992 /* PoporUploadVC.h in Headers */,
-				771E23AFEB759EFEF09BAC743A6D2B8D /* PoporUploadVcCellPresent.h in Headers */,
-				BB15D04FB21B5B6EC190A62B0F30236F /* PoporUploadVCInteractor.h in Headers */,
-				538A962F9C43545922FEF32832375F7B /* PoporUploadVCPrefix.h in Headers */,
-				84514B410C36001E9780146CAA5BB293 /* PoporUploadVCPresenter.h in Headers */,
-				C84F7A4A6AF530DBC9CC414A7BDCCA4D /* PoporUploadVCProtocol.h in Headers */,
-				7685FDC6350D34B0A696C3EF2019EAED /* PoporUploadVcShowPresent.h in Headers */,
-				53F51E9794A44980E56DCB7699D922D8 /* PUShare.h in Headers */,
-				865B42B13CAA7FBA0F637FAB9AAFCC85 /* PUVideoTool.h in Headers */,
-				AE513E02A3A1DD7892FDD1E60305AF20 /* UIView+PoporUpload.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		65FB1098D5B81DC41926A45C099F86E5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -3373,6 +3355,28 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9721F0A9D5214E552A354AB4ECE46A6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F14EF2035087361561181E7C2141349 /* PoporUploadCC.h in Headers */,
+				4686D18306EBC7A47965C53FFFE82037 /* PoporUploadCCProtocol.h in Headers */,
+				3BE0B4E347D2F9CA7B5311DF491C48A3 /* PoporUploadEntity.h in Headers */,
+				1891A9196F4C63FE6DDC8E85C26CC073 /* PoporUploadServiceProtocol.h in Headers */,
+				87F7D5DEDAC868E993EB75E99B0B9BBE /* PoporUploadTool.h in Headers */,
+				C15EC6B2F1D05AEF95D4FB6D12CD94C8 /* PoporUploadVC.h in Headers */,
+				55FCB66F05CDAF4A36BA754EA51975FB /* PoporUploadVcCellPresent.h in Headers */,
+				00BF55290702B5399EB4C0837888FCFF /* PoporUploadVCInteractor.h in Headers */,
+				BE5D5CFAE15B17950F53C7B0174EFCCC /* PoporUploadVCPrefix.h in Headers */,
+				E03B506677B710E1FF734D99FDF9101F /* PoporUploadVCPresenter.h in Headers */,
+				91091378A6B0F0DB130D0DE37D5DD8CC /* PoporUploadVCProtocol.h in Headers */,
+				A0F4E4CAACC255E9131A99A4689E1658 /* PoporUploadVcShowPresent.h in Headers */,
+				963A770F18820CCC3C940A762C3B9F60 /* PUShare.h in Headers */,
+				6E877B14B57B8763A7DF168171E25359 /* PUVideoTool.h in Headers */,
+				B643E2236DBA44D6ADE2A3B2B6471897 /* UIView+PoporUpload.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3769,25 +3773,25 @@
 		};
 		B0AC8E8838A4E02A99344CC7607B6538 /* PoporUploadVC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7467A8A7C32132097A9DD1448C5B31EA /* Build configuration list for PBXNativeTarget "PoporUploadVC" */;
+			buildConfigurationList = 2FF181D47563A6687411CB834754B29B /* Build configuration list for PBXNativeTarget "PoporUploadVC" */;
 			buildPhases = (
-				5834B5272566E5182D7ECF3B454F1EA3 /* Headers */,
-				5618B61C220A07FE094BD0E2C37BE919 /* Sources */,
-				430D9DC391C6414ECBECE394E9821558 /* Frameworks */,
+				D9721F0A9D5214E552A354AB4ECE46A6 /* Headers */,
+				69CF5FB53F88C4A0E5AD173D49C4AB08 /* Sources */,
+				BE037D7A32391D66A7D90DA7D35B5DB1 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2BCD444D14E15C90642E7D29E5A2BF94 /* PBXTargetDependency */,
-				062A0926C578BA0D5439FB7D2C98D260 /* PBXTargetDependency */,
-				87BAF453DC41111D86197B4C892A5750 /* PBXTargetDependency */,
-				EC9449807E56F6EBBEE601CA198F0898 /* PBXTargetDependency */,
-				2680A9A17A86916F04C6F5FAF872924E /* PBXTargetDependency */,
-				E776FFC91FD170573F74FA2847EE9B36 /* PBXTargetDependency */,
-				8FBEA38FD96CB3050097EBCB9033FA43 /* PBXTargetDependency */,
-				36CF4713184A6A2D36F58936BA7282C7 /* PBXTargetDependency */,
-				19FBDD9DF337EAD608BB2CA06791D4F2 /* PBXTargetDependency */,
-				C9A0DAF19DD12FC30EE0568F8661EB87 /* PBXTargetDependency */,
+				33D63EDABBDCF5DB6C317161547E33D3 /* PBXTargetDependency */,
+				ABE08DD9AB3580C48B5835B306488CC0 /* PBXTargetDependency */,
+				15FDE28B3CFF9CFCC5F72C10FADE508E /* PBXTargetDependency */,
+				5CED4EE1F3A7AE0E54188E987128F864 /* PBXTargetDependency */,
+				C4032ACCCD53F1E4288B59B1A0697A40 /* PBXTargetDependency */,
+				EECC0FE8A939D1A0CBC7023429254344 /* PBXTargetDependency */,
+				7CBF604F6B6A8CE332B4BF4B89B42C9C /* PBXTargetDependency */,
+				F0BBE7607FC538CDCFD9D0FD899B29EA /* PBXTargetDependency */,
+				E96337D1BA72A985E1C225078F17EAE0 /* PBXTargetDependency */,
+				B0D44F675D3FB36A3989CF4D8BCE9629 /* PBXTargetDependency */,
 			);
 			name = PoporUploadVC;
 			productName = PoporUploadVC;
@@ -4124,31 +4128,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5618B61C220A07FE094BD0E2C37BE919 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3AF0F501E9FCB43D88BCE12696BC4F70 /* PoporUploadCC.m in Sources */,
-				26B69902B9AFE0318C8679B2560C3247 /* PoporUploadEntity.m in Sources */,
-				534690E148F8EB302EF02D6D73C085A1 /* PoporUploadTool.m in Sources */,
-				9D6A40088CBCE0AB3EE24BCCD3B32B38 /* PoporUploadVC-dummy.m in Sources */,
-				2F537580EB946E0330EED432F40391E3 /* PoporUploadVC.m in Sources */,
-				85BF72A7BAAC7D34631F6FAE9E43B6C2 /* PoporUploadVcCellPresent.m in Sources */,
-				AF3DF203E9AA33A333F488AEC5CC9010 /* PoporUploadVCInteractor.m in Sources */,
-				C77003C5656FB131924A02D06BB83413 /* PoporUploadVCPresenter.m in Sources */,
-				6A38496791602D7B995C83FCCEBDDFFA /* PoporUploadVcShowPresent.m in Sources */,
-				25D075F8C0FF1ED66CB9DB08081BFEC5 /* PUShare.m in Sources */,
-				CA992C9C84E33429E65A5FFCFD7D9A9C /* PUVideoTool.m in Sources */,
-				85C9EA51718CFD8BA54EB9CBF6400E53 /* UIView+PoporUpload.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5C9AA1E41ACB58B8C14F74D32A414745 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A579729B489F94E08B18E83735063AEF /* DMProgressHUD-dummy.m in Sources */,
 				20809166611FF37D60DB873389BBF3C4 /* DMProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69CF5FB53F88C4A0E5AD173D49C4AB08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6777B731DE1C8C3C32D7A97D9F0D29B /* PoporUploadCC.m in Sources */,
+				D2674CA7CF3D22C64AA21AE1B80888B6 /* PoporUploadEntity.m in Sources */,
+				D223AA8DC638286DEC093C7CB16F7DF0 /* PoporUploadTool.m in Sources */,
+				549E20595A32EC823472EFA21E09D4FF /* PoporUploadVC-dummy.m in Sources */,
+				E952EAE70E5823D0BC3319ABDCF6D531 /* PoporUploadVC.m in Sources */,
+				7E0358FCD90A3F2041C09FAEEAF7646E /* PoporUploadVcCellPresent.m in Sources */,
+				E7AD5E5A50355FA15E905AE4F56240E4 /* PoporUploadVCInteractor.m in Sources */,
+				F6040E50E5AA54646D61E3A567561EA2 /* PoporUploadVCPresenter.m in Sources */,
+				46F29C74C4076ED8DDBDECF35B737CBE /* PoporUploadVcShowPresent.m in Sources */,
+				6528D79D11A67A8CE0F8E1DD81EE8FED /* PUShare.m in Sources */,
+				F4DF9E2B29F03B1F9A1A6D666F94F97D /* PUVideoTool.m in Sources */,
+				4CC765D63283585553E4FF5A8DDCF75F /* UIView+PoporUpload.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4333,12 +4337,6 @@
 			target = 41A5EBEED271FFE3C5F9445BEDC7905D /* PoporOrientation */;
 			targetProxy = B2AF52CF93D8582E9ACC6F05CCDDE504 /* PBXContainerItemProxy */;
 		};
-		062A0926C578BA0D5439FB7D2C98D260 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DMProgressHUD;
-			target = 243CB33AE70054DF4B4080E6BB990227 /* DMProgressHUD */;
-			targetProxy = 1339BC5B69176214E62E67FFF7181526 /* PBXContainerItemProxy */;
-		};
 		082FF9ED1ADCFEF3A82BB43620CE2B1B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-PoporUploadVC_Example";
@@ -4351,17 +4349,17 @@
 			target = E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */;
 			targetProxy = 07DBB4CB6EFB7516D4DA2062ED5D7750 /* PBXContainerItemProxy */;
 		};
+		15FDE28B3CFF9CFCC5F72C10FADE508E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JSONModel;
+			target = E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */;
+			targetProxy = 8467BB9346248E13FE42C90A1E270A35 /* PBXContainerItemProxy */;
+		};
 		1664F15D4512C353B221F965EB773B8C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PoporUI;
 			target = 817833671E949B1C5DDEDB675875A7BE /* PoporUI */;
 			targetProxy = ACB18A3E426A44E872D618E529A04765 /* PBXContainerItemProxy */;
-		};
-		19FBDD9DF337EAD608BB2CA06791D4F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PoporUI;
-			target = 817833671E949B1C5DDEDB675875A7BE /* PoporUI */;
-			targetProxy = 71A3C0B0A3642565FABBD6C2DE526B4F /* PBXContainerItemProxy */;
 		};
 		2108497B273B8870EAD8F2CC21614322 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4381,18 +4379,6 @@
 			target = 79BFEE24BDA715C459390BEF93511D7B /* SKFCamera */;
 			targetProxy = 562298467C24120C28D99557277834A4 /* PBXContainerItemProxy */;
 		};
-		2680A9A17A86916F04C6F5FAF872924E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PoporAVPlayer;
-			target = E0D06D6D196B6951E479A69C10EFFBF5 /* PoporAVPlayer */;
-			targetProxy = 2A484284B69861C758997D206B52A4C7 /* PBXContainerItemProxy */;
-		};
-		2BCD444D14E15C90642E7D29E5A2BF94 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AFNetworking;
-			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
-			targetProxy = 06332B4A8D6E51620164297A2EA54212 /* PBXContainerItemProxy */;
-		};
 		2F8A787303592044B395D00F658C2A2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SDWebImage;
@@ -4405,11 +4391,11 @@
 			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
 			targetProxy = E938B97AE75566EEA45E6D77962FC296 /* PBXContainerItemProxy */;
 		};
-		36CF4713184A6A2D36F58936BA7282C7 /* PBXTargetDependency */ = {
+		33D63EDABBDCF5DB6C317161547E33D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PoporMedia;
-			target = 9C0E032CFC4CF37EB8C4BCA7F69F012F /* PoporMedia */;
-			targetProxy = 17EB24EAF533A1F8136EAF1412B3A1CF /* PBXContainerItemProxy */;
+			name = AFNetworking;
+			target = 0130B3724283586C0E9D2A112D4F2AA1 /* AFNetworking */;
+			targetProxy = 7DB4113C8A9399D8011D522C14DCF731 /* PBXContainerItemProxy */;
 		};
 		398273FEC115B210B8B09D347ECF27D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4447,6 +4433,12 @@
 			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
 			targetProxy = E030C9B7214B81D020873BE525C6B393 /* PBXContainerItemProxy */;
 		};
+		5CED4EE1F3A7AE0E54188E987128F864 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
+			targetProxy = BF8179E14BF9B6093D17088C40113CE2 /* PBXContainerItemProxy */;
+		};
 		5F9E0717B5C3645627CC2C6EA7CACF6E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = KVOController;
@@ -4471,6 +4463,12 @@
 			target = 438B238ACC7DF1178D1BCE1A31983146 /* ReactiveObjC */;
 			targetProxy = E0CAC07A673F5D774C114FC5D15F0C32 /* PBXContainerItemProxy */;
 		};
+		7CBF604F6B6A8CE332B4BF4B89B42C9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PoporImageBrower;
+			target = EDADB94E77F4A2C2446E84D78D926B9A /* PoporImageBrower */;
+			targetProxy = 57F2A177BB3C2DC06C74E0147715E17A /* PBXContainerItemProxy */;
+		};
 		7E05FAB69707BDF4CEFF2D085871B3BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ReactiveObjC;
@@ -4483,23 +4481,11 @@
 			target = EDADB94E77F4A2C2446E84D78D926B9A /* PoporImageBrower */;
 			targetProxy = EB011731BD0A5591E5E6C7C53D5E5CA7 /* PBXContainerItemProxy */;
 		};
-		87BAF453DC41111D86197B4C892A5750 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JSONModel;
-			target = E0EAF4371C6E4B30A1779D513CB4355B /* JSONModel */;
-			targetProxy = AA7CD6F46DAEE8951BF760C71AE8830E /* PBXContainerItemProxy */;
-		};
 		896581D4ABE1301179DB4181B0EBBEFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PoporUI;
 			target = 817833671E949B1C5DDEDB675875A7BE /* PoporUI */;
 			targetProxy = 932785D329F455090F7EDF864DC15706 /* PBXContainerItemProxy */;
-		};
-		8FBEA38FD96CB3050097EBCB9033FA43 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PoporImageBrower;
-			target = EDADB94E77F4A2C2446E84D78D926B9A /* PoporImageBrower */;
-			targetProxy = 61BA496C2254B2EBCACE631CD75B96A5 /* PBXContainerItemProxy */;
 		};
 		A190E67191B6E29A8451A569946E6A52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4512,6 +4498,18 @@
 			name = PoporOrientation;
 			target = 41A5EBEED271FFE3C5F9445BEDC7905D /* PoporOrientation */;
 			targetProxy = 3F184D07C4764DAF2FC3394E9284F4DD /* PBXContainerItemProxy */;
+		};
+		ABE08DD9AB3580C48B5835B306488CC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DMProgressHUD;
+			target = 243CB33AE70054DF4B4080E6BB990227 /* DMProgressHUD */;
+			targetProxy = E044359DF5D0ED5FDE6F6935F9594C83 /* PBXContainerItemProxy */;
+		};
+		B0D44F675D3FB36A3989CF4D8BCE9629 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SDWebImage;
+			target = 3847153A6E5EEFB86565BA840768F429 /* SDWebImage */;
+			targetProxy = F61F10DB669F39F24ED2A772E045C571 /* PBXContainerItemProxy */;
 		};
 		B111B2D7E16AC46C5946829692F86B0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4537,17 +4535,17 @@
 			target = 79BFEE24BDA715C459390BEF93511D7B /* SKFCamera */;
 			targetProxy = EDA48ADA20F66D15A27A96A3335CC294 /* PBXContainerItemProxy */;
 		};
+		C4032ACCCD53F1E4288B59B1A0697A40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PoporAVPlayer;
+			target = E0D06D6D196B6951E479A69C10EFFBF5 /* PoporAVPlayer */;
+			targetProxy = 2C9E84A24F93D8A1836E97CE0B98AFD7 /* PBXContainerItemProxy */;
+		};
 		C7C76A445A76406F9F4ADCF695CC934B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PoporAVPlayer;
 			target = E0D06D6D196B6951E479A69C10EFFBF5 /* PoporAVPlayer */;
 			targetProxy = 2E04ECF99D01E3429FB29A1336E18F0D /* PBXContainerItemProxy */;
-		};
-		C9A0DAF19DD12FC30EE0568F8661EB87 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SDWebImage;
-			target = 3847153A6E5EEFB86565BA840768F429 /* SDWebImage */;
-			targetProxy = 5BB2F559549346345FB05CE3BD241C9F /* PBXContainerItemProxy */;
 		};
 		CE6BD47602106FD19B8EB7289B4B9C7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4573,23 +4571,29 @@
 			target = A96BBB982D62BB807B5BD10774BE2D07 /* TZImagePickerController */;
 			targetProxy = 26A5EB3DA328CECAC927C80C6567729C /* PBXContainerItemProxy */;
 		};
-		E776FFC91FD170573F74FA2847EE9B36 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PoporFoundation;
-			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
-			targetProxy = E1BAF8DEDABB28B7FBE1212E87F1F5B6 /* PBXContainerItemProxy */;
-		};
 		E7A9456028B1E7C173D238CB5ECC77FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PoporUploadVC;
 			target = B0AC8E8838A4E02A99344CC7607B6538 /* PoporUploadVC */;
 			targetProxy = 7A7A8E91525547977D35D1769BF24866 /* PBXContainerItemProxy */;
 		};
-		EC9449807E56F6EBBEE601CA198F0898 /* PBXTargetDependency */ = {
+		E96337D1BA72A985E1C225078F17EAE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = Masonry;
-			target = 55AF53E6C77A10ED4985E04D74A8878E /* Masonry */;
-			targetProxy = CF784D47E931FB9A02002532FE0BD485 /* PBXContainerItemProxy */;
+			name = PoporUI;
+			target = 817833671E949B1C5DDEDB675875A7BE /* PoporUI */;
+			targetProxy = E4DB794D873421CF0F481C5B2E921E8F /* PBXContainerItemProxy */;
+		};
+		EECC0FE8A939D1A0CBC7023429254344 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PoporFoundation;
+			target = 97370628A8BC4636041BB29E59F4D696 /* PoporFoundation */;
+			targetProxy = FD5E45E9F7378B52515382A36BEF8586 /* PBXContainerItemProxy */;
+		};
+		F0BBE7607FC538CDCFD9D0FD899B29EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PoporMedia;
+			target = 9C0E032CFC4CF37EB8C4BCA7F69F012F /* PoporMedia */;
+			targetProxy = BBDEBD83F115635DA9A9D4BFA1A7B147 /* PBXContainerItemProxy */;
 		};
 		F68F84354DAC88717BCE7208CFBA66BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -4624,6 +4628,31 @@
 			};
 			name = Debug;
 		};
+		08651223910B4DC794E09AA4825FB876 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 266F420FB4026460CCFAEE31AC6BB822 /* PoporUploadVC.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PoporUploadVC/PoporUploadVC-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PoporUploadVC;
+				PRODUCT_NAME = PoporUploadVC;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		0D1852FE006D86452893D0FE3CE10260 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 22180CD1BCDA75B4C3D5A464827C95CD /* SKFCamera.xcconfig */;
@@ -4639,31 +4668,6 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = SKFCamera;
 				PRODUCT_NAME = SKFCamera;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		0FE986E94A86BEE3250F27DA50DC4334 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE79D28579591C654952DEA82A437335 /* PoporUploadVC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/PoporUploadVC/PoporUploadVC-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = PoporUploadVC;
-				PRODUCT_NAME = PoporUploadVC;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -4947,30 +4951,6 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_MODULE_NAME = SDWebImage;
 				PRODUCT_NAME = SDWebImage;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		6DE0981A3305809E238CD5F1F722DDB3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE79D28579591C654952DEA82A437335 /* PoporUploadVC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/PoporUploadVC/PoporUploadVC-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = PoporUploadVC;
-				PRODUCT_NAME = PoporUploadVC;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -5403,6 +5383,30 @@
 			};
 			name = Debug;
 		};
+		BFA12F180C5DF2677CFDEAA99AC28392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 266F420FB4026460CCFAEE31AC6BB822 /* PoporUploadVC.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PoporUploadVC/PoporUploadVC-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PoporUploadVC;
+				PRODUCT_NAME = PoporUploadVC;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		C109AC675B3EF649F3C24839F72736A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F7A720B687AE2BB54BE2F93C886638C /* DMProgressHUD.xcconfig */;
@@ -5682,6 +5686,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2FF181D47563A6687411CB834754B29B /* Build configuration list for PBXNativeTarget "PoporUploadVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA12F180C5DF2677CFDEAA99AC28392 /* Debug */,
+				08651223910B4DC794E09AA4825FB876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3BA2548AA95D28E90FBD85C62252A41C /* Build configuration list for PBXNativeTarget "Pods-PoporUploadVC_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -5714,15 +5727,6 @@
 			buildConfigurations = (
 				33533594894A267CFCA6925673103FD6 /* Debug */,
 				90DF27ED9AA54939D5943E59E139127D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7467A8A7C32132097A9DD1448C5B31EA /* Build configuration list for PBXNativeTarget "PoporUploadVC" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6DE0981A3305809E238CD5F1F722DDB3 /* Debug */,
-				0FE986E94A86BEE3250F27DA50DC4334 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

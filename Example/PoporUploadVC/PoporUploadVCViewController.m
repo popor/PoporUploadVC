@@ -181,7 +181,7 @@
     
     NSDictionary * dic =
     @{
-      @"weakPuEntityArray": self.imageUploadArray,
+      @"weakPuEntityArray": self.videoUploadArray,
       @"title":             @"上传视频",
       
       @"uploadType":        @(uploadType),

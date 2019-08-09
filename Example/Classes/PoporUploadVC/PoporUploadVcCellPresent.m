@@ -79,9 +79,9 @@
             entity.imageUploadStatus = PoporUploadStatusFinish;
             entity.imageUrl          = fileUrl;
             entity.imageRequestId    = requestId;
-            entity.file_id        = [fileUrl lastPathComponent];
+            entity.file_id           = [fileUrl lastPathComponent];
             if (entity.file_id.length>5) {
-                entity.file_id    = entity.file_id.stringByDeletingPathExtension;
+                entity.file_id       = entity.file_id.stringByDeletingPathExtension;
             }
             
             if (entity == cell.uploadEntity) {// CellUI线程刷新

@@ -12,6 +12,10 @@
 #import <Masonry/Masonry.h>
 
 @implementation PoporUploadCC
+@synthesize imageIV;
+@synthesize selectBT;
+@synthesize tagL;
+@synthesize uploadEntity;
 
 - (id)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
