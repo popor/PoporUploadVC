@@ -12,10 +12,15 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <PoporUI/IToastKeyboard.h>
 
-@interface PoporUploadVCViewController ()
+#import <Masonry.h>
+
+@interface PoporUploadVCViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSMutableArray * imageUploadArray;
 @property (nonatomic, strong) NSMutableArray * videoUploadArray;
+
+@property (nonatomic, strong) UITableView * infoTV;
+
 @end
 
 @implementation PoporUploadVCViewController
@@ -26,42 +31,105 @@
     
     self.imageUploadArray = [NSMutableArray new];
     self.videoUploadArray = [NSMutableArray new];
-    {
-        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame =  CGRectMake(100, 100, 80, 44);
-        [button setTitle:@"图片" forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [button setBackgroundColor:[UIColor brownColor]];
+    
+    self.infoTV = [self addTVs];
+}
+
+#pragma mark - UITableView
+- (UITableView *)addTVs {
+    UITableView * oneTV = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    
+    oneTV.delegate   = self;
+    oneTV.dataSource = self;
+    
+    oneTV.allowsMultipleSelectionDuringEditing = YES;
+    oneTV.directionalLockEnabled = YES;
+    
+    oneTV.estimatedRowHeight           = 0;
+    oneTV.estimatedSectionHeaderHeight = 0;
+    oneTV.estimatedSectionFooterHeight = 0;
+    
+    [self.view addSubview:oneTV];
+    
+    [oneTV mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        // button.titleLabel.font = [UIFont systemFontOfSize:17];
-        button.layer.cornerRadius = 5;
-        button.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        button.layer.borderWidth = 1;
-        button.clipsToBounds = YES;
-        
-        [self.view addSubview:button];
-        
-        [button addTarget:self action:@selector(btImageAction) forControlEvents:UIControlEventTouchUpInside];
-        
-    };
-    {
-        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame =  CGRectMake(100, 160, 80, 44);
-        [button setTitle:@"视频" forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [button setBackgroundColor:[UIColor brownColor]];
-        
-        // button.titleLabel.font = [UIFont systemFontOfSize:17];
-        button.layer.cornerRadius = 5;
-        button.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        button.layer.borderWidth = 1;
-        button.clipsToBounds = YES;
-        
-        [self.view addSubview:button];
-        
-        [button addTarget:self action:@selector(btVideoAction) forControlEvents:UIControlEventTouchUpInside];
-        
-    };
+        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+    
+    return oneTV;
+}
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * CellID = @"CellID";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:CellID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellID];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    switch (indexPath.row) {
+        case 0: {
+            cell.textLabel.text = @"图片";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%i", (int)self.imageUploadArray.count];
+            break;
+        }
+        case 1: {
+            cell.textLabel.text = @"视频";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%i", (int)self.videoUploadArray.count];
+            break;
+        }
+        case 2: {
+            cell.textLabel.text = @"图片";
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"%i", (int)self.imageUploadArray.count];
+            break;
+        }
+        default:
+            break;
+    }
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    switch (indexPath.row) {
+        case 0: {
+            [self btImageAction];
+            break;
+        }
+        case 1: {
+            [self btVideoAction];
+            break;
+        }
+        case 2: {
+            
+            break;
+        }
+        default:
+            break;
+    }
 }
 
 - (void)btImageAction {
@@ -69,6 +137,7 @@
     PoporUploadAddType addType = PoporUploadAddTypeOrder;
     PoporUploadType uploadType = PoporUploadType_imageUploadBind;
     BOOL showCcSelectBT        = YES;
+    @weakify(self);
     
     int ccBtXGap = 0;
     int ccBtYGap = 0;
@@ -83,7 +152,8 @@
     }
     
     BlockPVoid deallocBlock = ^(void){
-        
+        @strongify(self);
+        [self.infoTV reloadData];
     };
     
     BlockPDic uploadFinishBlock = ^(NSDictionary * dic) {
@@ -145,6 +215,7 @@
     PoporUploadAddType addType = PoporUploadAddTypeOrder;
     PoporUploadType uploadType = PoporUploadType_videoUploadBind;
     BOOL showCcSelectBT        = YES;
+    @weakify(self);
     
     int ccBtXGap = 0;
     int ccBtYGap = 0;
@@ -159,7 +230,8 @@
     }
     
     BlockPVoid deallocBlock = ^(void){
-        
+        @strongify(self);
+        [self.infoTV reloadData];
     };
     
     BlockPDic uploadFinishBlock = ^(NSDictionary * dic) {
