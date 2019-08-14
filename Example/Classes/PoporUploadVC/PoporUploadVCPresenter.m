@@ -269,7 +269,7 @@
     if (self.view.maxUploadNum > 0) {
         maxCount = self.view.maxUploadNum - self.view.weakPuEntityArray.count;
         if (maxCount <= 0) {
-            NSString * info = [NSString stringWithFormat:@"已经超过最大上传个数: %i", (int)maxCount];
+            NSString * info = @"已经超过最大上传个数";
             AlertToastTitle(info);
             return;
         }
@@ -370,7 +370,7 @@
     if (self.view.maxUploadNum > 0) {
         NSInteger maxCount = self.view.maxUploadNum - self.view.weakPuEntityArray.count;
         if (maxCount <= 0) {
-            NSString * info = [NSString stringWithFormat:@"已经超过最大上传个数: %i", (int)maxCount];
+            NSString * info = @"已经超过最大上传个数";
             AlertToastTitle(info);
             return;
         }
