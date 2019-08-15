@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)updatePUShare;
 
 // MARK: 自己的
+// 目前只针对单个cv情形.
 @property (nonatomic, strong) UICollectionView * infoCV;
 
 @property (nonatomic        ) CGSize ccSize;
@@ -26,13 +27,13 @@ NS_ASSUME_NONNULL_BEGIN
 // MARK: 外部注入
 @property (nonatomic, weak  ) NSMutableArray<PoporUploadEntity*> * weakPuEntityArray;
 
-@property (nonatomic        ) PoporUploadType uploadType;
-@property (nonatomic        ) PoporUploadAddType addType;
+@property (nonatomic        ) PoporUploadType       uploadType;
+@property (nonatomic        ) PoporUploadAddType    addType;
 
 @property (nonatomic, getter=isShowCcSelectBT) BOOL showCcSelectBT;// 是否在有素材的时候显示selectBT
 
 // 是否显示新增按钮, 这个由addType决定, 最好不要在dic中设置了.
-@property (nonatomic, getter=isShowAddCC) BOOL showAddCC;
+@property (nonatomic, getter=isShowAddCC) BOOL      showAddCC;
 
 // !!!: UI 参数
 @property (nonatomic        ) int lineNumber; // 默认为4

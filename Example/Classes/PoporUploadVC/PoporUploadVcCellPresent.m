@@ -611,18 +611,18 @@
     PoporUploadCC * cell = (PoporUploadCC *)entity.weakCC;
     
     // 保存使用下载好的图片,提升刷新速度
-    @weakify(entity);
-    SDExternalCompletionBlock completedBlock = ^void(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL){
-        @strongify(entity);
-        entity.imageUploadTool.imageThumbnail = image;
-    };
+    //@weakify(entity);
+    //SDExternalCompletionBlock completedBlock = ^void(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL){
+    //    @strongify(entity);
+    //    entity.imageUploadTool.imageThumbnail = image;
+    //};
     
     // 1.优先只显示默认图,省内存
     if (entity.placeholderImage) {
         cell.imageIV.image = entity.placeholderImage;
     }
     else if(entity.placeholderImageUrl){
-        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.placeholderImageUrl]];
+        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.placeholderImageUrl] placeholderImage:self.view.ccPlacehlodImage];
     }
     else if (entity.placeholderImageName) {
         cell.imageIV.image = [UIImage imageNamed:entity.placeholderImageName];
@@ -639,7 +639,11 @@
     
     // 3.大多数只有imageUrl
     else if(entity.imageUrl){
-        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] completed:completedBlock];
+        @weakify(entity);
+        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:self.view.ccPlacehlodImage completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            @strongify(entity);
+            entity.imageUploadTool.imageThumbnail = image;
+        }];
     }
     
     // 4.替换模式

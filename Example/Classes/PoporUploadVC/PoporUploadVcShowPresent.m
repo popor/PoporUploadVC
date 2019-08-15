@@ -161,7 +161,7 @@
     
     NSString * fileUrl = cc.uploadEntity.fileUrl;
     if (!fileUrl) {
-        AlertToastTitle(@"视频网址为空，无法播放");
+        AlertToastTitle(@"音频网址为空，无法播放");
         return;
     }
     

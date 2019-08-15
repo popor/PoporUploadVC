@@ -70,7 +70,7 @@ PODS:
   - PoporUI/UIDeviceScreen (0.0.50)
   - PoporUI/UIImage (0.0.50)
   - PoporUI/UIView (0.0.50)
-  - PoporUploadVC (0.0.20):
+  - PoporUploadVC (0.0.21):
     - AFNetworking
     - DMProgressHUD
     - JSONModel
@@ -83,10 +83,10 @@ PODS:
     - PoporMedia
     - PoporUI/IToast
     - PoporUI/UIImage
-    - PoporUploadVC/EntityTool (= 0.0.20)
-    - PoporUploadVC/PoporUploadVC (= 0.0.20)
+    - PoporUploadVC/EntityTool (= 0.0.21)
+    - PoporUploadVC/PoporUploadVC (= 0.0.21)
     - SDWebImage
-  - PoporUploadVC/EntityTool (0.0.20):
+  - PoporUploadVC/EntityTool (0.0.21):
     - AFNetworking
     - DMProgressHUD
     - JSONModel
@@ -100,7 +100,7 @@ PODS:
     - PoporUI/IToast
     - PoporUI/UIImage
     - SDWebImage
-  - PoporUploadVC/PoporUploadVC (0.0.20):
+  - PoporUploadVC/PoporUploadVC (0.0.21):
     - AFNetworking
     - DMProgressHUD
     - JSONModel
@@ -161,7 +161,7 @@ SPEC CHECKSUMS:
   PoporMedia: a11e3df61eae7ed625dc917fbd66f6dfb68cc47a
   PoporOrientation: 92216eb28427bc152e897c5edf6725aaa1c766cf
   PoporUI: d1d789956ad6548e7376a40742b491fd4c7bf3b1
-  PoporUploadVC: ce04e9feb67960e7e16e84ae05bf4db5fc1330d1
+  PoporUploadVC: 1cce46f2682ebd8fbba757cc1ed64c40fb164268
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   SKFCamera: d63fa8ca23eb5ec51ade911fcbe736ffc5b37b4d
