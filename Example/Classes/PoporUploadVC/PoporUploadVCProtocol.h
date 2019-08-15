@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (UIViewController *)vc;
 - (void)updatePUShare;
 
+// 假若需要,可以增加UseCustomCV, 独立weakPuEntityArray, 或者创建PoporUploadMixVC,
 // MARK: 自己的
 // 目前只针对单个cv情形.
 @property (nonatomic, strong) UICollectionView * infoCV;
