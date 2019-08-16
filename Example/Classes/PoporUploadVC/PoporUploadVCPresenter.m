@@ -388,7 +388,6 @@
         NSLog(@"视频 videoPath: %@, time:%i秒, size:%.02fMB", videoPath, (int)time, videoSize);
         
         PoporUploadEntity * entity = [PoporUploadEntity new];
-        entity.hasData           = YES;
         entity.uploadFinishBlock = self.view.uploadFinishBlock;
         entity.weakCV            = self.view.infoCV;
         entity.weakPuEntityArray = self.view.weakPuEntityArray;
