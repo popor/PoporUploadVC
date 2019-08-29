@@ -19,7 +19,7 @@ PODS:
   - KVOController (1.2.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
-  - PoporAVPlayer (0.0.07):
+  - PoporAVPlayer (0.0.09):
     - KVOController
     - Masonry
     - PoporFoundation/NSAssistant
@@ -43,16 +43,15 @@ PODS:
   - PoporImageBrower (0.0.23):
     - MBProgressHUD
     - SDWebImage
-  - PoporMedia (0.0.14):
-    - PoporMedia/PoporMedia (= 0.0.14)
-  - PoporMedia/PoporMedia (0.0.14):
+  - PoporMedia (0.0.15):
+    - PoporMedia/PoporMedia (= 0.0.15)
+  - PoporMedia/PoporMedia (0.0.15):
     - Masonry
     - PoporFoundation/NSFileManager
     - PoporFoundation/PrefixCore
     - PoporImageBrower
     - PoporUI/IToast
-    - PoporUI/Tool
-    - PoporUI/UIDeviceScreen
+    - PoporUI/UIDevice
     - PoporUI/UIImage
     - PoporUI/UIView
     - ReactiveObjC
@@ -60,17 +59,14 @@ PODS:
     - TZImagePickerController
   - PoporOrientation (0.0.3):
     - PoporFoundation/NSObject
-  - PoporUI/BlockView (0.0.50)
-  - PoporUI/IToast (0.0.50):
+  - PoporUI/IToast (0.0.51):
     - PoporFoundation/NSString
-  - PoporUI/Tool (0.0.50):
+  - PoporUI/UIDevice (0.0.51):
     - PoporFoundation/NSString
-    - PoporUI/BlockView
     - PoporUI/IToast
-  - PoporUI/UIDeviceScreen (0.0.50)
-  - PoporUI/UIImage (0.0.50)
-  - PoporUI/UIView (0.0.50)
-  - PoporUploadVC (0.0.21):
+  - PoporUI/UIImage (0.0.51)
+  - PoporUI/UIView (0.0.51)
+  - PoporUploadVC (0.0.22):
     - AFNetworking
     - DMProgressHUD
     - JSONModel
@@ -83,10 +79,10 @@ PODS:
     - PoporMedia
     - PoporUI/IToast
     - PoporUI/UIImage
-    - PoporUploadVC/EntityTool (= 0.0.21)
-    - PoporUploadVC/PoporUploadVC (= 0.0.21)
+    - PoporUploadVC/EntityTool (= 0.0.22)
+    - PoporUploadVC/PoporUploadVC (= 0.0.22)
     - SDWebImage
-  - PoporUploadVC/EntityTool (0.0.21):
+  - PoporUploadVC/EntityTool (0.0.22):
     - AFNetworking
     - DMProgressHUD
     - JSONModel
@@ -100,7 +96,7 @@ PODS:
     - PoporUI/IToast
     - PoporUI/UIImage
     - SDWebImage
-  - PoporUploadVC/PoporUploadVC (0.0.21):
+  - PoporUploadVC/PoporUploadVC (0.0.22):
     - AFNetworking
     - DMProgressHUD
     - JSONModel
@@ -116,11 +112,11 @@ PODS:
     - PoporUploadVC/EntityTool
     - SDWebImage
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.0.6):
-    - SDWebImage/Core (= 5.0.6)
-  - SDWebImage/Core (5.0.6)
+  - SDWebImage (5.1.0):
+    - SDWebImage/Core (= 5.1.0)
+  - SDWebImage/Core (5.1.0)
   - SKFCamera (1.3.2)
-  - TZImagePickerController (3.2.1)
+  - TZImagePickerController (3.2.2)
 
 DEPENDENCIES:
   - PoporUploadVC (from `../`)
@@ -155,17 +151,17 @@ SPEC CHECKSUMS:
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  PoporAVPlayer: c483fa051fb98ec54faa6a9cb62f444369b9600d
+  PoporAVPlayer: 376fd9148a3a760776960523f5564799235e1ee5
   PoporFoundation: 10375a71f9064f0571aab23c145bbf43b783ee40
   PoporImageBrower: 5ee21d4c5391fae11d44e4df27888c8212138717
-  PoporMedia: a11e3df61eae7ed625dc917fbd66f6dfb68cc47a
+  PoporMedia: d4a06ae1c6ada7812104f1f9db4a0bfc14f9f97d
   PoporOrientation: 92216eb28427bc152e897c5edf6725aaa1c766cf
-  PoporUI: d1d789956ad6548e7376a40742b491fd4c7bf3b1
-  PoporUploadVC: 1cce46f2682ebd8fbba757cc1ed64c40fb164268
+  PoporUI: 9e25aaaa63f863923615e29776296f209f1da278
+  PoporUploadVC: 229e8a34d982dfd6c743b91e1cc6e21dc7fa4945
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
+  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
   SKFCamera: d63fa8ca23eb5ec51ade911fcbe736ffc5b37b4d
-  TZImagePickerController: bf4c57b98d8707fce41ea6be872414a71c7a8c9d
+  TZImagePickerController: 44aa49cf35b1e88fe292be955e15b9003a5b1d83
 
 PODFILE CHECKSUM: fbe610755fb38d94cb03e2723746f4f32481f1b2
 

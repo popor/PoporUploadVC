@@ -1,1 +1,1 @@
-../../../PoporUI/PoporUI/Classes/Tool/UIDevice+Permission.h
+../../../PoporUI/PoporUI/Classes/UIDevice/UIDevice+Permission.h

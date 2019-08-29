@@ -7,6 +7,7 @@
 
 #import "PoporAVPlayerVC.h"
 #import "PoporAVPlayerVCPresenter.h"
+#import "PoporAVPlayerVCInteractor.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <Masonry/Masonry.h>
 #import <PoporUI/UIView+Extension.h>
@@ -20,7 +21,7 @@ static int GLControllIndex1 = 1;
 
 @interface PoporAVPlayerVC ()
 
-@property (nonatomic, strong) id<PoporAVPlayerVCEventHandler, PoporAVPlayerVCDataSource> present;
+@property (nonatomic, strong) PoporAVPlayerVCPresenter * present;
 
 @end
 
@@ -43,16 +44,13 @@ static int GLControllIndex1 = 1;
 
 @synthesize rotateButton;
 @synthesize timeIndicatorView;
+
+@synthesize deallocBlock, appStatusBarStyle, viewDidLoadBlock;
+
 @synthesize willAppearBlock;
 @synthesize willDisappearBlock;
 @synthesize lockRotateBT;
 @synthesize showLockRotateBT;
-
-
-- (void)dealloc {
-    [self.present removeKVO];
-    //NSLog(@"PoporAVPlayerVC dealloc, work well.");
-}
 
 - (instancetype)initWithDic:(NSDictionary *)dic {
     if (self = [super init]) {
@@ -61,23 +59,18 @@ static int GLControllIndex1 = 1;
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    if (!self.title) {
-        self.title = @"播放器";
+- (void)dealloc {
+    [self preDealloc];
+    //NSLog(@"PoporAVPlayerVC dealloc, work well.");
+}
+
+- (void)preDealloc {
+    [self.present removeKVO];
+    if (self.deallocBlock) {
+        self.deallocBlock();
+    } else {
+        [UIApplication sharedApplication].statusBarStyle = self.appStatusBarStyle;
     }
-    self.view.backgroundColor = [UIColor whiteColor];
-    if (!self.present) {
-        PoporAVPlayerVCPresenter * present = [PoporAVPlayerVCPresenter new];
-        self.present = present;
-        [present setMyView:self];
-    }
-    
-    [self addViews];
-    [self masLayoutSubviews];
-    
-    [self.present setDefaultProgressTime];
-    [self.present setupVideoPlaybackForURL:self.videoURL];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,7 +82,7 @@ static int GLControllIndex1 = 1;
     if (self.willAppearBlock) {
         self.willAppearBlock();
     }else{
-        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
     }
     [self addNC:YES];
 }
@@ -99,7 +92,7 @@ static int GLControllIndex1 = 1;
     if (self.willDisappearBlock) {
         self.willDisappearBlock();
     }else{
-        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
     }
     [self addNC:NO];
 }
@@ -109,6 +102,30 @@ static int GLControllIndex1 = 1;
     
     // 恢复旋转锁.
     [PoporOrientation share].lock = NO;
+}
+
+- (void)viewDidLoad {
+    [self assembleViper];
+    [super viewDidLoad];
+    
+    if (!self.title) {
+        self.title = @"播放器";
+    }
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)assembleViper {
+    if (!self.present) {
+        PoporAVPlayerVCPresenter * present = [PoporAVPlayerVCPresenter new];
+        PoporAVPlayerVCInteractor * interactor = [PoporAVPlayerVCInteractor new];
+        
+        self.present = present;
+        [present setMyInteractor:interactor];
+        [present setMyView:self];
+        
+        [self addViews];
+        [self startEvent];
+    }
 }
 
 #pragma mark - views
@@ -128,6 +145,22 @@ static int GLControllIndex1 = 1;
     [self addTopBottomBarViews];
     [self addTopBottomBarTargetAction];
     [self addGR];
+    [self masLayoutSubviews];
+    
+    if (self.viewDidLoadBlock) {
+        self.viewDidLoadBlock();
+    } else {
+        self.appStatusBarStyle = [UIApplication sharedApplication].statusBarStyle;
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    }
+}
+
+// 开始执行事件,比如获取网络数据
+- (void)startEvent {
+    [self.present startEvent];
+    
+    [self.present setDefaultProgressTime];
+    [self.present setupVideoPlaybackForURL:self.videoURL];
 }
 
 - (void)addGR {
@@ -188,16 +221,6 @@ static int GLControllIndex1 = 1;
         
     }
 }
-
-#pragma mark -
-#pragma mark - Action Code
-
-
-#pragma mark -
-#pragma mark - getters and setters
-
-#pragma mark - 设置播放进度时间为0
-
 
 #pragma mark - getter
 - (void)setTitle:(NSString *)title {

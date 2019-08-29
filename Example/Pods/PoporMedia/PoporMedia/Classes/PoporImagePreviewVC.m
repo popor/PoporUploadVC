@@ -10,7 +10,7 @@
 #import <TZImagePickerController/UIView+Layout.h>
 
 #import <PoporUI/UIView+Extension.h>
-#import <PoporUI/UIDeviceScreen.h>
+#import <PoporUI/UIDevice+ScreenSize.h>
 
 @interface PoporImagePreviewVC ()
 
@@ -83,7 +83,7 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    CGFloat naviBarHeight      = [UIDeviceScreen isIphoneXScreen] ? 88:64;
+    CGFloat naviBarHeight      = [UIDevice isIphoneXScreen] ? 88:64;
 
     self.naviBar.frame         = CGRectMake(0, 0, self.view.width, naviBarHeight);
     self.backButton.frame      = CGRectMake(10, naviBarHeight - 44, 44, 44);

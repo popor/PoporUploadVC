@@ -15,24 +15,21 @@
 
 static void *AVPlayerDemoPlaybackViewControllerStatusObservationContext = &AVPlayerDemoPlaybackViewControllerStatusObservationContext;
 
-NSString * const kTracksKey      = @"tracks";
-NSString * const kPlayableKey    = @"playable";
-
-//NSString * const kRateKey        = @"rate";
-//NSString * const kCurrentItemKey = @"currentItem";
-NSString * const kStatusKey      = @"status";
+NSString * const kTracksKey   = @"tracks";
+NSString * const kPlayableKey = @"playable";
+NSString * const kStatusKey   = @"status";
 
 @interface PoporAVPlayerVCPresenter ()
 
 @property (nonatomic, weak  ) id<PoporAVPlayerVCProtocol> view;
 @property (nonatomic, strong) PoporAVPlayerVCInteractor * interactor;
 
-@property (strong, nonatomic) AVPlayerItem            *playerItem;
-@property (strong, nonatomic) id                      timeObserver;
-@property (assign, nonatomic) CGFloat                 mRestoreAfterScrubbingRate;
-@property (assign, nonatomic) BOOL                    seekToZeroBeforePlay; // 假如需要重新播放,或者播放下一级的话
+@property (strong, nonatomic) AVPlayerItem    * playerItem;
+@property (strong, nonatomic) id              timeObserver;
+@property (assign, nonatomic) CGFloat         mRestoreAfterScrubbingRate;
+@property (assign, nonatomic) BOOL            seekToZeroBeforePlay;// 假如需要重新播放,或者播放下一级的话
 
-@property (nonatomic, strong) FBKVOController        * fbKVO;
+@property (nonatomic, strong) FBKVOController * fbKVO;
 
 @end
 
@@ -40,21 +37,25 @@ NSString * const kStatusKey      = @"status";
 
 - (id)init {
     if (self = [super init]) {
-        [self initInteractors];
         
     }
     return self;
 }
 
-- (void)setMyView:(id<PoporAVPlayerVCProtocol>)view {
-    self.view = view;
+- (void)setMyInteractor:(PoporAVPlayerVCInteractor *)interactor {
+    self.interactor = interactor;
+    
 }
 
-- (void)initInteractors {
-    if (!self.interactor) {
-        self.interactor = [PoporAVPlayerVCInteractor new];
-        
-    }
+- (void)setMyView:(id<PoporAVPlayerVCProtocol>)view {
+    self.view = view;
+    
+}
+
+// 开始执行事件,比如获取网络数据
+- (void)startEvent {
+    
+    
 }
 
 #pragma mark - VC_DataSource
@@ -94,9 +95,13 @@ NSString * const kStatusKey      = @"status";
     }
 }
 
+// 快速关闭控制条
 - (void)hideControlsFast {
-    self.view.topBar.alpha = DEFAULT_VIEW_ALPHA;
+    self.view.topBar.alpha    = DEFAULT_VIEW_ALPHA;
     self.view.bottomBar.alpha = DEFAULT_VIEW_ALPHA;
+    if (self.view.vc.isViewLoaded) {
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    }
     
     [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^(void) {
         self.view.topBar.alpha    = 0.0f;
@@ -109,12 +114,16 @@ NSString * const kStatusKey      = @"status";
     }];
 }
 
+// 快速打开控制条
 - (void)showControlsFast {
-    self.view.topBar.alpha = 0.0;
-    self.view.topBar.hidden = NO;
-    
-    self.view.bottomBar.alpha = 0.0;
+    self.view.topBar.alpha     = 0.0;
+    self.view.topBar.hidden    = NO;
+
+    self.view.bottomBar.alpha  = 0.0;
     self.view.bottomBar.hidden = NO;
+    if (self.view.vc.isViewLoaded) {
+        [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    }
     
     [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^(void) {
         self.view.topBar.alpha    = DEFAULT_VIEW_ALPHA;
@@ -142,18 +151,20 @@ NSString * const kStatusKey      = @"status";
         return;
     }
     
+    @weakify(self);
     AVURLAsset *asset = [AVURLAsset URLAssetWithURL:url options:nil];
-    __weak typeof(self) weakSelf = self;
     NSArray *requestedKeys = [NSArray arrayWithObjects:kTracksKey, kPlayableKey, nil];
     
     [asset loadValuesAsynchronouslyForKeys:requestedKeys completionHandler:^{
         dispatch_async( dispatch_get_main_queue(), ^{
+            @strongify(self);
+            
             /* Make sure that the value of each key has loaded successfully. */
             for (NSString *thisKey in requestedKeys) {
                 NSError *error = nil;
                 AVKeyValueStatus keyStatus = [asset statusOfValueForKey:thisKey error:&error];
                 if (keyStatus == AVKeyValueStatusFailed) {
-                    [weakSelf assetFailedToPrepareForPlayback:error];
+                    [self assetFailedToPrepareForPlayback:error];
                     return;
                 }
             }
@@ -161,7 +172,6 @@ NSString * const kStatusKey      = @"status";
             AVKeyValueStatus status = [asset statusOfValueForKey:kTracksKey error:&error];
             if (status == AVKeyValueStatusLoaded) {
                 if (self.playerItem) {
-                    
                     // 移除一个通知
                     [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:self.playerItem];
                     
@@ -176,10 +186,10 @@ NSString * const kStatusKey      = @"status";
                 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:self.playerItem];
                 
                 self.seekToZeroBeforePlay = NO;
-                
-                @weakify(self);
+
                 [self.fbKVO observe:self.playerItem keyPath:kStatusKey options:NSKeyValueObservingOptionInitial | NSKeyValueObservingOptionNew block:^(id  _Nullable observer, id  _Nonnull object, NSDictionary<NSString *,id> * _Nonnull change) {
                     @strongify(self);
+                    
                     AVPlayerStatus status = [[change objectForKey:NSKeyValueChangeNewKey] integerValue];
                     switch (status) {
                             /* Indicates that the status of the player is not yet known because
@@ -219,7 +229,7 @@ NSString * const kStatusKey      = @"status";
                 [self playVideoEvent];
                 
             } else {
-                NSLog(@"%@ Failed to load the tracks.", weakSelf);
+                NSLog(@"Failed to load the tracks.");
             }
         });
     }];
@@ -230,7 +240,7 @@ NSString * const kStatusKey      = @"status";
     // 先移除之前的
     [self removePlayerTimeObserver];
     
-    double interval = .1f;
+    double interval = 0.1f;
     
     CMTime playerDuration = [self playerItemDuration];
     if (CMTIME_IS_INVALID(playerDuration)) {
@@ -242,10 +252,11 @@ NSString * const kStatusKey      = @"status";
         interval = 0.5f * duration / width;
     }
     
-    __weak typeof(self) weakSelf = self;
+    @weakify(self);
     /* If you pass NULL, the main queue is used. */
     self.timeObserver = [self.view.avPlayer addPeriodicTimeObserverForInterval:CMTimeMakeWithSeconds(interval, NSEC_PER_SEC) queue:NULL usingBlock:^(CMTime time) {
-        [weakSelf syncScrubber:time];
+        @strongify(self);
+        [self syncScrubber:time];
     }];
 }
 
@@ -257,19 +268,18 @@ NSString * const kStatusKey      = @"status";
 }
 
 - (void)syncScrubber:(CMTime)time {
-    __weak typeof (self) weakSelf = self;
     double currentTime = CMTimeGetSeconds(time);
-    double duration = CMTimeGetSeconds(self.view.avPlayer.currentItem.duration);
-    double cacheTime = [weakSelf availableDuration];
-    [weakSelf currentTime:currentTime cacheTime:cacheTime duration:duration];
+    double duration    = CMTimeGetSeconds(self.view.avPlayer.currentItem.duration);
+    double cacheTime   = [self availableDuration];
+    [self currentTime:currentTime cacheTime:cacheTime duration:duration];
 }
 
 - (NSTimeInterval)availableDuration {
     NSArray *loadedTimeRanges = [[self.view.avPlayer currentItem] loadedTimeRanges];
-    CMTimeRange timeRange = [loadedTimeRanges.firstObject CMTimeRangeValue];// 获取缓冲区域
-    float startSeconds = CMTimeGetSeconds(timeRange.start);
-    float durationSeconds = CMTimeGetSeconds(timeRange.duration);
-    NSTimeInterval result = startSeconds + durationSeconds;// 计算缓冲总进度
+    CMTimeRange timeRange     = [loadedTimeRanges.firstObject CMTimeRangeValue];// 获取缓冲区域
+    float startSeconds        = CMTimeGetSeconds(timeRange.start);
+    float durationSeconds     = CMTimeGetSeconds(timeRange.duration);
+    NSTimeInterval result     = startSeconds + durationSeconds;// 计算缓冲总进度
     return result;
 }
 
@@ -454,23 +464,14 @@ NSString * const kStatusKey      = @"status";
 - (void)rotateAction:(UIButton *)sender {
     sender.selected = !sender.isSelected;
     if (sender.isSelected) {
-        __weak typeof(self) weakSelf = self;
-        //        [PoporOrientation enableAutoFinish:^(UIDeviceOrientation orientation) {
-        //            if (weakSelf) {
-        //                if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight) {
-        //                    weakSelf.view.vc.navigationController.interactivePopGestureRecognizer.enabled = NO;
-        //                }else{
-        //                    weakSelf.view.vc.navigationController.interactivePopGestureRecognizer.enabled = YES;
-        //                }
-        //            }
-        //        }];
+        @weakify(self);
         [PoporOrientation enablePriorityLeftFinish:^(UIDeviceOrientation orientation) {
-            if (weakSelf) {
-                if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight) {
-                    weakSelf.view.vc.navigationController.interactivePopGestureRecognizer.enabled = NO;
-                }else{
-                    weakSelf.view.vc.navigationController.interactivePopGestureRecognizer.enabled = YES;
-                }
+            @strongify(self);
+            
+            if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight) {
+                self.view.vc.navigationController.interactivePopGestureRecognizer.enabled = NO;
+            }else{
+                self.view.vc.navigationController.interactivePopGestureRecognizer.enabled = YES;
             }
         }];
     }else{
@@ -487,6 +488,7 @@ NSString * const kStatusKey      = @"status";
         }else{
             [self.view.vc dismissViewControllerAnimated:YES completion:nil];
         }
+        [self.view preDealloc];
     }
 }
 

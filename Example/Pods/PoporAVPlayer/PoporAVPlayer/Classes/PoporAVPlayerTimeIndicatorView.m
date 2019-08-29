@@ -22,43 +22,27 @@ static const CGFloat ZBTimeIndicatorAutoFadeOutTimeInterval = 1.0;
 
 @implementation PoporAVPlayerTimeIndicatorView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.hidden = YES;
-        self.layer.cornerRadius = 5;
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        self.hidden              = YES;
+        self.layer.cornerRadius  = 5;
         self.layer.masksToBounds = YES;
-        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+        self.backgroundColor     = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
         
         [self createTimeIndicator];
     }
     return self;
 }
 
-- (void)setLabelText:(NSString *)labelText
-{
-    //    _labelText = [labelText copy];
+- (void)setLabelText:(NSString *)labelText {
     self.hidden = NO;
     self.timeLabel.text = labelText;
-    
-    // TODO: 需要更新
-    // FIXME: 这里是拷贝的ZX部分需要移除的.
-    // 防止重叠显示
-    //    if (self.superview.accessibilityIdentifier) {
-    //        GLPlayerControllerView *playerView = (GLPlayerControllerView *)self.superview;
-    //        playerView.brightnessIndicatorView.hidden = YES;
-    //        playerView.volumeIndicatorView.hidden = YES;
-    //    } else {
-    //        self.superview.accessibilityIdentifier = @"";
-    //    }
     
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(animateHide) object:nil];
     [self performSelector:@selector(animateHide) withObject:nil afterDelay:ZBTimeIndicatorAutoFadeOutTimeInterval];
 }
 
-- (void)layoutSubviews
-{
+- (void)layoutSubviews {
     [super layoutSubviews];
     
     if (self.playState == AVPlayerTimeIndicatorRewind) {
@@ -68,8 +52,7 @@ static const CGFloat ZBTimeIndicatorAutoFadeOutTimeInterval = 1.0;
     }
 }
 
-- (void)createTimeIndicator
-{
+- (void)createTimeIndicator {
     CGFloat margin = (GLVideoTimeIndicatorViewSide - 24 - 12 - ZBViewSpacing) / 2;
     _arrowImageView = [[UIImageView alloc] initWithFrame:CGRectMake((GLVideoTimeIndicatorViewSide - 44) / 2, margin, 44, 24)];
     [self addSubview:_arrowImageView];
@@ -82,8 +65,7 @@ static const CGFloat ZBTimeIndicatorAutoFadeOutTimeInterval = 1.0;
     [self addSubview:_timeLabel];
 }
 
-- (void)animateHide
-{
+- (void)animateHide {
     [UIView animateWithDuration:.3 animations:^{
         self.alpha = 0;
     } completion:^(BOOL finished) {

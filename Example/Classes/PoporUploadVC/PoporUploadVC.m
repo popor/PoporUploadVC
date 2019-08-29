@@ -9,7 +9,6 @@
 #import "PoporUploadVCPresenter.h"
 #import "PoporUploadVCInteractor.h"
 
-#import <PoporUI/UIDeviceScreen.h>
 #import "PUShare.h"
 #import <PoporFoundation/NSAssistant.h>
 #import <PoporFoundation/PrefixSize.h>
