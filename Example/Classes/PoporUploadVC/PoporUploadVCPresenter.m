@@ -440,7 +440,7 @@
                             if (finished) {
                                 dispatch_async(dispatch_get_main_queue(), ^{
                                     self.view.vc.navigationController.view.userInteractionEnabled = YES;
-                                    if (IsDebugVersion) {
+                                    if (PIsDebugVersion) {
                                         NSData * data = [NSData dataWithContentsOfFile:resultPath];
                                         NSLog(@"FFMpeg video size : %02fMB", data.length/1024.0f/1024.0f);
                                     }
