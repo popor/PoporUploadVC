@@ -11,7 +11,7 @@
 
 #import "PUShare.h"
 #import <PoporFoundation/NSAssistant.h>
-#import <PoporFoundation/PrefixSize.h>
+#import <PoporFoundation/Size+pPrefix.h>
 #import <Masonry/Masonry.h>
 
 @interface PoporUploadVC ()
@@ -76,7 +76,7 @@
         }
         {
             int colume  = self.lineNumber <= 0 ? 4:self.lineNumber;
-            float width =  (ScreenSize.width
+            float width =  (PSCREEN_SIZE.width
                             - self.cvSectionEdgeInsets.left
                             - self.cvSectionEdgeInsets.right
                             + self.ccIvXGap
@@ -195,7 +195,7 @@
     if (self.infoCvBgColor) {
         cv.backgroundColor = self.infoCvBgColor;
     }else{
-        cv.backgroundColor = RGB16(0XF9F9F9);
+        cv.backgroundColor = PRGB16(0XF9F9F9);
     }
     
     [self.view addSubview:cv];

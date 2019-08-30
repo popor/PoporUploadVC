@@ -10,7 +10,7 @@
 #import "PoporOrientation.h"
 #import "PoporInterfaceOrientation.h"
 
-#import <PoporFoundation/NSObject+Swizzling.h>
+#import <PoporFoundation/NSObject+pSwizzling.h>
 
 @interface PoporAppDelegate ()
 

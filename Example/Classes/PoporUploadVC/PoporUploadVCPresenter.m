@@ -19,8 +19,8 @@
 #import <AVFoundation/AVFoundation.h>
 
 #import "PUVideoTool.h"
-#import <PoporFoundation/NSFileManager+Tool.h>
-#import <PoporFoundation/PrefixFun.h>
+#import <PoporFoundation/NSFileManager+pTool.h>
+#import <PoporFoundation/Fun+pPrefix.h>
 
 #import <Photos/Photos.h>
 #import <DMProgressHUD/DMProgressHUD.h>
@@ -489,7 +489,7 @@
                             NSLog(@"视频导出完成");
                             if ([NSFileManager isFileExist:resultPath]) {
                                 NSLog(@"视频导出完成 ok");
-                                if (IsDebugVersion) {
+                                if (PIsDebugVersion) {
                                     NSData * data = [NSData dataWithContentsOfFile:resultPath];
                                     NSLog(@"Apple video size : %02fMB", data.length/1024.0f/1024.0f);
                                 }

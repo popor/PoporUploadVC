@@ -1,12 +1,12 @@
 //
 //  NSAssistant.h
-//  wanzi
+//  PoporFoundation
 //
 //  Created by popor on 12-3-19.
 //V1.0
 
 #import <Foundation/Foundation.h>
-#import "PrefixOs.h"
+#import "Os+pPrefix.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

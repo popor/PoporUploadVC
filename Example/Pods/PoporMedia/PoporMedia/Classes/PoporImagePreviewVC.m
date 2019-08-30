@@ -9,8 +9,8 @@
 #import "PoporImagePreviewVC.h"
 #import <TZImagePickerController/UIView+Layout.h>
 
-#import <PoporUI/UIView+Extension.h>
-#import <PoporUI/UIDevice+ScreenSize.h>
+#import <PoporUI/UIView+pExtension.h>
+#import <PoporUI/UIDevice+pScreenSize.h>
 
 @interface PoporImagePreviewVC ()
 

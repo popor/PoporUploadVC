@@ -6,8 +6,8 @@
 //  Copyright (c) 2019 popor. All rights reserved.
 //
 
-#import <PoporFoundation/PrefixBlock.h>
-#import <PoporFoundation/PrefixColor.h>
+#import <PoporFoundation/Block+pPrefix.h>
+#import <PoporFoundation/Color+pPrefix.h>
 #import "PoporUploadServiceProtocol.h"
 
 @class PoporUploadEntity;

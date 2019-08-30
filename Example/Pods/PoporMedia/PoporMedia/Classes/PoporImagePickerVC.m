@@ -24,15 +24,14 @@
 
 #import "PoporImagePickerVC.h"
 #import "TOCropViewController.h"
-#import "UIDevice+Tool.h"
-#import "UIDevice+SaveImage.h"
-#import "UIDevice+Permission.h"
+#import "UIDevice+pTool.h"
+#import "UIDevice+pSaveImage.h"
+#import "UIDevice+pPermission.h"
 #import "PoporImagePreviewCC.h"
 #import "PoporImagePreviewVC.h"
 
-#import <PoporUI/UIView+Extension.h>
-#import <PoporUI/UIImage+create.h>
-#import <PoporFoundation/PrefixSize.h>
+#import <PoporUI/UIView+pExtension.h>
+#import <PoporUI/UIImage+pCreate.h>
 
 @import CoreMotion;
 
@@ -180,7 +179,7 @@
 - (UICollectionView *)addCV {
     float gap   = 10;
     int colume  = 4;
-    float width = (ScreenSize.width - gap*(colume-1))/colume;
+    float width = (KScreenSize.width - gap*(colume-1))/colume;
     self.ccSize = CGSizeMake(width, width);
     
     //1.初始化layout

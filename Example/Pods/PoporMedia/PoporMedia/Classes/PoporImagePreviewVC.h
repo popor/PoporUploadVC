@@ -8,7 +8,7 @@
 
 #import <PoporImageBrower/PoporImageBrower.h>
 #import "PoporImageEntity.h"
-#import <PoporFoundation/PrefixBlock.h>
+#import <PoporFoundation/Block+pPrefix.h>
 #import "PoporMediaPrefix.h"
 
 // 预览

@@ -10,9 +10,9 @@
 
 #import <Photos/Photos.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-#import <PoporFoundation/NSDate+Tool.h>
+#import <PoporFoundation/NSDate+pTool.h>
 
-#import "NSFileManager+Tool.h"
+#import "NSFileManager+pTool.h"
 
 @implementation PUVideoTool
 

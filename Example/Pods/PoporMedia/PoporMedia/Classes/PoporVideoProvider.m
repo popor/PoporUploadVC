@@ -11,11 +11,11 @@
 
 // 拍摄视频
 #import <MobileCoreServices/MobileCoreServices.h>
-#import "UIDevice+Tool.h"
-#import "UIDevice+Permission.h"
-#import "UIDevice+SaveImage.h"
+#import "UIDevice+pTool.h"
+#import "UIDevice+pPermission.h"
+#import "UIDevice+pSaveImage.h"
 
-#import <PoporFoundation/PrefixSize.h>
+#import <PoporFoundation/Size+pPrefix.h>
 
 @interface PoporVideoProvider ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 

@@ -1,6 +1,6 @@
 //
 //  NSAssistant.m
-//  wanzi
+//  PoporFoundation
 //
 //  Created by popor on 12-3-19.
 //  Copyright 2012 popor. All rights reserved.
@@ -17,7 +17,7 @@
 //
 //解决办法：
 //＃import ”宏定义所在的文件“
-#import "PrefixFun.h"
+#import "Fun+pPrefix.h"
 
 @implementation NSAssistant
 
@@ -28,7 +28,7 @@
 }
 
 + (void)NSLogEntity:(id _Nullable)theClassEntity {
-    if (!IsDebugVersion) {
+    if (!PIsDebugVersion) {
         // 正式版不打印任何数据
         return;
     }

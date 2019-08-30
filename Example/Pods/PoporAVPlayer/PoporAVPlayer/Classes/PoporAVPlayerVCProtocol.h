@@ -14,7 +14,7 @@
 
 #import "PoporAVPlayerlayer.h"
 #import <PoporOrientation/PoporOrientation.h>
-#import <PoporFoundation/PrefixBlock.h>
+#import <PoporFoundation/Block+pPrefix.h>
 
 
 // 对外接口

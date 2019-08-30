@@ -10,7 +10,7 @@
 #import "PoporAVPlayerVCInteractor.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <Masonry/Masonry.h>
-#import <PoporUI/UIView+Extension.h>
+#import <PoporUI/UIView+pExtension.h>
 #import <PoporFoundation/NSAssistant.h>
 
 #import "PoporAVPlayerBundle.h"

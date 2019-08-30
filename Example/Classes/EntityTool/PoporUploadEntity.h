@@ -9,7 +9,7 @@
 #import <JSONModel/JSONModel.h>
 #import "PoporUploadTool.h"
 #import "PoporUploadVCPrefix.h"
-#import <PoporFoundation/PrefixBlock.h>
+#import <PoporFoundation/Block+pPrefix.h>
 
 // 用于保存上传所需要的一些数据.
 

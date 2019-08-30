@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporUploadVC'
-  s.version          = '0.0.22'
+  s.version          = '1.01'
   s.summary          = '简化上传图片视频等方法'
 
   s.homepage         = 'https://github.com/popor/PoporUploadVC'
@@ -34,7 +34,7 @@ Pod::Spec.new do |s|
   s.dependency 'JSONModel'
   s.dependency 'PoporUI/IToast'
   s.dependency 'PoporUI/UIImage'
-  s.dependency 'PoporFoundation/PrefixCore'
+  s.dependency 'PoporFoundation/Prefix'
   s.dependency 'PoporFoundation/NSAssistant'
   s.dependency 'PoporFoundation/NSDate'
   s.dependency 'SDWebImage'
