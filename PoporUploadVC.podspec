@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporUploadVC'
-  s.version          = '1.02'
+  s.version          = '1.03'
   s.summary          = '简化上传图片视频等方法'
 
   s.homepage         = 'https://github.com/popor/PoporUploadVC'
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'Example/Classes/EntityTool/*.{h,m}'
   end
   
-  s.subspec 'PoporUploadVC' do |ss|
+  s.subspec 'VC' do |ss|
     ss.ios.dependency 'PoporUploadVC/EntityTool'
     
     ss.source_files = 'Example/Classes/PoporUploadVC/*.{h,m}'
