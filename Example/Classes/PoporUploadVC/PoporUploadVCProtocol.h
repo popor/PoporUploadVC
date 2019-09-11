@@ -105,13 +105,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 获取图片缩略图的block, 根据不同的图床平台,请设置对应的缩略图url,供ccIV使用
 @property (nonatomic, copy  ) PoporUpload_RStringPStringSize  createImageThumbUrlBlock;
 
-
-
-
 @end
 
 // 数据来源
 @protocol PoporUploadVCDataSource <NSObject>
+
 - (void)cleanIVSelectStatus;
 
 @end

@@ -6,6 +6,8 @@
 //  Copyright (c) 2019 popor. All rights reserved.
 //
 
+// 用于展示图片和video、aduio。
+
 #import <Foundation/Foundation.h>
 
 #import "PoporUploadVCProtocol.h"

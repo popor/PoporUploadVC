@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporUploadVC'
-  s.version          = '1.03'
+  s.version          = '1.04'
   s.summary          = '简化上传图片视频等方法'
 
   s.homepage         = 'https://github.com/popor/PoporUploadVC'
@@ -22,8 +22,15 @@ Pod::Spec.new do |s|
     ss.source_files = 'Example/Classes/EntityTool/*.{h,m}'
   end
   
+  s.subspec 'Cell' do |ss|
+    ss.ios.dependency 'PoporUploadVC/EntityTool'
+    
+    ss.source_files = 'Example/Classes/Cell/*.{h,m}'
+  end
+  
   s.subspec 'VC' do |ss|
     ss.ios.dependency 'PoporUploadVC/EntityTool'
+    ss.ios.dependency 'PoporUploadVC/Cell'
     
     ss.source_files = 'Example/Classes/PoporUploadVC/*.{h,m}'
   end
@@ -43,8 +50,5 @@ Pod::Spec.new do |s|
   s.dependency 'PoporMedia'
   s.dependency 'AFNetworking'
   s.dependency 'DMProgressHUD'
-  
-  #s.dependency 'AliyunOSSiOS'
-  
   
 end

@@ -1,1 +1,1 @@
-../../../../Classes/PoporUploadVC/PoporUploadCCProtocol.h
+../../../../Classes/Cell/PoporUploadCCProtocol.h

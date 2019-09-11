@@ -13,13 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (PoporUpload)
 
-@property (nonatomic, strong) UIView                  * puGrayView;
-@property (nonatomic, strong) UILabel                 * puInfoL;
-@property (nonatomic, strong) UIActivityIndicatorView * puUploadAIV;
-@property (nonatomic, strong) NSString                * puTapGRMessage;
+@property (nonatomic, strong          ) UIView                  * puGrayView;
+@property (nonatomic, strong          ) UILabel                 * puInfoL;
+@property (nonatomic, strong          ) UIActivityIndicatorView * puUploadAIV;
+@property (nonatomic, strong          ) NSString                * puTapGRMessage;
 
 @property (nonatomic, strong, nullable) UITapGestureRecognizer  * puTapGR;
-@property (nonatomic, copy  , nullable) BlockPVoid              puTapGRBlock;
+@property (nonatomic, copy  , nullable) BlockPVoid                puTapGRBlock;
 @property (nonatomic, strong, nullable) UIImageView             * puErrorIV;
 
 - (void)puAddUploadStatusViews;
