@@ -66,6 +66,8 @@
 @synthesize createUploadServiceBlock;
 @synthesize createImageThumbUrlBlock;
 
+@synthesize ffmpegCompressBlock;
+
 - (id)initWithDic:(NSDictionary *)dic {
     if (self = [super init]) {
         [NSAssistant setVC:self dic:dic];

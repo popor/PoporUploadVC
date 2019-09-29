@@ -16,6 +16,8 @@ typedef void(^PoporUpload_ProgressBlock) (CGFloat progress);
 // 当前PoporUpload_FinishBlock所传递的参数满足阿里
 typedef void(^PoporUpload_FinishBlock)   (BOOL isSuccess, BOOL isCancle, NSString * _Nullable fileUrl, NSString * _Nullable requestId);
 
+typedef void(^PoporUpload_FFmpegBlock)   (NSString * _Nonnull videoPath, CGSize toSize, NSString * _Nonnull toPath, BlockPBool _Nullable finish);
+
 @protocol PoporUploadServiceProtocol <NSObject>
 
 @property (nonatomic, copy  ) PoporUpload_ProgressBlock progressBlock;

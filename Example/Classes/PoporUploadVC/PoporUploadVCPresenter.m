@@ -25,14 +25,14 @@
 #import <Photos/Photos.h>
 #import <DMProgressHUD/DMProgressHUD.h>
 
-#if __has_include(<PoporFFmpegCompress/PoporFFmpegCompress.h>)
-#define HasFFmpeg 1
-#import <PoporFFmpegCompress/PoporFFmpegCompress.h>
-
-#else
-#define HasFFmpeg 0
-
-#endif
+//#if __has_include(<PoporFFmpegCompress/PoporFFmpegCompress.h>)
+//#define HasFFmpeg 1
+//#import <PoporFFmpegCompress/PoporFFmpegCompress.h>
+//
+//#else
+//#define HasFFmpeg 0
+//
+//#endif
 
 #import "PUVideoTool.h"
 #import <PoporUI/IToastKeyboard.h>
@@ -44,10 +44,10 @@
 
 @property (nonatomic, strong) PoporMedia * media;
 
-#if HasFFmpeg == 1
-@property (nonatomic, strong) PoporFFmpegCompress * ffmpegCmd;
-
-#endif
+//#if HasFFmpeg == 1
+//@property (nonatomic, strong) PoporFFmpegCompress * ffmpegCmd;
+//
+//#endif
 
 @end
 
@@ -391,7 +391,7 @@
         entity.uploadFinishBlock = self.view.uploadFinishBlock;
         entity.weakCV            = self.view.infoCV;
         entity.weakPuEntityArray = self.view.weakPuEntityArray;
-
+        
         entity.imageUploadTool   = [PoporUploadTool new];
         entity.videoUploadTool   = [PoporUploadTool new];
         entity.imageUploadTool.uploadService = [self getPoporUploadService];
@@ -421,12 +421,7 @@
                     break;
                 }
                 case 0:{
-#if HasFFmpeg == 1
-                    //NSLog(@"开始标准压缩");
-                    if (!self.ffmpegCmd) {
-                        self.ffmpegCmd = [PoporFFmpegCompress new];
-                    }
-                    {
+                    if (self.view.ffmpegCompressBlock) {
                         self.view.vc.navigationController.view.userInteractionEnabled = NO;
                         DMProgressHUD * hud = [DMProgressHUD showLoadingHUDAddedTo:self.view.vc.navigationController.view];
                         //hud.text = @"每分钟大约花费20秒时间\n压缩视频中~";
@@ -435,9 +430,10 @@
                         
                         __weak typeof(hud) weakHud = hud;
                         NSString *resultPath = [PUVideoTool videoCompressPath_time];
-                        [self.ffmpegCmd compressVideoUrl:videoPath size:CGSizeMake(540, 960) tPath:resultPath finish:^(BOOL finished, NSString *info) {
+                        
+                        BlockPBool finish = ^(BOOL value) {
                             [weakHud dismiss];
-                            if (finished) {
+                            if (value) {
                                 dispatch_async(dispatch_get_main_queue(), ^{
                                     self.view.vc.navigationController.view.userInteractionEnabled = YES;
                                     if (PIsDebugVersion) {
@@ -448,16 +444,16 @@
                                     [entity.weakCV reloadData];
                                 });
                             }else{
-                                AlertToastTitle(info);
+                                AlertToastTitle(@"视频压缩失败");
                                 [entity.weakPuEntityArray removeObject:entity];
                             }
-                        }];
+                        };
+                        
+                        self.view.ffmpegCompressBlock(videoPath, CGSizeMake(540, 960), resultPath, finish);
+                    } else {
+                        AlertToastTitle(@"未引入自定义FFMpeg视频压缩");
+                        [entity.weakPuEntityArray removeObject:entity];
                     }
-#else
-                    AlertToastTitle(@"未引入 pod 'PoporFFmpegCompress'");
-                    NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n未引入 pod 'PoporFFmpegCompress', 否则无法执行FFMpeg压缩视频! \n❗️❗️❗️  \n❗️❗️❗️ ");
-                    [entity.weakPuEntityArray removeObject:entity];
-#endif
                     break;
                 }
                 case 1:{
