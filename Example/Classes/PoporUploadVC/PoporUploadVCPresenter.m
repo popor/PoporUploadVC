@@ -449,7 +449,7 @@
                             }
                         };
                         
-                        self.view.ffmpegCompressBlock(videoPath, CGSizeMake(540, 960), resultPath, finish);
+                        self.view.ffmpegCompressBlock(videoPath, resultPath, finish);
                     } else {
                         AlertToastTitle(@"未引入自定义FFMpeg视频压缩");
                         [entity.weakPuEntityArray removeObject:entity];
