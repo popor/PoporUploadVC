@@ -12,6 +12,9 @@ typedef void(^PoporVideoProviderBlock)(NSURL * videoURL); // __BlockTypedef
 
 @interface PoporVideoProvider : NSObject
 
+// present方式, 默认为: UIModalPresentationFullScreen
+@property (nonatomic        ) UIModalPresentationStyle modalPresentationStyle;
+
 @property (nonatomic, weak  ) UIImagePickerController * imagePC; // 图片采集器
 @property (nonatomic, copy  ) PoporVideoProviderBlock   hasTakeVideo;
 

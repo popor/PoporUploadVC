@@ -20,6 +20,10 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'PoporMedia'
+
+针对iOS13.0系统, presentViewController:viewController 时候, 默认设置 
+viewController.modalPresentationStyle = UIModalPresentationFullScreen;
+
 ```
 
 ## Author

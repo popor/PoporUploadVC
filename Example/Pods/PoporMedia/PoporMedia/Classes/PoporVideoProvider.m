@@ -78,6 +78,8 @@
         self.imagePC = controller;
         
         controller.delegate = self;
+        controller.modalPresentationStyle = self.modalPresentationStyle;
+        
         [self.superVC presentViewController:controller animated:YES completion:^(void){
             //NSLog(@"Picker View Controller is presented");
         }];

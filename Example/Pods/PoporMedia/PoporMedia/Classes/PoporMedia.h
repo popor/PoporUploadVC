@@ -21,8 +21,11 @@ typedef void(^PoporVideoFinishBlock)(NSURL * videoURL, NSString * videoPath, NSD
 
 @interface PoporMedia : NSObject
 
-@property (nonatomic, copy  ) PoporImageFinishBlock PoporImageFinishBlock;
-@property (nonatomic, strong) PoporVideoProvider * imageProvider;
+// present方式, 默认为: UIModalPresentationFullScreen
+@property (nonatomic        ) UIModalPresentationStyle modalPresentationStyle;
+
+@property (nonatomic, copy  ) PoporImageFinishBlock    PoporImageFinishBlock;
+@property (nonatomic, strong) PoporVideoProvider       * imageProvider;
 
 // 拍摄的时候增加一个浮层使用,只针对单拍使用.
 

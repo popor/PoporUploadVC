@@ -15,6 +15,13 @@
 
 @implementation PoporMedia
 
+- (instancetype)init {
+    if (self = [super init]) {
+        _modalPresentationStyle = UIModalPresentationFullScreen;
+    }
+    return self;
+}
+
 - (void)showImageACTitle:(NSString *)title message:(NSString *)message vc:(UIViewController *)vc maxCount:(int)maxCount origin:(BOOL)origin finish:(PoporImageFinishBlock)finish {
     [self showImageACTitle:title message:message vc:vc maxCount:maxCount origin:origin actions:nil finish:finish];
 }
@@ -42,7 +49,7 @@
         if (maxCount == 1) {
             pickVC.appearBlock = cameraAppearBlock;
         }
-        
+        pickVC.modalPresentationStyle = weakSelf.modalPresentationStyle;
         [weakVC presentViewController:pickVC animated:YES completion:nil];
 #endif
     }];
@@ -62,7 +69,7 @@
         [imageVC setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
             [weakSelf hasSelectImages:photos assets:assets origin:isSelectOriginalPhoto];
         }];
-        
+        imageVC.modalPresentationStyle = weakSelf.modalPresentationStyle;
         [weakVC presentViewController:imageVC animated:YES completion:nil];
     }];
     
@@ -125,7 +132,7 @@
                 }];
             }];
         }];
-        
+        imagePickerVC.modalPresentationStyle = weakSelf.modalPresentationStyle;
         [weakVC presentViewController:imagePickerVC animated:YES completion:nil];
         
     }];
@@ -137,6 +144,7 @@
         if (!weakSelf.imageProvider) {
             PoporVideoProvider * imageProvider = [[PoporVideoProvider alloc] init];
             imageProvider.superVC = weakVC;
+            imageProvider.modalPresentationStyle = weakSelf.modalPresentationStyle;
             imageProvider.qualityType = qualityType;
             [imageProvider setHasTakeVideo:^(NSURL * videoURL) {
                 dispatch_async(dispatch_get_main_queue(), ^{
