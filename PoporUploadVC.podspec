@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PoporUploadVC'
-  s.version          = '1.07'
+  s.version          = '1.08'
   s.summary          = '简化上传图片视频等方法'
 
   s.homepage         = 'https://github.com/popor/PoporUploadVC'
@@ -19,20 +19,23 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.subspec 'EntityTool' do |ss|
-    ss.source_files = 'Example/Classes/EntityTool/*.{h,m}'
+    ss.source_files = 'Example/Classes/PoporUploadEntity.{h,m}', 'Example/Classes/PoporUploadServiceProtocol.{h,m}', 'Example/Classes/PoporUploadTool.{h,m}', 'Example/Classes/PoporUploadVCPrefix.{h,m}', 'Example/Classes/PUShare.{h,m}', 'Example/Classes/PUVideoTool.{h,m}', 'Example/Classes/UIView+PoporUpload.{h,m}'
+    
   end
   
   s.subspec 'Cell' do |ss|
     ss.ios.dependency 'PoporUploadVC/EntityTool'
     
-    ss.source_files = 'Example/Classes/Cell/*.{h,m}'
+    ss.source_files = 'Example/Classes/PoporUploadCC.{h,m}', 'Example/Classes/PoporUploadCCProtocol.{h,m}'
+    
   end
   
   s.subspec 'VC' do |ss|
     ss.ios.dependency 'PoporUploadVC/EntityTool'
     ss.ios.dependency 'PoporUploadVC/Cell'
     
-    ss.source_files = 'Example/Classes/PoporUploadVC/*.{h,m}'
+    ss.source_files = 'Example/Classes/PoporUploadVC.{h,m}', 'Example/Classes/PoporUploadVcCellPresent.{h,m}', 'Example/Classes/PoporUploadVCInteractor.{h,m}', 'Example/Classes/PoporUploadVCPresenter.{h,m}', 'Example/Classes/PoporUploadVCProtocol.{h,m}', 'Example/Classes/PoporUploadVcShowPresent.{h,m}'
+    
   end
   
   s.resource = 'Example/Classes/PoporUploadVC.bundle'

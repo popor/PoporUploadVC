@@ -1,6 +1,6 @@
 {
   "name": "PoporUploadVC",
-  "version": "1.07",
+  "version": "1.08",
   "summary": "简化上传图片视频等方法",
   "homepage": "https://github.com/popor/PoporUploadVC",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/popor/PoporUploadVC.git",
-    "tag": "1.07"
+    "tag": "1.08"
   },
   "platforms": {
     "ios": "8.0"
@@ -62,7 +62,15 @@
   "subspecs": [
     {
       "name": "EntityTool",
-      "source_files": "Example/Classes/EntityTool/*.{h,m}"
+      "source_files": [
+        "Example/Classes/PoporUploadEntity.{h,m}",
+        "Example/Classes/PoporUploadServiceProtocol.{h,m}",
+        "Example/Classes/PoporUploadTool.{h,m}",
+        "Example/Classes/PoporUploadVCPrefix.{h,m}",
+        "Example/Classes/PUShare.{h,m}",
+        "Example/Classes/PUVideoTool.{h,m}",
+        "Example/Classes/UIView+PoporUpload.{h,m}"
+      ]
     },
     {
       "name": "Cell",
@@ -73,7 +81,10 @@
           ]
         }
       },
-      "source_files": "Example/Classes/Cell/*.{h,m}"
+      "source_files": [
+        "Example/Classes/PoporUploadCC.{h,m}",
+        "Example/Classes/PoporUploadCCProtocol.{h,m}"
+      ]
     },
     {
       "name": "VC",
@@ -87,7 +98,14 @@
           ]
         }
       },
-      "source_files": "Example/Classes/PoporUploadVC/*.{h,m}"
+      "source_files": [
+        "Example/Classes/PoporUploadVC.{h,m}",
+        "Example/Classes/PoporUploadVcCellPresent.{h,m}",
+        "Example/Classes/PoporUploadVCInteractor.{h,m}",
+        "Example/Classes/PoporUploadVCPresenter.{h,m}",
+        "Example/Classes/PoporUploadVCProtocol.{h,m}",
+        "Example/Classes/PoporUploadVcShowPresent.{h,m}"
+      ]
     }
   ]
 }
