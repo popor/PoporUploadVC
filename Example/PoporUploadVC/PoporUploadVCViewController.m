@@ -340,7 +340,7 @@
       @"lineNumber":   @(3),
       @"ccIvCorner":   @(0),
       @"maxUploadNum": @(0),
-      @"compressType": @(PoporUploadVideoCompressTypeNone + PoporUploadVideoCompressTypeSystem),
+      @"compressType": @(PoporUploadVideoCompressTypeNone + PoporUploadVideoCompressTypeSystem + PoporUploadVideoCompressTypeNoMov),
       
       //block
       @"deallocBlock":      deallocBlock,

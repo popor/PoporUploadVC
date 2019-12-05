@@ -66,7 +66,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 视频部分
 @property (nonatomic        ) PoporUploadVideoCompressType compressType;
-@property (nonatomic        ) BOOL videoFromCamraUseCompress; // 拍摄的视频是否压缩?
 @property (nonatomic        ) int  videoUploadMaxSize; //视频上传最大容量,单位为MB 1024*1024.
 @property (nonatomic, copy  ) PoporUpload_FFmpegBlock ffmpegCompressBlock;
 

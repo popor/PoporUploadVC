@@ -410,7 +410,7 @@
         [self.view.weakPuEntityArray addObject:entity];
         BOOL isCamera = phAsset ? NO:YES;
         
-        [self compressVideoTime:time size:videoSize camera:isCamera Block:^(int number) {
+        [self compressVideoPath:videoPath time:time size:videoSize camera:isCamera Block:^(int number) {
             @strongify(self);
             @strongify(entity);
             
@@ -518,13 +518,12 @@
     }];
 }
 
-- (void)compressVideoTime:(int)time size:(CGFloat)size camera:(BOOL)isCamera Block:(BlockPInt)block {
-    if (isCamera) {
-        if (!self.view.videoFromCamraUseCompress) {
-            // 拍摄的视频不需要压缩情形
-            block(2);
-            return;
-        }
+- (void)compressVideoPath:(NSString *)path time:(int)time size:(CGFloat)size camera:(BOOL)isCamera Block:(BlockPInt)block {
+    if (isCamera &&
+        self.view.compressType & PoporUploadVideoCompressTypeCamera) {
+        // 拍摄的视频不需要压缩情形
+        block(2);
+        return;
     }
     
     {
@@ -565,9 +564,15 @@
         if (self.view.compressType & PoporUploadVideoCompressTypeSystem) {
             [oneAC addAction:sysCompressAction];
         }
-        if (self.view.compressType & PoporUploadVideoCompressTypeNone) {
-            [oneAC addAction:nonCompressAction];
+        if (self.view.compressType & PoporUploadVideoCompressTypeNoMov &&
+            [path.lowercaseString hasSuffix:@"mov"]) {
+            NSLog(@"⚠️⚠️⚠️ 参数设置: PoporUploadVideoCompressTypeNoMov不允许上传mov格式 ⚠️⚠️⚠️");
+        } else {
+            if (self.view.compressType & PoporUploadVideoCompressTypeNone) {
+                [oneAC addAction:nonCompressAction];
+            }
         }
+        
         if (oneAC.actions.count == 1) {
             AlertToastTitle(@"请设置 compressType, 视频压缩方式");
             NSLog(@"\n❗️❗️❗️ \n❗️❗️❗️ \n请设置 compressType, 视频压缩方式! \n❗️❗️❗️  \n❗️❗️❗️ ");

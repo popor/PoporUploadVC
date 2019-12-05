@@ -35,7 +35,6 @@
 @synthesize uploadType;
 @synthesize infoCvBgColor;
 @synthesize compressType;
-@synthesize videoFromCamraUseCompress;
 @synthesize videoUploadMaxSize;
 
 @synthesize weakPuEntityArray;

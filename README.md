@@ -20,6 +20,13 @@ it, simply add the following line to your Podfile:
 pod 'PoporUploadVC'
 ```
 
+1.09
+- 移除videoFromCamraUseCompress(单独的bool变量控制, 是否不压缩拍摄视频),改为PoporUploadVideoCompressTypeCamera
+- 增加PoporUploadVideoCompressTypeNoMov   = 1 << 3, // 假如选择的文件是mov后缀,那么不显示'不压缩'选项
+- 增加PoporUploadVideoCompressTypeCamera  = 1 << 4, // 拍摄的视频不需要压缩情形(个别情况使用)
+
+
+
 ## Author
 
 popor, 908891024@qq.com
