@@ -65,7 +65,7 @@ typedef NS_OPTIONS(NSUInteger, PoporUploadVideoCompressType) {
     PoporUploadVideoCompressTypeNone    = 1 << 0, // 不压缩
     PoporUploadVideoCompressTypeFFMpeg  = 1 << 1, // FFMpeg
     PoporUploadVideoCompressTypeSystem  = 1 << 2, // 系统压缩
-    PoporUploadVideoCompressTypeNoMov   = 1 << 3, // 假如选择的文件是mov后缀,那么不显示'不压缩'选项
+    PoporUploadVideoCompressTypeMp4     = 1 << 3, // 如果不是MP4后缀,那么不显示'不压缩'选项
     PoporUploadVideoCompressTypeCamera  = 1 << 4, // 拍摄的视频不需要压缩情形(个别情况使用)
     // 3和4会存在冲突,因为拍摄的视频也是mov结尾的.
 };

@@ -564,9 +564,9 @@
         if (self.view.compressType & PoporUploadVideoCompressTypeSystem) {
             [oneAC addAction:sysCompressAction];
         }
-        if (self.view.compressType & PoporUploadVideoCompressTypeNoMov &&
-            [path.lowercaseString hasSuffix:@"mov"]) {
-            NSLog(@"⚠️⚠️⚠️ 参数设置: PoporUploadVideoCompressTypeNoMov不允许上传mov格式 ⚠️⚠️⚠️");
+        if (self.view.compressType & PoporUploadVideoCompressTypeMp4 &&
+            ![path.lowercaseString hasSuffix:@"mp4"]) {
+            NSLog(@"⚠️⚠️⚠️ 参数设置: PoporUploadVideoCompressTypeMp4不允许上传非mp4格式 ⚠️⚠️⚠️");
         } else {
             if (self.view.compressType & PoporUploadVideoCompressTypeNone) {
                 [oneAC addAction:nonCompressAction];
