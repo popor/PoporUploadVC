@@ -11,6 +11,7 @@
 #import "PoporUploadVC.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <PoporUI/IToastPTool.h>
+#import <PoporUI/UIImage+pTool.h>
 #import "PoporUploadServiceConfig.h"
 
 #import <PoporMedia/PoporMedia.h>
@@ -238,6 +239,25 @@
         }
     };
     
+    PoporUpload_imageAllowSelectBlock imageAllowSelectBlock = ^(UIImage * image, NSData * imageData, BOOL originFile, PoporUploadEntity * puEntity) {
+        if (!imageData) {
+            imageData = UIImageJPEGRepresentation(image, 0.9);
+        }
+        NSUInteger maxLength = 1.0*1024*1024;
+        if (imageData.length > maxLength) {
+            imageData = [image compressWithMaxLength:maxLength];
+            
+            if (originFile) {
+                AlertToastTitle(@"原图片容量超过了1.0兆, 将进行压缩");
+            } else {
+                AlertToastTitle(@"原图片容量较大, 将进行压缩");
+            }
+        }
+        
+        puEntity.imageUploadTool.image      = image;
+        puEntity.imageUploadTool.imageData  = imageData;
+    };
+    
     NSDictionary * dic =
     @{
       @"weakPuEntityArray": self.imageUploadArray,
@@ -264,11 +284,14 @@
       //@"cvSectionEdgeInsets":UIEdgeInsetsMake(5, 16, 16, 16),
       // ---
       @"lineNumber":           @(3),
-      @"ccIvCorner": @(0),
+      @"ccIvCorner":           @(0),
       @"maxUploadNum":         @(0),
+      
+      @"imageUploadMaxSize":   @(1.0),
       
       //debug
       @"showCcBG": @(NO),
+      @"imageAllowSelectBlock":imageAllowSelectBlock,
       
       };
     

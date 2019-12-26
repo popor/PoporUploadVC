@@ -32,6 +32,8 @@
 
 @synthesize maxUploadNum;
 
+@synthesize imageAllowSelectBlock;
+
 @synthesize uploadType;
 @synthesize infoCvBgColor;
 @synthesize compressType;

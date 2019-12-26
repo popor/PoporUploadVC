@@ -64,9 +64,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIImage * ccPlacehlodImage; // 默认的 cc image
 
+@property (nonatomic        ) PoporUpload_imageAllowSelectBlock imageAllowSelectBlock;
+
 // 视频部分
 @property (nonatomic        ) PoporUploadVideoCompressType compressType;
-@property (nonatomic        ) int  videoUploadMaxSize; //视频上传最大容量,单位为MB 1024*1024.
+// 假如videoUploadMaxSize大于0则判断.
+@property (nonatomic        ) float  videoUploadMaxSize; //视频上传最大容量,单位为MB 1024*1024.
 @property (nonatomic, copy  ) PoporUpload_FFmpegBlock ffmpegCompressBlock;
 
 // 是否显示file_name

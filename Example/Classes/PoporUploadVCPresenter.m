@@ -284,13 +284,18 @@
                 PoporUploadEntity * entity = [PoporUploadEntity new];
                 [self assembleImagePoporUploadEntity:entity image:images[i] PHAsset:assets[i] origin:origin];
                 
-                [self.view.weakPuEntityArray addObject:entity];
+                if (entity) {
+                    [self.view.weakPuEntityArray addObject:entity];
+                }
             }
         }else{
             for (UIImage * image in images) {
                 PoporUploadEntity * entity = [PoporUploadEntity new];
                 [self assembleImagePoporUploadEntity:entity image:image];
-                [self.view.weakPuEntityArray addObject:entity];
+                
+                if (entity) {
+                    [self.view.weakPuEntityArray addObject:entity];
+                }
             }
         }
         
@@ -325,30 +330,61 @@
     }];
 }
 
+// 图片: 相册
 - (void)assembleImagePoporUploadEntity:(PoporUploadEntity *)entity image:(UIImage *)image PHAsset:(PHAsset *)asset origin:(BOOL)origin {
     
     entity.uploadFinishBlock = self.view.uploadFinishBlock;
     
     entity.imageUploadTool = [PoporUploadTool new];
     entity.imageUploadTool.uploadService = [self getPoporUploadService];
-    entity.imageUploadTool.image = image;
-    entity.imageUploadTool.originFile = @(origin);
     
+    __block NSData * imageData;
     [PHAsset getImageFromPHAsset:asset finish:^(NSData *data) {
-        entity.imageUploadTool.imageData  = data;
+        imageData = data;
     }];
-    entity.imageUploadStatus = PoporUploadStatusInit;
     
+    if (self.view.imageAllowSelectBlock) {
+        self.view.imageAllowSelectBlock(image, imageData, origin, entity);
+        
+        // 由于进行了压缩, 所以origin改为YES;
+        if (entity.imageUploadTool.imageData.length != imageData.length) {
+            entity.imageUploadTool.originFile = @(YES);
+        }
+    } else {
+        entity.imageUploadTool.image = image;
+        entity.imageUploadTool.originFile = @(origin);
+        entity.imageUploadTool.imageData  = imageData;
+    }
+    
+    // 只有设置了image才开始上传
+    if (entity.imageUploadTool.image) {
+        entity.imageUploadStatus = PoporUploadStatusInit;
+    }
 }
 
+// 图片: 相机
 - (void)assembleImagePoporUploadEntity:(PoporUploadEntity *)entity image:(UIImage *)image {
     entity.uploadFinishBlock = self.view.uploadFinishBlock;
     
-    entity.imageUploadStatus = PoporUploadStatusInit;
-    
     entity.imageUploadTool = [PoporUploadTool new];
     entity.imageUploadTool.uploadService = [self getPoporUploadService];
-    entity.imageUploadTool.image = image;
+    
+    if (self.view.imageAllowSelectBlock) {
+        self.view.imageAllowSelectBlock(image, nil, NO, entity);
+        
+        // 由于进行了压缩, 所以origin改为YES;
+        if (entity.imageUploadTool.imageData) {
+            entity.imageUploadTool.originFile = @(YES);
+        }
+    } else {
+        entity.imageUploadTool.image = image;
+        //entity.imageUploadTool.imageData  = imageData;
+    }
+    
+    // 只有设置了image才开始上传
+    if (entity.imageUploadTool.image) {
+        entity.imageUploadStatus = PoporUploadStatusInit;
+    }
 }
 
 - (id<PoporUploadServiceProtocol>)getPoporUploadService {

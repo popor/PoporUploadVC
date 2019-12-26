@@ -25,7 +25,9 @@ pod 'PoporUploadVC'
 - 增加PoporUploadVideoCompressTypeMp4       = 1 << 3, // 如果不是MP4后缀,那么不显示'不压缩'选项
 - 增加PoporUploadVideoCompressTypeCamera  = 1 << 4, // 拍摄的视频不需要压缩情形(个别情况使用)
 
-
+1.11
+允许设定图片容量block.
+PoporUpload_imageAllowSelectBlock imageAllowSelectBlock;
 
 ## Author
 
