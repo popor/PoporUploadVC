@@ -29,6 +29,10 @@ pod 'PoporUploadVC'
 允许设定图片容量block.
 PoporUpload_imageAllowSelectBlock imageAllowSelectBlock;
 
+1.12
+修改图片image显示顺序
+优先显示entity.image和imageUrl, 其次替换模式下面的图片, 最后显示页面或者entity默认图片
+
 ## Author
 
 popor, 908891024@qq.com

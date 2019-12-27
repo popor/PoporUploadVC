@@ -617,19 +617,9 @@
     //    entity.imageUploadTool.imageThumbnail = image;
     //};
     
-    // 1.优先只显示默认图,省内存
-    if (entity.placeholderImage) {
-        cell.imageIV.image = entity.placeholderImage;
-    }
-    else if(entity.placeholderImageUrl){
-        [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.placeholderImageUrl] placeholderImage:self.view.ccPlacehlodImage];
-    }
-    else if (entity.placeholderImageName) {
-        cell.imageIV.image = [UIImage imageNamed:entity.placeholderImageName];
-    }
-    
-    // 2.优先显示本地图片,速度快
-    else if (entity.imageUploadTool.image) {
+    BOOL hasImage = YES;
+    // 1.优先显示本地图片,速度快
+    if (entity.imageUploadTool.image) {
         if (!entity.imageUploadTool.imageThumbnail) {
             // 很有可能第一个cell的ImageIV.frame = CGRectZero,所以使用ccSize.
             entity.imageUploadTool.imageThumbnail = [UIImage imageFromImage:entity.imageUploadTool.image size:self.view.ccSize];
@@ -637,7 +627,7 @@
         cell.imageIV.image = entity.imageUploadTool.imageThumbnail;
     }
     
-    // 3.大多数只有imageUrl
+    // 2.大多数只有imageUrl
     else if(entity.imageUrl){
         @weakify(entity);
         [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:[self imageIconUrlEntity:entity]] placeholderImage:self.view.ccPlacehlodImage completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
@@ -646,7 +636,7 @@
         }];
     }
     
-    // 4.替换模式
+    // 3.替换模式
     else if (entity.replaceImage) {
         cell.imageIV.image = entity.replaceImage;
     } else if(entity.replaceImageUrl){
@@ -655,14 +645,28 @@
         cell.imageIV.image = [UIImage imageNamed:entity.replaceImageName];
     }
     
-    // 5.显示本页面默认图片
-    else if (self.view.ccPlacehlodImage){
-        cell.imageIV.image = self.view.ccPlacehlodImage;
-    }
-    
     // 其他置空
     else{
         cell.imageIV.image = nil;
+        hasImage = NO;
+    }
+    
+    // 最后 假如没有图片的话,则显示默认图片
+    if (!hasImage) {
+        // 页面默认图片
+        if (self.view.ccPlacehlodImage){
+            cell.imageIV.image = self.view.ccPlacehlodImage;
+        }
+        // entity的默认图片
+        else if (entity.placeholderImage) {
+            cell.imageIV.image = entity.placeholderImage;
+        }
+        else if(entity.placeholderImageUrl){
+            [cell.imageIV sd_setImageWithURL:[NSURL URLWithString:entity.placeholderImageUrl] placeholderImage:self.view.ccPlacehlodImage];
+        }
+        else if (entity.placeholderImageName) {
+            cell.imageIV.image = [UIImage imageNamed:entity.placeholderImageName];
+        }
     }
 }
 
