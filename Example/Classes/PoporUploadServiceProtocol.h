@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <PoporFoundation/Block+pPrefix.h>
 
 @class PoporUploadEntity;
@@ -19,6 +20,8 @@ typedef void(^PoporUpload_ProgressBlock) (CGFloat progress);
 typedef void(^PoporUpload_FinishBlock)   (BOOL isSuccess, BOOL isCancle, NSString * _Nullable fileUrl, NSString * _Nullable requestId);
 
 typedef void(^PoporUpload_FFmpegBlock)   (NSString * _Nonnull videoPath, NSString * _Nonnull toPath, BlockPBool _Nullable finish);
+
+typedef void(^PoporUpload_tvPlaceHolderBlock) (UICollectionView * infoCV);
 
 /**
  如果需要检查图片容量,请设置该block. 必要的设置有:

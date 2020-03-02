@@ -108,6 +108,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 获取图片缩略图的block, 根据不同的图床平台,请设置对应的缩略图url,供ccIV使用
 @property (nonatomic, copy  ) PoporUpload_RStringPStringSize  createImageThumbUrlBlock;
 
+// 设置TV的一些额外属性,r比如默认空白页
+@property (nonatomic, copy  ) PoporUpload_tvPlaceHolderBlock  tvPlaceHolderBlock;
+
 @end
 
 // 数据来源

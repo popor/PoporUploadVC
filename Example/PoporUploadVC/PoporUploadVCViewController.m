@@ -339,6 +339,12 @@
         }
     };
     
+    PoporUpload_tvPlaceHolderBlock  tvPlaceHolderBlock;
+    tvPlaceHolderBlock = ^(UICollectionView * infoCV) {
+        // 设置 infoCV的placeHolderView.
+        
+    };
+    
     NSDictionary * dic =
     @{
       @"weakPuEntityArray": self.videoUploadArray,

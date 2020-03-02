@@ -69,6 +69,8 @@
 
 @synthesize ffmpegCompressBlock;
 
+@synthesize tvPlaceHolderBlock;
+
 - (id)initWithDic:(NSDictionary *)dic {
     if (self = [super init]) {
         [NSAssistant setVC:self dic:dic];
@@ -165,6 +167,9 @@
     
     if (self.viewDidLoadBlock) {
         self.viewDidLoadBlock(self);
+    }
+    if (self.tvPlaceHolderBlock) {
+        self.tvPlaceHolderBlock(self.infoCV);
     }
 }
 

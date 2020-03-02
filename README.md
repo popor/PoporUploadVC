@@ -33,6 +33,10 @@ PoporUpload_imageAllowSelectBlock imageAllowSelectBlock;
 修改图片image显示顺序
 优先显示entity.image和imageUrl, 其次替换模式下面的图片, 最后显示页面或者entity默认图片
 
+1.13
+增加了PoporUpload_tvPlaceHolderBlock  tvPlaceHolderBlock, 可以设置TV的一些额外属性,比如默认空白页
+
+
 ## Author
 
 popor, 908891024@qq.com
